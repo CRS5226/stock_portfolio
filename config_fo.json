@@ -1,0 +1,1517 @@
+{
+  "meta": {
+    "source": "NSE F&O Listed Stocks",
+    "total_fo_stocks": 218,
+    "total_found": 218,
+    "total_missing": 0,
+    "missing_symbols": [],
+    "note": "Instrument tokens sourced from config_mtf1500.json. Index tokens are standard Zerodha NSE index tokens."
+  },
+  "stocks": [
+    {
+      "stock_code": "NIFTY 50",
+      "instrument_token": 256265,
+      "name": "NIFTY 50"
+    },
+    {
+      "stock_code": "SENSEX",
+      "instrument_token": 265,
+      "name": "SENSEX"
+    },
+{ "stock_code": "NIFTY BANK",     "instrument_token": 260105, "name": "NIFTY BANK" },
+{ "stock_code": "NIFTY FIN SERVICE", "instrument_token": 257801, "name": "NIFTY FIN SERVICE" },
+{ "stock_code": "NIFTY NEXT 50",  "instrument_token": 270857, "name": "NIFTY NEXT 50" },
+{ "stock_code": "NIFTY MID SELECT", "instrument_token": 288009, "name": "NIFTY MID SELECT" },
+    {
+      "stock_code": "360ONE",
+      "instrument_token": 3343617,
+      "name": "360 ONE WAM",
+      "nse_symbol": "360ONE",
+      "underlying": "360 ONE WAM LIMITED"
+    },
+    {
+      "stock_code": "ABB",
+      "instrument_token": 3329,
+      "name": "ABB INDIA",
+      "nse_symbol": "ABB",
+      "underlying": "ABB India Limited"
+    },
+    {
+      "stock_code": "APLAPOLLO",
+      "instrument_token": 6599681,
+      "name": "APL APOLLO TUBES",
+      "nse_symbol": "APLAPOLLO",
+      "underlying": "APL Apollo Tubes Limited"
+    },
+    {
+      "stock_code": "AUBANK",
+      "instrument_token": 5436929,
+      "name": "AU SMALL FINANCE BANK",
+      "nse_symbol": "AUBANK",
+      "underlying": "AU Small Finance Bank Limited"
+    },
+    {
+      "stock_code": "ADANIENSOL",
+      "instrument_token": 2615553,
+      "name": "ADANI ENERGY SOLUTION",
+      "nse_symbol": "ADANIENSOL",
+      "underlying": "Adani Energy Solutions Limited"
+    },
+    {
+      "stock_code": "ADANIENT",
+      "instrument_token": 6401,
+      "name": "ADANI ENTERPRISES",
+      "nse_symbol": "ADANIENT",
+      "underlying": "Adani Enterprises Limited"
+    },
+    {
+      "stock_code": "ADANIGREEN",
+      "instrument_token": 912129,
+      "name": "ADANI GREEN ENERGY",
+      "nse_symbol": "ADANIGREEN",
+      "underlying": "Adani Green Energy Limited"
+    },
+    {
+      "stock_code": "ADANIPORTS",
+      "instrument_token": 3861249,
+      "name": "ADANI PORT & SEZ",
+      "nse_symbol": "ADANIPORTS",
+      "underlying": "Adani Ports and Special Economic Zone Limited"
+    },
+    {
+      "stock_code": "ADANIPOWER",
+      "instrument_token": 4451329,
+      "name": "ADANI POWER",
+      "nse_symbol": "ADANIPOWER",
+      "underlying": "Adani Power Limited"
+    },
+    {
+      "stock_code": "ABCAPITAL",
+      "instrument_token": 5533185,
+      "name": "ADITYA BIRLA CAPITAL",
+      "nse_symbol": "ABCAPITAL",
+      "underlying": "Aditya Birla Capital Limited"
+    },
+    {
+      "stock_code": "ALKEM",
+      "instrument_token": 2995969,
+      "name": "ALKEM LABORATORIES",
+      "nse_symbol": "ALKEM",
+      "underlying": "Alkem Laboratories Limited"
+    },
+    {
+      "stock_code": "AMBER",
+      "instrument_token": 303361,
+      "name": "AMBER ENTERPRISES (I)",
+      "nse_symbol": "AMBER",
+      "underlying": "Amber Enterprises India Limited"
+    },
+    {
+      "stock_code": "AMBUJACEM",
+      "instrument_token": 325121,
+      "name": "AMBUJA CEMENTS",
+      "nse_symbol": "AMBUJACEM",
+      "underlying": "Ambuja Cements Limited"
+    },
+    {
+      "stock_code": "ANGELONE",
+      "instrument_token": 82945,
+      "name": "ANGEL ONE",
+      "nse_symbol": "ANGELONE",
+      "underlying": "Angel One Limited"
+    },
+    {
+      "stock_code": "APOLLOHOSP",
+      "instrument_token": 40193,
+      "name": "APOLLO HOSPITALS ENTER. L",
+      "nse_symbol": "APOLLOHOSP",
+      "underlying": "Apollo Hospitals Enterprise Limited"
+    },
+    {
+      "stock_code": "ASHOKLEY",
+      "instrument_token": 54273,
+      "name": "ASHOK LEYLAND",
+      "nse_symbol": "ASHOKLEY",
+      "underlying": "Ashok Leyland Limited"
+    },
+    {
+      "stock_code": "ASIANPAINT",
+      "instrument_token": 60417,
+      "name": "ASIAN PAINTS",
+      "nse_symbol": "ASIANPAINT",
+      "underlying": "Asian Paints Limited"
+    },
+    {
+      "stock_code": "ASTRAL",
+      "instrument_token": 3691009,
+      "name": "ASTRAL",
+      "nse_symbol": "ASTRAL",
+      "underlying": "Astral Limited"
+    },
+    {
+      "stock_code": "AUROPHARMA",
+      "instrument_token": 70401,
+      "name": "AUROBINDO PHARMA",
+      "nse_symbol": "AUROPHARMA",
+      "underlying": "Aurobindo Pharma Limited"
+    },
+    {
+      "stock_code": "DMART",
+      "instrument_token": 5097729,
+      "name": "AVENUE SUPERMARTS",
+      "nse_symbol": "DMART",
+      "underlying": "Avenue Supermarts Limited"
+    },
+    {
+      "stock_code": "AXISBANK",
+      "instrument_token": 1510401,
+      "name": "AXIS BANK",
+      "nse_symbol": "AXISBANK",
+      "underlying": "Axis Bank Limited"
+    },
+    {
+      "stock_code": "BSE",
+      "instrument_token": 5013761,
+      "name": "BSE",
+      "nse_symbol": "BSE",
+      "underlying": "BSE Limited"
+    },
+    {
+      "stock_code": "BAJAJ-AUTO",
+      "instrument_token": 4267265,
+      "name": "BAJAJ AUTO",
+      "nse_symbol": "BAJAJ-AUTO",
+      "underlying": "Bajaj Auto Limited"
+    },
+    {
+      "stock_code": "BAJFINANCE",
+      "instrument_token": 81153,
+      "name": "BAJAJ FINANCE",
+      "nse_symbol": "BAJFINANCE",
+      "underlying": "Bajaj Finance Limited"
+    },
+    {
+      "stock_code": "BAJAJFINSV",
+      "instrument_token": 4268801,
+      "name": "BAJAJ FINSERV",
+      "nse_symbol": "BAJAJFINSV",
+      "underlying": "Bajaj Finserv Limited"
+    },
+    {
+      "stock_code": "BAJAJHLDNG",
+      "instrument_token": 78081,
+      "name": "BAJAJ HOLDINGS & INVS",
+      "nse_symbol": "BAJAJHLDNG",
+      "underlying": "Bajaj Holdings & Investment Limited"
+    },
+    {
+      "stock_code": "BANDHANBNK",
+      "instrument_token": 579329,
+      "name": "BANDHAN BANK",
+      "nse_symbol": "BANDHANBNK",
+      "underlying": "Bandhan Bank Limited"
+    },
+    {
+      "stock_code": "BANKBARODA",
+      "instrument_token": 1195009,
+      "name": "BANK OF BARODA",
+      "nse_symbol": "BANKBARODA",
+      "underlying": "Bank of Baroda"
+    },
+    {
+      "stock_code": "BANKINDIA",
+      "instrument_token": 1214721,
+      "name": "BANK OF INDIA",
+      "nse_symbol": "BANKINDIA",
+      "underlying": "Bank of India"
+    },
+    {
+      "stock_code": "BDL",
+      "instrument_token": 548865,
+      "name": "BHARAT DYNAMICS",
+      "nse_symbol": "BDL",
+      "underlying": "Bharat Dynamics Limited"
+    },
+    {
+      "stock_code": "BEL",
+      "instrument_token": 98049,
+      "name": "BHARAT ELECTRONICS",
+      "nse_symbol": "BEL",
+      "underlying": "Bharat Electronics Limited"
+    },
+    {
+      "stock_code": "BHARATFORG",
+      "instrument_token": 108033,
+      "name": "BHARAT FORGE",
+      "nse_symbol": "BHARATFORG",
+      "underlying": "Bharat Forge Limited"
+    },
+    {
+      "stock_code": "BHEL",
+      "instrument_token": 112129,
+      "name": "BHEL",
+      "nse_symbol": "BHEL",
+      "underlying": "Bharat Heavy Electricals Limited"
+    },
+    {
+      "stock_code": "BPCL",
+      "instrument_token": 134657,
+      "name": "BHARAT PETROLEUM CORP  LT",
+      "nse_symbol": "BPCL",
+      "underlying": "Bharat Petroleum Corporation Limited"
+    },
+    {
+      "stock_code": "BHARTIARTL",
+      "instrument_token": 2714625,
+      "name": "BHARTI AIRTEL",
+      "nse_symbol": "BHARTIARTL",
+      "underlying": "Bharti Airtel Limited"
+    },
+    {
+      "stock_code": "BIOCON",
+      "instrument_token": 2911489,
+      "name": "BIOCON",
+      "nse_symbol": "BIOCON",
+      "underlying": "Biocon Limited"
+    },
+    {
+      "stock_code": "BLUESTARCO",
+      "instrument_token": 2127617,
+      "name": "BLUE STAR",
+      "nse_symbol": "BLUESTARCO",
+      "underlying": "Blue Star Limited"
+    },
+    {
+      "stock_code": "BOSCHLTD",
+      "instrument_token": 558337,
+      "name": "BOSCH",
+      "nse_symbol": "BOSCHLTD",
+      "underlying": "Bosch Limited"
+    },
+    {
+      "stock_code": "BRITANNIA",
+      "instrument_token": 140033,
+      "name": "BRITANNIA INDUSTRIES",
+      "nse_symbol": "BRITANNIA",
+      "underlying": "Britannia Industries Limited"
+    },
+    {
+      "stock_code": "CGPOWER",
+      "instrument_token": 194561,
+      "name": "CG POWER AND IND SOL",
+      "nse_symbol": "CGPOWER",
+      "underlying": "CG Power and Industrial Solutions Limited"
+    },
+    {
+      "stock_code": "CANBK",
+      "instrument_token": 2763265,
+      "name": "CANARA BANK",
+      "nse_symbol": "CANBK",
+      "underlying": "Canara Bank"
+    },
+    {
+      "stock_code": "CDSL",
+      "instrument_token": 5420545,
+      "name": "CENTRAL DEPO SER (I)",
+      "nse_symbol": "CDSL",
+      "underlying": "Central Depository Services (India) Limited"
+    },
+    {
+      "stock_code": "CHOLAFIN",
+      "instrument_token": 175361,
+      "name": "CHOLAMANDALAM IN & FIN CO",
+      "nse_symbol": "CHOLAFIN",
+      "underlying": "Cholamandalam Investment and Finance Company Limited"
+    },
+    {
+      "stock_code": "CIPLA",
+      "instrument_token": 177665,
+      "name": "CIPLA",
+      "nse_symbol": "CIPLA",
+      "underlying": "Cipla Limited"
+    },
+    {
+      "stock_code": "COALINDIA",
+      "instrument_token": 5215745,
+      "name": "COAL INDIA",
+      "nse_symbol": "COALINDIA",
+      "underlying": "Coal India Limited"
+    },
+    {
+      "stock_code": "COCHINSHIP",
+      "instrument_token": 5506049,
+      "name": "COCHIN SHIPYARD",
+      "nse_symbol": "COCHINSHIP",
+      "underlying": "Cochin Shipyard Limited"
+    },
+    {
+      "stock_code": "COFORGE",
+      "instrument_token": 2955009,
+      "name": "COFORGE",
+      "nse_symbol": "COFORGE",
+      "underlying": "Coforge Limited"
+    },
+    {
+      "stock_code": "COLPAL",
+      "instrument_token": 3876097,
+      "name": "COLGATE PALMOLIVE",
+      "nse_symbol": "COLPAL",
+      "underlying": "Colgate Palmolive (India) Limited"
+    },
+    {
+      "stock_code": "CAMS",
+      "instrument_token": 87553,
+      "name": "COMPUTER AGE MNGT SER",
+      "nse_symbol": "CAMS",
+      "underlying": "Computer Age Management Services Limited"
+    },
+    {
+      "stock_code": "CONCOR",
+      "instrument_token": 1215745,
+      "name": "CONTAINER CORP OF IND",
+      "nse_symbol": "CONCOR",
+      "underlying": "Container Corporation of India Limited"
+    },
+    {
+      "stock_code": "CROMPTON",
+      "instrument_token": 4376065,
+      "name": "CROMPT GREA CON ELEC",
+      "nse_symbol": "CROMPTON",
+      "underlying": "Crompton Greaves Consumer Electricals Limited"
+    },
+    {
+      "stock_code": "CUMMINSIND",
+      "instrument_token": 486657,
+      "name": "CUMMINS INDIA",
+      "nse_symbol": "CUMMINSIND",
+      "underlying": "Cummins India Limited"
+    },
+    {
+      "stock_code": "DLF",
+      "instrument_token": 3771393,
+      "name": "DLF",
+      "nse_symbol": "DLF",
+      "underlying": "DLF Limited"
+    },
+    {
+      "stock_code": "DABUR",
+      "instrument_token": 197633,
+      "name": "DABUR INDIA",
+      "nse_symbol": "DABUR",
+      "underlying": "Dabur India Limited"
+    },
+    {
+      "stock_code": "DALBHARAT",
+      "instrument_token": 2067201,
+      "name": "DALMIA BHARAT",
+      "nse_symbol": "DALBHARAT",
+      "underlying": "Dalmia Bharat Limited"
+    },
+    {
+      "stock_code": "DELHIVERY",
+      "instrument_token": 2457345,
+      "name": "DELHIVERY",
+      "nse_symbol": "DELHIVERY",
+      "underlying": "Delhivery Limited"
+    },
+    {
+      "stock_code": "DIVISLAB",
+      "instrument_token": 2800641,
+      "name": "DIVI S LABORATORIES",
+      "nse_symbol": "DIVISLAB",
+      "underlying": "Divi's Laboratories Limited"
+    },
+    {
+      "stock_code": "DIXON",
+      "instrument_token": 5552641,
+      "name": "DIXON TECHNO (INDIA)",
+      "nse_symbol": "DIXON",
+      "underlying": "Dixon Technologies (India) Limited"
+    },
+    {
+      "stock_code": "DRREDDY",
+      "instrument_token": 225537,
+      "name": "DR. REDDY S LABORATORIES",
+      "nse_symbol": "DRREDDY",
+      "underlying": "Dr. Reddy's Laboratories Limited"
+    },
+    {
+      "stock_code": "ETERNAL",
+      "instrument_token": 1304833,
+      "name": "ETERNAL - ZOMATO",
+      "nse_symbol": "ETERNAL",
+      "underlying": "ETERNAL LIMITED"
+    },
+    {
+      "stock_code": "EICHERMOT",
+      "instrument_token": 232961,
+      "name": "EICHER MOTORS",
+      "nse_symbol": "EICHERMOT",
+      "underlying": "Eicher Motors Limited"
+    },
+    {
+      "stock_code": "EXIDEIND",
+      "instrument_token": 173057,
+      "name": "EXIDE INDUSTRIES",
+      "nse_symbol": "EXIDEIND",
+      "underlying": "Exide Industries Limited"
+    },
+    {
+      "stock_code": "FORCEMOT",
+      "instrument_token": 2962689,
+      "name": "FORCE MOTORS",
+      "nse_symbol": "FORCEMOT",
+      "underlying": "FORCE MOTORS LTD"
+    },
+    {
+      "stock_code": "NYKAA",
+      "instrument_token": 1675521,
+      "name": "FSN E COMMERCE VENTURES",
+      "nse_symbol": "NYKAA",
+      "underlying": "FSN E-Commerce Ventures Limited"
+    },
+    {
+      "stock_code": "FORTIS",
+      "instrument_token": 3735553,
+      "name": "FORTIS HEALTHCARE",
+      "nse_symbol": "FORTIS",
+      "underlying": "Fortis Healthcare Limited"
+    },
+    {
+      "stock_code": "GAIL",
+      "instrument_token": 1207553,
+      "name": "GAIL (INDIA)",
+      "nse_symbol": "GAIL",
+      "underlying": "GAIL (India) Limited"
+    },
+    {
+      "stock_code": "GMRAIRPORT",
+      "instrument_token": 3463169,
+      "name": "GMR AIRPORTS",
+      "nse_symbol": "GMRAIRPORT",
+      "underlying": "GMR AIRPORTS LIMITED"
+    },
+    {
+      "stock_code": "GLENMARK",
+      "instrument_token": 1895937,
+      "name": "GLENMARK PHARMACEUTICALS",
+      "nse_symbol": "GLENMARK",
+      "underlying": "Glenmark Pharmaceuticals Limited"
+    },
+    {
+      "stock_code": "GODFRYPHLP",
+      "instrument_token": 302337,
+      "name": "GODFREY PHILLIPS INDIA LT",
+      "nse_symbol": "GODFRYPHLP",
+      "underlying": "Godfrey Phillips India Limited"
+    },
+    {
+      "stock_code": "GODREJCP",
+      "instrument_token": 2585345,
+      "name": "GODREJ CONSUMER PRODUCTS",
+      "nse_symbol": "GODREJCP",
+      "underlying": "Godrej Consumer Products Limited"
+    },
+    {
+      "stock_code": "GODREJPROP",
+      "instrument_token": 4576001,
+      "name": "GODREJ PROPERTIES",
+      "nse_symbol": "GODREJPROP",
+      "underlying": "Godrej Properties Limited"
+    },
+    {
+      "stock_code": "GRASIM",
+      "instrument_token": 315393,
+      "name": "GRASIM INDUSTRIES",
+      "nse_symbol": "GRASIM",
+      "underlying": "Grasim Industries Limited"
+    },
+    {
+      "stock_code": "HCLTECH",
+      "instrument_token": 1850625,
+      "name": "HCL TECHNOLOGIES",
+      "nse_symbol": "HCLTECH",
+      "underlying": "HCL Technologies Limited"
+    },
+    {
+      "stock_code": "HDFCAMC",
+      "instrument_token": 1086465,
+      "name": "HDFC AMC",
+      "nse_symbol": "HDFCAMC",
+      "underlying": "HDFC Asset Management Company Limited"
+    },
+    {
+      "stock_code": "HDFCBANK",
+      "instrument_token": 341249,
+      "name": "HDFC BANK",
+      "nse_symbol": "HDFCBANK",
+      "underlying": "HDFC Bank Limited"
+    },
+    {
+      "stock_code": "HDFCLIFE",
+      "instrument_token": 119553,
+      "name": "HDFC LIFE INS CO",
+      "nse_symbol": "HDFCLIFE",
+      "underlying": "HDFC Life Insurance Company Limited"
+    },
+    {
+      "stock_code": "HAVELLS",
+      "instrument_token": 2513665,
+      "name": "HAVELLS INDIA",
+      "nse_symbol": "HAVELLS",
+      "underlying": "Havells India Limited"
+    },
+    {
+      "stock_code": "HEROMOTOCO",
+      "instrument_token": 345089,
+      "name": "HERO MOTOCORP",
+      "nse_symbol": "HEROMOTOCO",
+      "underlying": "Hero MotoCorp Limited"
+    },
+    {
+      "stock_code": "HINDALCO",
+      "instrument_token": 348929,
+      "name": "HINDALCO  INDUSTRIES ",
+      "nse_symbol": "HINDALCO",
+      "underlying": "Hindalco Industries Limited"
+    },
+    {
+      "stock_code": "HAL",
+      "instrument_token": 589569,
+      "name": "HINDUSTAN AERONAUTICS",
+      "nse_symbol": "HAL",
+      "underlying": "Hindustan Aeronautics Limited"
+    },
+    {
+      "stock_code": "HINDPETRO",
+      "instrument_token": 359937,
+      "name": "HINDUSTAN PETROLEUM CORP",
+      "nse_symbol": "HINDPETRO",
+      "underlying": "Hindustan Petroleum Corporation Limited"
+    },
+    {
+      "stock_code": "HINDUNILVR",
+      "instrument_token": 356865,
+      "name": "HINDUSTAN UNILEVER",
+      "nse_symbol": "HINDUNILVR",
+      "underlying": "Hindustan Unilever Limited"
+    },
+    {
+      "stock_code": "HINDZINC",
+      "instrument_token": 364545,
+      "name": "HINDUSTAN ZINC",
+      "nse_symbol": "HINDZINC",
+      "underlying": "Hindustan Zinc Limited"
+    },
+    {
+      "stock_code": "POWERINDIA",
+      "instrument_token": 4724993,
+      "name": "HITACHI ENERGY INDIA",
+      "nse_symbol": "POWERINDIA",
+      "underlying": "Hitachi Energy India Limited"
+    },
+    {
+      "stock_code": "HUDCO",
+      "instrument_token": 5331201,
+      "name": "HSG & URBAN DEV CORPN",
+      "nse_symbol": "HUDCO",
+      "underlying": "Housing & Urban Development Corporation Limited"
+    },
+    {
+      "stock_code": "HYUNDAI",
+      "instrument_token": 6616065,
+      "name": "HYUNDAI MOTOR INDIA",
+      "nse_symbol": "HYUNDAI",
+      "underlying": "Hyundai Motor India Limited"
+    },
+    {
+      "stock_code": "ICICIBANK",
+      "instrument_token": 1270529,
+      "name": "ICICI BANK",
+      "nse_symbol": "ICICIBANK",
+      "underlying": "ICICI Bank Limited"
+    },
+    {
+      "stock_code": "ICICIGI",
+      "instrument_token": 5573121,
+      "name": "ICICI LOMBARD GIC",
+      "nse_symbol": "ICICIGI",
+      "underlying": "ICICI Lombard General Insurance Company Limited"
+    },
+    {
+      "stock_code": "ICICIPRULI",
+      "instrument_token": 4774913,
+      "name": "ICICI PRU LIFE INS CO",
+      "nse_symbol": "ICICIPRULI",
+      "underlying": "ICICI Prudential Life Insurance Company Limited"
+    },
+    {
+      "stock_code": "IDFCFIRSTB",
+      "instrument_token": 2863105,
+      "name": "IDFC FIRST BANK",
+      "nse_symbol": "IDFCFIRSTB",
+      "underlying": "IDFC First Bank Limited"
+    },
+    {
+      "stock_code": "ITC",
+      "instrument_token": 424961,
+      "name": "ITC",
+      "nse_symbol": "ITC",
+      "underlying": "ITC Limited"
+    },
+    {
+      "stock_code": "INDIANB",
+      "instrument_token": 3663105,
+      "name": "INDIAN BANK",
+      "nse_symbol": "INDIANB",
+      "underlying": "Indian Bank"
+    },
+    {
+      "stock_code": "IEX",
+      "instrument_token": 56321,
+      "name": "INDIAN ENERGY EXC",
+      "nse_symbol": "IEX",
+      "underlying": "Indian Energy Exchange Limited"
+    },
+    {
+      "stock_code": "IOC",
+      "instrument_token": 415745,
+      "name": "INDIAN OIL CORP",
+      "nse_symbol": "IOC",
+      "underlying": "Indian Oil Corporation Limited"
+    },
+    {
+      "stock_code": "IRFC",
+      "instrument_token": 519425,
+      "name": "INDIAN RAILWAY FIN CORP L",
+      "nse_symbol": "IRFC",
+      "underlying": "Indian Railway Finance Corporation Limited"
+    },
+    {
+      "stock_code": "IREDA",
+      "instrument_token": 5186817,
+      "name": "INDIAN RENEWABLE ENERGY",
+      "nse_symbol": "IREDA",
+      "underlying": "Indian Renewable Energy Development Agency Limited"
+    },
+    {
+      "stock_code": "INDUSTOWER",
+      "instrument_token": 7458561,
+      "name": "INDUS TOWERS",
+      "nse_symbol": "INDUSTOWER",
+      "underlying": "Indus Towers Limited"
+    },
+    {
+      "stock_code": "INDUSINDBK",
+      "instrument_token": 1346049,
+      "name": "INDUSIND BANK",
+      "nse_symbol": "INDUSINDBK",
+      "underlying": "IndusInd Bank Limited"
+    },
+    {
+      "stock_code": "NAUKRI",
+      "instrument_token": 3520257,
+      "name": "INFO EDGE (I)",
+      "nse_symbol": "NAUKRI",
+      "underlying": "Info Edge (India) Limited"
+    },
+    {
+      "stock_code": "INFY",
+      "instrument_token": 408065,
+      "name": "INFOSYS",
+      "nse_symbol": "INFY",
+      "underlying": "Infosys Limited"
+    },
+    {
+      "stock_code": "INOXWIND",
+      "instrument_token": 2010113,
+      "name": "INOX WIND",
+      "nse_symbol": "INOXWIND",
+      "underlying": "Inox Wind Limited"
+    },
+    {
+      "stock_code": "INDIGO",
+      "instrument_token": 2865921,
+      "name": "INTERGLOBE AVIATION",
+      "nse_symbol": "INDIGO",
+      "underlying": "InterGlobe Aviation Limited"
+    },
+    {
+      "stock_code": "JINDALSTEL",
+      "instrument_token": 1723649,
+      "name": "JINDAL STEEL",
+      "nse_symbol": "JINDALSTEL",
+      "underlying": "JINDAL STEEL LIMITED"
+    },
+    {
+      "stock_code": "JSWENERGY",
+      "instrument_token": 4574465,
+      "name": "JSW ENERGY",
+      "nse_symbol": "JSWENERGY",
+      "underlying": "JSW Energy Limited"
+    },
+    {
+      "stock_code": "JSWSTEEL",
+      "instrument_token": 3001089,
+      "name": "JSW STEEL",
+      "nse_symbol": "JSWSTEEL",
+      "underlying": "JSW Steel Limited"
+    },
+    {
+      "stock_code": "JIOFIN",
+      "instrument_token": 4644609,
+      "name": "JIO FIN SERVICES",
+      "nse_symbol": "JIOFIN",
+      "underlying": "Jio Financial Services Limited"
+    },
+    {
+      "stock_code": "JUBLFOOD",
+      "instrument_token": 4632577,
+      "name": "JUBILANT FOODWORKS",
+      "nse_symbol": "JUBLFOOD",
+      "underlying": "Jubilant Foodworks Limited"
+    },
+    {
+      "stock_code": "KEI",
+      "instrument_token": 3407361,
+      "name": "KEI INDUSTRIES",
+      "nse_symbol": "KEI",
+      "underlying": "KEI Industries Limited"
+    },
+    {
+      "stock_code": "KPITTECH",
+      "instrument_token": 2478849,
+      "name": "KPIT TECHNOLOGIES",
+      "nse_symbol": "KPITTECH",
+      "underlying": "KPIT Technologies Limited"
+    },
+    {
+      "stock_code": "KALYANKJIL",
+      "instrument_token": 756481,
+      "name": "KALYAN JEWELLERS IND",
+      "nse_symbol": "KALYANKJIL",
+      "underlying": "Kalyan Jewellers India Limited"
+    },
+    {
+      "stock_code": "KAYNES",
+      "instrument_token": 3095553,
+      "name": "KAYNES TECHNOLOGY IND",
+      "nse_symbol": "KAYNES",
+      "underlying": "Kaynes Technology India Limited"
+    },
+    {
+      "stock_code": "KFINTECH",
+      "instrument_token": 3419905,
+      "name": "KFIN TECHNOLOGIES",
+      "nse_symbol": "KFINTECH",
+      "underlying": "Kfin Technologies Limited"
+    },
+    {
+      "stock_code": "KOTAKBANK",
+      "instrument_token": 492033,
+      "name": "KOTAK MAHINDRA BANK",
+      "nse_symbol": "KOTAKBANK",
+      "underlying": "Kotak Mahindra Bank Limited"
+    },
+    {
+      "stock_code": "LTF",
+      "instrument_token": 6386689,
+      "name": "L&T FINANCE",
+      "nse_symbol": "LTF",
+      "underlying": "L&T Finance Limited"
+    },
+    {
+      "stock_code": "LICHSGFIN",
+      "instrument_token": 511233,
+      "name": "LIC HOUSING FINANCE",
+      "nse_symbol": "LICHSGFIN",
+      "underlying": "LIC Housing Finance Limited"
+    },
+    {
+      "stock_code": "LTM",
+      "instrument_token": 4561409,
+      "name": "LTIMINDTREE",
+      "nse_symbol": "LTM",
+      "underlying": "LTIMindtree Limited"
+    },
+    {
+      "stock_code": "LT",
+      "instrument_token": 2939649,
+      "name": "LARSEN & TOUBRO",
+      "nse_symbol": "LT",
+      "underlying": "Larsen & Toubro Limited"
+    },
+    {
+      "stock_code": "LAURUSLABS",
+      "instrument_token": 4923905,
+      "name": "LAURUS LABS",
+      "nse_symbol": "LAURUSLABS",
+      "underlying": "Laurus Labs Limited"
+    },
+    {
+      "stock_code": "LICI",
+      "instrument_token": 2426881,
+      "name": "LIFE INSURA CORP OF INDIA",
+      "nse_symbol": "LICI",
+      "underlying": "Life Insurance Corporation Of India"
+    },
+    {
+      "stock_code": "LODHA",
+      "instrument_token": 824321,
+      "name": "LODHA DEVELOPERS",
+      "nse_symbol": "LODHA",
+      "underlying": "Lodha Developers Limited"
+    },
+    {
+      "stock_code": "LUPIN",
+      "instrument_token": 2672641,
+      "name": "LUPIN",
+      "nse_symbol": "LUPIN",
+      "underlying": "Lupin Limited"
+    },
+    {
+      "stock_code": "M&M",
+      "instrument_token": 519937,
+      "name": "MAHINDRA & MAHINDRA",
+      "nse_symbol": "M&M",
+      "underlying": "Mahindra & Mahindra Limited"
+    },
+    {
+      "stock_code": "MANAPPURAM",
+      "instrument_token": 4879617,
+      "name": "MANAPPURAM FINANCE",
+      "nse_symbol": "MANAPPURAM",
+      "underlying": "Manappuram Finance Limited"
+    },
+    {
+      "stock_code": "MANKIND",
+      "instrument_token": 3937281,
+      "name": "MANKIND PHARMA",
+      "nse_symbol": "MANKIND",
+      "underlying": "Mankind Pharma Limited"
+    },
+    {
+      "stock_code": "MARICO",
+      "instrument_token": 1041153,
+      "name": "MARICO",
+      "nse_symbol": "MARICO",
+      "underlying": "Marico Limited"
+    },
+    {
+      "stock_code": "MARUTI",
+      "instrument_token": 2815745,
+      "name": "MARUTI SUZUKI INDIA",
+      "nse_symbol": "MARUTI",
+      "underlying": "Maruti Suzuki India Limited"
+    },
+    {
+      "stock_code": "MFSL",
+      "instrument_token": 548353,
+      "name": "MAX FINANCIAL SERV",
+      "nse_symbol": "MFSL",
+      "underlying": "Max Financial Services Limited"
+    },
+    {
+      "stock_code": "MAXHEALTH",
+      "instrument_token": 5728513,
+      "name": "MAX HEALTHCARE INS",
+      "nse_symbol": "MAXHEALTH",
+      "underlying": "Max Healthcare Institute Limited"
+    },
+    {
+      "stock_code": "MAZDOCK",
+      "instrument_token": 130305,
+      "name": "MAZAGON DOCK SHIPBUIL",
+      "nse_symbol": "MAZDOCK",
+      "underlying": "Mazagon Dock Shipbuilders Limited"
+    },
+    {
+      "stock_code": "MOTILALOFS",
+      "instrument_token": 3826433,
+      "name": "MOTILAL OSWAL FIN",
+      "nse_symbol": "MOTILALOFS",
+      "underlying": "Motilal Oswal Financial Services Limited"
+    },
+    {
+      "stock_code": "MPHASIS",
+      "instrument_token": 1152769,
+      "name": "MPHASIS",
+      "nse_symbol": "MPHASIS",
+      "underlying": "MphasiS Limited"
+    },
+    {
+      "stock_code": "MCX",
+      "instrument_token": 7982337,
+      "name": "MULTI COMMODITY EXCHANGE",
+      "nse_symbol": "MCX",
+      "underlying": "Multi Commodity Exchange of India Limited"
+    },
+    {
+      "stock_code": "MUTHOOTFIN",
+      "instrument_token": 6054401,
+      "name": "MUTHOOT FINANCE",
+      "nse_symbol": "MUTHOOTFIN",
+      "underlying": "Muthoot Finance Limited"
+    },
+    {
+      "stock_code": "NBCC",
+      "instrument_token": 8042241,
+      "name": "NBCC (INDIA)",
+      "nse_symbol": "NBCC",
+      "underlying": "NBCC (India) Limited"
+    },
+    {
+      "stock_code": "NHPC",
+      "instrument_token": 4454401,
+      "name": "NHPC",
+      "nse_symbol": "NHPC",
+      "underlying": "NHPC Limited"
+    },
+    {
+      "stock_code": "NMDC",
+      "instrument_token": 3924993,
+      "name": "NMDC",
+      "nse_symbol": "NMDC",
+      "underlying": "NMDC Limited"
+    },
+    {
+      "stock_code": "NTPC",
+      "instrument_token": 2977281,
+      "name": "NTPC",
+      "nse_symbol": "NTPC",
+      "underlying": "NTPC Limited"
+    },
+    {
+      "stock_code": "NATIONALUM",
+      "instrument_token": 1629185,
+      "name": "NATIONAL ALUMINIUM CO",
+      "nse_symbol": "NATIONALUM",
+      "underlying": "National Aluminium Company Limited"
+    },
+    {
+      "stock_code": "NESTLEIND",
+      "instrument_token": 4598529,
+      "name": "NESTLE INDIA",
+      "nse_symbol": "NESTLEIND",
+      "underlying": "Nestle India Limited"
+    },
+    {
+      "stock_code": "NAM-INDIA",
+      "instrument_token": 91393,
+      "name": "NIPPON L I A M",
+      "nse_symbol": "NAM-INDIA",
+      "underlying": "Nippon Life India Asset Management Limited"
+    },
+    {
+      "stock_code": "NUVAMA",
+      "instrument_token": 4792577,
+      "name": "NUVAMA WEALTH MANAGE",
+      "nse_symbol": "NUVAMA",
+      "underlying": "Nuvama Wealth Management Limited"
+    },
+    {
+      "stock_code": "OBEROIRLTY",
+      "instrument_token": 5181953,
+      "name": "OBEROI REALTY",
+      "nse_symbol": "OBEROIRLTY",
+      "underlying": "Oberoi Realty Limited"
+    },
+    {
+      "stock_code": "ONGC",
+      "instrument_token": 633601,
+      "name": "OIL AND NATURAL GAS CORP.",
+      "nse_symbol": "ONGC",
+      "underlying": "Oil & Natural Gas Corporation Limited"
+    },
+    {
+      "stock_code": "OIL",
+      "instrument_token": 4464129,
+      "name": "OIL INDIA",
+      "nse_symbol": "OIL",
+      "underlying": "Oil India Limited"
+    },
+    {
+      "stock_code": "PAYTM",
+      "instrument_token": 1716481,
+      "name": "ONE 97 COMMUNICATIONS",
+      "nse_symbol": "PAYTM",
+      "underlying": "One 97 Communications Limited"
+    },
+    {
+      "stock_code": "OFSS",
+      "instrument_token": 2748929,
+      "name": "ORACLE FIN SERV SOFT",
+      "nse_symbol": "OFSS",
+      "underlying": "Oracle Financial Services Software Limited"
+    },
+    {
+      "stock_code": "POLICYBZR",
+      "instrument_token": 1703937,
+      "name": "PB FINTECH",
+      "nse_symbol": "POLICYBZR",
+      "underlying": "PB Fintech Limited"
+    },
+    {
+      "stock_code": "PGEL",
+      "instrument_token": 6491649,
+      "name": "PG ELECTROPLAST",
+      "nse_symbol": "PGEL",
+      "underlying": "PG Electroplast Limited"
+    },
+    {
+      "stock_code": "PIIND",
+      "instrument_token": 6191105,
+      "name": "PI INDUSTRIES",
+      "nse_symbol": "PIIND",
+      "underlying": "PI Industries Limited"
+    },
+    {
+      "stock_code": "PNBHOUSING",
+      "instrument_token": 4840449,
+      "name": "PNB HOUSING FIN",
+      "nse_symbol": "PNBHOUSING",
+      "underlying": "PNB Housing Finance Limited"
+    },
+    {
+      "stock_code": "PAGEIND",
+      "instrument_token": 3689729,
+      "name": "PAGE INDUSTRIES",
+      "nse_symbol": "PAGEIND",
+      "underlying": "Page Industries Limited"
+    },
+    {
+      "stock_code": "PATANJALI",
+      "instrument_token": 4359425,
+      "name": "PATANJALI FOODS",
+      "nse_symbol": "PATANJALI",
+      "underlying": "Patanjali Foods Limited"
+    },
+    {
+      "stock_code": "PERSISTENT",
+      "instrument_token": 4701441,
+      "name": "PERSISTENT SYSTEMS",
+      "nse_symbol": "PERSISTENT",
+      "underlying": "Persistent Systems Limited"
+    },
+    {
+      "stock_code": "PETRONET",
+      "instrument_token": 2905857,
+      "name": "PETRONET LNG",
+      "nse_symbol": "PETRONET",
+      "underlying": "Petronet LNG Limited"
+    },
+    {
+      "stock_code": "PIDILITIND",
+      "instrument_token": 681985,
+      "name": "PIDILITE INDUSTRIES",
+      "nse_symbol": "PIDILITIND",
+      "underlying": "Pidilite Industries Limited"
+    },
+    {
+      "stock_code": "PPLPHARMA",
+      "instrument_token": 2962177,
+      "name": "PIRAMAL PHARMA",
+      "nse_symbol": "PPLPHARMA",
+      "underlying": "Piramal Pharma Limited"
+    },
+    {
+      "stock_code": "POLYCAB",
+      "instrument_token": 2455041,
+      "name": "POLYCAB INDIA",
+      "nse_symbol": "POLYCAB",
+      "underlying": "Polycab India Limited"
+    },
+    {
+      "stock_code": "PFC",
+      "instrument_token": 3660545,
+      "name": "POWER FIN CORP",
+      "nse_symbol": "PFC",
+      "underlying": "Power Finance Corporation Limited"
+    },
+    {
+      "stock_code": "POWERGRID",
+      "instrument_token": 3834113,
+      "name": "POWER GRID CORP.",
+      "nse_symbol": "POWERGRID",
+      "underlying": "Power Grid Corporation of India Limited"
+    },
+    {
+      "stock_code": "PREMIERENE",
+      "instrument_token": 6412545,
+      "name": "PREMIER ENERGIES",
+      "nse_symbol": "PREMIERENE",
+      "underlying": "Premier Energies Limited"
+    },
+    {
+      "stock_code": "PRESTIGE",
+      "instrument_token": 5197313,
+      "name": "PRESTIGE ESTATE",
+      "nse_symbol": "PRESTIGE",
+      "underlying": "Prestige Estates Projects Limited"
+    },
+    {
+      "stock_code": "PNB",
+      "instrument_token": 2730497,
+      "name": "PUNJAB NATIONAL BANK",
+      "nse_symbol": "PNB",
+      "underlying": "Punjab National Bank"
+    },
+    {
+      "stock_code": "RBLBANK",
+      "instrument_token": 4708097,
+      "name": "RBL BANK",
+      "nse_symbol": "RBLBANK",
+      "underlying": "RBL Bank Limited"
+    },
+    {
+      "stock_code": "RECLTD",
+      "instrument_token": 3930881,
+      "name": "REC",
+      "nse_symbol": "RECLTD",
+      "underlying": "REC Limited"
+    },
+    {
+      "stock_code": "RVNL",
+      "instrument_token": 2445313,
+      "name": "RAIL VIKAS NIGAM",
+      "nse_symbol": "RVNL",
+      "underlying": "Rail Vikas Nigam Limited"
+    },
+    {
+      "stock_code": "RELIANCE",
+      "instrument_token": 738561,
+      "name": "RELIANCE INDUSTRIES",
+      "nse_symbol": "RELIANCE",
+      "underlying": "Reliance Industries Limited"
+    },
+    {
+      "stock_code": "SBICARD",
+      "instrument_token": 4600577,
+      "name": "SBI CARDS & PAY SER",
+      "nse_symbol": "SBICARD",
+      "underlying": "SBI Cards and Payment Services Limited"
+    },
+    {
+      "stock_code": "SBILIFE",
+      "instrument_token": 5582849,
+      "name": "SBI LIFE INSURANCE CO",
+      "nse_symbol": "SBILIFE",
+      "underlying": "SBI Life Insurance Company Limited"
+    },
+    {
+      "stock_code": "SHREECEM",
+      "instrument_token": 794369,
+      "name": "SHREE CEMENT",
+      "nse_symbol": "SHREECEM",
+      "underlying": "SHREE CEMENT LIMITED"
+    },
+    {
+      "stock_code": "SRF",
+      "instrument_token": 837889,
+      "name": "SRF",
+      "nse_symbol": "SRF",
+      "underlying": "SRF Limited"
+    },
+    {
+      "stock_code": "SAMMAANCAP",
+      "instrument_token": 7712001,
+      "name": "SAMMAAN CAPITAL",
+      "nse_symbol": "SAMMAANCAP",
+      "underlying": "Sammaan Capital Limited"
+    },
+    {
+      "stock_code": "MOTHERSON",
+      "instrument_token": 1076225,
+      "name": "SAMVRDHNA MTHRSN INTL",
+      "nse_symbol": "MOTHERSON",
+      "underlying": "Samvardhana Motherson International Limited"
+    },
+    {
+      "stock_code": "SHRIRAMFIN",
+      "instrument_token": 1102337,
+      "name": "SHRIRAM FINANCE",
+      "nse_symbol": "SHRIRAMFIN",
+      "underlying": "Shriram Finance Limited"
+    },
+    {
+      "stock_code": "SIEMENS",
+      "instrument_token": 806401,
+      "name": "SIEMENS",
+      "nse_symbol": "SIEMENS",
+      "underlying": "Siemens Limited"
+    },
+    {
+      "stock_code": "SOLARINDS",
+      "instrument_token": 3412993,
+      "name": "SOLAR INDUSTRIES (I)",
+      "nse_symbol": "SOLARINDS",
+      "underlying": "Solar Industries India Limited"
+    },
+    {
+      "stock_code": "SONACOMS",
+      "instrument_token": 1199105,
+      "name": "SONA BLW PRECISION FRGS L",
+      "nse_symbol": "SONACOMS",
+      "underlying": "Sona BLW Precision Forgings Limited"
+    },
+    {
+      "stock_code": "SBIN",
+      "instrument_token": 779521,
+      "name": "STATE BANK OF INDIA",
+      "nse_symbol": "SBIN",
+      "underlying": "State Bank of India"
+    },
+    {
+      "stock_code": "SAIL",
+      "instrument_token": 758529,
+      "name": "STEEL AUTHORITY OF INDIA",
+      "nse_symbol": "SAIL",
+      "underlying": "Steel Authority of India Limited"
+    },
+    {
+      "stock_code": "SUNPHARMA",
+      "instrument_token": 857857,
+      "name": "SUN PHARMACEUTICAL IND L",
+      "nse_symbol": "SUNPHARMA",
+      "underlying": "Sun Pharmaceutical Industries Limited"
+    },
+    {
+      "stock_code": "SUPREMEIND",
+      "instrument_token": 860929,
+      "name": "SUPREME INDUSTRIES",
+      "nse_symbol": "SUPREMEIND",
+      "underlying": "Supreme Industries Limited"
+    },
+    {
+      "stock_code": "SUZLON",
+      "instrument_token": 3076609,
+      "name": "SUZLON ENERGY",
+      "nse_symbol": "SUZLON",
+      "underlying": "Suzlon Energy Limited"
+    },
+    {
+      "stock_code": "SWIGGY",
+      "instrument_token": 6928897,
+      "name": "SWIGGY",
+      "nse_symbol": "SWIGGY",
+      "underlying": "Swiggy Limited"
+    },
+    {
+      "stock_code": "TATACONSUM",
+      "instrument_token": 878593,
+      "name": "TATA CONSUMER PRODUCT",
+      "nse_symbol": "TATACONSUM",
+      "underlying": "TATA CONSUMER PRODUCTS LIMITED"
+    },
+    {
+      "stock_code": "TVSMOTOR",
+      "instrument_token": 2170625,
+      "name": "TVS MOTOR COMPANY ",
+      "nse_symbol": "TVSMOTOR",
+      "underlying": "TVS Motor Company Limited"
+    },
+    {
+      "stock_code": "TCS",
+      "instrument_token": 2953217,
+      "name": "TATA CONSULTANCY SERV LT",
+      "nse_symbol": "TCS",
+      "underlying": "Tata Consultancy Services Limited"
+    },
+    {
+      "stock_code": "TATAELXSI",
+      "instrument_token": 873217,
+      "name": "TATA ELXSI",
+      "nse_symbol": "TATAELXSI",
+      "underlying": "Tata Elxsi Limited"
+    },
+    {
+      "stock_code": "TMPV",
+      "instrument_token": 884737,
+      "name": "TATA MOTORS PASS VEH",
+      "nse_symbol": "TMPV",
+      "underlying": "Tata Motors Passenger Vehicles Limited"
+    },
+    {
+      "stock_code": "TATAPOWER",
+      "instrument_token": 877057,
+      "name": "TATA POWER CO",
+      "nse_symbol": "TATAPOWER",
+      "underlying": "Tata Power Company Limited"
+    },
+    {
+      "stock_code": "TATASTEEL",
+      "instrument_token": 895745,
+      "name": "TATA STEEL",
+      "nse_symbol": "TATASTEEL",
+      "underlying": "Tata Steel Limited"
+    },
+    {
+      "stock_code": "TATATECH",
+      "instrument_token": 5195009,
+      "name": "TATA TECHNOLOGIES",
+      "nse_symbol": "TATATECH",
+      "underlying": "Tata Technologies Limited"
+    },
+    {
+      "stock_code": "TECHM",
+      "instrument_token": 3465729,
+      "name": "TECH MAHINDRA",
+      "nse_symbol": "TECHM",
+      "underlying": "Tech Mahindra Limited"
+    },
+    {
+      "stock_code": "FEDERALBNK",
+      "instrument_token": 261889,
+      "name": "FEDERAL BANK",
+      "nse_symbol": "FEDERALBNK",
+      "underlying": "The Federal Bank Limited"
+    },
+    {
+      "stock_code": "INDHOTEL",
+      "instrument_token": 387073,
+      "name": "THE INDIAN HOTELS CO.",
+      "nse_symbol": "INDHOTEL",
+      "underlying": "The Indian Hotels Company Limited"
+    },
+    {
+      "stock_code": "PHOENIXLTD",
+      "instrument_token": 3725313,
+      "name": "THE PHOENIX MILLS",
+      "nse_symbol": "PHOENIXLTD",
+      "underlying": "The Phoenix Mills Limited"
+    },
+    {
+      "stock_code": "TITAN",
+      "instrument_token": 897537,
+      "name": "TITAN COMPANY",
+      "nse_symbol": "TITAN",
+      "underlying": "Titan Company Limited"
+    },
+    {
+      "stock_code": "TORNTPHARM",
+      "instrument_token": 900609,
+      "name": "TORRENT PHARMACEUTICALS L",
+      "nse_symbol": "TORNTPHARM",
+      "underlying": "Torrent Pharmaceuticals Limited"
+    },
+    {
+      "stock_code": "TORNTPOWER",
+      "instrument_token": 3529217,
+      "name": "TORRENT POWER",
+      "nse_symbol": "TORNTPOWER",
+      "underlying": "Torrent Power Limited"
+    },
+    {
+      "stock_code": "TRENT",
+      "instrument_token": 502785,
+      "name": "TRENT",
+      "nse_symbol": "TRENT",
+      "underlying": "Trent Limited"
+    },
+    {
+      "stock_code": "TIINDIA",
+      "instrument_token": 79873,
+      "name": "TUBE INVEST OF INDIA",
+      "nse_symbol": "TIINDIA",
+      "underlying": "Tube Investments of India Limited"
+    },
+    {
+      "stock_code": "UNOMINDA",
+      "instrument_token": 3623425,
+      "name": "UNO MINDA",
+      "nse_symbol": "UNOMINDA",
+      "underlying": "UNO Minda Limited"
+    },
+    {
+      "stock_code": "UPL",
+      "instrument_token": 2889473,
+      "name": "UPL",
+      "nse_symbol": "UPL",
+      "underlying": "UPL Limited"
+    },
+    {
+      "stock_code": "ULTRACEMCO",
+      "instrument_token": 2952193,
+      "name": "ULTRATECH CEMENT",
+      "nse_symbol": "ULTRACEMCO",
+      "underlying": "UltraTech Cement Limited"
+    },
+    {
+      "stock_code": "UNIONBANK",
+      "instrument_token": 2752769,
+      "name": "UNION BANK OF INDIA",
+      "nse_symbol": "UNIONBANK",
+      "underlying": "Union Bank of India"
+    },
+    {
+      "stock_code": "UNITDSPR",
+      "instrument_token": 2674433,
+      "name": "UNITED SPIRITS",
+      "nse_symbol": "UNITDSPR",
+      "underlying": "United Spirits Limited"
+    },
+    {
+      "stock_code": "VBL",
+      "instrument_token": 4843777,
+      "name": "VARUN BEVERAGES",
+      "nse_symbol": "VBL",
+      "underlying": "Varun Beverages Limited"
+    },
+    {
+      "stock_code": "VEDL",
+      "instrument_token": 784129,
+      "name": "VEDANTA",
+      "nse_symbol": "VEDL",
+      "underlying": "Vedanta Limited"
+    },
+    {
+      "stock_code": "VMM",
+      "instrument_token": 7160065,
+      "name": "VISHAL MEGA MART",
+      "nse_symbol": "VMM",
+      "underlying": "Vishal Mega Mart Limited"
+    },
+    {
+      "stock_code": "IDEA",
+      "instrument_token": 3677697,
+      "name": "VODAFONE IDEA",
+      "nse_symbol": "IDEA",
+      "underlying": "Vodafone Idea Limited"
+    },
+    {
+      "stock_code": "VOLTAS",
+      "instrument_token": 951809,
+      "name": "VOLTAS",
+      "nse_symbol": "VOLTAS",
+      "underlying": "Voltas Limited"
+    },
+    {
+      "stock_code": "WAAREEENER",
+      "instrument_token": 6632193,
+      "name": "WAAREE ENERGIES",
+      "nse_symbol": "WAAREEENER",
+      "underlying": "Waaree Energies Limited"
+    },
+    {
+      "stock_code": "WIPRO",
+      "instrument_token": 969473,
+      "name": "WIPRO",
+      "nse_symbol": "WIPRO",
+      "underlying": "Wipro Limited"
+    },
+    {
+      "stock_code": "YESBANK",
+      "instrument_token": 3050241,
+      "name": "YES BANK",
+      "nse_symbol": "YESBANK",
+      "underlying": "Yes Bank Limited"
+    },
+    {
+      "stock_code": "ZYDUSLIFE",
+      "instrument_token": 2029825,
+      "name": "ZYDUS LIFESCIENCES",
+      "nse_symbol": "ZYDUSLIFE",
+      "underlying": "Zydus Lifesciences Limited"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+streamlit
+streamlit-autorefresh
+redis
+pandas
+pyotp
+python-dotenv
+neo-api-client
+requests

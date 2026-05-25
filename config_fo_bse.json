@@ -1,0 +1,2330 @@
+{
+  "exchange": "BSE",
+  "segment": "bse_fo",
+  "total": 211,
+  "indices_count": 4,
+  "stocks_count": 207,
+  "stocks": [
+    {
+      "stock_code": "BANKEX",
+      "name": "BANKEX",
+      "asset_code": "12",
+      "exchange": "BSE",
+      "type": "INDEX",
+      "inst_types": [
+        "IF",
+        "IO"
+      ]
+    },
+    {
+      "stock_code": "FOCIT",
+      "name": "FOCIT",
+      "asset_code": "75",
+      "exchange": "BSE",
+      "type": "INDEX",
+      "inst_types": [
+        "IF",
+        "IO"
+      ]
+    },
+    {
+      "stock_code": "SENSEX",
+      "name": "SENSEX",
+      "asset_code": "1",
+      "exchange": "BSE",
+      "type": "INDEX",
+      "inst_types": [
+        "IF",
+        "IO"
+      ]
+    },
+    {
+      "stock_code": "SENSEX50",
+      "name": "SENSEX50",
+      "asset_code": "47",
+      "exchange": "BSE",
+      "type": "INDEX",
+      "inst_types": [
+        "IF",
+        "IO"
+      ]
+    },
+    {
+      "stock_code": "360ONE",
+      "name": "360ONE",
+      "asset_code": "542772",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ABB",
+      "name": "ABB",
+      "asset_code": "500002",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ABCAPITAL",
+      "name": "ABCAPITAL",
+      "asset_code": "540691",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ADANIENSOL",
+      "name": "ADANIENSOL",
+      "asset_code": "539254",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ADANIENT",
+      "name": "ADANIENT",
+      "asset_code": "512599",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ADANIGREEN",
+      "name": "ADANIGREEN",
+      "asset_code": "541450",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ADANIPORTS",
+      "name": "ADANIPORTS",
+      "asset_code": "532921",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ADANIPOWER",
+      "name": "ADANIPOWER",
+      "asset_code": "533096",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ALKEM",
+      "name": "ALKEM",
+      "asset_code": "539523",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "AMBER",
+      "name": "AMBER",
+      "asset_code": "540902",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "AMBUJACEM",
+      "name": "AMBUJACEM",
+      "asset_code": "500425",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ANGELONE",
+      "name": "ANGELONE",
+      "asset_code": "543235",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "APLAPOLLO",
+      "name": "APLAPOLLO",
+      "asset_code": "533758",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "APOLLOHOSP",
+      "name": "APOLLOHOSP",
+      "asset_code": "508869",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ASHOKLEY",
+      "name": "ASHOKLEY",
+      "asset_code": "500477",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ASIANPAINT",
+      "name": "ASIANPAINT",
+      "asset_code": "500820",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ASTRAL",
+      "name": "ASTRAL",
+      "asset_code": "532830",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "AUBANK",
+      "name": "AUBANK",
+      "asset_code": "540611",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "AUROPHARMA",
+      "name": "AUROPHARMA",
+      "asset_code": "524804",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "AXISBANK",
+      "name": "AXISBANK",
+      "asset_code": "532215",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BAJAJ-AUTO",
+      "name": "BAJAJ-AUTO",
+      "asset_code": "532977",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BAJAJFINSV",
+      "name": "BAJAJFINSV",
+      "asset_code": "532978",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BAJAJHLDNG",
+      "name": "BAJAJHLDNG",
+      "asset_code": "500490",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BAJFINANCE",
+      "name": "BAJFINANCE",
+      "asset_code": "500034",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BANDHANBNK",
+      "name": "BANDHANBNK",
+      "asset_code": "541153",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BANKBARODA",
+      "name": "BANKBARODA",
+      "asset_code": "532134",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BANKINDIA",
+      "name": "BANKINDIA",
+      "asset_code": "532149",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BDL",
+      "name": "BDL",
+      "asset_code": "541143",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BEL",
+      "name": "BEL",
+      "asset_code": "500049",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BHARATFORG",
+      "name": "BHARATFORG",
+      "asset_code": "500493",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BHARTIARTL",
+      "name": "BHARTIARTL",
+      "asset_code": "532454",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BHEL",
+      "name": "BHEL",
+      "asset_code": "500103",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BIOCON",
+      "name": "BIOCON",
+      "asset_code": "532523",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BLUESTARCO",
+      "name": "BLUESTARCO",
+      "asset_code": "500067",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BOSCHLTD",
+      "name": "BOSCHLTD",
+      "asset_code": "500530",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BPCL",
+      "name": "BPCL",
+      "asset_code": "500547",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "BRITANNIA",
+      "name": "BRITANNIA",
+      "asset_code": "500825",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "CAMS",
+      "name": "CAMS",
+      "asset_code": "543232",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "CANBK",
+      "name": "CANBK",
+      "asset_code": "532483",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "CGPOWER",
+      "name": "CGPOWER",
+      "asset_code": "500093",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "CHOLAFIN",
+      "name": "CHOLAFIN",
+      "asset_code": "511243",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "CIPLA",
+      "name": "CIPLA",
+      "asset_code": "500087",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "COALINDIA",
+      "name": "COALINDIA",
+      "asset_code": "533278",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "COCHINSHIP",
+      "name": "COCHINSHIP",
+      "asset_code": "540678",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "COFORGE",
+      "name": "COFORGE",
+      "asset_code": "532541",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "COLPAL",
+      "name": "COLPAL",
+      "asset_code": "500830",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "CONCOR",
+      "name": "CONCOR",
+      "asset_code": "531344",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "CROMPTON",
+      "name": "CROMPTON",
+      "asset_code": "539876",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "CUMMINSIND",
+      "name": "CUMMINSIND",
+      "asset_code": "500480",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "DABUR",
+      "name": "DABUR",
+      "asset_code": "500096",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "DALBHARAT",
+      "name": "DALBHARAT",
+      "asset_code": "542216",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "DELHIVERY",
+      "name": "DELHIVERY",
+      "asset_code": "543529",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "DIVISLAB",
+      "name": "DIVISLAB",
+      "asset_code": "532488",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "DIXON",
+      "name": "DIXON",
+      "asset_code": "540699",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "DLF",
+      "name": "DLF",
+      "asset_code": "532868",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "DMART",
+      "name": "DMART",
+      "asset_code": "540376",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "DRREDDY",
+      "name": "DRREDDY",
+      "asset_code": "500124",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "EICHERMOT",
+      "name": "EICHERMOT",
+      "asset_code": "505200",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ETERNAL",
+      "name": "ETERNAL",
+      "asset_code": "543320",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "EXIDEIND",
+      "name": "EXIDEIND",
+      "asset_code": "500086",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "FEDERALBNK",
+      "name": "FEDERALBNK",
+      "asset_code": "500469",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "FORCEMOT",
+      "name": "FORCEMOT",
+      "asset_code": "500033",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "FORTIS",
+      "name": "FORTIS",
+      "asset_code": "532843",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "GAIL",
+      "name": "GAIL",
+      "asset_code": "532155",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "GLENMARK",
+      "name": "GLENMARK",
+      "asset_code": "532296",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "GMRAIRPORT",
+      "name": "GMRAIRPORT",
+      "asset_code": "532754",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "GODFRYPHLP",
+      "name": "GODFRYPHLP",
+      "asset_code": "500163",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "GODREJCP",
+      "name": "GODREJCP",
+      "asset_code": "532424",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "GODREJPROP",
+      "name": "GODREJPROP",
+      "asset_code": "533150",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "GRASIM",
+      "name": "GRASIM",
+      "asset_code": "500300",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "HAL",
+      "name": "HAL",
+      "asset_code": "541154",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "HAVELLS",
+      "name": "HAVELLS",
+      "asset_code": "517354",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "HCLTECH",
+      "name": "HCLTECH",
+      "asset_code": "532281",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "HDFCAMC",
+      "name": "HDFCAMC",
+      "asset_code": "541729",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "HDFCBANK",
+      "name": "HDFCBANK",
+      "asset_code": "500180",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "HDFCLIFE",
+      "name": "HDFCLIFE",
+      "asset_code": "540777",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "HEROMOTOCO",
+      "name": "HEROMOTOCO",
+      "asset_code": "500182",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "HINDALCO",
+      "name": "HINDALCO",
+      "asset_code": "500440",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "HINDPETRO",
+      "name": "HINDPETRO",
+      "asset_code": "500104",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "HINDUNILVR",
+      "name": "HINDUNILVR",
+      "asset_code": "500696",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "HINDZINC",
+      "name": "HINDZINC",
+      "asset_code": "500188",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "HYUNDAI",
+      "name": "HYUNDAI",
+      "asset_code": "544274",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ICICIBANK",
+      "name": "ICICIBANK",
+      "asset_code": "532174",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ICICIGI",
+      "name": "ICICIGI",
+      "asset_code": "540716",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ICICIPRULI",
+      "name": "ICICIPRULI",
+      "asset_code": "540133",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "IDEA",
+      "name": "IDEA",
+      "asset_code": "532822",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "IDFCFIRSTB",
+      "name": "IDFCFIRSTB",
+      "asset_code": "539437",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "IEX",
+      "name": "IEX",
+      "asset_code": "540750",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "INDHOTEL",
+      "name": "INDHOTEL",
+      "asset_code": "500850",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "INDIANB",
+      "name": "INDIANB",
+      "asset_code": "532814",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "INDIGO",
+      "name": "INDIGO",
+      "asset_code": "539448",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "INDUSINDBK",
+      "name": "INDUSINDBK",
+      "asset_code": "532187",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "INDUSTOWER",
+      "name": "INDUSTOWER",
+      "asset_code": "534816",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "INFY",
+      "name": "INFY",
+      "asset_code": "500209",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "INOXWIND",
+      "name": "INOXWIND",
+      "asset_code": "539083",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "IOC",
+      "name": "IOC",
+      "asset_code": "530965",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "IREDA",
+      "name": "IREDA",
+      "asset_code": "544026",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "IRFC",
+      "name": "IRFC",
+      "asset_code": "543257",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ITC",
+      "name": "ITC",
+      "asset_code": "500875",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "JINDALSTEL",
+      "name": "JINDALSTEL",
+      "asset_code": "532286",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "JIOFIN",
+      "name": "JIOFIN",
+      "asset_code": "543940",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "JSWENERGY",
+      "name": "JSWENERGY",
+      "asset_code": "533148",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "JSWSTEEL",
+      "name": "JSWSTEEL",
+      "asset_code": "500228",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "JUBLFOOD",
+      "name": "JUBLFOOD",
+      "asset_code": "533155",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "KALYANKJIL",
+      "name": "KALYANKJIL",
+      "asset_code": "543278",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "KAYNES",
+      "name": "KAYNES",
+      "asset_code": "543664",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "KEI",
+      "name": "KEI",
+      "asset_code": "517569",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "KFINTECH",
+      "name": "KFINTECH",
+      "asset_code": "543720",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "KOTAKBANK",
+      "name": "KOTAKBANK",
+      "asset_code": "500247",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "KPITTECH",
+      "name": "KPITTECH",
+      "asset_code": "542651",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "LAURUSLABS",
+      "name": "LAURUSLABS",
+      "asset_code": "540222",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "LICHSGFIN",
+      "name": "LICHSGFIN",
+      "asset_code": "500253",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "LICI",
+      "name": "LICI",
+      "asset_code": "543526",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "LODHA",
+      "name": "LODHA",
+      "asset_code": "543287",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "LT",
+      "name": "LT",
+      "asset_code": "500510",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "LTF",
+      "name": "LTF",
+      "asset_code": "533519",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "LTM",
+      "name": "LTM",
+      "asset_code": "540005",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "LUPIN",
+      "name": "LUPIN",
+      "asset_code": "500257",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "M&M",
+      "name": "M&M",
+      "asset_code": "500520",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "MANAPPURAM",
+      "name": "MANAPPURAM",
+      "asset_code": "531213",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "MANKIND",
+      "name": "MANKIND",
+      "asset_code": "543904",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "MARICO",
+      "name": "MARICO",
+      "asset_code": "531642",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "MARUTI",
+      "name": "MARUTI",
+      "asset_code": "532500",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "MAXHEALTH",
+      "name": "MAXHEALTH",
+      "asset_code": "543220",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "MAZDOCK",
+      "name": "MAZDOCK",
+      "asset_code": "543237",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "MCX",
+      "name": "MCX",
+      "asset_code": "534091",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "MFSL",
+      "name": "MFSL",
+      "asset_code": "500271",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "MOTHERSON",
+      "name": "MOTHERSON",
+      "asset_code": "517334",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "MOTILALOFS",
+      "name": "MOTILALOFS",
+      "asset_code": "532892",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "MPHASIS",
+      "name": "MPHASIS",
+      "asset_code": "526299",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "MUTHOOTFIN",
+      "name": "MUTHOOTFIN",
+      "asset_code": "533398",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "NAM-INDIA",
+      "name": "NAM-INDIA",
+      "asset_code": "540767",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "NATIONALUM",
+      "name": "NATIONALUM",
+      "asset_code": "532234",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "NAUKRI",
+      "name": "NAUKRI",
+      "asset_code": "532777",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "NBCC",
+      "name": "NBCC",
+      "asset_code": "534309",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "NESTLEIND",
+      "name": "NESTLEIND",
+      "asset_code": "500790",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "NHPC",
+      "name": "NHPC",
+      "asset_code": "533098",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "NMDC",
+      "name": "NMDC",
+      "asset_code": "526371",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "NTPC",
+      "name": "NTPC",
+      "asset_code": "532555",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "NUVAMA",
+      "name": "NUVAMA",
+      "asset_code": "543988",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "NYKAA",
+      "name": "NYKAA",
+      "asset_code": "543384",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "OBEROIRLTY",
+      "name": "OBEROIRLTY",
+      "asset_code": "533273",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "OFSS",
+      "name": "OFSS",
+      "asset_code": "532466",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "OIL",
+      "name": "OIL",
+      "asset_code": "533106",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ONGC",
+      "name": "ONGC",
+      "asset_code": "500312",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "PAGEIND",
+      "name": "PAGEIND",
+      "asset_code": "532827",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "PATANJALI",
+      "name": "PATANJALI",
+      "asset_code": "500368",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "PAYTM",
+      "name": "PAYTM",
+      "asset_code": "543396",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "PERSISTENT",
+      "name": "PERSISTENT",
+      "asset_code": "533179",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "PETRONET",
+      "name": "PETRONET",
+      "asset_code": "532522",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "PFC",
+      "name": "PFC",
+      "asset_code": "532810",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "PGEL",
+      "name": "PGEL",
+      "asset_code": "533581",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "PHOENIXLTD",
+      "name": "PHOENIXLTD",
+      "asset_code": "503100",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "PIDILITIND",
+      "name": "PIDILITIND",
+      "asset_code": "500331",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "PIIND",
+      "name": "PIIND",
+      "asset_code": "523642",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "PNB",
+      "name": "PNB",
+      "asset_code": "532461",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "PNBHOUSING",
+      "name": "PNBHOUSING",
+      "asset_code": "540173",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "POLICYBZR",
+      "name": "POLICYBZR",
+      "asset_code": "543390",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "POLYCAB",
+      "name": "POLYCAB",
+      "asset_code": "542652",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "POWERGRID",
+      "name": "POWERGRID",
+      "asset_code": "532898",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "POWERINDIA",
+      "name": "POWERINDIA",
+      "asset_code": "543187",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "PREMIERENE",
+      "name": "PREMIERENE",
+      "asset_code": "544238",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "PRESTIGE",
+      "name": "PRESTIGE",
+      "asset_code": "533274",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "RBLBANK",
+      "name": "RBLBANK",
+      "asset_code": "540065",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "RECLTD",
+      "name": "RECLTD",
+      "asset_code": "532955",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "RELIANCE",
+      "name": "RELIANCE",
+      "asset_code": "500325",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "RVNL",
+      "name": "RVNL",
+      "asset_code": "542649",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "SAIL",
+      "name": "SAIL",
+      "asset_code": "500113",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "SAMMAANCAP",
+      "name": "SAMMAANCAP",
+      "asset_code": "535789",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "SBICARD",
+      "name": "SBICARD",
+      "asset_code": "543066",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "SBILIFE",
+      "name": "SBILIFE",
+      "asset_code": "540719",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "SBIN",
+      "name": "SBIN",
+      "asset_code": "500112",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "SHREECEM",
+      "name": "SHREECEM",
+      "asset_code": "500387",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "SHRIRAMFIN",
+      "name": "SHRIRAMFIN",
+      "asset_code": "511218",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "SIEMENS",
+      "name": "SIEMENS",
+      "asset_code": "500550",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "SOLARINDS",
+      "name": "SOLARINDS",
+      "asset_code": "532725",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "SONACOMS",
+      "name": "SONACOMS",
+      "asset_code": "543300",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "SRF",
+      "name": "SRF",
+      "asset_code": "503806",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "SUNPHARMA",
+      "name": "SUNPHARMA",
+      "asset_code": "524715",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "SUPREMEIND",
+      "name": "SUPREMEIND",
+      "asset_code": "509930",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "SUZLON",
+      "name": "SUZLON",
+      "asset_code": "532667",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "SWIGGY",
+      "name": "SWIGGY",
+      "asset_code": "544285",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "TATACONSUM",
+      "name": "TATACONSUM",
+      "asset_code": "500800",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "TATAELXSI",
+      "name": "TATAELXSI",
+      "asset_code": "500408",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "TATAPOWER",
+      "name": "TATAPOWER",
+      "asset_code": "500400",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "TATASTEEL",
+      "name": "TATASTEEL",
+      "asset_code": "500470",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "TCS",
+      "name": "TCS",
+      "asset_code": "532540",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "TECHM",
+      "name": "TECHM",
+      "asset_code": "532755",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "TIINDIA",
+      "name": "TIINDIA",
+      "asset_code": "540762",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "TITAN",
+      "name": "TITAN",
+      "asset_code": "500114",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "TMPV",
+      "name": "TMPV",
+      "asset_code": "500570",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "TORNTPHARM",
+      "name": "TORNTPHARM",
+      "asset_code": "500420",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "TRENT",
+      "name": "TRENT",
+      "asset_code": "500251",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "TVSMOTOR",
+      "name": "TVSMOTOR",
+      "asset_code": "532343",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ULTRACEMCO",
+      "name": "ULTRACEMCO",
+      "asset_code": "532538",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "UNIONBANK",
+      "name": "UNIONBANK",
+      "asset_code": "532477",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "UNITDSPR",
+      "name": "UNITDSPR",
+      "asset_code": "532432",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "UNOMINDA",
+      "name": "UNOMINDA",
+      "asset_code": "532539",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "UPL",
+      "name": "UPL",
+      "asset_code": "512070",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "VBL",
+      "name": "VBL",
+      "asset_code": "540180",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "VEDL",
+      "name": "VEDL",
+      "asset_code": "500295",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "VMM",
+      "name": "VMM",
+      "asset_code": "544307",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "VOLTAS",
+      "name": "VOLTAS",
+      "asset_code": "500575",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "WAAREEENER",
+      "name": "WAAREEENER",
+      "asset_code": "544277",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "WIPRO",
+      "name": "WIPRO",
+      "asset_code": "507685",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "YESBANK",
+      "name": "YESBANK",
+      "asset_code": "532648",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    },
+    {
+      "stock_code": "ZYDUSLIFE",
+      "name": "ZYDUSLIFE",
+      "asset_code": "532321",
+      "exchange": "BSE",
+      "type": "STOCK",
+      "inst_types": [
+        "SF",
+        "SO"
+      ]
+    }
+  ]
+}

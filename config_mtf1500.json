@@ -1,0 +1,7837 @@
+{
+  "meta": {
+    "source": "Zerodha Approved Securities for MTF",
+    "total_requested": 1563,
+    "total_found": 1563,
+    "total_missing": 0,
+    "missing_symbols": [],
+    "note": "Includes 71 ETFs added from config_mtf600"
+  },
+  "stocks": [
+    {
+      "stock_code": "NIFTY 50",
+      "instrument_token": 256265,
+      "name": "NIFTY 50"
+    },
+    {
+      "stock_code": "SENSEX",
+      "instrument_token": 265,
+      "name": "SENSEX"
+    },
+{ "stock_code": "NIFTY BANK",     "instrument_token": 260105, "name": "NIFTY BANK" },
+{ "stock_code": "NIFTY FIN SERVICE", "instrument_token": 257801, "name": "NIFTY FIN SERVICE" },
+{ "stock_code": "NIFTY NEXT 50",  "instrument_token": 270857, "name": "NIFTY NEXT 50" },
+{ "stock_code": "NIFTY MID SELECT", "instrument_token": 288009, "name": "NIFTY MID SELECT" },
+    {
+      "stock_code": "ABB",
+      "instrument_token": 3329,
+      "name": "ABB INDIA"
+    },
+    {
+      "stock_code": "AEGISLOG",
+      "instrument_token": 10241,
+      "name": "AEGIS LOGISTICS"
+    },
+    {
+      "stock_code": "ARE&M",
+      "instrument_token": 25601,
+      "name": "AMARA RAJA ENERGY MOB"
+    },
+    {
+      "stock_code": "BOMDYEING",
+      "instrument_token": 131329,
+      "name": "BOMBAY DYEING & MFG. CO L"
+    },
+    {
+      "stock_code": "ATUL",
+      "instrument_token": 67329,
+      "name": "ATUL"
+    },
+    {
+      "stock_code": "BAJAJELEC",
+      "instrument_token": 3848705,
+      "name": "BAJAJ ELECT.LTD"
+    },
+    {
+      "stock_code": "BAJAJHIND",
+      "instrument_token": 78849,
+      "name": "BAJAJ HINDUSTHAN SUGAR LT"
+    },
+    {
+      "stock_code": "FORCEMOT",
+      "instrument_token": 2962689,
+      "name": "FORCE MOTORS"
+    },
+    {
+      "stock_code": "BAJFINANCE",
+      "instrument_token": 81153,
+      "name": "BAJAJ FINANCE"
+    },
+    {
+      "stock_code": "BALRAMCHIN",
+      "instrument_token": 87297,
+      "name": "BALRAMPUR CHINI MILLS"
+    },
+    {
+      "stock_code": "BANCOINDIA",
+      "instrument_token": 3553281,
+      "name": "BANCO PRODUCTS (I)"
+    },
+    {
+      "stock_code": "ABREL",
+      "instrument_token": 160001,
+      "name": "ADITYA BIRLA REAL EST"
+    },
+    {
+      "stock_code": "BANARISUG",
+      "instrument_token": 89601,
+      "name": "BANNARI AMMAN SUGARS"
+    },
+    {
+      "stock_code": "BASF",
+      "instrument_token": 94209,
+      "name": "BASF INDIA"
+    },
+    {
+      "stock_code": "BATAINDIA",
+      "instrument_token": 94977,
+      "name": "BATA INDIA"
+    },
+    {
+      "stock_code": "BEML",
+      "instrument_token": 101121,
+      "name": "BEML"
+    },
+    {
+      "stock_code": "BEL",
+      "instrument_token": 98049,
+      "name": "BHARAT ELECTRONICS"
+    },
+    {
+      "stock_code": "BEPL",
+      "instrument_token": 107265,
+      "name": "BHANSALI ENG. POLYMERS LT"
+    },
+    {
+      "stock_code": "BLUESTARCO",
+      "instrument_token": 2127617,
+      "name": "BLUE STAR"
+    },
+    {
+      "stock_code": "OAL",
+      "instrument_token": 2756609,
+      "name": "ORIENTAL AROMATICS"
+    },
+    {
+      "stock_code": "CESC",
+      "instrument_token": 160769,
+      "name": "CESC"
+    },
+    {
+      "stock_code": "CHAMBLFERT",
+      "instrument_token": 163073,
+      "name": "CHAMBAL FERTILIZERS"
+    },
+    {
+      "stock_code": "EXIDEIND",
+      "instrument_token": 173057,
+      "name": "EXIDE INDUSTRIES"
+    },
+    {
+      "stock_code": "CIPLA",
+      "instrument_token": 177665,
+      "name": "CIPLA"
+    },
+    {
+      "stock_code": "CRISIL",
+      "instrument_token": 193793,
+      "name": "CRISIL"
+    },
+    {
+      "stock_code": "CGPOWER",
+      "instrument_token": 194561,
+      "name": "CG POWER AND IND SOL"
+    },
+    {
+      "stock_code": "DABUR",
+      "instrument_token": 197633,
+      "name": "DABUR INDIA"
+    },
+    {
+      "stock_code": "DALMIASUG",
+      "instrument_token": 199937,
+      "name": "DALMIA BHARAT SUG IN"
+    },
+    {
+      "stock_code": "ARVIND",
+      "instrument_token": 49409,
+      "name": "ARVIND"
+    },
+    {
+      "stock_code": "BHEL",
+      "instrument_token": 112129,
+      "name": "BHEL"
+    },
+    {
+      "stock_code": "HINDPETRO",
+      "instrument_token": 359937,
+      "name": "HINDUSTAN PETROLEUM CORP"
+    },
+    {
+      "stock_code": "IFCI",
+      "instrument_token": 381697,
+      "name": "IFCI"
+    },
+    {
+      "stock_code": "MTNL",
+      "instrument_token": 587265,
+      "name": "MAHANAGAR TELEPHONE NIGAM"
+    },
+    {
+      "stock_code": "MRPL",
+      "instrument_token": 584449,
+      "name": "MRPL"
+    },
+    {
+      "stock_code": "CHENNPETRO",
+      "instrument_token": 524545,
+      "name": "CHENNAI PETROLEUM CORP LT"
+    },
+    {
+      "stock_code": "SBIN",
+      "instrument_token": 779521,
+      "name": "STATE BANK OF INDIA"
+    },
+    {
+      "stock_code": "SAIL",
+      "instrument_token": 758529,
+      "name": "STEEL AUTHORITY OF INDIA"
+    },
+    {
+      "stock_code": "TITAN",
+      "instrument_token": 897537,
+      "name": "TITAN COMPANY"
+    },
+    {
+      "stock_code": "IDBI",
+      "instrument_token": 377857,
+      "name": "IDBI BANK"
+    },
+    {
+      "stock_code": "DCW",
+      "instrument_token": 209153,
+      "name": "DCW"
+    },
+    {
+      "stock_code": "DHAMPURSUG",
+      "instrument_token": 219393,
+      "name": "DHAMPUR SUGAR MILLS"
+    },
+    {
+      "stock_code": "DRREDDY",
+      "instrument_token": 225537,
+      "name": "DR. REDDY S LABORATORIES"
+    },
+    {
+      "stock_code": "EIDPARRY",
+      "instrument_token": 234497,
+      "name": "EID PARRY INDIA"
+    },
+    {
+      "stock_code": "PGHL",
+      "instrument_token": 240641,
+      "name": "PROCTER & GAMBLE HEALTH L"
+    },
+    {
+      "stock_code": "ELECTCAST",
+      "instrument_token": 237569,
+      "name": "ELECTROSTEEL CASTINGS"
+    },
+    {
+      "stock_code": "ESABINDIA",
+      "instrument_token": 244481,
+      "name": "ESAB INDIA"
+    },
+    {
+      "stock_code": "EPL",
+      "instrument_token": 251137,
+      "name": "EPL"
+    },
+    {
+      "stock_code": "FINCABLES",
+      "instrument_token": 265729,
+      "name": "FINOLEX CABLES"
+    },
+    {
+      "stock_code": "UFLEX",
+      "instrument_token": 269569,
+      "name": "UFLEX"
+    },
+    {
+      "stock_code": "FOSECOIND",
+      "instrument_token": 274689,
+      "name": "FOSECO INDIA"
+    },
+    {
+      "stock_code": "GANESHBE",
+      "instrument_token": 1437185,
+      "name": "GANESH BENZOPLAST"
+    },
+    {
+      "stock_code": "GODFRYPHLP",
+      "instrument_token": 302337,
+      "name": "GODFREY PHILLIPS INDIA LT"
+    },
+    {
+      "stock_code": "GODREJIND",
+      "instrument_token": 2796801,
+      "name": "GODREJ INDUSTRIES"
+    },
+    {
+      "stock_code": "KANSAINER",
+      "instrument_token": 306177,
+      "name": "KANSAI NEROLAC PAINTS"
+    },
+    {
+      "stock_code": "GHCL",
+      "instrument_token": 288513,
+      "name": "GHCL"
+    },
+    {
+      "stock_code": "HDFCBANK",
+      "instrument_token": 341249,
+      "name": "HDFC BANK"
+    },
+    {
+      "stock_code": "HEROMOTOCO",
+      "instrument_token": 345089,
+      "name": "HERO MOTOCORP"
+    },
+    {
+      "stock_code": "HFCL",
+      "instrument_token": 5619457,
+      "name": "HFCL"
+    },
+    {
+      "stock_code": "HSCL",
+      "instrument_token": 3669505,
+      "name": "HIMADRI SPECIALITY CHEM L"
+    },
+    {
+      "stock_code": "HCC",
+      "instrument_token": 352001,
+      "name": "HINDUSTAN CONSTRUCTION CO"
+    },
+    {
+      "stock_code": "HINDOILEXP",
+      "instrument_token": 359169,
+      "name": "HINDUSTAN OIL EXPLORATION"
+    },
+    {
+      "stock_code": "AGI",
+      "instrument_token": 361473,
+      "name": "AGI GREENPAC"
+    },
+    {
+      "stock_code": "HINDZINC",
+      "instrument_token": 364545,
+      "name": "HINDUSTAN ZINC"
+    },
+    {
+      "stock_code": "IGPL",
+      "instrument_token": 3606017,
+      "name": "I G PETROCHEMICALS"
+    },
+    {
+      "stock_code": "INDIAGLYCO",
+      "instrument_token": 389377,
+      "name": "INDIA GLYCOLS"
+    },
+    {
+      "stock_code": "INFY",
+      "instrument_token": 408065,
+      "name": "INFOSYS"
+    },
+    {
+      "stock_code": "INGERRAND",
+      "instrument_token": 408833,
+      "name": "INGERSOLL-RAND INDIA"
+    },
+    {
+      "stock_code": "IONEXCHANG",
+      "instrument_token": 417281,
+      "name": "ION EXCHANGE (INDIA)"
+    },
+    {
+      "stock_code": "SUNDROP",
+      "instrument_token": 425729,
+      "name": "SUNDROP BRANDS"
+    },
+    {
+      "stock_code": "JISLJALEQS",
+      "instrument_token": 2661633,
+      "name": "JAIN IRRIGATION SYSTEMS"
+    },
+    {
+      "stock_code": "JINDALPOLY",
+      "instrument_token": 449537,
+      "name": "JINDAL POLY FILMS"
+    },
+    {
+      "stock_code": "JSWSTEEL",
+      "instrument_token": 3001089,
+      "name": "JSW STEEL"
+    },
+    {
+      "stock_code": "KAJARIACER",
+      "instrument_token": 462849,
+      "name": "KAJARIA CERAMICS"
+    },
+    {
+      "stock_code": "KSL",
+      "instrument_token": 4835585,
+      "name": "KALYANI STEELS"
+    },
+    {
+      "stock_code": "WHIRLPOOL",
+      "instrument_token": 4610817,
+      "name": "WHIRLPOOL OF INDIA"
+    },
+    {
+      "stock_code": "KIRLOSBROS",
+      "instrument_token": 4756737,
+      "name": "KIRLOSKAR BROTHERS"
+    },
+    {
+      "stock_code": "KIRLOSIND",
+      "instrument_token": 4870401,
+      "name": "KIRLOSKAR INDUSTRIES"
+    },
+    {
+      "stock_code": "KOTAKBANK",
+      "instrument_token": 492033,
+      "name": "KOTAK MAHINDRA BANK"
+    },
+    {
+      "stock_code": "KSB",
+      "instrument_token": 498945,
+      "name": "KSB"
+    },
+    {
+      "stock_code": "LGBBROSLTD",
+      "instrument_token": 4690177,
+      "name": "LG BALAKRISHNAN & BROS"
+    },
+    {
+      "stock_code": "TRENT",
+      "instrument_token": 502785,
+      "name": "TRENT"
+    },
+    {
+      "stock_code": "LMW",
+      "instrument_token": 506625,
+      "name": "LMW"
+    },
+    {
+      "stock_code": "LICHSGFIN",
+      "instrument_token": 511233,
+      "name": "LIC HOUSING FINANCE"
+    },
+    {
+      "stock_code": "LUPIN",
+      "instrument_token": 2672641,
+      "name": "LUPIN"
+    },
+    {
+      "stock_code": "RAMCOCEM",
+      "instrument_token": 523009,
+      "name": "THE RAMCO CEMENTS"
+    },
+    {
+      "stock_code": "MAHSEAMLES",
+      "instrument_token": 534529,
+      "name": "MAHARASHTRA SEAMLESS"
+    },
+    {
+      "stock_code": "MAHSCOOTER",
+      "instrument_token": 533761,
+      "name": "MAHARASHTRA SCOOTERS"
+    },
+    {
+      "stock_code": "MFSL",
+      "instrument_token": 548353,
+      "name": "MAX FINANCIAL SERV"
+    },
+    {
+      "stock_code": "MIRCELECTR",
+      "instrument_token": 563713,
+      "name": "MIRC ELECTRONICS"
+    },
+    {
+      "stock_code": "MOREPENLAB",
+      "instrument_token": 578305,
+      "name": "MOREPEN LAB."
+    },
+    {
+      "stock_code": "MRF",
+      "instrument_token": 582913,
+      "name": "MRF"
+    },
+    {
+      "stock_code": "HEIDELBERG",
+      "instrument_token": 592897,
+      "name": "HEIDELBERGCEMENT (I)"
+    },
+    {
+      "stock_code": "NCC",
+      "instrument_token": 593665,
+      "name": "NCC"
+    },
+    {
+      "stock_code": "VEDL",
+      "instrument_token": 784129,
+      "name": "VEDANTA"
+    },
+    {
+      "stock_code": "GRASIM",
+      "instrument_token": 315393,
+      "name": "GRASIM INDUSTRIES"
+    },
+    {
+      "stock_code": "NIITLTD",
+      "instrument_token": 2949633,
+      "name": "NIIT"
+    },
+    {
+      "stock_code": "JAYKAY",
+      "instrument_token": 194578689,
+      "name": "JAYKAY ENTERPRISES"
+    },
+    {
+      "stock_code": "ONGC",
+      "instrument_token": 633601,
+      "name": "OIL AND NATURAL GAS CORP."
+    },
+    {
+      "stock_code": "ORIENTHOT",
+      "instrument_token": 638209,
+      "name": "ORIENT HOTELS"
+    },
+    {
+      "stock_code": "RELIANCE",
+      "instrument_token": 738561,
+      "name": "RELIANCE INDUSTRIES"
+    },
+    {
+      "stock_code": "RAYMOND",
+      "instrument_token": 731905,
+      "name": "RAYMOND"
+    },
+    {
+      "stock_code": "PIDILITIND",
+      "instrument_token": 681985,
+      "name": "PIDILITE INDUSTRIES"
+    },
+    {
+      "stock_code": "PIXTRANS",
+      "instrument_token": 2326273,
+      "name": "PIX TRANSMISSIONS"
+    },
+    {
+      "stock_code": "BIRLACORPN",
+      "instrument_token": 122881,
+      "name": "BIRLA CORPORATION"
+    },
+    {
+      "stock_code": "SURYAROSNI",
+      "instrument_token": 864001,
+      "name": "SURYA ROSHNI"
+    },
+    {
+      "stock_code": "PRSMJOHNSN",
+      "instrument_token": 701185,
+      "name": "PRISM JOHNSON"
+    },
+    {
+      "stock_code": "RAIN",
+      "instrument_token": 3926273,
+      "name": "RAIN INDUSTRIES"
+    },
+    {
+      "stock_code": "RALLIS",
+      "instrument_token": 720897,
+      "name": "RALLIS INDIA"
+    },
+    {
+      "stock_code": "PATANJALI",
+      "instrument_token": 4359425,
+      "name": "PATANJALI FOODS"
+    },
+    {
+      "stock_code": "JINDALSAW",
+      "instrument_token": 774145,
+      "name": "JINDAL SAW"
+    },
+    {
+      "stock_code": "JKLAKSHMI",
+      "instrument_token": 3453697,
+      "name": "JK LAKSHMI CEMENT"
+    },
+    {
+      "stock_code": "SHREECEM",
+      "instrument_token": 794369,
+      "name": "SHREE CEMENT"
+    },
+    {
+      "stock_code": "TATAPOWER",
+      "instrument_token": 877057,
+      "name": "TATA POWER CO"
+    },
+    {
+      "stock_code": "SPMLINFRA",
+      "instrument_token": 850177,
+      "name": "SPML INFRA"
+    },
+    {
+      "stock_code": "SUNDRMFAST",
+      "instrument_token": 856321,
+      "name": "SUNDRAM FASTENERS"
+    },
+    {
+      "stock_code": "SUNFLAG",
+      "instrument_token": 857089,
+      "name": "SUNFLAG IRON AND STEEL CO"
+    },
+    {
+      "stock_code": "SPLPETRO",
+      "instrument_token": 2461953,
+      "name": "SUPREME PETROCHEM"
+    },
+    {
+      "stock_code": "SWARAJENG",
+      "instrument_token": 866305,
+      "name": "SWARAJ ENGINES"
+    },
+    {
+      "stock_code": "TATAELXSI",
+      "instrument_token": 873217,
+      "name": "TATA ELXSI"
+    },
+    {
+      "stock_code": "ACC",
+      "instrument_token": 5633,
+      "name": "ACC"
+    },
+    {
+      "stock_code": "THERMAX",
+      "instrument_token": 889601,
+      "name": "THERMAX"
+    },
+    {
+      "stock_code": "TIRUMALCHM",
+      "instrument_token": 894977,
+      "name": "THIRUMALAI CHEMICALS"
+    },
+    {
+      "stock_code": "THOMASCOOK",
+      "instrument_token": 891137,
+      "name": "THOMAS COOK (INDIA)"
+    },
+    {
+      "stock_code": "TORNTPHARM",
+      "instrument_token": 900609,
+      "name": "TORRENT PHARMACEUTICALS L"
+    },
+    {
+      "stock_code": "AMBUJACEM",
+      "instrument_token": 325121,
+      "name": "AMBUJA CEMENTS"
+    },
+    {
+      "stock_code": "HINDALCO",
+      "instrument_token": 348929,
+      "name": "HINDALCO  INDUSTRIES "
+    },
+    {
+      "stock_code": "WSTCSTPAPR",
+      "instrument_token": 972545,
+      "name": "WEST COAST PAPER MILLS LT"
+    },
+    {
+      "stock_code": "PGHH",
+      "instrument_token": 648961,
+      "name": "P&G HYGIENE & HEALTH CARE"
+    },
+    {
+      "stock_code": "MUKANDLTD",
+      "instrument_token": 2899201,
+      "name": "MUKAND"
+    },
+    {
+      "stock_code": "BBOX",
+      "instrument_token": 879361,
+      "name": "BLACK BOX"
+    },
+    {
+      "stock_code": "FEDERALBNK",
+      "instrument_token": 261889,
+      "name": "FEDERAL BANK"
+    },
+    {
+      "stock_code": "TATASTEEL",
+      "instrument_token": 895745,
+      "name": "TATA STEEL"
+    },
+    {
+      "stock_code": "SKFINDIA",
+      "instrument_token": 815617,
+      "name": "SKF INDIA"
+    },
+    {
+      "stock_code": "ASHOKLEY",
+      "instrument_token": 54273,
+      "name": "ASHOK LEYLAND"
+    },
+    {
+      "stock_code": "CUMMINSIND",
+      "instrument_token": 486657,
+      "name": "CUMMINS INDIA"
+    },
+    {
+      "stock_code": "TATACOMM",
+      "instrument_token": 952577,
+      "name": "TATA COMMUNICATIONS"
+    },
+    {
+      "stock_code": "ABBOTINDIA",
+      "instrument_token": 4583169,
+      "name": "ABBOTT INDIA"
+    },
+    {
+      "stock_code": "BAJAJHLDNG",
+      "instrument_token": 78081,
+      "name": "BAJAJ HOLDINGS & INVS"
+    },
+    {
+      "stock_code": "BHARATFORG",
+      "instrument_token": 108033,
+      "name": "BHARAT FORGE"
+    },
+    {
+      "stock_code": "ESCORTS",
+      "instrument_token": 245249,
+      "name": "ESCORTS KUBOTA"
+    },
+    {
+      "stock_code": "LT",
+      "instrument_token": 2939649,
+      "name": "LARSEN & TOUBRO"
+    },
+    {
+      "stock_code": "M&M",
+      "instrument_token": 519937,
+      "name": "MAHINDRA & MAHINDRA"
+    },
+    {
+      "stock_code": "BOSCHLTD",
+      "instrument_token": 558337,
+      "name": "BOSCH"
+    },
+    {
+      "stock_code": "BPCL",
+      "instrument_token": 134657,
+      "name": "BHARAT PETROLEUM CORP  LT"
+    },
+    {
+      "stock_code": "SIEMENS",
+      "instrument_token": 806401,
+      "name": "SIEMENS"
+    },
+    {
+      "stock_code": "TMPV",
+      "instrument_token": 884737,
+      "name": "TATA MOTORS PASS VEH"
+    },
+    {
+      "stock_code": "VOLTAS",
+      "instrument_token": 951809,
+      "name": "VOLTAS"
+    },
+    {
+      "stock_code": "GESHIP",
+      "instrument_token": 3526657,
+      "name": "THE GE SHPG.LTD"
+    },
+    {
+      "stock_code": "DEEPAKFERT",
+      "instrument_token": 211713,
+      "name": "DEEPAK FERTILIZERS & PETR"
+    },
+    {
+      "stock_code": "GRWRHITECH",
+      "instrument_token": 2043393,
+      "name": "GARWARE HI-TECH FILMS"
+    },
+    {
+      "stock_code": "GLAXO",
+      "instrument_token": 295169,
+      "name": "GLAXOSMITHKLINE PHARMA LT"
+    },
+    {
+      "stock_code": "GNFC",
+      "instrument_token": 300545,
+      "name": "GUJ NAR VAL FER & CHEM L"
+    },
+    {
+      "stock_code": "SANOFI",
+      "instrument_token": 369153,
+      "name": "SANOFI INDIA"
+    },
+    {
+      "stock_code": "PFIZER",
+      "instrument_token": 676609,
+      "name": "PFIZER"
+    },
+    {
+      "stock_code": "GSFC",
+      "instrument_token": 319233,
+      "name": "GUJ STATE FERT & CHEM"
+    },
+    {
+      "stock_code": "HINDUNILVR",
+      "instrument_token": 356865,
+      "name": "HINDUSTAN UNILEVER"
+    },
+    {
+      "stock_code": "AKZOINDIA",
+      "instrument_token": 375553,
+      "name": "AKZO NOBEL INDIA"
+    },
+    {
+      "stock_code": "NOCIL",
+      "instrument_token": 625153,
+      "name": "NOCIL"
+    },
+    {
+      "stock_code": "TATACHEM",
+      "instrument_token": 871681,
+      "name": "TATA CHEMICALS"
+    },
+    {
+      "stock_code": "TNPETRO",
+      "instrument_token": 898305,
+      "name": "TAMILNADU PETROPRODUCTS L"
+    },
+    {
+      "stock_code": "ZUARIIND",
+      "instrument_token": 979713,
+      "name": "ZUARI INDUSTRIES"
+    },
+    {
+      "stock_code": "NESTLEIND",
+      "instrument_token": 4598529,
+      "name": "NESTLE INDIA"
+    },
+    {
+      "stock_code": "TATACONSUM",
+      "instrument_token": 878593,
+      "name": "TATA CONSUMER PRODUCT"
+    },
+    {
+      "stock_code": "ASIANPAINT",
+      "instrument_token": 60417,
+      "name": "ASIAN PAINTS"
+    },
+    {
+      "stock_code": "BRITANNIA",
+      "instrument_token": 140033,
+      "name": "BRITANNIA INDUSTRIES"
+    },
+    {
+      "stock_code": "COLPAL",
+      "instrument_token": 3876097,
+      "name": "COLGATE PALMOLIVE"
+    },
+    {
+      "stock_code": "EIHOTEL",
+      "instrument_token": 235265,
+      "name": "EIH - OBEROI HOTELS"
+    },
+    {
+      "stock_code": "INDHOTEL",
+      "instrument_token": 387073,
+      "name": "THE INDIAN HOTELS CO."
+    },
+    {
+      "stock_code": "CASTROLIND",
+      "instrument_token": 320001,
+      "name": "CASTROL INDIA"
+    },
+    {
+      "stock_code": "ITC",
+      "instrument_token": 424961,
+      "name": "ITC"
+    },
+    {
+      "stock_code": "APOLLOTYRE",
+      "instrument_token": 41729,
+      "name": "APOLLO TYRES"
+    },
+    {
+      "stock_code": "CEATLTD",
+      "instrument_token": 3905025,
+      "name": "CEAT"
+    },
+    {
+      "stock_code": "FINPIPE",
+      "instrument_token": 266497,
+      "name": "FINOLEX INDUSTRIES"
+    },
+    {
+      "stock_code": "CENTRUM",
+      "instrument_token": 628225,
+      "name": "CENTRUM CAPITAL"
+    },
+    {
+      "stock_code": "TATAINVEST",
+      "instrument_token": 414977,
+      "name": "TATA INVESTMENT CORP"
+    },
+    {
+      "stock_code": "SHAILY",
+      "instrument_token": 2234113,
+      "name": "SHAILY ENG PLASTICS"
+    },
+    {
+      "stock_code": "BBTC",
+      "instrument_token": 97281,
+      "name": "BOMBAY BURMAH TRADING COR"
+    },
+    {
+      "stock_code": "GREAVESCOT",
+      "instrument_token": 316161,
+      "name": "GREAVES COTTON"
+    },
+    {
+      "stock_code": "SAGCEM",
+      "instrument_token": 3601409,
+      "name": "SAGAR CEMENTS"
+    },
+    {
+      "stock_code": "DECCANCE",
+      "instrument_token": 3798529,
+      "name": "DECCAN CEMENTS"
+    },
+    {
+      "stock_code": "MANGLMCEM",
+      "instrument_token": 539137,
+      "name": "MANGALAM CEMENT"
+    },
+    {
+      "stock_code": "NCLIND",
+      "instrument_token": 3709441,
+      "name": "NCL INDUSTRIES"
+    },
+    {
+      "stock_code": "SHREDIGCEM",
+      "instrument_token": 793345,
+      "name": "SHREE DIGVIJAY CEM CO"
+    },
+    {
+      "stock_code": "BORORENEW",
+      "instrument_token": 806145,
+      "name": "BOROSIL RENEWABLES"
+    },
+    {
+      "stock_code": "ANDHRAPAP",
+      "instrument_token": 42497,
+      "name": "ANDHRA PAPER"
+    },
+    {
+      "stock_code": "BALKRISIND",
+      "instrument_token": 85761,
+      "name": "BALKRISHNA IND."
+    },
+    {
+      "stock_code": "VTL",
+      "instrument_token": 530689,
+      "name": "VARDHMAN TEXTILES"
+    },
+    {
+      "stock_code": "PENINLAND",
+      "instrument_token": 577537,
+      "name": "PENINSULA LAND"
+    },
+    {
+      "stock_code": "PHOENIXLTD",
+      "instrument_token": 3725313,
+      "name": "THE PHOENIX MILLS"
+    },
+    {
+      "stock_code": "MARATHON",
+      "instrument_token": 4776705,
+      "name": "MARATHON NXTGEN REALT"
+    },
+    {
+      "stock_code": "SWANCORP",
+      "instrument_token": 6936321,
+      "name": "SWAN CORP"
+    },
+    {
+      "stock_code": "SRF",
+      "instrument_token": 837889,
+      "name": "SRF"
+    },
+    {
+      "stock_code": "SIYSIL",
+      "instrument_token": 3608577,
+      "name": "SIYARAM SILK MILLS"
+    },
+    {
+      "stock_code": "BBL",
+      "instrument_token": 3522817,
+      "name": "BHARAT BIJLEE"
+    },
+    {
+      "stock_code": "HIRECT",
+      "instrument_token": 3555841,
+      "name": "HIND RECTIFIER"
+    },
+    {
+      "stock_code": "ZENSARTECH",
+      "instrument_token": 275457,
+      "name": "ZENSAR TECHNOLOGIES "
+    },
+    {
+      "stock_code": "NELCO",
+      "instrument_token": 611329,
+      "name": "NELCO"
+    },
+    {
+      "stock_code": "UNIVCABLES",
+      "instrument_token": 923393,
+      "name": "UNIVERSAL CABLES"
+    },
+    {
+      "stock_code": "RELTD",
+      "instrument_token": 6296577,
+      "name": "RAVINDRA ENERGY"
+    },
+    {
+      "stock_code": "SARDAEN",
+      "instrument_token": 4546049,
+      "name": "SARDA ENERGY & MIN"
+    },
+    {
+      "stock_code": "INDIANHUME",
+      "instrument_token": 391681,
+      "name": "INDIAN HUME PIPE CO."
+    },
+    {
+      "stock_code": "SANDUMA",
+      "instrument_token": 4699905,
+      "name": "SANDUR MANG & IRON ORES L"
+    },
+    {
+      "stock_code": "CHOLAHLDNG",
+      "instrument_token": 5565441,
+      "name": "CHOLAMANDALAM FIN HOL"
+    },
+    {
+      "stock_code": "AUTOAXLES",
+      "instrument_token": 71169,
+      "name": "AUTOMOTIVE AXLES"
+    },
+    {
+      "stock_code": "TALBROAUTO",
+      "instrument_token": 3493889,
+      "name": "TALBROS AUTO. COMP."
+    },
+    {
+      "stock_code": "TIL",
+      "instrument_token": 891905,
+      "name": "TIL"
+    },
+    {
+      "stock_code": "EICHERMOT",
+      "instrument_token": 232961,
+      "name": "EICHER MOTORS"
+    },
+    {
+      "stock_code": "DYNAMATECH",
+      "instrument_token": 1158401,
+      "name": "DYNAMATIC TECHNOLOGIES"
+    },
+    {
+      "stock_code": "GMMPFAUDLR",
+      "instrument_token": 401921,
+      "name": "GMM PFAUDLER"
+    },
+    {
+      "stock_code": "KIRLPNU",
+      "instrument_token": 3886081,
+      "name": "KIRLOSKAR PNEUMATIC COM L"
+    },
+    {
+      "stock_code": "NESCO",
+      "instrument_token": 3944705,
+      "name": "NESCO"
+    },
+    {
+      "stock_code": "TEXINFRA",
+      "instrument_token": 2956545,
+      "name": "TEXMACO INFRA & HOLDG"
+    },
+    {
+      "stock_code": "WENDT",
+      "instrument_token": 1084161,
+      "name": "WENDT (INDIA)"
+    },
+    {
+      "stock_code": "RESPONIND",
+      "instrument_token": 5202689,
+      "name": "RESPONSIVE INDUSTRIES"
+    },
+    {
+      "stock_code": "DOLATALGO",
+      "instrument_token": 3103745,
+      "name": "DOLAT ALGOTECH"
+    },
+    {
+      "stock_code": "WESTLIFE",
+      "instrument_token": 2964481,
+      "name": "WESTLIFE FOODWORLD"
+    },
+    {
+      "stock_code": "ZEEL",
+      "instrument_token": 975873,
+      "name": "ZEE ENTERTAINMENT ENT"
+    },
+    {
+      "stock_code": "ELECON",
+      "instrument_token": 3492609,
+      "name": "ELECON ENG. CO."
+    },
+    {
+      "stock_code": "GABRIEL",
+      "instrument_token": 277761,
+      "name": "GABRIEL INDIA"
+    },
+    {
+      "stock_code": "ALGOQUANT",
+      "instrument_token": 194885121,
+      "name": "ALGOQUANT FINTECH"
+    },
+    {
+      "stock_code": "IFBIND",
+      "instrument_token": 380161,
+      "name": "IFB INDUSTRIES"
+    },
+    {
+      "stock_code": "FMGOETZE",
+      "instrument_token": 304641,
+      "name": "FEDERAL-MOGUL GOETZE (IND"
+    },
+    {
+      "stock_code": "SCHAEFFLER",
+      "instrument_token": 258817,
+      "name": "SCHAEFFLER INDIA"
+    },
+    {
+      "stock_code": "RANEHOLDIN",
+      "instrument_token": 728065,
+      "name": "RANE HOLDINGS"
+    },
+    {
+      "stock_code": "PRAKASH",
+      "instrument_token": 693249,
+      "name": "PRAKASH INDUSTRIES"
+    },
+    {
+      "stock_code": "GRINDWELL",
+      "instrument_token": 3471361,
+      "name": "GRINDWELL NORTON"
+    },
+    {
+      "stock_code": "GENESYS",
+      "instrument_token": 2791681,
+      "name": "GENESYS INTL CORPN"
+    },
+    {
+      "stock_code": "BLISSGVS",
+      "instrument_token": 4931841,
+      "name": "BLISS GVS PHARMA"
+    },
+    {
+      "stock_code": "STYRENIX",
+      "instrument_token": 4865,
+      "name": "STYRENIX PERFORMANCE"
+    },
+    {
+      "stock_code": "ALEMBICLTD",
+      "instrument_token": 20225,
+      "name": "ALEMBIC"
+    },
+    {
+      "stock_code": "BAYERCROP",
+      "instrument_token": 4589313,
+      "name": "BAYER CROPSCIENCE"
+    },
+    {
+      "stock_code": "CHEMPLASTS",
+      "instrument_token": 1394945,
+      "name": "CHEMPLAST SANMAR"
+    },
+    {
+      "stock_code": "COROMANDEL",
+      "instrument_token": 189185,
+      "name": "COROMANDEL INTERNTL."
+    },
+    {
+      "stock_code": "DEEPAKNTR",
+      "instrument_token": 5105409,
+      "name": "DEEPAK NITRITE"
+    },
+    {
+      "stock_code": "DMCC",
+      "instrument_token": 1785089,
+      "name": "DMCC SPECIALITY CHEMICALS"
+    },
+    {
+      "stock_code": "GOCLCORP",
+      "instrument_token": 1014529,
+      "name": "GOCL CORPORATION"
+    },
+    {
+      "stock_code": "PCBL",
+      "instrument_token": 678145,
+      "name": "PCBL CHEMICAL"
+    },
+    {
+      "stock_code": "SUDARSCHEM",
+      "instrument_token": 851713,
+      "name": "SUDARSHAN CHEMICAL INDS L"
+    },
+    {
+      "stock_code": "UNICHEMLAB",
+      "instrument_token": 916225,
+      "name": "UNICHEM LABORATORIES"
+    },
+    {
+      "stock_code": "ALKYLAMINE",
+      "instrument_token": 1148673,
+      "name": "ALKYL AMINES CHEM."
+    },
+    {
+      "stock_code": "ASTRAZEN",
+      "instrument_token": 1436161,
+      "name": "ASTRAZENECA PHARMA IND LT"
+    },
+    {
+      "stock_code": "GUJTHEM",
+      "instrument_token": 7611137,
+      "name": "GUJARAT THEMIS BIOSYN"
+    },
+    {
+      "stock_code": "JBCHEPHARM",
+      "instrument_token": 441857,
+      "name": "J B CHEMICALS AND PHARMA"
+    },
+    {
+      "stock_code": "TI",
+      "instrument_token": 4914177,
+      "name": "TILAKNAGAR INDUSTRIES"
+    },
+    {
+      "stock_code": "WALCHANNAG",
+      "instrument_token": 956417,
+      "name": "WALCHANDNAGAR INDUSTRIES"
+    },
+    {
+      "stock_code": "IFBAGRO",
+      "instrument_token": 379393,
+      "name": "IFB AGRO INDUSTRIES"
+    },
+    {
+      "stock_code": "SDBL",
+      "instrument_token": 342529,
+      "name": "SOM DIST & BREW"
+    },
+    {
+      "stock_code": "ASALCBR",
+      "instrument_token": 4505089,
+      "name": "ASSO ALCOHOLS & BREW"
+    },
+    {
+      "stock_code": "WIPRO",
+      "instrument_token": 969473,
+      "name": "WIPRO"
+    },
+    {
+      "stock_code": "DHANUKA",
+      "instrument_token": 6248705,
+      "name": "DHANUKA AGRITECH"
+    },
+    {
+      "stock_code": "JAGSNPHARM",
+      "instrument_token": 1128961,
+      "name": "JAGSONPAL PHARMACEUTICALS"
+    },
+    {
+      "stock_code": "GILLETTE",
+      "instrument_token": 403457,
+      "name": "GILLETTE INDIA"
+    },
+    {
+      "stock_code": "VIPIND",
+      "instrument_token": 947969,
+      "name": "VIP INDUSTRIES"
+    },
+    {
+      "stock_code": "COSMOFIRST",
+      "instrument_token": 189953,
+      "name": "COSMO FIRST"
+    },
+    {
+      "stock_code": "APOLLOHOSP",
+      "instrument_token": 40193,
+      "name": "APOLLO HOSPITALS ENTER. L"
+    },
+    {
+      "stock_code": "NAVNETEDUL",
+      "instrument_token": 610561,
+      "name": "NAVNEET EDUCATION"
+    },
+    {
+      "stock_code": "GUFICBIO",
+      "instrument_token": 2971137,
+      "name": "GUFIC BIOSCIENCES"
+    },
+    {
+      "stock_code": "TVSSRICHAK",
+      "instrument_token": 3646721,
+      "name": "TVS SRICHAKRA"
+    },
+    {
+      "stock_code": "BERGEPAINT",
+      "instrument_token": 103425,
+      "name": "BERGER PAINTS (I)"
+    },
+    {
+      "stock_code": "GRAPHITE",
+      "instrument_token": 151553,
+      "name": "GRAPHITE INDIA"
+    },
+    {
+      "stock_code": "CEMPRO",
+      "instrument_token": 1439233,
+      "name": "CEMINDIA PROJECTS"
+    },
+    {
+      "stock_code": "GARFIBRES",
+      "instrument_token": 281601,
+      "name": "GARWARE TECH FIBRES"
+    },
+    {
+      "stock_code": "HEG",
+      "instrument_token": 342017,
+      "name": "HEG"
+    },
+    {
+      "stock_code": "HUHTAMAKI",
+      "instrument_token": 655873,
+      "name": "HUHTAMAKI INDIA"
+    },
+    {
+      "stock_code": "SUPREMEIND",
+      "instrument_token": 860929,
+      "name": "SUPREME INDUSTRIES"
+    },
+    {
+      "stock_code": "VSTIND",
+      "instrument_token": 953345,
+      "name": "VST INDUSTRIES"
+    },
+    {
+      "stock_code": "JINDRILL",
+      "instrument_token": 3552001,
+      "name": "JINDAL DRILLING IND."
+    },
+    {
+      "stock_code": "PIRAMALFIN",
+      "instrument_token": 194445057,
+      "name": "PIRAMAL FINANCE"
+    },
+    {
+      "stock_code": "AEROENTER",
+      "instrument_token": 3075841,
+      "name": "AEROFLEX ENTERPRISES"
+    },
+    {
+      "stock_code": "CANFINHOME",
+      "instrument_token": 149249,
+      "name": "CAN FIN HOMES"
+    },
+    {
+      "stock_code": "SHRIRAMFIN",
+      "instrument_token": 1102337,
+      "name": "SHRIRAM FINANCE"
+    },
+    {
+      "stock_code": "CHOLAFIN",
+      "instrument_token": 175361,
+      "name": "CHOLAMANDALAM IN & FIN CO"
+    },
+    {
+      "stock_code": "VAKRANGEE",
+      "instrument_token": 3415553,
+      "name": "VAKRANGEE"
+    },
+    {
+      "stock_code": "ARIHANTCAP",
+      "instrument_token": 976129,
+      "name": "ARIHANT CAPITAL MKTS"
+    },
+    {
+      "stock_code": "GICHSGFIN",
+      "instrument_token": 291585,
+      "name": "GIC HOUSING FINANCE"
+    },
+    {
+      "stock_code": "UGROCAP",
+      "instrument_token": 1360129,
+      "name": "UGRO CAPITAL"
+    },
+    {
+      "stock_code": "MASTERTR",
+      "instrument_token": 6924033,
+      "name": "MASTER TRUST"
+    },
+    {
+      "stock_code": "EFCIL",
+      "instrument_token": 194220801,
+      "name": "EFC (I)"
+    },
+    {
+      "stock_code": "UPL",
+      "instrument_token": 2889473,
+      "name": "UPL"
+    },
+    {
+      "stock_code": "SUNTECK",
+      "instrument_token": 4516097,
+      "name": "SUNTECK REALTY"
+    },
+    {
+      "stock_code": "JAICORPLTD",
+      "instrument_token": 1316609,
+      "name": "JAI CORP"
+    },
+    {
+      "stock_code": "SGMART",
+      "instrument_token": 194275585,
+      "name": "SG MART"
+    },
+    {
+      "stock_code": "LLOYDSME",
+      "instrument_token": 4432129,
+      "name": "LLOYDS METALS N ENERGY L"
+    },
+    {
+      "stock_code": "LLOYDSENT",
+      "instrument_token": 6606593,
+      "name": "LLOYDS ENTERPRISES"
+    },
+    {
+      "stock_code": "VIYASH",
+      "instrument_token": 3659777,
+      "name": "VIYASH SCIENTIFIC"
+    },
+    {
+      "stock_code": "AVANTIFEED",
+      "instrument_token": 2031617,
+      "name": "AVANTI FEEDS"
+    },
+    {
+      "stock_code": "ADANIENT",
+      "instrument_token": 6401,
+      "name": "ADANI ENTERPRISES"
+    },
+    {
+      "stock_code": "NAVA",
+      "instrument_token": 1027585,
+      "name": "NAVA"
+    },
+    {
+      "stock_code": "SBCL",
+      "instrument_token": 1191937,
+      "name": "SHIVALIK BIMETAL CON."
+    },
+    {
+      "stock_code": "ORICONENT",
+      "instrument_token": 2600705,
+      "name": "ORICON ENTERPRISES"
+    },
+    {
+      "stock_code": "PENIND",
+      "instrument_token": 5278977,
+      "name": "PENNAR INDUSTRIES"
+    },
+    {
+      "stock_code": "JYOTISTRUC",
+      "instrument_token": 461313,
+      "name": "JYOTI STRUCTURES"
+    },
+    {
+      "stock_code": "SSWL",
+      "instrument_token": 3028225,
+      "name": "STEEL STRIPS WHEELS"
+    },
+    {
+      "stock_code": "MANINDS",
+      "instrument_token": 3042305,
+      "name": "MAN INDUSTRIES (I)"
+    },
+    {
+      "stock_code": "AJMERA",
+      "instrument_token": 4430593,
+      "name": "AJMERA REALTY & INF I"
+    },
+    {
+      "stock_code": "CARBORUNIV",
+      "instrument_token": 152321,
+      "name": "CARBORUNDUM UNIVERSAL"
+    },
+    {
+      "stock_code": "MMTC",
+      "instrument_token": 4596993,
+      "name": "MMTC"
+    },
+    {
+      "stock_code": "STEELCAS",
+      "instrument_token": 1741569,
+      "name": "STEELCAST"
+    },
+    {
+      "stock_code": "PITTIENG",
+      "instrument_token": 3618305,
+      "name": "PITTI ENGINEERING"
+    },
+    {
+      "stock_code": "HINDCOPPER",
+      "instrument_token": 4592385,
+      "name": "HINDUSTAN COPPER"
+    },
+    {
+      "stock_code": "NLCINDIA",
+      "instrument_token": 2197761,
+      "name": "NLC INDIA"
+    },
+    {
+      "stock_code": "HIMATSEIDE",
+      "instrument_token": 348161,
+      "name": "HIMATSINGKA SEIDE"
+    },
+    {
+      "stock_code": "WELSPUNLIV",
+      "instrument_token": 2880769,
+      "name": "WELSPUN LIVING"
+    },
+    {
+      "stock_code": "GANECOS",
+      "instrument_token": 1777665,
+      "name": "GANESHA ECOSPHERE"
+    },
+    {
+      "stock_code": "SANGAMIND",
+      "instrument_token": 1071105,
+      "name": "SANGAM (INDIA)"
+    },
+    {
+      "stock_code": "PREMIERPOL",
+      "instrument_token": 1000449,
+      "name": "PREMIER POLYFILM"
+    },
+    {
+      "stock_code": "ASAHIINDIA",
+      "instrument_token": 1376769,
+      "name": "ASAHI INDIA GLASS"
+    },
+    {
+      "stock_code": "ANANTRAJ",
+      "instrument_token": 3486721,
+      "name": "ANANT RAJ"
+    },
+    {
+      "stock_code": "ARROWGREEN",
+      "instrument_token": 2370561,
+      "name": "ARROW GREENTECH"
+    },
+    {
+      "stock_code": "VISHNU",
+      "instrument_token": 1768449,
+      "name": "VISHNU CHEMICALS"
+    },
+    {
+      "stock_code": "VINDHYATEL",
+      "instrument_token": 945665,
+      "name": "VINDHYA TELELINKS"
+    },
+    {
+      "stock_code": "SALZERELEC",
+      "instrument_token": 2918145,
+      "name": "SALZER ELECTRONICS"
+    },
+    {
+      "stock_code": "USHAMART",
+      "instrument_token": 2263041,
+      "name": "USHA MARTIN"
+    },
+    {
+      "stock_code": "SUBROS",
+      "instrument_token": 850945,
+      "name": "SUBROS"
+    },
+    {
+      "stock_code": "HONAUT",
+      "instrument_token": 874753,
+      "name": "HONEYWELL AUTOMATION IND"
+    },
+    {
+      "stock_code": "LUMAXIND",
+      "instrument_token": 516609,
+      "name": "LUMAX INDUSTRIES"
+    },
+    {
+      "stock_code": "HBLENGINE",
+      "instrument_token": 3575297,
+      "name": "HBL ENGINEERING"
+    },
+    {
+      "stock_code": "GIPCL",
+      "instrument_token": 293121,
+      "name": "GUJ IND POW CO."
+    },
+    {
+      "stock_code": "MOTHERSON",
+      "instrument_token": 1076225,
+      "name": "SAMVRDHNA MTHRSN INTL"
+    },
+    {
+      "stock_code": "HAVELLS",
+      "instrument_token": 2513665,
+      "name": "HAVELLS INDIA"
+    },
+    {
+      "stock_code": "IGARASHI",
+      "instrument_token": 162305,
+      "name": "IGARASHI MOTORS INDIA"
+    },
+    {
+      "stock_code": "SYMPHONY",
+      "instrument_token": 6192641,
+      "name": "SYMPHONY"
+    },
+    {
+      "stock_code": "BUTTERFLY",
+      "instrument_token": 695297,
+      "name": "BTRFLY GANDHI APPL"
+    },
+    {
+      "stock_code": "WEBELSOLAR",
+      "instrument_token": 3738113,
+      "name": "WEBSOL ENERGY SYSTEM"
+    },
+    {
+      "stock_code": "ROTO",
+      "instrument_token": 2316545,
+      "name": "ROTO PUMPS"
+    },
+    {
+      "stock_code": "TTKPRESTIG",
+      "instrument_token": 907777,
+      "name": "TTK PRESTIGE"
+    },
+    {
+      "stock_code": "RAJRATAN",
+      "instrument_token": 4854273,
+      "name": "RAJRATAN GLOBAL WIRE"
+    },
+    {
+      "stock_code": "ONWARDTEC",
+      "instrument_token": 635137,
+      "name": "ONWARD TECHNOLOGIES"
+    },
+    {
+      "stock_code": "CENTUM",
+      "instrument_token": 3835393,
+      "name": "CENTUM ELECTRONICS"
+    },
+    {
+      "stock_code": "KEI",
+      "instrument_token": 3407361,
+      "name": "KEI INDUSTRIES"
+    },
+    {
+      "stock_code": "TASTYBITE",
+      "instrument_token": 5143553,
+      "name": "TASTY BITE EATABLES"
+    },
+    {
+      "stock_code": "HNDFDS",
+      "instrument_token": 3116289,
+      "name": "HINDUSTAN FOODS"
+    },
+    {
+      "stock_code": "VADILALIND",
+      "instrument_token": 6194177,
+      "name": "VADILAL INDUSTRIES"
+    },
+    {
+      "stock_code": "ADFFOODS",
+      "instrument_token": 5058817,
+      "name": "ADF FOODS"
+    },
+    {
+      "stock_code": "HERITGFOOD",
+      "instrument_token": 1177089,
+      "name": "HERITAGE FOODS"
+    },
+    {
+      "stock_code": "CCL",
+      "instrument_token": 2931713,
+      "name": "CCL PRODUCTS (I)"
+    },
+    {
+      "stock_code": "KELLTONTEC",
+      "instrument_token": 3438081,
+      "name": "KELLTON TECH SOL"
+    },
+    {
+      "stock_code": "RICOAUTO",
+      "instrument_token": 744705,
+      "name": "RICO AUTO INDUSTRIES"
+    },
+    {
+      "stock_code": "JAMNAAUTO",
+      "instrument_token": 5319169,
+      "name": "JAMNA AUTO IND"
+    },
+    {
+      "stock_code": "TVSHLTD",
+      "instrument_token": 7426049,
+      "name": "TVS HOLDINGS"
+    },
+    {
+      "stock_code": "MUNJALAU",
+      "instrument_token": 3458817,
+      "name": "MUNJAL AUTO IND."
+    },
+    {
+      "stock_code": "JAYBARMARU",
+      "instrument_token": 437249,
+      "name": "JAY BHARAT MARUTI"
+    },
+    {
+      "stock_code": "RACLGEAR",
+      "instrument_token": 6955777,
+      "name": "RACL GEARTECH"
+    },
+    {
+      "stock_code": "RATNAMANI",
+      "instrument_token": 3443457,
+      "name": "RATNAMANI MET & TUB"
+    },
+    {
+      "stock_code": "VESUVIUS",
+      "instrument_token": 941057,
+      "name": "VESUVIUS INDIA"
+    },
+    {
+      "stock_code": "ICIL",
+      "instrument_token": 3068673,
+      "name": "INDO COUNT INDUSTRIES"
+    },
+    {
+      "stock_code": "TRIDENT",
+      "instrument_token": 2479361,
+      "name": "TRIDENT"
+    },
+    {
+      "stock_code": "ALOKINDS",
+      "instrument_token": 4524801,
+      "name": "ALOK INDUSTRIES"
+    },
+    {
+      "stock_code": "KITEX",
+      "instrument_token": 7398145,
+      "name": "KITEX GARMENTS"
+    },
+    {
+      "stock_code": "WINDMACHIN",
+      "instrument_token": 6392065,
+      "name": "WINDSOR MACHINES"
+    },
+    {
+      "stock_code": "SHANTIGEAR",
+      "instrument_token": 787969,
+      "name": "SHANTHI GEARS"
+    },
+    {
+      "stock_code": "HONDAPOWER",
+      "instrument_token": 803329,
+      "name": "HONDA I POWER PRODUCT"
+    },
+    {
+      "stock_code": "ELGIEQUIP",
+      "instrument_token": 239873,
+      "name": "ELGI EQUIPMENTS"
+    },
+    {
+      "stock_code": "TIMKEN",
+      "instrument_token": 3634689,
+      "name": "TIMKEN INDIA"
+    },
+    {
+      "stock_code": "DIACABS",
+      "instrument_token": 4747009,
+      "name": "DIAMOND POWER INFRA"
+    },
+    {
+      "stock_code": "PRAJIND",
+      "instrument_token": 692481,
+      "name": "PRAJ INDUSTRIES"
+    },
+    {
+      "stock_code": "HLEGLAS",
+      "instrument_token": 585985,
+      "name": "HLE GLASCOAT"
+    },
+    {
+      "stock_code": "MMFL",
+      "instrument_token": 3544065,
+      "name": "MM FORGINGS"
+    },
+    {
+      "stock_code": "MAYURUNIQ",
+      "instrument_token": 7399937,
+      "name": "MAYUR UNIQUOTERS"
+    },
+    {
+      "stock_code": "RAJOOENG",
+      "instrument_token": 193804545,
+      "name": "RAJOO ENGINEERS"
+    },
+    {
+      "stock_code": "GVT&D",
+      "instrument_token": 4296449,
+      "name": "GE VERNOVA T&D INDIA"
+    },
+    {
+      "stock_code": "RAMRAT",
+      "instrument_token": 2684161,
+      "name": "RAM RATNA WIRES"
+    },
+    {
+      "stock_code": "JAYNECOIND",
+      "instrument_token": 596737,
+      "name": "JAYASWAL NECO INDUSTR"
+    },
+    {
+      "stock_code": "KPIL",
+      "instrument_token": 464385,
+      "name": "KALPATARU PROJECT INT"
+    },
+    {
+      "stock_code": "CONTROLPR",
+      "instrument_token": 4474113,
+      "name": "CONTROL PRINT"
+    },
+    {
+      "stock_code": "SAFARI",
+      "instrument_token": 3336961,
+      "name": "SAFARI IND (INDIA)"
+    },
+    {
+      "stock_code": "BHARATSE",
+      "instrument_token": 7742465,
+      "name": "BHARAT SEATS"
+    },
+    {
+      "stock_code": "VENKEYS",
+      "instrument_token": 961793,
+      "name": "VENKY S (INDIA)"
+    },
+    {
+      "stock_code": "TCPLPACK",
+      "instrument_token": 47105,
+      "name": "TCPL PACKAGING"
+    },
+    {
+      "stock_code": "BALMLAWRIE",
+      "instrument_token": 86529,
+      "name": "BALMER LAWRIE & CO"
+    },
+    {
+      "stock_code": "DCMSHRIRAM",
+      "instrument_token": 207617,
+      "name": "DCM SHRIRAM"
+    },
+    {
+      "stock_code": "3MINDIA",
+      "instrument_token": 121345,
+      "name": "3M INDIA"
+    },
+    {
+      "stock_code": "BOSCH-HCIL",
+      "instrument_token": 1149697,
+      "name": "BOSCH HOME COMFRT IND"
+    },
+    {
+      "stock_code": "JMFINANCIL",
+      "instrument_token": 3491073,
+      "name": "JM FINANCIAL"
+    },
+    {
+      "stock_code": "RIIL",
+      "instrument_token": 745473,
+      "name": "RELIANCE INDUSTRIAL INFRA"
+    },
+    {
+      "stock_code": "LINDEINDIA",
+      "instrument_token": 416513,
+      "name": "LINDE INDIA"
+    },
+    {
+      "stock_code": "PRECWIRE",
+      "instrument_token": 695553,
+      "name": "PRECISION WIRES INDIA"
+    },
+    {
+      "stock_code": "IRCON",
+      "instrument_token": 1276417,
+      "name": "IRCON INTERNATIONAL"
+    },
+    {
+      "stock_code": "SCI",
+      "instrument_token": 780289,
+      "name": "SHIPPING CORP OF INDIA LT"
+    },
+    {
+      "stock_code": "ITI",
+      "instrument_token": 428801,
+      "name": "ITI"
+    },
+    {
+      "stock_code": "DREDGECORP",
+      "instrument_token": 2885377,
+      "name": "DREDGING CORP OF INDIA"
+    },
+    {
+      "stock_code": "NFL",
+      "instrument_token": 3564801,
+      "name": "NATIONAL FERT."
+    },
+    {
+      "stock_code": "PIIND",
+      "instrument_token": 6191105,
+      "name": "PI INDUSTRIES"
+    },
+    {
+      "stock_code": "APCOTEXIND",
+      "instrument_token": 39425,
+      "name": "APCOTEX INDUSTRIES LIMITE"
+    },
+    {
+      "stock_code": "MASTEK",
+      "instrument_token": 543745,
+      "name": "MASTEK"
+    },
+    {
+      "stock_code": "EIMCOELECO",
+      "instrument_token": 1034241,
+      "name": "EIMCO ELECON (INDIA)"
+    },
+    {
+      "stock_code": "ASHIANA",
+      "instrument_token": 6247169,
+      "name": "ASHIANA HOUSING"
+    },
+    {
+      "stock_code": "SIMPLEXINF",
+      "instrument_token": 809473,
+      "name": "SIMPLEX INFRASTRUCTURES L"
+    },
+    {
+      "stock_code": "POONAWALLA",
+      "instrument_token": 2919169,
+      "name": "POONAWALLA FINCORP"
+    },
+    {
+      "stock_code": "KINGFA",
+      "instrument_token": 4849665,
+      "name": "KINGFA SCI & TEC IND"
+    },
+    {
+      "stock_code": "POLYPLEX",
+      "instrument_token": 687873,
+      "name": "POLYPLEX CORPORATION"
+    },
+    {
+      "stock_code": "CARYSIL",
+      "instrument_token": 481025,
+      "name": "CARYSIL"
+    },
+    {
+      "stock_code": "IOLCP",
+      "instrument_token": 5225729,
+      "name": "IOL CHEM AND PHARMA"
+    },
+    {
+      "stock_code": "VINATIORGA",
+      "instrument_token": 4445185,
+      "name": "VINATI ORGANICS"
+    },
+    {
+      "stock_code": "AARTIIND",
+      "instrument_token": 1793,
+      "name": "AARTI INDUSTRIES"
+    },
+    {
+      "stock_code": "GAEL",
+      "instrument_token": 2259969,
+      "name": "GUJARAT AMBUJA EXPORTS LT"
+    },
+    {
+      "stock_code": "RCF",
+      "instrument_token": 733697,
+      "name": "RASHTRIYA CHEMICALS & FER"
+    },
+    {
+      "stock_code": "KOPRAN",
+      "instrument_token": 491265,
+      "name": "KOPRAN"
+    },
+    {
+      "stock_code": "BCLIND",
+      "instrument_token": 643329,
+      "name": "BCL INDUSTRIES"
+    },
+    {
+      "stock_code": "AARTIDRUGS",
+      "instrument_token": 1147137,
+      "name": "AARTI DRUGS"
+    },
+    {
+      "stock_code": "BODALCHEM",
+      "instrument_token": 6404353,
+      "name": "BODAL CHEMICALS"
+    },
+    {
+      "stock_code": "ORCHPHARMA",
+      "instrument_token": 237057,
+      "name": "ORCHID PHARMA"
+    },
+    {
+      "stock_code": "VIMTALABS",
+      "instrument_token": 3353857,
+      "name": "VIMTA LABS"
+    },
+    {
+      "stock_code": "MARKSANS",
+      "instrument_token": 2708225,
+      "name": "MARKSANS PHARMA"
+    },
+    {
+      "stock_code": "SYNCOMF",
+      "instrument_token": 3069953,
+      "name": "SYNCOM FORMU (I)"
+    },
+    {
+      "stock_code": "IPCALAB",
+      "instrument_token": 418049,
+      "name": "IPCA LABORATORIES"
+    },
+    {
+      "stock_code": "NEULANDLAB",
+      "instrument_token": 615937,
+      "name": "NEULAND LAB"
+    },
+    {
+      "stock_code": "SOTL",
+      "instrument_token": 773377,
+      "name": "SAVITA OIL TECHNOLO."
+    },
+    {
+      "stock_code": "NACLIND",
+      "instrument_token": 5228801,
+      "name": "NACL INDUSTRIES"
+    },
+    {
+      "stock_code": "SUNPHARMA",
+      "instrument_token": 857857,
+      "name": "SUN PHARMACEUTICAL IND L"
+    },
+    {
+      "stock_code": "HIKAL",
+      "instrument_token": 2475009,
+      "name": "HIKAL"
+    },
+    {
+      "stock_code": "CAPLIPOINT",
+      "instrument_token": 999937,
+      "name": "CAPLIN POINT LAB"
+    },
+    {
+      "stock_code": "FISCHER",
+      "instrument_token": 193960449,
+      "name": "FISCHER MEDICAL VENTURE L"
+    },
+    {
+      "stock_code": "NGLFINE",
+      "instrument_token": 2630913,
+      "name": "NGL FINE CHEM"
+    },
+    {
+      "stock_code": "AUROPHARMA",
+      "instrument_token": 70401,
+      "name": "AUROBINDO PHARMA"
+    },
+    {
+      "stock_code": "NATCOPHARM",
+      "instrument_token": 1003009,
+      "name": "NATCO PHARMA"
+    },
+    {
+      "stock_code": "FILATEX",
+      "instrument_token": 6280193,
+      "name": "FILATEX INDIA"
+    },
+    {
+      "stock_code": "PREMEXPLN",
+      "instrument_token": 4453633,
+      "name": "PREMIER EXPLOSIVES"
+    },
+    {
+      "stock_code": "MPHASIS",
+      "instrument_token": 1152769,
+      "name": "MPHASIS"
+    },
+    {
+      "stock_code": "GANESHHOU",
+      "instrument_token": 3670785,
+      "name": "GANESH HOUSING"
+    },
+    {
+      "stock_code": "NMDC",
+      "instrument_token": 3924993,
+      "name": "NMDC"
+    },
+    {
+      "stock_code": "SANGHIIND",
+      "instrument_token": 767233,
+      "name": "SANGHI INDUSTRIES"
+    },
+    {
+      "stock_code": "ELECTHERM",
+      "instrument_token": 1144065,
+      "name": "ELECTROTHERM (I)"
+    },
+    {
+      "stock_code": "BLUEDART",
+      "instrument_token": 126721,
+      "name": "BLUE DART EXPRESS"
+    },
+    {
+      "stock_code": "TFCILTD",
+      "instrument_token": 887297,
+      "name": "TOURISM FINANCE CORP. OF"
+    },
+    {
+      "stock_code": "KAMATHOTEL",
+      "instrument_token": 467457,
+      "name": "KAMAT HOTELS (I)"
+    },
+    {
+      "stock_code": "GOLDIAM",
+      "instrument_token": 3064577,
+      "name": "GOLDIAM INTERNATIONAL"
+    },
+    {
+      "stock_code": "GREENPLY",
+      "instrument_token": 1020673,
+      "name": "GREENPLY INDUSTRIES"
+    },
+    {
+      "stock_code": "SEAMECLTD",
+      "instrument_token": 669697,
+      "name": "SEAMEC"
+    },
+    {
+      "stock_code": "CONFIPET",
+      "instrument_token": 2620929,
+      "name": "CONFIDENCE PETRO IND"
+    },
+    {
+      "stock_code": "63MOONS",
+      "instrument_token": 3038209,
+      "name": "63 MOONS TECHNOLOGIES"
+    },
+    {
+      "stock_code": "LAOPALA",
+      "instrument_token": 3692289,
+      "name": "LA OPALA RG"
+    },
+    {
+      "stock_code": "ASHAPURMIN",
+      "instrument_token": 51969,
+      "name": "ASHAPURA MINECHEM"
+    },
+    {
+      "stock_code": "GUJALKALI",
+      "instrument_token": 324353,
+      "name": "GUJARAT ALKALIES & CHEM"
+    },
+    {
+      "stock_code": "INDIACEM",
+      "instrument_token": 387841,
+      "name": "THE INDIA CEMENTS"
+    },
+    {
+      "stock_code": "JKTYRE",
+      "instrument_token": 3695361,
+      "name": "JK TYRE & INDUSTRIES"
+    },
+    {
+      "stock_code": "JUBLPHARMA",
+      "instrument_token": 931073,
+      "name": "JUBILANT PHARMOVA"
+    },
+    {
+      "stock_code": "CSLFINANCE",
+      "instrument_token": 2649601,
+      "name": "CSL FINANCE"
+    },
+    {
+      "stock_code": "ANTELOPUS",
+      "instrument_token": 3481089,
+      "name": "ANTELOPUS SELAN ENRGY"
+    },
+    {
+      "stock_code": "PRIVISCL",
+      "instrument_token": 2259201,
+      "name": "PRIVI SPECIALITY CHE"
+    },
+    {
+      "stock_code": "OPTIEMUS",
+      "instrument_token": 5496065,
+      "name": "OPTIEMUS INFRACOM"
+    },
+    {
+      "stock_code": "THEMISMED",
+      "instrument_token": 3708161,
+      "name": "THEMIS MEDICARE"
+    },
+    {
+      "stock_code": "SUVEN",
+      "instrument_token": 2875649,
+      "name": "SUVEN LIFE SCIENCES"
+    },
+    {
+      "stock_code": "PICCADIL",
+      "instrument_token": 193985025,
+      "name": "PICCADILY AGRO INDUSTRI L"
+    },
+    {
+      "stock_code": "CLSEL",
+      "instrument_token": 891393,
+      "name": "CHAMAN LAL SETIA EXP"
+    },
+    {
+      "stock_code": "GENUSPOWER",
+      "instrument_token": 3047681,
+      "name": "GENUS POWER INFRASTRU"
+    },
+    {
+      "stock_code": "ASIANENE",
+      "instrument_token": 1799681,
+      "name": "ASIAN ENERGY SERVICES"
+    },
+    {
+      "stock_code": "NRBBEARING",
+      "instrument_token": 1933569,
+      "name": "NRB BEARING"
+    },
+    {
+      "stock_code": "TINNARUBR",
+      "instrument_token": 193541121,
+      "name": "TINNA RUBBER AND INFR"
+    },
+    {
+      "stock_code": "RELAXO",
+      "instrument_token": 6201601,
+      "name": "RELAXO FOOT"
+    },
+    {
+      "stock_code": "SHILPAMED",
+      "instrument_token": 4544513,
+      "name": "SHILPA MEDICARE"
+    },
+    {
+      "stock_code": "GOODLUCK",
+      "instrument_token": 1568001,
+      "name": "GOODLUCK INDIA"
+    },
+    {
+      "stock_code": "STERTOOLS",
+      "instrument_token": 1100545,
+      "name": "STERLING TOOLS"
+    },
+    {
+      "stock_code": "KRBL",
+      "instrument_token": 2707713,
+      "name": "KRBL"
+    },
+    {
+      "stock_code": "CUPID",
+      "instrument_token": 4741121,
+      "name": "CUPID"
+    },
+    {
+      "stock_code": "CIFL",
+      "instrument_token": 193539841,
+      "name": "CAPITAL INDIA FINANCE"
+    },
+    {
+      "stock_code": "IOC",
+      "instrument_token": 415745,
+      "name": "INDIAN OIL CORP"
+    },
+    {
+      "stock_code": "BALAMINES",
+      "instrument_token": 3712257,
+      "name": "BALAJI AMINES"
+    },
+    {
+      "stock_code": "OMINFRAL",
+      "instrument_token": 6203137,
+      "name": "OM INFRA"
+    },
+    {
+      "stock_code": "BALUFORGE",
+      "instrument_token": 6043393,
+      "name": "BALU FORGE INDUSTRIES"
+    },
+    {
+      "stock_code": "PATELENG",
+      "instrument_token": 2994945,
+      "name": "PATEL ENGINEERING"
+    },
+    {
+      "stock_code": "EMAMILTD",
+      "instrument_token": 3460353,
+      "name": "EMAMI"
+    },
+    {
+      "stock_code": "ARMANFIN",
+      "instrument_token": 4419329,
+      "name": "ARMAN FIN SERV"
+    },
+    {
+      "stock_code": "SHILCTECH",
+      "instrument_token": 194520833,
+      "name": "SHILCHAR TECHNOLOGIES"
+    },
+    {
+      "stock_code": "NUCLEUS",
+      "instrument_token": 2762497,
+      "name": "NUCLEUS SOFTWARE EXPORTS"
+    },
+    {
+      "stock_code": "MANAPPURAM",
+      "instrument_token": 4879617,
+      "name": "MANAPPURAM FINANCE"
+    },
+    {
+      "stock_code": "VSTTILLERS",
+      "instrument_token": 6218753,
+      "name": "VST TILLERS TRACTORS"
+    },
+    {
+      "stock_code": "ZYDUSWELL",
+      "instrument_token": 4514561,
+      "name": "ZYDUS WELLNESS"
+    },
+    {
+      "stock_code": "CONCOR",
+      "instrument_token": 1215745,
+      "name": "CONTAINER CORP OF IND"
+    },
+    {
+      "stock_code": "PANACEABIO",
+      "instrument_token": 1038081,
+      "name": "PANACEA BIOTEC"
+    },
+    {
+      "stock_code": "CHOICEIN",
+      "instrument_token": 2269697,
+      "name": "CHOICE INTERNATIONAL"
+    },
+    {
+      "stock_code": "TNPL",
+      "instrument_token": 1018881,
+      "name": "TAMILNADU NEWSPRT & PAPER"
+    },
+    {
+      "stock_code": "SHAKTIPUMP",
+      "instrument_token": 6546945,
+      "name": "SHAKTI PUMPS (I)"
+    },
+    {
+      "stock_code": "EVEREADY",
+      "instrument_token": 3016193,
+      "name": "EVEREADY INDS. IND. "
+    },
+    {
+      "stock_code": "HATSUN",
+      "instrument_token": 996353,
+      "name": "HATSUN AGRO PRODUCT"
+    },
+    {
+      "stock_code": "JINDWORLD",
+      "instrument_token": 5284353,
+      "name": "JINDAL WORLDWIDE"
+    },
+    {
+      "stock_code": "SOMANYCERA",
+      "instrument_token": 993281,
+      "name": "SOMANY CERAMICS"
+    },
+    {
+      "stock_code": "CGCL",
+      "instrument_token": 5204225,
+      "name": "CAPRI GLOBAL CAPITAL"
+    },
+    {
+      "stock_code": "FDC",
+      "instrument_token": 1253889,
+      "name": "FDC"
+    },
+    {
+      "stock_code": "LINCOLN",
+      "instrument_token": 2968577,
+      "name": "LINCOLN PHARMA"
+    },
+    {
+      "stock_code": "MARICO",
+      "instrument_token": 1041153,
+      "name": "MARICO"
+    },
+    {
+      "stock_code": "VIDHIING",
+      "instrument_token": 3465217,
+      "name": "VIDHI SPCLTY F INGRDNTS L"
+    },
+    {
+      "stock_code": "BHAGCHEM",
+      "instrument_token": 1577985,
+      "name": "BHAGIRADHA CHEM & INDS L"
+    },
+    {
+      "stock_code": "APOLLOPIPE",
+      "instrument_token": 3676417,
+      "name": "APOLLO PIPES"
+    },
+    {
+      "stock_code": "POLYMED",
+      "instrument_token": 6583809,
+      "name": "POLY MEDICURE"
+    },
+    {
+      "stock_code": "ATULAUTO",
+      "instrument_token": 7685889,
+      "name": "ATUL AUTO"
+    },
+    {
+      "stock_code": "AGARIND",
+      "instrument_token": 867585,
+      "name": "AGARWAL INDS CORP"
+    },
+    {
+      "stock_code": "SINDHUTRAD",
+      "instrument_token": 4315905,
+      "name": "SINDHU TRADE LINKS"
+    },
+    {
+      "stock_code": "SWELECTES",
+      "instrument_token": 3048705,
+      "name": "SWELECT ENERGY SYS"
+    },
+    {
+      "stock_code": "KDDL",
+      "instrument_token": 3816449,
+      "name": "KDDL"
+    },
+    {
+      "stock_code": "HEXT",
+      "instrument_token": 7594497,
+      "name": "HEXAWARE TECHNOLOGIES"
+    },
+    {
+      "stock_code": "BANKBARODA",
+      "instrument_token": 1195009,
+      "name": "BANK OF BARODA"
+    },
+    {
+      "stock_code": "SKMEGGPROD",
+      "instrument_token": 1211393,
+      "name": "SKM EGG PROD EXPORT(I) LT"
+    },
+    {
+      "stock_code": "WELCORP",
+      "instrument_token": 3026177,
+      "name": "WELSPUN CORP"
+    },
+    {
+      "stock_code": "BANKINDIA",
+      "instrument_token": 1214721,
+      "name": "BANK OF INDIA"
+    },
+    {
+      "stock_code": "INDRAMEDCO",
+      "instrument_token": 1216257,
+      "name": "INDRAPRASTHA MEDICAL CORP"
+    },
+    {
+      "stock_code": "GAIL",
+      "instrument_token": 1207553,
+      "name": "GAIL (INDIA)"
+    },
+    {
+      "stock_code": "VAIBHAVGBL",
+      "instrument_token": 2909185,
+      "name": "VAIBHAV GLOBAL"
+    },
+    {
+      "stock_code": "JKPAPER",
+      "instrument_token": 3036161,
+      "name": "JK PAPER"
+    },
+    {
+      "stock_code": "SAREGAMA",
+      "instrument_token": 1252353,
+      "name": "SAREGAMA INDIA"
+    },
+    {
+      "stock_code": "ICICIBANK",
+      "instrument_token": 1270529,
+      "name": "ICICI BANK"
+    },
+    {
+      "stock_code": "CYIENT",
+      "instrument_token": 1471489,
+      "name": "CYIENT"
+    },
+    {
+      "stock_code": "ENGINERSIN",
+      "instrument_token": 1256193,
+      "name": "ENGINEERS INDIA"
+    },
+    {
+      "stock_code": "DHANBANK",
+      "instrument_token": 2907905,
+      "name": "DHANLAXMI BANK"
+    },
+    {
+      "stock_code": "GMDCLTD",
+      "instrument_token": 1332225,
+      "name": "GUJARAT MINERAL DEV CORP"
+    },
+    {
+      "stock_code": "INDUSINDBK",
+      "instrument_token": 1346049,
+      "name": "INDUSIND BANK"
+    },
+    {
+      "stock_code": "ITDC",
+      "instrument_token": 4940545,
+      "name": "INDIA TOUR. DEV. CO."
+    },
+    {
+      "stock_code": "J&KBANK",
+      "instrument_token": 1442049,
+      "name": "J & K BANK"
+    },
+    {
+      "stock_code": "CUB",
+      "instrument_token": 1459457,
+      "name": "CITY UNION BANK"
+    },
+    {
+      "stock_code": "AXISBANK",
+      "instrument_token": 1510401,
+      "name": "AXIS BANK"
+    },
+    {
+      "stock_code": "SOUTHBANK",
+      "instrument_token": 1522689,
+      "name": "THE SOUTH INDIAN BANK"
+    },
+    {
+      "stock_code": "SONATSOFTW",
+      "instrument_token": 1688577,
+      "name": "SONATA SOFTWARE"
+    },
+    {
+      "stock_code": "NATIONALUM",
+      "instrument_token": 1629185,
+      "name": "NATIONAL ALUMINIUM CO"
+    },
+    {
+      "stock_code": "INDNIPPON",
+      "instrument_token": 1215233,
+      "name": "INDIA NIPPON ELECT "
+    },
+    {
+      "stock_code": "NSIL",
+      "instrument_token": 2877185,
+      "name": "NALWA SONS INVESTMENT"
+    },
+    {
+      "stock_code": "APARINDS",
+      "instrument_token": 2941697,
+      "name": "APAR INDUSTRIES"
+    },
+    {
+      "stock_code": "ACCELYA",
+      "instrument_token": 1805569,
+      "name": "ACCELYA SOLN INDIA"
+    },
+    {
+      "stock_code": "HCLTECH",
+      "instrument_token": 1850625,
+      "name": "HCL TECHNOLOGIES"
+    },
+    {
+      "stock_code": "GEOJITFSL",
+      "instrument_token": 3045377,
+      "name": "GEOJIT FINANCIAL SER L"
+    },
+    {
+      "stock_code": "JINDALSTEL",
+      "instrument_token": 1723649,
+      "name": "JINDAL STEEL"
+    },
+    {
+      "stock_code": "GLENMARK",
+      "instrument_token": 1895937,
+      "name": "GLENMARK PHARMACEUTICALS"
+    },
+    {
+      "stock_code": "WOCKPHARMA",
+      "instrument_token": 1921537,
+      "name": "WOCKHARDT"
+    },
+    {
+      "stock_code": "INDSWFTLAB",
+      "instrument_token": 1246721,
+      "name": "IND SWIFT LABORATORIES LT"
+    },
+    {
+      "stock_code": "MAHLIFE",
+      "instrument_token": 2060801,
+      "name": "MAHINDRA LIFESPACE DEVLTD"
+    },
+    {
+      "stock_code": "ZYDUSLIFE",
+      "instrument_token": 2029825,
+      "name": "ZYDUS LIFESCIENCES"
+    },
+    {
+      "stock_code": "AJANTPHARM",
+      "instrument_token": 2079745,
+      "name": "AJANTA PHARMA"
+    },
+    {
+      "stock_code": "TVSMOTOR",
+      "instrument_token": 2170625,
+      "name": "TVS MOTOR COMPANY "
+    },
+    {
+      "stock_code": "TCI",
+      "instrument_token": 2708481,
+      "name": "TRANSPORT CORPN OF INDIA"
+    },
+    {
+      "stock_code": "TRIVENI",
+      "instrument_token": 3348737,
+      "name": "TRIVENI ENGG. & INDS."
+    },
+    {
+      "stock_code": "DSSL",
+      "instrument_token": 6576641,
+      "name": "DYNACONS SYS & SOLN"
+    },
+    {
+      "stock_code": "PNBGILTS",
+      "instrument_token": 2236417,
+      "name": "PNB GILTS"
+    },
+    {
+      "stock_code": "RAMCOIND",
+      "instrument_token": 1174273,
+      "name": "RAMCO INDUSTRIES"
+    },
+    {
+      "stock_code": "RAMCOSYS",
+      "instrument_token": 2009857,
+      "name": "RAMCO SYSTEMS"
+    },
+    {
+      "stock_code": "TTML",
+      "instrument_token": 2292225,
+      "name": "TATA TELESERV(MAHARASTRA)"
+    },
+    {
+      "stock_code": "STLTECH",
+      "instrument_token": 2383105,
+      "name": "STERLITE TECHNOLOGIES"
+    },
+    {
+      "stock_code": "TIPSMUSIC",
+      "instrument_token": 2333953,
+      "name": "TIPS MUSIC"
+    },
+    {
+      "stock_code": "BALAJITELE",
+      "instrument_token": 2344449,
+      "name": "BALAJI TELEFILMS"
+    },
+    {
+      "stock_code": "IOB",
+      "instrument_token": 2393089,
+      "name": "INDIAN OVERSEAS BANK"
+    },
+    {
+      "stock_code": "TAJGVK",
+      "instrument_token": 2394625,
+      "name": "TAJ GVK HOTELS & RESORTS"
+    },
+    {
+      "stock_code": "AXISCADES",
+      "instrument_token": 2415617,
+      "name": "AXISCADES TECH"
+    },
+    {
+      "stock_code": "BSOFT",
+      "instrument_token": 1790465,
+      "name": "BIRLASOFT"
+    },
+    {
+      "stock_code": "AVANTEL",
+      "instrument_token": 6300161,
+      "name": "AVANTEL"
+    },
+    {
+      "stock_code": "MOSCHIP",
+      "instrument_token": 7541505,
+      "name": "MOSCHIP TECHNOLOGIES"
+    },
+    {
+      "stock_code": "SIGMAADV",
+      "instrument_token": 3787009,
+      "name": "SIGMA ADVANCED SYSTEM"
+    },
+    {
+      "stock_code": "GODREJCP",
+      "instrument_token": 2585345,
+      "name": "GODREJ CONSUMER PRODUCTS"
+    },
+    {
+      "stock_code": "UNITDSPR",
+      "instrument_token": 2674433,
+      "name": "UNITED SPIRITS"
+    },
+    {
+      "stock_code": "OLECTRA",
+      "instrument_token": 2723073,
+      "name": "OLECTRA GREENTECH"
+    },
+    {
+      "stock_code": "MPSLTD",
+      "instrument_token": 2707969,
+      "name": "MPS"
+    },
+    {
+      "stock_code": "CERA",
+      "instrument_token": 3849985,
+      "name": "CERA SANITARYWARE"
+    },
+    {
+      "stock_code": "BHARTIARTL",
+      "instrument_token": 2714625,
+      "name": "BHARTI AIRTEL"
+    },
+    {
+      "stock_code": "GULPOLY",
+      "instrument_token": 1609217,
+      "name": "GULSHAN POLYOLS"
+    },
+    {
+      "stock_code": "PNB",
+      "instrument_token": 2730497,
+      "name": "PUNJAB NATIONAL BANK"
+    },
+    {
+      "stock_code": "OFSS",
+      "instrument_token": 2748929,
+      "name": "ORACLE FIN SERV SOFT"
+    },
+    {
+      "stock_code": "UNIONBANK",
+      "instrument_token": 2752769,
+      "name": "UNION BANK OF INDIA"
+    },
+    {
+      "stock_code": "UBL",
+      "instrument_token": 4278529,
+      "name": "UNITED BREWERIES"
+    },
+    {
+      "stock_code": "GRANULES",
+      "instrument_token": 3039233,
+      "name": "GRANULES INDIA"
+    },
+    {
+      "stock_code": "CANBK",
+      "instrument_token": 2763265,
+      "name": "CANARA BANK"
+    },
+    {
+      "stock_code": "POKARNA",
+      "instrument_token": 4518657,
+      "name": "POKARNA"
+    },
+    {
+      "stock_code": "DIVISLAB",
+      "instrument_token": 2800641,
+      "name": "DIVI S LABORATORIES"
+    },
+    {
+      "stock_code": "ASTRAMICRO",
+      "instrument_token": 2974209,
+      "name": "ASTRA MICROWAVE"
+    },
+    {
+      "stock_code": "RADICO",
+      "instrument_token": 2813441,
+      "name": "RADICO KHAITAN"
+    },
+    {
+      "stock_code": "MARUTI",
+      "instrument_token": 2815745,
+      "name": "MARUTI SUZUKI INDIA"
+    },
+    {
+      "stock_code": "NAVINFLUOR",
+      "instrument_token": 3756033,
+      "name": "NAVIN FLUORINE INT."
+    },
+    {
+      "stock_code": "UCOBANK",
+      "instrument_token": 2873089,
+      "name": "UCO BANK"
+    },
+    {
+      "stock_code": "JSL",
+      "instrument_token": 2876417,
+      "name": "JINDAL STAINLESS"
+    },
+    {
+      "stock_code": "SUPRAJIT",
+      "instrument_token": 2992385,
+      "name": "SUPRAJIT ENGINEERING"
+    },
+    {
+      "stock_code": "TVSELECT",
+      "instrument_token": 2883841,
+      "name": "TVS ELECTRONICS"
+    },
+    {
+      "stock_code": "IGL",
+      "instrument_token": 2883073,
+      "name": "INDRAPRASTHA GAS"
+    },
+    {
+      "stock_code": "TVTODAY",
+      "instrument_token": 2886401,
+      "name": "TV TODAY NETWORK"
+    },
+    {
+      "stock_code": "PETRONET",
+      "instrument_token": 2905857,
+      "name": "PETRONET LNG"
+    },
+    {
+      "stock_code": "BIOCON",
+      "instrument_token": 2911489,
+      "name": "BIOCON"
+    },
+    {
+      "stock_code": "PTC",
+      "instrument_token": 2906881,
+      "name": "PTC INDIA"
+    },
+    {
+      "stock_code": "MAHABANK",
+      "instrument_token": 2912513,
+      "name": "BANK OF MAHARASHTRA"
+    },
+    {
+      "stock_code": "RKFORGE",
+      "instrument_token": 2921217,
+      "name": "RAMKRISHNA FORGINGS"
+    },
+    {
+      "stock_code": "DATAMATICS",
+      "instrument_token": 2924289,
+      "name": "DATAMATICS GLOBAL SER"
+    },
+    {
+      "stock_code": "NDTV",
+      "instrument_token": 2925313,
+      "name": "NDTV"
+    },
+    {
+      "stock_code": "STAR",
+      "instrument_token": 1887745,
+      "name": "STRIDES PHARMA SCI"
+    },
+    {
+      "stock_code": "ULTRACEMCO",
+      "instrument_token": 2952193,
+      "name": "ULTRATECH CEMENT"
+    },
+    {
+      "stock_code": "UNOMINDA",
+      "instrument_token": 3623425,
+      "name": "UNO MINDA"
+    },
+    {
+      "stock_code": "TCS",
+      "instrument_token": 2953217,
+      "name": "TATA CONSULTANCY SERV LT"
+    },
+    {
+      "stock_code": "COFORGE",
+      "instrument_token": 2955009,
+      "name": "COFORGE"
+    },
+    {
+      "stock_code": "CENTURYPLY",
+      "instrument_token": 3406081,
+      "name": "CENTURY PLYBOARDS (I)"
+    },
+    {
+      "stock_code": "WELENT",
+      "instrument_token": 2976257,
+      "name": "WELSPUN ENTERPRISES"
+    },
+    {
+      "stock_code": "NTPC",
+      "instrument_token": 2977281,
+      "name": "NTPC"
+    },
+    {
+      "stock_code": "JBMA",
+      "instrument_token": 2983681,
+      "name": "JBM AUTO"
+    },
+    {
+      "stock_code": "DWARKESH",
+      "instrument_token": 2986753,
+      "name": "DWARIKESH SUGAR IND"
+    },
+    {
+      "stock_code": "INDOCO",
+      "instrument_token": 2989313,
+      "name": "INDOCO REMEDIES"
+    },
+    {
+      "stock_code": "JINDALPHOT",
+      "instrument_token": 3006209,
+      "name": "JINDAL PHOTO"
+    },
+    {
+      "stock_code": "POCL",
+      "instrument_token": 3682561,
+      "name": "PONDY OXIDES & CHEM"
+    },
+    {
+      "stock_code": "JPPOWER",
+      "instrument_token": 3011329,
+      "name": "JAIPRAKASH POWER VEN."
+    },
+    {
+      "stock_code": "GOKEX",
+      "instrument_token": 3015169,
+      "name": "GOKALDAS EXPORTS"
+    },
+    {
+      "stock_code": "IIFL",
+      "instrument_token": 3023105,
+      "name": "IIFL FINANCE"
+    },
+    {
+      "stock_code": "SHOPERSTOP",
+      "instrument_token": 3024129,
+      "name": "SHOPPERS STOP"
+    },
+    {
+      "stock_code": "JSWHL",
+      "instrument_token": 3041281,
+      "name": "JSW HOLDINGS"
+    },
+    {
+      "stock_code": "JKCEMENT",
+      "instrument_token": 3397121,
+      "name": "JK CEMENT"
+    },
+    {
+      "stock_code": "YESBANK",
+      "instrument_token": 3050241,
+      "name": "YES BANK"
+    },
+    {
+      "stock_code": "MSPL",
+      "instrument_token": 3051265,
+      "name": "MSP STEEL & POWER"
+    },
+    {
+      "stock_code": "KTKBANK",
+      "instrument_token": 2061825,
+      "name": "KARNATAKA BANK"
+    },
+    {
+      "stock_code": "RML",
+      "instrument_token": 3065601,
+      "name": "RANE (MADRAS)"
+    },
+    {
+      "stock_code": "SASKEN",
+      "instrument_token": 3067649,
+      "name": "SASKEN TECHNOLOGIES"
+    },
+    {
+      "stock_code": "SUZLON",
+      "instrument_token": 3076609,
+      "name": "SUZLON ENERGY"
+    },
+    {
+      "stock_code": "AURIONPRO",
+      "instrument_token": 3077633,
+      "name": "AURIONPRO SOLN"
+    },
+    {
+      "stock_code": "RENUKA",
+      "instrument_token": 3078657,
+      "name": "SHREE RENUKA SUGARS"
+    },
+    {
+      "stock_code": "AIAENG",
+      "instrument_token": 3350017,
+      "name": "AIA ENGINEERING"
+    },
+    {
+      "stock_code": "EKC",
+      "instrument_token": 3351297,
+      "name": "EVEREST KANTO CYLINDERLTD"
+    },
+    {
+      "stock_code": "KERNEX",
+      "instrument_token": 3358977,
+      "name": "KERNEX MICROSYS(I)"
+    },
+    {
+      "stock_code": "REPRO",
+      "instrument_token": 3360257,
+      "name": "REPRO INDIA"
+    },
+    {
+      "stock_code": "PVRINOX",
+      "instrument_token": 3365633,
+      "name": "PVR INOX"
+    },
+    {
+      "stock_code": "NITINSPIN",
+      "instrument_token": 3372801,
+      "name": "NITIN SPINNERS"
+    },
+    {
+      "stock_code": "GSPL",
+      "instrument_token": 3378433,
+      "name": "GUJARAT STATE PETRO"
+    },
+    {
+      "stock_code": "JAGRAN",
+      "instrument_token": 3382017,
+      "name": "JAGRAN PRAKASHAN"
+    },
+    {
+      "stock_code": "KEC",
+      "instrument_token": 3394561,
+      "name": "KEC INTL."
+    },
+    {
+      "stock_code": "INDOTECH",
+      "instrument_token": 3398401,
+      "name": "INDO TECH TRANSFORM"
+    },
+    {
+      "stock_code": "BLKASHYAP",
+      "instrument_token": 3402241,
+      "name": "B.L.KASHYAP & SON"
+    },
+    {
+      "stock_code": "M&MFIN",
+      "instrument_token": 3400961,
+      "name": "M&M FIN. SERVICES"
+    },
+    {
+      "stock_code": "NITCO",
+      "instrument_token": 3404801,
+      "name": "NITCO"
+    },
+    {
+      "stock_code": "SOLARINDS",
+      "instrument_token": 3412993,
+      "name": "SOLAR INDUSTRIES (I)"
+    },
+    {
+      "stock_code": "GALLANTT",
+      "instrument_token": 3414273,
+      "name": "GALLANTT ISPAT"
+    },
+    {
+      "stock_code": "UTTAMSUGAR",
+      "instrument_token": 3424257,
+      "name": "UTTAM SUGAR MILLS"
+    },
+    {
+      "stock_code": "KKCL",
+      "instrument_token": 3425537,
+      "name": "KEWAL KIRAN CLOTHING"
+    },
+    {
+      "stock_code": "SUNTV",
+      "instrument_token": 3431425,
+      "name": "SUN TV NETWORK"
+    },
+    {
+      "stock_code": "GPIL",
+      "instrument_token": 3432705,
+      "name": "GODAWARI POW & ISP"
+    },
+    {
+      "stock_code": "RSYSTEMS",
+      "instrument_token": 3433985,
+      "name": "R SYS INTERNATIONAL"
+    },
+    {
+      "stock_code": "PAUSHAKLTD",
+      "instrument_token": 194552065,
+      "name": "PAUSHAK"
+    },
+    {
+      "stock_code": "PFOCUS",
+      "instrument_token": 3454977,
+      "name": "PRIME FOCUS"
+    },
+    {
+      "stock_code": "ALLCARGO",
+      "instrument_token": 3456257,
+      "name": "ALLCARGO LOGISTICS"
+    },
+    {
+      "stock_code": "GMRAIRPORT",
+      "instrument_token": 3463169,
+      "name": "GMR AIRPORTS"
+    },
+    {
+      "stock_code": "TECHM",
+      "instrument_token": 3465729,
+      "name": "TECH MAHINDRA"
+    },
+    {
+      "stock_code": "CIEINDIA",
+      "instrument_token": 3823873,
+      "name": "CIE AUTOMOTIVE INDIA"
+    },
+    {
+      "stock_code": "VOLTAMP",
+      "instrument_token": 3475713,
+      "name": "VOLTAMP TRANSFORMERS"
+    },
+    {
+      "stock_code": "ACE",
+      "instrument_token": 3478273,
+      "name": "ACTION CONST EQUIP"
+    },
+    {
+      "stock_code": "FIEMIND",
+      "instrument_token": 3509761,
+      "name": "FIEM INDUSTRIES"
+    },
+    {
+      "stock_code": "DCBBANK",
+      "instrument_token": 3513601,
+      "name": "DCB BANK"
+    },
+    {
+      "stock_code": "NAUKRI",
+      "instrument_token": 3520257,
+      "name": "INFO EDGE (I)"
+    },
+    {
+      "stock_code": "TORNTPOWER",
+      "instrument_token": 3529217,
+      "name": "TORRENT POWER"
+    },
+    {
+      "stock_code": "LTFOODS",
+      "instrument_token": 3536897,
+      "name": "LT FOODS"
+    },
+    {
+      "stock_code": "SOBHA",
+      "instrument_token": 3539457,
+      "name": "SOBHA"
+    },
+    {
+      "stock_code": "TANLA",
+      "instrument_token": 3577857,
+      "name": "TANLA PLATFORMS"
+    },
+    {
+      "stock_code": "LUMAXTECH",
+      "instrument_token": 3587585,
+      "name": "LUMAX AUTO TECH"
+    },
+    {
+      "stock_code": "NETWORK18",
+      "instrument_token": 3612417,
+      "name": "NETWORK18 MEDIA & INV"
+    },
+    {
+      "stock_code": "HUBTOWN",
+      "instrument_token": 3635969,
+      "name": "HUBTOWN"
+    },
+    {
+      "stock_code": "TIIL",
+      "instrument_token": 3641089,
+      "name": "TECHNOCRAFT IND"
+    },
+    {
+      "stock_code": "REDINGTON",
+      "instrument_token": 3649281,
+      "name": "REDINGTON"
+    },
+    {
+      "stock_code": "PGIL",
+      "instrument_token": 3650561,
+      "name": "PEARL GLOBAL IND"
+    },
+    {
+      "stock_code": "FSL",
+      "instrument_token": 3661825,
+      "name": "FIRSTSOURCE SOLU."
+    },
+    {
+      "stock_code": "PFC",
+      "instrument_token": 3660545,
+      "name": "POWER FIN CORP"
+    },
+    {
+      "stock_code": "AHLUCONT",
+      "instrument_token": 4565249,
+      "name": "AHLUWALIA CONT IND"
+    },
+    {
+      "stock_code": "INDIANB",
+      "instrument_token": 3663105,
+      "name": "INDIAN BANK"
+    },
+    {
+      "stock_code": "SMSPHARMA",
+      "instrument_token": 3668225,
+      "name": "SMS PHARMACEUTICALS"
+    },
+    {
+      "stock_code": "IDEA",
+      "instrument_token": 3677697,
+      "name": "VODAFONE IDEA"
+    },
+    {
+      "stock_code": "PAGEIND",
+      "instrument_token": 3689729,
+      "name": "PAGE INDUSTRIES"
+    },
+    {
+      "stock_code": "ASTRAL",
+      "instrument_token": 3691009,
+      "name": "ASTRAL"
+    },
+    {
+      "stock_code": "CAMLINFINE",
+      "instrument_token": 1591297,
+      "name": "CAMLIN FINE SCIENCES"
+    },
+    {
+      "stock_code": "ICRA",
+      "instrument_token": 3717889,
+      "name": "ICRA"
+    },
+    {
+      "stock_code": "SRHHYPOLTD",
+      "instrument_token": 3732993,
+      "name": "SREE RAYALSEEMA HHP"
+    },
+    {
+      "stock_code": "FORTIS",
+      "instrument_token": 3735553,
+      "name": "FORTIS HEALTHCARE"
+    },
+    {
+      "stock_code": "DELTACORP",
+      "instrument_token": 3851265,
+      "name": "DELTA CORP"
+    },
+    {
+      "stock_code": "MICEL",
+      "instrument_token": 1835265,
+      "name": "MIC ELECTRONICS"
+    },
+    {
+      "stock_code": "INSECTICID",
+      "instrument_token": 3752193,
+      "name": "INSECTICIDES (I)"
+    },
+    {
+      "stock_code": "TIMETECHNO",
+      "instrument_token": 3764993,
+      "name": "TIME TECHNOPLAST"
+    },
+    {
+      "stock_code": "HGS",
+      "instrument_token": 3766273,
+      "name": "HINDUJA GLOBAL SOLS."
+    },
+    {
+      "stock_code": "NELCAST",
+      "instrument_token": 3778817,
+      "name": "NELCAST"
+    },
+    {
+      "stock_code": "V2RETAIL",
+      "instrument_token": 3780097,
+      "name": "V2 RETAIL"
+    },
+    {
+      "stock_code": "DLF",
+      "instrument_token": 3771393,
+      "name": "DLF"
+    },
+    {
+      "stock_code": "SPARC",
+      "instrument_token": 3785729,
+      "name": "SUN PHARMA ADV.RES.CO.LTD"
+    },
+    {
+      "stock_code": "ADSL",
+      "instrument_token": 3792129,
+      "name": "ALLIED DIGITAL SERV."
+    },
+    {
+      "stock_code": "REFEX",
+      "instrument_token": 4547585,
+      "name": "REFEX INDUSTRIES"
+    },
+    {
+      "stock_code": "CENTRALBK",
+      "instrument_token": 3812865,
+      "name": "CENTRAL BANK OF INDIA"
+    },
+    {
+      "stock_code": "ASIANTILES",
+      "instrument_token": 3811585,
+      "name": "ASIAN GRANITO IND."
+    },
+    {
+      "stock_code": "KPRMILL",
+      "instrument_token": 3817473,
+      "name": "KPR MILL"
+    },
+    {
+      "stock_code": "PURVA",
+      "instrument_token": 3820033,
+      "name": "PURAVANKARA"
+    },
+    {
+      "stock_code": "MOTILALOFS",
+      "instrument_token": 3826433,
+      "name": "MOTILAL OSWAL FIN"
+    },
+    {
+      "stock_code": "POWERGRID",
+      "instrument_token": 3834113,
+      "name": "POWER GRID CORP."
+    },
+    {
+      "stock_code": "KSCL",
+      "instrument_token": 3832833,
+      "name": "KAVERI SEED CO."
+    },
+    {
+      "stock_code": "PAISALO",
+      "instrument_token": 6519809,
+      "name": "PAISALO DIGITAL"
+    },
+    {
+      "stock_code": "RELIGARE",
+      "instrument_token": 3857409,
+      "name": "RELIGARE ENTER."
+    },
+    {
+      "stock_code": "ADANIPORTS",
+      "instrument_token": 3861249,
+      "name": "ADANI PORT & SEZ"
+    },
+    {
+      "stock_code": "EDELWEISS",
+      "instrument_token": 3870465,
+      "name": "EDELWEISS FIN SERV"
+    },
+    {
+      "stock_code": "RGL",
+      "instrument_token": 3873025,
+      "name": "RENAISSANCE GLOBAL"
+    },
+    {
+      "stock_code": "KARURVYSYA",
+      "instrument_token": 470529,
+      "name": "KARUR VYSYA BANK"
+    },
+    {
+      "stock_code": "VEEDOL",
+      "instrument_token": 3588865,
+      "name": "VEEDOL CORPORATION"
+    },
+    {
+      "stock_code": "AMRUTANJAN",
+      "instrument_token": 4492033,
+      "name": "AMRUTAJAN HEALTH"
+    },
+    {
+      "stock_code": "XPROINDIA",
+      "instrument_token": 2920193,
+      "name": "XPRO INDIA"
+    },
+    {
+      "stock_code": "BHARATRAS",
+      "instrument_token": 981505,
+      "name": "BHARAT RASAYAN"
+    },
+    {
+      "stock_code": "FACT",
+      "instrument_token": 258049,
+      "name": "FACT"
+    },
+    {
+      "stock_code": "SPIC",
+      "instrument_token": 832513,
+      "name": "SPIC"
+    },
+    {
+      "stock_code": "ZENTEC",
+      "instrument_token": 1922049,
+      "name": "ZEN TECHNOLOGIES"
+    },
+    {
+      "stock_code": "SAKSOFT",
+      "instrument_token": 3019265,
+      "name": "SAKSOFT"
+    },
+    {
+      "stock_code": "KECL",
+      "instrument_token": 4664321,
+      "name": "KIRLOSKAR ELECTRIC CO"
+    },
+    {
+      "stock_code": "APLAPOLLO",
+      "instrument_token": 6599681,
+      "name": "APL APOLLO TUBES"
+    },
+    {
+      "stock_code": "ANDHRSUGAR",
+      "instrument_token": 34817,
+      "name": "ANDHRA SUGARS"
+    },
+    {
+      "stock_code": "JAIBALAJI",
+      "instrument_token": 2881537,
+      "name": "JAI BALAJI INDUSTRIES"
+    },
+    {
+      "stock_code": "KCP",
+      "instrument_token": 471297,
+      "name": "KCP"
+    },
+    {
+      "stock_code": "SUNDARMFIN",
+      "instrument_token": 854785,
+      "name": "SUNDARAM FINANCE"
+    },
+    {
+      "stock_code": "WHEELS",
+      "instrument_token": 964097,
+      "name": "WHEELS INDIA"
+    },
+    {
+      "stock_code": "JYOTHYLAB",
+      "instrument_token": 3877377,
+      "name": "JYOTHY LABS"
+    },
+    {
+      "stock_code": "KOLTEPATIL",
+      "instrument_token": 3871745,
+      "name": "KOLTE PATIL DEV."
+    },
+    {
+      "stock_code": "ECLERX",
+      "instrument_token": 3885825,
+      "name": "ECLERX SERVICES"
+    },
+    {
+      "stock_code": "TARIL",
+      "instrument_token": 3884545,
+      "name": "TRANS & RECTI."
+    },
+    {
+      "stock_code": "BRIGADE",
+      "instrument_token": 3887105,
+      "name": "BRIGADE ENTER."
+    },
+    {
+      "stock_code": "ISGEC",
+      "instrument_token": 852225,
+      "name": "ISGEC HEAVY ENG"
+    },
+    {
+      "stock_code": "MADRASFERT",
+      "instrument_token": 1257217,
+      "name": "MADRAS FERTILISERS"
+    },
+    {
+      "stock_code": "KOTHARIPET",
+      "instrument_token": 1176065,
+      "name": "KOTHARI PETROCHEM"
+    },
+    {
+      "stock_code": "RPOWER",
+      "instrument_token": 3906305,
+      "name": "RELIANCE POWER"
+    },
+    {
+      "stock_code": "JKIL",
+      "instrument_token": 3908097,
+      "name": "JKUMAR INFR.LTD."
+    },
+    {
+      "stock_code": "ONMOBILE",
+      "instrument_token": 3911169,
+      "name": "ONMOBILE GLOBAL"
+    },
+    {
+      "stock_code": "KNRCON",
+      "instrument_token": 3912449,
+      "name": "KNR CONSTRU"
+    },
+    {
+      "stock_code": "GLOBUSSPR",
+      "instrument_token": 4460545,
+      "name": "GLOBUS SPIRITS"
+    },
+    {
+      "stock_code": "IRB",
+      "instrument_token": 3920129,
+      "name": "IRB INFRA DEV"
+    },
+    {
+      "stock_code": "SEPC",
+      "instrument_token": 3918849,
+      "name": "SEPC"
+    },
+    {
+      "stock_code": "VGUARD",
+      "instrument_token": 3932673,
+      "name": "V-GUARD IND"
+    },
+    {
+      "stock_code": "RECLTD",
+      "instrument_token": 3930881,
+      "name": "REC"
+    },
+    {
+      "stock_code": "DBCORP",
+      "instrument_token": 4577537,
+      "name": "D.B.CORP"
+    },
+    {
+      "stock_code": "KIRIINDUS",
+      "instrument_token": 4259585,
+      "name": "KIRI INDUSTRIES"
+    },
+    {
+      "stock_code": "MHRIL",
+      "instrument_token": 4437249,
+      "name": "MAHINDRA HOLIDAYS"
+    },
+    {
+      "stock_code": "MANINFRA",
+      "instrument_token": 4665857,
+      "name": "MAN INFRA"
+    },
+    {
+      "stock_code": "OIL",
+      "instrument_token": 4464129,
+      "name": "OIL INDIA"
+    },
+    {
+      "stock_code": "PNCINFRA",
+      "instrument_token": 2402561,
+      "name": "PNC INFRATECH"
+    },
+    {
+      "stock_code": "TITAGARH",
+      "instrument_token": 3945985,
+      "name": "TITAGARH RAIL SYSTEMS"
+    },
+    {
+      "stock_code": "BAJAJ-AUTO",
+      "instrument_token": 4267265,
+      "name": "BAJAJ AUTO"
+    },
+    {
+      "stock_code": "ZFCVINDIA",
+      "instrument_token": 4330241,
+      "name": "ZF COM VE CTR SYS IND"
+    },
+    {
+      "stock_code": "MAITHANALL",
+      "instrument_token": 6281729,
+      "name": "MAITHAN ALLOYS"
+    },
+    {
+      "stock_code": "BAJAJFINSV",
+      "instrument_token": 4268801,
+      "name": "BAJAJ FINSERV"
+    },
+    {
+      "stock_code": "RPGLIFE",
+      "instrument_token": 4281601,
+      "name": "RPG LIFE SCIENCES"
+    },
+    {
+      "stock_code": "ELLEN",
+      "instrument_token": 194192129,
+      "name": "ELLENBARRIE INDUS GASES L"
+    },
+    {
+      "stock_code": "ORISSAMINE",
+      "instrument_token": 5102337,
+      "name": "ORISSA MIN DEV CO"
+    },
+    {
+      "stock_code": "CIGNITITEC",
+      "instrument_token": 1316353,
+      "name": "CIGNITI TECHNOLOGIES"
+    },
+    {
+      "stock_code": "20MICRONS",
+      "instrument_token": 4331777,
+      "name": "20 MICRONS"
+    },
+    {
+      "stock_code": "ADVENZYMES",
+      "instrument_token": 4617985,
+      "name": "ADVANCED ENZYME TECH"
+    },
+    {
+      "stock_code": "ASHOKA",
+      "instrument_token": 5166593,
+      "name": "ASHOKA BUILDCON"
+    },
+    {
+      "stock_code": "DOLLAR",
+      "instrument_token": 5263361,
+      "name": "DOLLAR INDUSTRIES"
+    },
+    {
+      "stock_code": "BSE",
+      "instrument_token": 5013761,
+      "name": "BSE"
+    },
+    {
+      "stock_code": "STARCEMENT",
+      "instrument_token": 5399297,
+      "name": "STAR CEMENT"
+    },
+    {
+      "stock_code": "CDSL",
+      "instrument_token": 5420545,
+      "name": "CENTRAL DEPO SER (I)"
+    },
+    {
+      "stock_code": "CHALET",
+      "instrument_token": 2187777,
+      "name": "CHALET HOTELS"
+    },
+    {
+      "stock_code": "GALAXYSURF",
+      "instrument_token": 336641,
+      "name": "GALAXY SURFACTANTS"
+    },
+    {
+      "stock_code": "GRSE",
+      "instrument_token": 1401601,
+      "name": "GARDEN REACH SHIP&ENG"
+    },
+    {
+      "stock_code": "GODREJPROP",
+      "instrument_token": 4576001,
+      "name": "GODREJ PROPERTIES"
+    },
+    {
+      "stock_code": "GPPL",
+      "instrument_token": 5051137,
+      "name": "GUJARAT PIPAVAV PORT"
+    },
+    {
+      "stock_code": "HDFCAMC",
+      "instrument_token": 1086465,
+      "name": "HDFC AMC"
+    },
+    {
+      "stock_code": "HITECH",
+      "instrument_token": 734209,
+      "name": "HI-TECH PIPES"
+    },
+    {
+      "stock_code": "IRCTC",
+      "instrument_token": 3484417,
+      "name": "INDIAN RAIL TOUR CORP"
+    },
+    {
+      "stock_code": "IREDA",
+      "instrument_token": 5186817,
+      "name": "INDIAN RENEWABLE ENERGY"
+    },
+    {
+      "stock_code": "JSWENERGY",
+      "instrument_token": 4574465,
+      "name": "JSW ENERGY"
+    },
+    {
+      "stock_code": "MSTCLTD",
+      "instrument_token": 2395137,
+      "name": "MSTC"
+    },
+    {
+      "stock_code": "MGL",
+      "instrument_token": 4488705,
+      "name": "MAHANAGAR GAS"
+    },
+    {
+      "stock_code": "MOIL",
+      "instrument_token": 5332481,
+      "name": "MOIL"
+    },
+    {
+      "stock_code": "MIDHANI",
+      "instrument_token": 630529,
+      "name": "MISHRA DHATU NIGAM"
+    },
+    {
+      "stock_code": "MCX",
+      "instrument_token": 7982337,
+      "name": "MULTI COMMODITY EXCHANGE"
+    },
+    {
+      "stock_code": "NBCC",
+      "instrument_token": 8042241,
+      "name": "NBCC (INDIA)"
+    },
+    {
+      "stock_code": "RVNL",
+      "instrument_token": 2445313,
+      "name": "RAIL VIKAS NIGAM"
+    },
+    {
+      "stock_code": "RAMASTEEL",
+      "instrument_token": 2636801,
+      "name": "RAMA STEEL TUBES"
+    },
+    {
+      "stock_code": "RAMKY",
+      "instrument_token": 5154305,
+      "name": "RAMKY INFRA"
+    },
+    {
+      "stock_code": "RBLBANK",
+      "instrument_token": 4708097,
+      "name": "RBL BANK"
+    },
+    {
+      "stock_code": "NAM-INDIA",
+      "instrument_token": 91393,
+      "name": "NIPPON L I A M"
+    },
+    {
+      "stock_code": "REPCOHOME",
+      "instrument_token": 7577089,
+      "name": "REPCO HOME FINANCE"
+    },
+    {
+      "stock_code": "RITES",
+      "instrument_token": 962817,
+      "name": "RITES"
+    },
+    {
+      "stock_code": "SPAL",
+      "instrument_token": 4672513,
+      "name": "S. P. APPARELS"
+    },
+    {
+      "stock_code": "SANDHAR",
+      "instrument_token": 613633,
+      "name": "SANDHAR TECHNOLOGIES"
+    },
+    {
+      "stock_code": "SHARDAMOTR",
+      "instrument_token": 2695681,
+      "name": "SHARDA MOTOR INDS"
+    },
+    {
+      "stock_code": "SNOWMAN",
+      "instrument_token": 1239809,
+      "name": "SNOWMAN LOGISTICS"
+    },
+    {
+      "stock_code": "SUMICHEM",
+      "instrument_token": 4378881,
+      "name": "SUMITOMO CHEM INDIA"
+    },
+    {
+      "stock_code": "SYNGENE",
+      "instrument_token": 2622209,
+      "name": "SYNGENE INTERNATIONAL"
+    },
+    {
+      "stock_code": "UTIAMC",
+      "instrument_token": 134913,
+      "name": "UTI ASSET MNGMT CO"
+    },
+    {
+      "stock_code": "WABAG",
+      "instrument_token": 5168129,
+      "name": "VA TECH WABAG"
+    },
+    {
+      "stock_code": "VBL",
+      "instrument_token": 4843777,
+      "name": "VARUN BEVERAGES"
+    },
+    {
+      "stock_code": "VRLLOG",
+      "instrument_token": 2226177,
+      "name": "VRL LOGISTICS"
+    },
+    {
+      "stock_code": "ADANIPOWER",
+      "instrument_token": 4451329,
+      "name": "ADANI POWER"
+    },
+    {
+      "stock_code": "ANGELONE",
+      "instrument_token": 82945,
+      "name": "ANGEL ONE"
+    },
+    {
+      "stock_code": "PARKHOTELS",
+      "instrument_token": 5798145,
+      "name": "PARKHOTELS"
+    },
+    {
+      "stock_code": "INDUSTOWER",
+      "instrument_token": 7458561,
+      "name": "INDUS TOWERS"
+    },
+    {
+      "stock_code": "CAMS",
+      "instrument_token": 87553,
+      "name": "COMPUTER AGE MNGT SER"
+    },
+    {
+      "stock_code": "DIXON",
+      "instrument_token": 5552641,
+      "name": "DIXON TECHNO (INDIA)"
+    },
+    {
+      "stock_code": "GICRE",
+      "instrument_token": 70913,
+      "name": "GENERAL INS CORP OF INDIA"
+    },
+    {
+      "stock_code": "HCG",
+      "instrument_token": 3982081,
+      "name": "HEALTHCARE GLOB. ENT."
+    },
+    {
+      "stock_code": "ICICIPRULI",
+      "instrument_token": 4774913,
+      "name": "ICICI PRU LIFE INS CO"
+    },
+    {
+      "stock_code": "PERSISTENT",
+      "instrument_token": 4701441,
+      "name": "PERSISTENT SYSTEMS"
+    },
+    {
+      "stock_code": "ABFRL",
+      "instrument_token": 7707649,
+      "name": "ADITYA BIRLA FASHION & RT"
+    },
+    {
+      "stock_code": "SIS",
+      "instrument_token": 5504257,
+      "name": "SIS"
+    },
+    {
+      "stock_code": "TEJASNET",
+      "instrument_token": 5409537,
+      "name": "TEJAS NETWORKS"
+    },
+    {
+      "stock_code": "GNA",
+      "instrument_token": 4754177,
+      "name": "GNA AXLES"
+    },
+    {
+      "stock_code": "POLYCAB",
+      "instrument_token": 2455041,
+      "name": "POLYCAB INDIA"
+    },
+    {
+      "stock_code": "SBILIFE",
+      "instrument_token": 5582849,
+      "name": "SBI LIFE INSURANCE CO"
+    },
+    {
+      "stock_code": "JUSTDIAL",
+      "instrument_token": 7670273,
+      "name": "JUSTDIAL"
+    },
+    {
+      "stock_code": "RPTECH",
+      "instrument_token": 5803521,
+      "name": "RASHI PERIPHERALS"
+    },
+    {
+      "stock_code": "SFL",
+      "instrument_token": 4911105,
+      "name": "SHEELA FOAM"
+    },
+    {
+      "stock_code": "VASCONEQ",
+      "instrument_token": 4636161,
+      "name": "VASCON ENGINEERS"
+    },
+    {
+      "stock_code": "ALKEM",
+      "instrument_token": 2995969,
+      "name": "ALKEM LABORATORIES"
+    },
+    {
+      "stock_code": "ASTEC",
+      "instrument_token": 4538369,
+      "name": "ASTEC LIFESCIENCES"
+    },
+    {
+      "stock_code": "BAJAJHCARE",
+      "instrument_token": 1756929,
+      "name": "BAJAJ HEALTHCARE"
+    },
+    {
+      "stock_code": "BDL",
+      "instrument_token": 548865,
+      "name": "BHARAT DYNAMICS"
+    },
+    {
+      "stock_code": "FCL",
+      "instrument_token": 1586689,
+      "name": "FINEOTEX CHEMICAL"
+    },
+    {
+      "stock_code": "HUDCO",
+      "instrument_token": 5331201,
+      "name": "HSG & URBAN DEV CORPN"
+    },
+    {
+      "stock_code": "LEMONTREE",
+      "instrument_token": 667137,
+      "name": "LEMON TREE HOTELS"
+    },
+    {
+      "stock_code": "LUXIND",
+      "instrument_token": 2893057,
+      "name": "LUX INDUSTRIES"
+    },
+    {
+      "stock_code": "MBAPL",
+      "instrument_token": 3247617,
+      "name": "MADHYA BHARAT AGRO P."
+    },
+    {
+      "stock_code": "MINDACORP",
+      "instrument_token": 6629633,
+      "name": "MINDA CORPORATION"
+    },
+    {
+      "stock_code": "NEWGEN",
+      "instrument_token": 297985,
+      "name": "NEWGEN SOFTWARE TECH"
+    },
+    {
+      "stock_code": "PRESTIGE",
+      "instrument_token": 5197313,
+      "name": "PRESTIGE ESTATE"
+    },
+    {
+      "stock_code": "SMCGLOBAL",
+      "instrument_token": 593921,
+      "name": "SMC GLOBAL SECURITIES"
+    },
+    {
+      "stock_code": "SANSERA",
+      "instrument_token": 1472257,
+      "name": "SANSERA ENGINEERING"
+    },
+    {
+      "stock_code": "VARROC",
+      "instrument_token": 987393,
+      "name": "VARROC ENGINEERING"
+    },
+    {
+      "stock_code": "CRAFTSMAN",
+      "instrument_token": 730625,
+      "name": "CRAFTSMAN AUTOMATION"
+    },
+    {
+      "stock_code": "JUBLFOOD",
+      "instrument_token": 4632577,
+      "name": "JUBILANT FOODWORKS"
+    },
+    {
+      "stock_code": "ENDURANCE",
+      "instrument_token": 4818433,
+      "name": "ENDURANCE TECHNO."
+    },
+    {
+      "stock_code": "GRAVITA",
+      "instrument_token": 5256705,
+      "name": "GRAVITA INDIA"
+    },
+    {
+      "stock_code": "HATHWAY",
+      "instrument_token": 4647425,
+      "name": "HATHWAY CABLE & DATACOM"
+    },
+    {
+      "stock_code": "HPL",
+      "instrument_token": 4781825,
+      "name": "HPL ELECTRIC & POWER"
+    },
+    {
+      "stock_code": "LTM",
+      "instrument_token": 4561409,
+      "name": "LTIMINDTREE"
+    },
+    {
+      "stock_code": "MACPOWER",
+      "instrument_token": 5720833,
+      "name": "MACPOWER CNC MACHINES"
+    },
+    {
+      "stock_code": "NHPC",
+      "instrument_token": 4454401,
+      "name": "NHPC"
+    },
+    {
+      "stock_code": "PRINCEPIPE",
+      "instrument_token": 4107521,
+      "name": "PRINCE PIPES FITTINGS"
+    },
+    {
+      "stock_code": "SKIPPER",
+      "instrument_token": 2413569,
+      "name": "SKIPPER"
+    },
+    {
+      "stock_code": "IRFC",
+      "instrument_token": 519425,
+      "name": "INDIAN RAILWAY FIN CORP L"
+    },
+    {
+      "stock_code": "ICICIGI",
+      "instrument_token": 5573121,
+      "name": "ICICI LOMBARD GIC"
+    },
+    {
+      "stock_code": "NIACL",
+      "instrument_token": 102145,
+      "name": "THE NEW INDIA ASSU CO"
+    },
+    {
+      "stock_code": "HDFCLIFE",
+      "instrument_token": 119553,
+      "name": "HDFC LIFE INS CO"
+    },
+    {
+      "stock_code": "IMFA",
+      "instrument_token": 4924161,
+      "name": "INDIAN METALS & FERRO"
+    },
+    {
+      "stock_code": "PNBHOUSING",
+      "instrument_token": 4840449,
+      "name": "PNB HOUSING FIN"
+    },
+    {
+      "stock_code": "GODREJAGRO",
+      "instrument_token": 36865,
+      "name": "GODREJ AGROVET"
+    },
+    {
+      "stock_code": "PSB",
+      "instrument_token": 5376257,
+      "name": "PUNJAB & SIND BANK"
+    },
+    {
+      "stock_code": "MAHLOG",
+      "instrument_token": 98561,
+      "name": "MAHINDRA LOGISTIC"
+    },
+    {
+      "stock_code": "NH",
+      "instrument_token": 3031041,
+      "name": "NARAYANA HRUDAYALAYA"
+    },
+    {
+      "stock_code": "MOLDTKPAC",
+      "instrument_token": 1718529,
+      "name": "MOLD-TEK PACKAGING"
+    },
+    {
+      "stock_code": "LALPATHLAB",
+      "instrument_token": 2983425,
+      "name": "DR. LAL PATH LABS"
+    },
+    {
+      "stock_code": "THYROCARE",
+      "instrument_token": 4360193,
+      "name": "THYROCARE TECH"
+    },
+    {
+      "stock_code": "SHRIPISTON",
+      "instrument_token": 4399617,
+      "name": "SHRIRAM PIST. & RING"
+    },
+    {
+      "stock_code": "EXPLEOSOL",
+      "instrument_token": 4476417,
+      "name": "EXPLEO SOLUTIONS"
+    },
+    {
+      "stock_code": "RTNPOWER",
+      "instrument_token": 4485121,
+      "name": "RATTANINDIA POWER"
+    },
+    {
+      "stock_code": "THANGAMAYL",
+      "instrument_token": 4638209,
+      "name": "THANGAMAYIL JEWELLERY"
+    },
+    {
+      "stock_code": "DEN",
+      "instrument_token": 4536833,
+      "name": "DEN NETWORKS"
+    },
+    {
+      "stock_code": "PILANIINVS",
+      "instrument_token": 2929921,
+      "name": "PILANI INV & IND COR"
+    },
+    {
+      "stock_code": "COALINDIA",
+      "instrument_token": 5215745,
+      "name": "COAL INDIA"
+    },
+    {
+      "stock_code": "DLINKINDIA",
+      "instrument_token": 4569857,
+      "name": "D-LINK INDIA"
+    },
+    {
+      "stock_code": "LODHA",
+      "instrument_token": 824321,
+      "name": "LODHA DEVELOPERS"
+    },
+    {
+      "stock_code": "CANTABIL",
+      "instrument_token": 5160961,
+      "name": "CANTABIL RETAIL"
+    },
+    {
+      "stock_code": "DBREALTY",
+      "instrument_token": 4639745,
+      "name": "VALOR ESTATE"
+    },
+    {
+      "stock_code": "HAL",
+      "instrument_token": 589569,
+      "name": "HINDUSTAN AERONAUTICS"
+    },
+    {
+      "stock_code": "COCHINSHIP",
+      "instrument_token": 5506049,
+      "name": "COCHIN SHIPYARD"
+    },
+    {
+      "stock_code": "MAZDOCK",
+      "instrument_token": 130305,
+      "name": "MAZAGON DOCK SHIPBUIL"
+    },
+    {
+      "stock_code": "OBEROIRLTY",
+      "instrument_token": 5181953,
+      "name": "OBEROI REALTY"
+    },
+    {
+      "stock_code": "KIOCL",
+      "instrument_token": 4896257,
+      "name": "KIOCL"
+    },
+    {
+      "stock_code": "LTF",
+      "instrument_token": 6386689,
+      "name": "L&T FINANCE"
+    },
+    {
+      "stock_code": "SJVN",
+      "instrument_token": 4834049,
+      "name": "SJVN"
+    },
+    {
+      "stock_code": "BAJAJCON",
+      "instrument_token": 4999937,
+      "name": "BAJAJ CONSUMER CARE"
+    },
+    {
+      "stock_code": "SPANDANA",
+      "instrument_token": 2927361,
+      "name": "SPANDANA SPHOORTY FIN"
+    },
+    {
+      "stock_code": "SUMMITSEC",
+      "instrument_token": 5446401,
+      "name": "SUMMIT SECURITIES"
+    },
+    {
+      "stock_code": "PFS",
+      "instrument_token": 5786113,
+      "name": "PTC INDIA FIN SERV"
+    },
+    {
+      "stock_code": "JWL",
+      "instrument_token": 5177345,
+      "name": "JUPITER WAGONS"
+    },
+    {
+      "stock_code": "SAMMAANCAP",
+      "instrument_token": 7712001,
+      "name": "SAMMAAN CAPITAL"
+    },
+    {
+      "stock_code": "TECHNOE",
+      "instrument_token": 1649921,
+      "name": "TECHNO ELEC & ENG CO."
+    },
+    {
+      "stock_code": "SHK",
+      "instrument_token": 2870273,
+      "name": "S H KELKAR AND CO."
+    },
+    {
+      "stock_code": "GREENPOWER",
+      "instrument_token": 5148161,
+      "name": "ORIENT GREEN POWER CO"
+    },
+    {
+      "stock_code": "ASTERDM",
+      "instrument_token": 386049,
+      "name": "ASTER DM HEALTHCARE"
+    },
+    {
+      "stock_code": "GPTINFRA",
+      "instrument_token": 4527361,
+      "name": "GPT INFRAPROJECTS"
+    },
+    {
+      "stock_code": "TEAMLEASE",
+      "instrument_token": 3255297,
+      "name": "TEAMLEASE SERVICES"
+    },
+    {
+      "stock_code": "WONDERLA",
+      "instrument_token": 768513,
+      "name": "WONDERLA HOLIDAYS"
+    },
+    {
+      "stock_code": "RUPA",
+      "instrument_token": 6585345,
+      "name": "RUPA & COMPANY"
+    },
+    {
+      "stock_code": "BHARATWIRE",
+      "instrument_token": 4127489,
+      "name": "BHARAT WIRE ROPES"
+    },
+    {
+      "stock_code": "MUTHOOTFIN",
+      "instrument_token": 6054401,
+      "name": "MUTHOOT FINANCE"
+    },
+    {
+      "stock_code": "INOXWIND",
+      "instrument_token": 2010113,
+      "name": "INOX WIND"
+    },
+    {
+      "stock_code": "CREDITACC",
+      "instrument_token": 1131777,
+      "name": "CREDITACCESS GRAMEEN"
+    },
+    {
+      "stock_code": "INDIGO",
+      "instrument_token": 2865921,
+      "name": "INTERGLOBE AVIATION"
+    },
+    {
+      "stock_code": "ERIS",
+      "instrument_token": 5415425,
+      "name": "ERIS LIFESCIENCES"
+    },
+    {
+      "stock_code": "PGEL",
+      "instrument_token": 6491649,
+      "name": "PG ELECTROPLAST"
+    },
+    {
+      "stock_code": "DODLA",
+      "instrument_token": 1234433,
+      "name": "DODLA DAIRY"
+    },
+    {
+      "stock_code": "TEXRAIL",
+      "instrument_token": 5587969,
+      "name": "TEXMACO RAIL & ENG."
+    },
+    {
+      "stock_code": "KIRLOSENG",
+      "instrument_token": 5359617,
+      "name": "KIRLOSKAR OIL ENG"
+    },
+    {
+      "stock_code": "QUICKHEAL",
+      "instrument_token": 3357697,
+      "name": "QUICK HEAL TECH"
+    },
+    {
+      "stock_code": "PCJEWELLER",
+      "instrument_token": 7455745,
+      "name": "PC JEWELLER"
+    },
+    {
+      "stock_code": "MATRIMONY",
+      "instrument_token": 5561857,
+      "name": "MATRIMONY.COM"
+    },
+    {
+      "stock_code": "TBZ",
+      "instrument_token": 6921473,
+      "name": "TRIB BHIMJI ZAVERI"
+    },
+    {
+      "stock_code": "STOVEKRAFT",
+      "instrument_token": 539393,
+      "name": "STOVE KRAFT"
+    },
+    {
+      "stock_code": "BECTORFOOD",
+      "instrument_token": 416769,
+      "name": "MRS BECTORS FOOD SPE"
+    },
+    {
+      "stock_code": "HERANBA",
+      "instrument_token": 669185,
+      "name": "HERANBA INDUSTRIES"
+    },
+    {
+      "stock_code": "DMART",
+      "instrument_token": 5097729,
+      "name": "AVENUE SUPERMARTS"
+    },
+    {
+      "stock_code": "TDPOWERSYS",
+      "instrument_token": 6445569,
+      "name": "TD POWER SYSTEMS"
+    },
+    {
+      "stock_code": "CEINSYS",
+      "instrument_token": 194825473,
+      "name": "CEINSYS TECH"
+    },
+    {
+      "stock_code": "PARAGMILK",
+      "instrument_token": 4385281,
+      "name": "PARAG MILK FOODS"
+    },
+    {
+      "stock_code": "VSSL",
+      "instrument_token": 6929153,
+      "name": "VARDHMAN SPC STEEL"
+    },
+    {
+      "stock_code": "IEX",
+      "instrument_token": 56321,
+      "name": "INDIAN ENERGY EXC"
+    },
+    {
+      "stock_code": "INDOTHAI",
+      "instrument_token": 6555649,
+      "name": "INDO THAI SEC"
+    },
+    {
+      "stock_code": "APLLTD",
+      "instrument_token": 6483969,
+      "name": "ALEMBIC PHARMA"
+    },
+    {
+      "stock_code": "TSFINV",
+      "instrument_token": 558849,
+      "name": "TSF INVESTMENTS"
+    },
+    {
+      "stock_code": "SGFIN",
+      "instrument_token": 194266369,
+      "name": "SG FINSERVE"
+    },
+    {
+      "stock_code": "SBICARD",
+      "instrument_token": 4600577,
+      "name": "SBI CARDS & PAY SER"
+    },
+    {
+      "stock_code": "AMBER",
+      "instrument_token": 303361,
+      "name": "AMBER ENTERPRISES (I)"
+    },
+    {
+      "stock_code": "TCIEXP",
+      "instrument_token": 4921089,
+      "name": "TCI EXPRESS"
+    },
+    {
+      "stock_code": "TRITURBINE",
+      "instrument_token": 6549505,
+      "name": "TRIVENI TURBINE"
+    },
+    {
+      "stock_code": "ANANDRATHI",
+      "instrument_token": 1829121,
+      "name": "ANAND RATHI WEALTH"
+    },
+    {
+      "stock_code": "DBL",
+      "instrument_token": 4630017,
+      "name": "DILIP BUILDCON"
+    },
+    {
+      "stock_code": "MASFIN",
+      "instrument_token": 50945,
+      "name": "MAS FINANCIAL SERV"
+    },
+    {
+      "stock_code": "SHARDACROP",
+      "instrument_token": 1277953,
+      "name": "SHARDA CROPCHEM"
+    },
+    {
+      "stock_code": "CARERATING",
+      "instrument_token": 7452929,
+      "name": "CARE RATINGS"
+    },
+    {
+      "stock_code": "NAVKARCORP",
+      "instrument_token": 2702593,
+      "name": "NAVKAR CORPORATION"
+    },
+    {
+      "stock_code": "ARVSMART",
+      "instrument_token": 2676993,
+      "name": "ARVIND SMARTSPACES"
+    },
+    {
+      "stock_code": "ATGL",
+      "instrument_token": 1552897,
+      "name": "ADANI TOTAL GAS"
+    },
+    {
+      "stock_code": "UFBL",
+      "instrument_token": 800513,
+      "name": "UNITED FOODBRANDS"
+    },
+    {
+      "stock_code": "DCAL",
+      "instrument_token": 5556225,
+      "name": "DISHMAN CARBO AMCIS"
+    },
+    {
+      "stock_code": "5PAISA",
+      "instrument_token": 113921,
+      "name": "5PAISA CAPITAL"
+    },
+    {
+      "stock_code": "360ONE",
+      "instrument_token": 3343617,
+      "name": "360 ONE WAM"
+    },
+    {
+      "stock_code": "AFFLE",
+      "instrument_token": 2903809,
+      "name": "AFFLE 3I"
+    },
+    {
+      "stock_code": "JASH",
+      "instrument_token": 3579393,
+      "name": "JASH ENGINEERING"
+    },
+    {
+      "stock_code": "NAZARA",
+      "instrument_token": 764673,
+      "name": "NAZARA TECHNOLOGIES"
+    },
+    {
+      "stock_code": "RTNINDIA",
+      "instrument_token": 6988033,
+      "name": "RATTANINDIA ENT"
+    },
+    {
+      "stock_code": "ZUARI",
+      "instrument_token": 7436801,
+      "name": "ZUARI AGRO CHEMICALS"
+    },
+    {
+      "stock_code": "COMSYN",
+      "instrument_token": 5523969,
+      "name": "COMMERCIAL SYN BAGS"
+    },
+    {
+      "stock_code": "RHIM",
+      "instrument_token": 7977729,
+      "name": "RHI MAGNESITA INDIA"
+    },
+    {
+      "stock_code": "COFFEEDAY",
+      "instrument_token": 2858241,
+      "name": "COFFEE DAY ENTERPRISE"
+    },
+    {
+      "stock_code": "ACUTAAS",
+      "instrument_token": 1427969,
+      "name": "ACUTAAS CHEMICALS"
+    },
+    {
+      "stock_code": "ROSSARI",
+      "instrument_token": 4968961,
+      "name": "ROSSARI BIOTECH"
+    },
+    {
+      "stock_code": "RITCO",
+      "instrument_token": 2289665,
+      "name": "RITCO LOGISTICS"
+    },
+    {
+      "stock_code": "INDOSTAR",
+      "instrument_token": 790529,
+      "name": "INDOSTAR CAPITAL FIN"
+    },
+    {
+      "stock_code": "SHALBY",
+      "instrument_token": 182785,
+      "name": "SHALBY"
+    },
+    {
+      "stock_code": "METROPOLIS",
+      "instrument_token": 2452737,
+      "name": "METROPOLIS HEALTHCARE"
+    },
+    {
+      "stock_code": "HOMEFIRST",
+      "instrument_token": 526337,
+      "name": "HOME FIRST FIN CO IND"
+    },
+    {
+      "stock_code": "PROZONER",
+      "instrument_token": 7387905,
+      "name": "PROZONE REALTY"
+    },
+    {
+      "stock_code": "ARTEMISMED",
+      "instrument_token": 4329729,
+      "name": "ARTEMIS MED SERVICE"
+    },
+    {
+      "stock_code": "WAAREERTL",
+      "instrument_token": 193545729,
+      "name": "WAAREE RENEWABLE TECH"
+    },
+    {
+      "stock_code": "VMART",
+      "instrument_token": 7496705,
+      "name": "VMART RETAIL"
+    },
+    {
+      "stock_code": "JTLIND",
+      "instrument_token": 1865473,
+      "name": "JTL INDUSTRIES"
+    },
+    {
+      "stock_code": "NEOGEN",
+      "instrument_token": 2538753,
+      "name": "NEOGEN CHEMICALS"
+    },
+    {
+      "stock_code": "NIBE",
+      "instrument_token": 7548673,
+      "name": "NIBE"
+    },
+    {
+      "stock_code": "ABCAPITAL",
+      "instrument_token": 5533185,
+      "name": "ADITYA BIRLA CAPITAL"
+    },
+    {
+      "stock_code": "ORIENTCEM",
+      "instrument_token": 7702785,
+      "name": "ORIENT CEMENT"
+    },
+    {
+      "stock_code": "AIIL",
+      "instrument_token": 6029569,
+      "name": "AUTHUM INVEST & INFRA"
+    },
+    {
+      "stock_code": "IIFLCAPS",
+      "instrument_token": 3346433,
+      "name": "IIFL CAPITAL SERVICES"
+    },
+    {
+      "stock_code": "PTCIL",
+      "instrument_token": 4270593,
+      "name": "PTC INDUSTRIES"
+    },
+    {
+      "stock_code": "SPORTKING",
+      "instrument_token": 2747649,
+      "name": "SPORTKING INDIA"
+    },
+    {
+      "stock_code": "JPOLYINVST",
+      "instrument_token": 8065793,
+      "name": "JIND POL INV & FIN CO"
+    },
+    {
+      "stock_code": "VINCOFE",
+      "instrument_token": 6613761,
+      "name": "VINTAGE COFFEE N BVRGS L"
+    },
+    {
+      "stock_code": "GUJGASLTD",
+      "instrument_token": 2713345,
+      "name": "GUJARAT GAS"
+    },
+    {
+      "stock_code": "SUYOG",
+      "instrument_token": 6361857,
+      "name": "SUYOG TELEMATICS"
+    },
+    {
+      "stock_code": "POWERMECH",
+      "instrument_token": 2681089,
+      "name": "POWER MECH PROJECTS"
+    },
+    {
+      "stock_code": "PRECAM",
+      "instrument_token": 3226369,
+      "name": "PRECISION CAMSHAFTS"
+    },
+    {
+      "stock_code": "MONTECARLO",
+      "instrument_token": 1520129,
+      "name": "MONTE CARLO FASHIONS"
+    },
+    {
+      "stock_code": "IMAGICAA",
+      "instrument_token": 1964033,
+      "name": "IMAGICAAWORLD ENT"
+    },
+    {
+      "stock_code": "PDSL",
+      "instrument_token": 1347585,
+      "name": "PDS"
+    },
+    {
+      "stock_code": "QUESS",
+      "instrument_token": 4532225,
+      "name": "QUESS CORP"
+    },
+    {
+      "stock_code": "GULFOILLUB",
+      "instrument_token": 1124097,
+      "name": "GULF OIL LUB. IND."
+    },
+    {
+      "stock_code": "AAVAS",
+      "instrument_token": 1378561,
+      "name": "AAVAS FINANCIERS"
+    },
+    {
+      "stock_code": "LTTS",
+      "instrument_token": 4752385,
+      "name": "L&T TECHNOLOGY SER."
+    },
+    {
+      "stock_code": "MANAKCOAT",
+      "instrument_token": 1897729,
+      "name": "MAN COAT METAL & IND"
+    },
+    {
+      "stock_code": "TIINDIA",
+      "instrument_token": 79873,
+      "name": "TUBE INVEST OF INDIA"
+    },
+    {
+      "stock_code": "UNIPARTS",
+      "instrument_token": 3342593,
+      "name": "UNIPARTS INDIA"
+    },
+    {
+      "stock_code": "SHREEPUSHK",
+      "instrument_token": 2710529,
+      "name": "SHRE PUSH CHEM & FERT"
+    },
+    {
+      "stock_code": "INTELLECT",
+      "instrument_token": 1517057,
+      "name": "INTELLECT DESIGN ARENA"
+    },
+    {
+      "stock_code": "LAURUSLABS",
+      "instrument_token": 4923905,
+      "name": "LAURUS LABS"
+    },
+    {
+      "stock_code": "ADANIENSOL",
+      "instrument_token": 2615553,
+      "name": "ADANI ENERGY SOLUTION"
+    },
+    {
+      "stock_code": "GREENLAM",
+      "instrument_token": 1753089,
+      "name": "GREENLAM INDUSTRIES"
+    },
+    {
+      "stock_code": "AGIIL",
+      "instrument_token": 6257921,
+      "name": "AGI INFRA"
+    },
+    {
+      "stock_code": "EQUITASBNK",
+      "instrument_token": 233729,
+      "name": "EQUITAS SMALL FIN BNK"
+    },
+    {
+      "stock_code": "ROUTE",
+      "instrument_token": 32769,
+      "name": "ROUTE MOBILE"
+    },
+    {
+      "stock_code": "DIAMONDYD",
+      "instrument_token": 5591041,
+      "name": "PRATAAP SNACKS"
+    },
+    {
+      "stock_code": "CCAVENUE",
+      "instrument_token": 4159745,
+      "name": "AVENUESAI"
+    },
+    {
+      "stock_code": "INFOBEAN",
+      "instrument_token": 2822913,
+      "name": "INFOBEANS TECHNO."
+    },
+    {
+      "stock_code": "STUDDS",
+      "instrument_token": 194454273,
+      "name": "STUDDS ACCESSORIES"
+    },
+    {
+      "stock_code": "YASHO",
+      "instrument_token": 4641537,
+      "name": "YASHO INDUSTRIES"
+    },
+    {
+      "stock_code": "ARFIN",
+      "instrument_token": 194227201,
+      "name": "ARFIN INDIA"
+    },
+    {
+      "stock_code": "AWHCL",
+      "instrument_token": 460033,
+      "name": "ANTONY WASTE HDG CELL"
+    },
+    {
+      "stock_code": "IDFCFIRSTB",
+      "instrument_token": 2863105,
+      "name": "IDFC FIRST BANK"
+    },
+    {
+      "stock_code": "BANDHANBNK",
+      "instrument_token": 579329,
+      "name": "BANDHAN BANK"
+    },
+    {
+      "stock_code": "GOKULAGRO",
+      "instrument_token": 3706881,
+      "name": "GOKUL AGRO RESOURCES"
+    },
+    {
+      "stock_code": "CROMPTON",
+      "instrument_token": 4376065,
+      "name": "CROMPT GREA CON ELEC"
+    },
+    {
+      "stock_code": "BLS",
+      "instrument_token": 4423425,
+      "name": "BLS INTL SERVS"
+    },
+    {
+      "stock_code": "LLOYDSENGG",
+      "instrument_token": 4557057,
+      "name": "LLOYDS ENGG WORK"
+    },
+    {
+      "stock_code": "RADHIKAJWE",
+      "instrument_token": 2647809,
+      "name": "RADHIKA JEWELTECH"
+    },
+    {
+      "stock_code": "HGINFRA",
+      "instrument_token": 428033,
+      "name": "H.G.INFRA ENGINEERING"
+    },
+    {
+      "stock_code": "SAKAR",
+      "instrument_token": 2441985,
+      "name": "SAKAR HEALTHCARE"
+    },
+    {
+      "stock_code": "AVL",
+      "instrument_token": 6651905,
+      "name": "ADITYA VISION"
+    },
+    {
+      "stock_code": "MUTHOOTMF",
+      "instrument_token": 5332737,
+      "name": "MUTHOOT MICROFIN"
+    },
+    {
+      "stock_code": "PSPPROJECT",
+      "instrument_token": 5344513,
+      "name": "PSP PROJECTS"
+    },
+    {
+      "stock_code": "GTPL",
+      "instrument_token": 5425921,
+      "name": "GTPL HATHWAY"
+    },
+    {
+      "stock_code": "KRISHANA",
+      "instrument_token": 3288833,
+      "name": "KRISHANA PHOSCHEM"
+    },
+    {
+      "stock_code": "PRICOLLTD",
+      "instrument_token": 5025537,
+      "name": "PRICOL"
+    },
+    {
+      "stock_code": "GLOBAL",
+      "instrument_token": 362241,
+      "name": "GLOBAL EDUCATION"
+    },
+    {
+      "stock_code": "SALASAR",
+      "instrument_token": 5468673,
+      "name": "SALASAR TECHNO ENGG."
+    },
+    {
+      "stock_code": "APEX",
+      "instrument_token": 5535489,
+      "name": "APEX FROZEN FOODS"
+    },
+    {
+      "stock_code": "CAPACITE",
+      "instrument_token": 5567745,
+      "name": "CAPACITE INFRAPROJECT"
+    },
+    {
+      "stock_code": "AUBANK",
+      "instrument_token": 5436929,
+      "name": "AU SMALL FINANCE BANK"
+    },
+    {
+      "stock_code": "AVADHSUGAR",
+      "instrument_token": 5479937,
+      "name": "AVADH SUG & ENERGY"
+    },
+    {
+      "stock_code": "MAGADSUGAR",
+      "instrument_token": 5476353,
+      "name": "MAGADH SUGAR & ENERGY"
+    },
+    {
+      "stock_code": "SERVOTECH",
+      "instrument_token": 1409793,
+      "name": "SERVOTECH REN POW SYS"
+    },
+    {
+      "stock_code": "SHAREINDIA",
+      "instrument_token": 26625,
+      "name": "SHARE IND. SECURITIES"
+    },
+    {
+      "stock_code": "GANDHAR",
+      "instrument_token": 5197569,
+      "name": "GANDHAR OIL REFINE IND L"
+    },
+    {
+      "stock_code": "UJJIVANSFB",
+      "instrument_token": 3898369,
+      "name": "UJJIVAN SMALL FINANC BANK"
+    },
+    {
+      "stock_code": "DYCL",
+      "instrument_token": 2666753,
+      "name": "DYNAMIC CABLES"
+    },
+    {
+      "stock_code": "BETA",
+      "instrument_token": 194519553,
+      "name": "BETA DRUGS"
+    },
+    {
+      "stock_code": "APOLLO",
+      "instrument_token": 290305,
+      "name": "APOLLO MICRO SYSTEMS"
+    },
+    {
+      "stock_code": "ACMESOLAR",
+      "instrument_token": 6927617,
+      "name": "ACME SOLAR HOLDINGS"
+    },
+    {
+      "stock_code": "DPABHUSHAN",
+      "instrument_token": 239617,
+      "name": "D. P. ABHUSHAN"
+    },
+    {
+      "stock_code": "ICEMAKE",
+      "instrument_token": 125185,
+      "name": "ICE MAKE REFRIGERAT"
+    },
+    {
+      "stock_code": "ESAFSFB",
+      "instrument_token": 5088769,
+      "name": "ESAF SMALL FINANCE BANK L"
+    },
+    {
+      "stock_code": "ONEPOINT",
+      "instrument_token": 2544385,
+      "name": "ONE POINT ONE SOL"
+    },
+    {
+      "stock_code": "TEMBO",
+      "instrument_token": 838401,
+      "name": "TEMBO GLOBAL IND"
+    },
+    {
+      "stock_code": "SOLEX",
+      "instrument_token": 194405633,
+      "name": "SOLEX ENERGY"
+    },
+    {
+      "stock_code": "ORIENTELEC",
+      "instrument_token": 760833,
+      "name": "ORIENT ELECTRIC"
+    },
+    {
+      "stock_code": "FINEORG",
+      "instrument_token": 958465,
+      "name": "FINE ORGANIC IND."
+    },
+    {
+      "stock_code": "SIRCA",
+      "instrument_token": 2828801,
+      "name": "SIRCA PAINT INDIA"
+    },
+    {
+      "stock_code": "ADANIGREEN",
+      "instrument_token": 912129,
+      "name": "ADANI GREEN ENERGY"
+    },
+    {
+      "stock_code": "MANORAMA",
+      "instrument_token": 2618113,
+      "name": "MANORAMA INDUSTRIES"
+    },
+    {
+      "stock_code": "SGIL",
+      "instrument_token": 1309185,
+      "name": "SYNERGY GREEN IND."
+    },
+    {
+      "stock_code": "SOLARA",
+      "instrument_token": 940033,
+      "name": "SOLARA ACTIVE PHA SCI"
+    },
+    {
+      "stock_code": "INDIAMART",
+      "instrument_token": 2745857,
+      "name": "INDIAMART INTERMESH"
+    },
+    {
+      "stock_code": "MARINE",
+      "instrument_token": 339969,
+      "name": "MARINE ELECTRICAL (I)"
+    },
+    {
+      "stock_code": "SPECTRUM",
+      "instrument_token": 7796481,
+      "name": "SPECTRUM ELECTRIC IND"
+    },
+    {
+      "stock_code": "SKYGOLD",
+      "instrument_token": 3489537,
+      "name": "SKY GOLD AND DIAMONDS"
+    },
+    {
+      "stock_code": "IRISDOREME",
+      "instrument_token": 582401,
+      "name": "IRIS CLOTHINGS"
+    },
+    {
+      "stock_code": "SENCO",
+      "instrument_token": 4421377,
+      "name": "SENCO GOLD"
+    },
+    {
+      "stock_code": "FLAIR",
+      "instrument_token": 5215233,
+      "name": "FLAIR WRITING INDUST"
+    },
+    {
+      "stock_code": "KPIGREEN",
+      "instrument_token": 1307649,
+      "name": "KPI GREEN ENERGY"
+    },
+    {
+      "stock_code": "DALBHARAT",
+      "instrument_token": 2067201,
+      "name": "DALMIA BHARAT"
+    },
+    {
+      "stock_code": "ANUP",
+      "instrument_token": 2307585,
+      "name": "THE ANUP ENGINEERING"
+    },
+    {
+      "stock_code": "ARVINDFASN",
+      "instrument_token": 2332417,
+      "name": "ARVIND FASHIONS"
+    },
+    {
+      "stock_code": "RPSGVENT",
+      "instrument_token": 2078465,
+      "name": "RPSG VENTURES"
+    },
+    {
+      "stock_code": "KPITTECH",
+      "instrument_token": 2478849,
+      "name": "KPIT TECHNOLOGIES"
+    },
+    {
+      "stock_code": "SWSOLAR",
+      "instrument_token": 3197185,
+      "name": "STRLNG & WIL REN ENE"
+    },
+    {
+      "stock_code": "GREENPANEL",
+      "instrument_token": 3535361,
+      "name": "GREENPANEL INDUSTRIES"
+    },
+    {
+      "stock_code": "CSBBANK",
+      "instrument_token": 3831297,
+      "name": "CSB BANK"
+    },
+    {
+      "stock_code": "FLUOROCHEM",
+      "instrument_token": 3520001,
+      "name": "GUJARAT FLUOROCHEM"
+    },
+    {
+      "stock_code": "HINDWAREAP",
+      "instrument_token": 4066049,
+      "name": "HINDWARE HME INOVATON"
+    },
+    {
+      "stock_code": "MUFIN",
+      "instrument_token": 5064449,
+      "name": "MUFIN GREEN FINANCE"
+    },
+    {
+      "stock_code": "SAMHI",
+      "instrument_token": 4765185,
+      "name": "SAMHI HOTELS"
+    },
+    {
+      "stock_code": "RBA",
+      "instrument_token": 382465,
+      "name": "RESTAURANT BRAND ASIA"
+    },
+    {
+      "stock_code": "EASEMYTRIP",
+      "instrument_token": 714753,
+      "name": "EASY TRIP PLANNERS"
+    },
+    {
+      "stock_code": "POWERINDIA",
+      "instrument_token": 4724993,
+      "name": "HITACHI ENERGY INDIA"
+    },
+    {
+      "stock_code": "COHANCE",
+      "instrument_token": 4593921,
+      "name": "COHANCE LIFESCIENCES"
+    },
+    {
+      "stock_code": "NDRAUTO",
+      "instrument_token": 5697281,
+      "name": "NDR AUTO COMPONENTS"
+    },
+    {
+      "stock_code": "ADVAIT",
+      "instrument_token": 194728193,
+      "name": "ADVAIT ENRGY TRANSITION L"
+    },
+    {
+      "stock_code": "KSOLVES",
+      "instrument_token": 2831361,
+      "name": "KSOLVES INDIA"
+    },
+    {
+      "stock_code": "BOROLTD",
+      "instrument_token": 4966657,
+      "name": "BOROSIL"
+    },
+    {
+      "stock_code": "LICI",
+      "instrument_token": 2426881,
+      "name": "LIFE INSURA CORP OF INDIA"
+    },
+    {
+      "stock_code": "MAXHEALTH",
+      "instrument_token": 5728513,
+      "name": "MAX HEALTHCARE INS"
+    },
+    {
+      "stock_code": "HAPPSTMNDS",
+      "instrument_token": 12289,
+      "name": "HAPPIEST MINDS TECHNO"
+    },
+    {
+      "stock_code": "SIGACHI",
+      "instrument_token": 1705729,
+      "name": "SIGACHI INDUSTRIES"
+    },
+    {
+      "stock_code": "HEMIPROP",
+      "instrument_token": 179457,
+      "name": "HEMISPHERE PROP IND"
+    },
+    {
+      "stock_code": "GLAND",
+      "instrument_token": 303617,
+      "name": "GLAND PHARMA"
+    },
+    {
+      "stock_code": "KMEW",
+      "instrument_token": 6933505,
+      "name": "KNOWLEDGE MARINE & EN W L"
+    },
+    {
+      "stock_code": "TARC",
+      "instrument_token": 404737,
+      "name": "TARC"
+    },
+    {
+      "stock_code": "MTARTECH",
+      "instrument_token": 693505,
+      "name": "MTAR TECHNOLOGIES"
+    },
+    {
+      "stock_code": "INDIGOPNTS",
+      "instrument_token": 524289,
+      "name": "INDIGO PAINTS"
+    },
+    {
+      "stock_code": "ANURAS",
+      "instrument_token": 724225,
+      "name": "ANUPAM RASAYAN INDIA"
+    },
+    {
+      "stock_code": "RAILTEL",
+      "instrument_token": 622337,
+      "name": "RAILTEL CORP OF IND"
+    },
+    {
+      "stock_code": "IPL",
+      "instrument_token": 1263105,
+      "name": "INDIA PESTICIDES"
+    },
+    {
+      "stock_code": "LXCHEM",
+      "instrument_token": 727297,
+      "name": "LAXMI ORGANIC INDUS"
+    },
+    {
+      "stock_code": "PARAS",
+      "instrument_token": 1513217,
+      "name": "PARAS DEF AND SPCE TECH L"
+    },
+    {
+      "stock_code": "KALYANKJIL",
+      "instrument_token": 756481,
+      "name": "KALYAN JEWELLERS IND"
+    },
+    {
+      "stock_code": "SURYODAY",
+      "instrument_token": 760321,
+      "name": "SURYODAY SMALL FIN BK"
+    },
+    {
+      "stock_code": "KIMS",
+      "instrument_token": 1240833,
+      "name": "KRISHNA INST OF MED SCI L"
+    },
+    {
+      "stock_code": "SHYAMMETL",
+      "instrument_token": 1201409,
+      "name": "SHYAM METALICS AND ENGY L"
+    },
+    {
+      "stock_code": "SONACOMS",
+      "instrument_token": 1199105,
+      "name": "SONA BLW PRECISION FRGS L"
+    },
+    {
+      "stock_code": "JUBLINGREA",
+      "instrument_token": 712449,
+      "name": "JUBILANT INGREVIA"
+    },
+    {
+      "stock_code": "ROLEXRINGS",
+      "instrument_token": 1351425,
+      "name": "ROLEX RINGS"
+    },
+    {
+      "stock_code": "TATVA",
+      "instrument_token": 1321473,
+      "name": "TATVA CHIN PHARM CHEM"
+    },
+    {
+      "stock_code": "JSFB",
+      "instrument_token": 5801729,
+      "name": "JANA SMALL FIN BANK"
+    },
+    {
+      "stock_code": "CLEAN",
+      "instrument_token": 1292545,
+      "name": "CLEAN SCIENCE & TECH"
+    },
+    {
+      "stock_code": "SHRIRAMPPS",
+      "instrument_token": 1843201,
+      "name": "SHRIRAM PROPERTIES"
+    },
+    {
+      "stock_code": "GRINFRA",
+      "instrument_token": 1293825,
+      "name": "G R INFRAPROJECTS"
+    },
+    {
+      "stock_code": "ABSLAMC",
+      "instrument_token": 1540609,
+      "name": "ADIT BIRL SUN LIF AMC"
+    },
+    {
+      "stock_code": "ALIVUS",
+      "instrument_token": 1347841,
+      "name": "ALIVUS LIFE SCIENCES"
+    },
+    {
+      "stock_code": "DEEPINDS",
+      "instrument_token": 842753,
+      "name": "DEEP INDUSTRIES"
+    },
+    {
+      "stock_code": "ETERNAL",
+      "instrument_token": 1304833,
+      "name": "ETERNAL - ZOMATO"
+    },
+    {
+      "stock_code": "NUVOCO",
+      "instrument_token": 1389057,
+      "name": "NUVOCO VISTAS CORP"
+    },
+    {
+      "stock_code": "MEDIASSIST",
+      "instrument_token": 5556481,
+      "name": "MEDI ASSIST HEALTH SER L"
+    },
+    {
+      "stock_code": "WINDLAS",
+      "instrument_token": 1373697,
+      "name": "WINDLAS BIOTECH"
+    },
+    {
+      "stock_code": "DEVYANI",
+      "instrument_token": 1375489,
+      "name": "DEVYANI INTERNATIONAL"
+    },
+    {
+      "stock_code": "SUPRIYA",
+      "instrument_token": 1891841,
+      "name": "SUPRIYA LIFESCIENCE"
+    },
+    {
+      "stock_code": "APTUS",
+      "instrument_token": 1391361,
+      "name": "APTUS VALUE HSG FIN I"
+    },
+    {
+      "stock_code": "CARTRADE",
+      "instrument_token": 1384193,
+      "name": "CARTRADE TECH"
+    },
+    {
+      "stock_code": "KRSNAA",
+      "instrument_token": 1371905,
+      "name": "KRSNAA DIAGNOSTICS"
+    },
+    {
+      "stock_code": "VIJAYA",
+      "instrument_token": 1429761,
+      "name": "VIJAYA DIAGNOSTIC CEN"
+    },
+    {
+      "stock_code": "UTKARSHBNK",
+      "instrument_token": 4443649,
+      "name": "UTKARSH SMALL FIN BANK L"
+    },
+    {
+      "stock_code": "MOBIKWIK",
+      "instrument_token": 7179777,
+      "name": "ONE MOBIKWIK SYSTEMS"
+    },
+    {
+      "stock_code": "PAYTM",
+      "instrument_token": 1716481,
+      "name": "ONE 97 COMMUNICATIONS"
+    },
+    {
+      "stock_code": "NORTHARC",
+      "instrument_token": 6509057,
+      "name": "NORTHERN ARC CAPITAL"
+    },
+    {
+      "stock_code": "NPST",
+      "instrument_token": 193618945,
+      "name": "NETWORK PEOPLE SRV TECH L"
+    },
+    {
+      "stock_code": "STARHEALTH",
+      "instrument_token": 1813249,
+      "name": "STAR HEALTH & AL INS CO L"
+    },
+    {
+      "stock_code": "SJS",
+      "instrument_token": 1700609,
+      "name": "SJS ENTERPRISES"
+    },
+    {
+      "stock_code": "POLICYBZR",
+      "instrument_token": 1703937,
+      "name": "PB FINTECH"
+    },
+    {
+      "stock_code": "FINOPB",
+      "instrument_token": 1684225,
+      "name": "FINO PAYMENTS BANK"
+    },
+    {
+      "stock_code": "NYKAA",
+      "instrument_token": 1675521,
+      "name": "FSN E COMMERCE VENTURES"
+    },
+    {
+      "stock_code": "AWL",
+      "instrument_token": 2076161,
+      "name": "AWL AGRI BUSINESS"
+    },
+    {
+      "stock_code": "FUSION",
+      "instrument_token": 3054593,
+      "name": "FUSION FINANCE"
+    },
+    {
+      "stock_code": "TARSONS",
+      "instrument_token": 1777409,
+      "name": "TARSONS PRODUCTS"
+    },
+    {
+      "stock_code": "SAPPHIRE",
+      "instrument_token": 1719809,
+      "name": "SAPPHIRE FOODS INDIA"
+    },
+    {
+      "stock_code": "IXIGO",
+      "instrument_token": 6161153,
+      "name": "LE TRAVENUES TECHNOLOGY L"
+    },
+    {
+      "stock_code": "EPIGRAL",
+      "instrument_token": 1377793,
+      "name": "EPIGRAL"
+    },
+    {
+      "stock_code": "CMSINFO",
+      "instrument_token": 1946369,
+      "name": "CMS INFO SYSTEMS"
+    },
+    {
+      "stock_code": "PARADEEP",
+      "instrument_token": 2493697,
+      "name": "PARADEEP PHOSPHATES"
+    },
+    {
+      "stock_code": "MOL",
+      "instrument_token": 1380865,
+      "name": "MEGHMANI ORGANICS"
+    },
+    {
+      "stock_code": "GOCOLORS",
+      "instrument_token": 1782785,
+      "name": "GO FASHION INDIA"
+    },
+    {
+      "stock_code": "MEDPLUS",
+      "instrument_token": 1857025,
+      "name": "MEDPLUS HEALTH SERV"
+    },
+    {
+      "stock_code": "RATEGAIN",
+      "instrument_token": 1837313,
+      "name": "RATEGAIN TRAVEL TECHN"
+    },
+    {
+      "stock_code": "TEGA",
+      "instrument_token": 1818881,
+      "name": "TEGA INDUSTRIES"
+    },
+    {
+      "stock_code": "EMCURE",
+      "instrument_token": 6245889,
+      "name": "EMCURE PHARMACEUTICALS L"
+    },
+    {
+      "stock_code": "PRUDENT",
+      "instrument_token": 2445569,
+      "name": "PRUDENT CORP ADV SER"
+    },
+    {
+      "stock_code": "METROBRAND",
+      "instrument_token": 1853953,
+      "name": "METRO BRANDS"
+    },
+    {
+      "stock_code": "MAPMYINDIA",
+      "instrument_token": 1850113,
+      "name": "C.E. INFO SYSTEMS"
+    },
+    {
+      "stock_code": "TMB",
+      "instrument_token": 2801921,
+      "name": "TAMILNAD MERCA BANK"
+    },
+    {
+      "stock_code": "MANYAVAR",
+      "instrument_token": 2090753,
+      "name": "VEDANT FASHIONS"
+    },
+    {
+      "stock_code": "EMIL",
+      "instrument_token": 2951681,
+      "name": "ELECTRONICS MART IND"
+    },
+    {
+      "stock_code": "DATAPATTNS",
+      "instrument_token": 1883649,
+      "name": "DATA PATTERNS INDIA"
+    },
+    {
+      "stock_code": "GODAVARIB",
+      "instrument_token": 6640897,
+      "name": "GODAVARI BIOREFINERIES L"
+    },
+    {
+      "stock_code": "WAAREEENER",
+      "instrument_token": 6632193,
+      "name": "WAAREE ENERGIES"
+    },
+    {
+      "stock_code": "MEDANTA",
+      "instrument_token": 3060737,
+      "name": "GLOBAL HEALTH"
+    },
+    {
+      "stock_code": "JSLL",
+      "instrument_token": 194077441,
+      "name": "JEENA SIKHO LIFECARE"
+    },
+    {
+      "stock_code": "GPTHEALTH",
+      "instrument_token": 5848577,
+      "name": "GPT HEALTHCARE"
+    },
+    {
+      "stock_code": "LATENTVIEW",
+      "instrument_token": 1745409,
+      "name": "LATENT VIEW ANALYTICS"
+    },
+    {
+      "stock_code": "CAPITALSFB",
+      "instrument_token": 5804801,
+      "name": "CAPITAL SMALL FIN BANK L"
+    },
+    {
+      "stock_code": "DELHIVERY",
+      "instrument_token": 2457345,
+      "name": "DELHIVERY"
+    },
+    {
+      "stock_code": "VERANDA",
+      "instrument_token": 2275841,
+      "name": "VERANDA LEARNING SOL"
+    },
+    {
+      "stock_code": "FIVESTAR",
+      "instrument_token": 3080193,
+      "name": "FIVE-STAR BUS FIN"
+    },
+    {
+      "stock_code": "EMUDHRA",
+      "instrument_token": 2497537,
+      "name": "EMUDHRA"
+    },
+    {
+      "stock_code": "ELIN",
+      "instrument_token": 3436289,
+      "name": "ELIN ELECTRONICS"
+    },
+    {
+      "stock_code": "SYRMA",
+      "instrument_token": 2763009,
+      "name": "SYRMA SGS TECHNOLOGY"
+    },
+    {
+      "stock_code": "TBOTEK",
+      "instrument_token": 6077441,
+      "name": "TBO TEK"
+    },
+    {
+      "stock_code": "CAPILLARY",
+      "instrument_token": 194525953,
+      "name": "CAPILLARY TECHNO INDIA L"
+    },
+    {
+      "stock_code": "VENUSPIPES",
+      "instrument_token": 2455553,
+      "name": "VENUS PIPES & TUBES"
+    },
+    {
+      "stock_code": "RAINBOW",
+      "instrument_token": 2408449,
+      "name": "RAINBOW CHILDRENS MED"
+    },
+    {
+      "stock_code": "CAMPUS",
+      "instrument_token": 2396673,
+      "name": "CAMPUS ACTIVEWEAR"
+    },
+    {
+      "stock_code": "PROTEAN",
+      "instrument_token": 7544833,
+      "name": "PROTEAN EGOV TECHNO"
+    },
+    {
+      "stock_code": "AETHER",
+      "instrument_token": 2511361,
+      "name": "AETHER INDUSTRIES"
+    },
+    {
+      "stock_code": "SANATHAN",
+      "instrument_token": 7374081,
+      "name": "SANATHAN TEXTILES"
+    },
+    {
+      "stock_code": "LANDMARK",
+      "instrument_token": 3398657,
+      "name": "LANDMARK CARS"
+    },
+    {
+      "stock_code": "ETHOSLTD",
+      "instrument_token": 2496001,
+      "name": "ETHOS"
+    },
+    {
+      "stock_code": "DHARMAJ",
+      "instrument_token": 3328257,
+      "name": "DHARMAJ CROP GUARD"
+    },
+    {
+      "stock_code": "HARSHA",
+      "instrument_token": 2857473,
+      "name": "HARSHA ENGINEERS INT"
+    },
+    {
+      "stock_code": "LEMERITE",
+      "instrument_token": 194636801,
+      "name": "LE MERITE EXPORTS"
+    },
+    {
+      "stock_code": "KRISHNADEF",
+      "instrument_token": 194865153,
+      "name": "KRISHNA DEF AND ALD IND L"
+    },
+    {
+      "stock_code": "INOXGREEN",
+      "instrument_token": 3120129,
+      "name": "INOX GREEN ENERGY SER"
+    },
+    {
+      "stock_code": "FEDFINA",
+      "instrument_token": 5202433,
+      "name": "FEDBANK FINANCIAL SER L"
+    },
+    {
+      "stock_code": "ACI",
+      "instrument_token": 3078145,
+      "name": "ARCHEAN CHEMICAL IND"
+    },
+    {
+      "stock_code": "BIKAJI",
+      "instrument_token": 3063297,
+      "name": "BIKAJI FOODS INTERN"
+    },
+    {
+      "stock_code": "SURAJEST",
+      "instrument_token": 5330433,
+      "name": "SURAJ ESTATE DEVELOPERS L"
+    },
+    {
+      "stock_code": "EUREKAFORB",
+      "instrument_token": 6441473,
+      "name": "EUREKA FORBES"
+    },
+    {
+      "stock_code": "GATEWAY",
+      "instrument_token": 2178561,
+      "name": "GATEWAY DISTRIPARKS"
+    },
+    {
+      "stock_code": "GMRP&UI",
+      "instrument_token": 2183425,
+      "name": "GMR POW AND URBAN INFRA L"
+    },
+    {
+      "stock_code": "MSUMI",
+      "instrument_token": 2200577,
+      "name": "MOTHERSON SUMI WRNG IND L"
+    },
+    {
+      "stock_code": "VIKRAMSOLR",
+      "instrument_token": 194419969,
+      "name": "VIKRAM SOLAR"
+    },
+    {
+      "stock_code": "YATRA",
+      "instrument_token": 4802561,
+      "name": "YATRA ONLINE"
+    },
+    {
+      "stock_code": "MWL",
+      "instrument_token": 194347265,
+      "name": "MANGALAM WORLDWIDE"
+    },
+    {
+      "stock_code": "YATHARTH",
+      "instrument_token": 4540929,
+      "name": "YATHARTH HOSP & TRA C S L"
+    },
+    {
+      "stock_code": "KFINTECH",
+      "instrument_token": 3419905,
+      "name": "KFIN TECHNOLOGIES"
+    },
+    {
+      "stock_code": "DCXINDIA",
+      "instrument_token": 3045121,
+      "name": "DCX SYSTEMS"
+    },
+    {
+      "stock_code": "AADHARHFC",
+      "instrument_token": 6074625,
+      "name": "AADHAR HOUSING FINANCE L"
+    },
+    {
+      "stock_code": "KAYNES",
+      "instrument_token": 3095553,
+      "name": "KAYNES TECHNOLOGY IND"
+    },
+    {
+      "stock_code": "RUSTOMJEE",
+      "instrument_token": 3128065,
+      "name": "KEYSTONE REALTORS"
+    },
+    {
+      "stock_code": "RHETAN",
+      "instrument_token": 194319873,
+      "name": "RHETAN TMT"
+    },
+    {
+      "stock_code": "ABDL",
+      "instrument_token": 6222849,
+      "name": "ALLIED BLEND N DISTILS L"
+    },
+    {
+      "stock_code": "INNOVACAP",
+      "instrument_token": 5391873,
+      "name": "INNOVA CAPTAB"
+    },
+    {
+      "stock_code": "CEWATER",
+      "instrument_token": 7363585,
+      "name": "CONCORD ENVIRO SYSTEMS L"
+    },
+    {
+      "stock_code": "SIGNATURE",
+      "instrument_token": 4798209,
+      "name": "SIGNATUREGLOBAL INDIA"
+    },
+    {
+      "stock_code": "SULA",
+      "instrument_token": 3383809,
+      "name": "SULA VINEYARDS"
+    },
+    {
+      "stock_code": "DDEVPLSTIK",
+      "instrument_token": 7449089,
+      "name": "DDEV PLASTIKS IND"
+    },
+    {
+      "stock_code": "KALAMANDIR",
+      "instrument_token": 4801281,
+      "name": "SAI SILKS (KALAMANDIR) L"
+    },
+    {
+      "stock_code": "AVALON",
+      "instrument_token": 3854849,
+      "name": "AVALON TECHNOLOGIES"
+    },
+    {
+      "stock_code": "CONCORDBIO",
+      "instrument_token": 4623361,
+      "name": "CONCORD BIOTECH"
+    },
+    {
+      "stock_code": "GODIGIT",
+      "instrument_token": 6092545,
+      "name": "GO DIGIT GENERAL INS"
+    },
+    {
+      "stock_code": "BLUEJET",
+      "instrument_token": 5039617,
+      "name": "BLUE JET HEALTHCARE"
+    },
+    {
+      "stock_code": "PPLPHARMA",
+      "instrument_token": 2962177,
+      "name": "PIRAMAL PHARMA"
+    },
+    {
+      "stock_code": "DBOL",
+      "instrument_token": 2788609,
+      "name": "DHAMPUR BIO ORGANICS"
+    },
+    {
+      "stock_code": "MANKIND",
+      "instrument_token": 3937281,
+      "name": "MANKIND PHARMA"
+    },
+    {
+      "stock_code": "DIVGIITTS",
+      "instrument_token": 3706625,
+      "name": "DIVGI TORQTRANSFER SYST L"
+    },
+    {
+      "stock_code": "EIEL",
+      "instrument_token": 6966529,
+      "name": "ENVIRO INFRA ENGINEERS L"
+    },
+    {
+      "stock_code": "MOTISONS",
+      "instrument_token": 5321729,
+      "name": "MOTISONS JEWELLERS"
+    },
+    {
+      "stock_code": "IKIO",
+      "instrument_token": 4306433,
+      "name": "IKIO TECHNOLOGIES"
+    },
+    {
+      "stock_code": "AARTIPHARM",
+      "instrument_token": 3550209,
+      "name": "AARTI PHARMALABS"
+    },
+    {
+      "stock_code": "NSLNISP",
+      "instrument_token": 3630081,
+      "name": "NMDC STEEL"
+    },
+    {
+      "stock_code": "SBFC",
+      "instrument_token": 4614657,
+      "name": "SBFC FINANCE"
+    },
+    {
+      "stock_code": "IRMENERGY",
+      "instrument_token": 5016833,
+      "name": "IRM ENERGY"
+    },
+    {
+      "stock_code": "INDGN",
+      "instrument_token": 6065409,
+      "name": "INDEGENE"
+    },
+    {
+      "stock_code": "ZAGGLE",
+      "instrument_token": 4763649,
+      "name": "ZAGGLE PREPA OCEAN SER L"
+    },
+    {
+      "stock_code": "HONASA",
+      "instrument_token": 5072129,
+      "name": "HONASA CONSUMER - MAMAEARTH"
+    },
+    {
+      "stock_code": "RISHABH",
+      "instrument_token": 4714753,
+      "name": "RISHABH INSTRUMENTS"
+    },
+    {
+      "stock_code": "JGCHEM",
+      "instrument_token": 5902337,
+      "name": "J.G.CHEMICALS"
+    },
+    {
+      "stock_code": "CYIENTDLM",
+      "instrument_token": 4399873,
+      "name": "CYIENT DLM"
+    },
+    {
+      "stock_code": "RATNAVEER",
+      "instrument_token": 4716289,
+      "name": "RATNAVEER PRECISION ENG L"
+    },
+    {
+      "stock_code": "IDEAFORGE",
+      "instrument_token": 4387841,
+      "name": "IDEAFORGE TECHNO"
+    },
+    {
+      "stock_code": "TATATECH",
+      "instrument_token": 5195009,
+      "name": "TATA TECHNOLOGIES"
+    },
+    {
+      "stock_code": "NETWEB",
+      "instrument_token": 4462849,
+      "name": "NETWEB TECH INDIA"
+    },
+    {
+      "stock_code": "UDS",
+      "instrument_token": 4892929,
+      "name": "UPDATER SERVICES"
+    },
+    {
+      "stock_code": "AEROFLEX",
+      "instrument_token": 4676609,
+      "name": "AEROFLEX INDUSTRIES"
+    },
+    {
+      "stock_code": "EMSLIMITED",
+      "instrument_token": 4759809,
+      "name": "EMS"
+    },
+    {
+      "stock_code": "SCILAL",
+      "instrument_token": 5920513,
+      "name": "SHIPPING CORP OF ILA"
+    },
+    {
+      "stock_code": "VPRPL",
+      "instrument_token": 4695297,
+      "name": "VISHNU PRAKASH R PUNGLI L"
+    },
+    {
+      "stock_code": "RRKABEL",
+      "instrument_token": 4752897,
+      "name": "R R KABEL"
+    },
+    {
+      "stock_code": "GHCLTEXTIL",
+      "instrument_token": 4274177,
+      "name": "GHCL TEXTILES"
+    },
+    {
+      "stock_code": "JSWINFRA",
+      "instrument_token": 4869121,
+      "name": "JSW INFRASTRUCTURE"
+    },
+    {
+      "stock_code": "JLHL",
+      "instrument_token": 4749569,
+      "name": "JUPITER LIFE LINE HOSP L"
+    },
+    {
+      "stock_code": "WCIL",
+      "instrument_token": 6503169,
+      "name": "WESTERN CARRIERS (IND) L"
+    },
+    {
+      "stock_code": "ASKAUTOLTD",
+      "instrument_token": 5158913,
+      "name": "ASK AUTOMOTIVE"
+    },
+    {
+      "stock_code": "PLATIND",
+      "instrument_token": 5870081,
+      "name": "PLATINUM INDUSTRIES"
+    },
+    {
+      "stock_code": "MUFTI",
+      "instrument_token": 5344769,
+      "name": "CREDO BRANDS MARKETING L"
+    },
+    {
+      "stock_code": "NIITMTS",
+      "instrument_token": 4543233,
+      "name": "NIIT LEARNING SYSTEMS"
+    },
+    {
+      "stock_code": "INDIASHLTR",
+      "instrument_token": 5262337,
+      "name": "INDIA SHELTER FIN CORP L"
+    },
+    {
+      "stock_code": "BLSE",
+      "instrument_token": 5776897,
+      "name": "BLS E-SERVICES"
+    },
+    {
+      "stock_code": "REDTAPE",
+      "instrument_token": 4571905,
+      "name": "REDTAPE"
+    },
+    {
+      "stock_code": "EPACK",
+      "instrument_token": 5750529,
+      "name": "EPACK DURABLE"
+    },
+    {
+      "stock_code": "HAPPYFORGE",
+      "instrument_token": 5338625,
+      "name": "HAPPY FORGINGS"
+    },
+    {
+      "stock_code": "CELLO",
+      "instrument_token": 5067521,
+      "name": "CELLO WORLD"
+    },
+    {
+      "stock_code": "JIOFIN",
+      "instrument_token": 4644609,
+      "name": "JIO FIN SERVICES"
+    },
+    {
+      "stock_code": "DOMS",
+      "instrument_token": 5261057,
+      "name": "DOMS INDUSTRIES"
+    },
+    {
+      "stock_code": "JNKINDIA",
+      "instrument_token": 6046977,
+      "name": "JNK INDIA"
+    },
+    {
+      "stock_code": "INOXINDIA",
+      "instrument_token": 5275393,
+      "name": "INOX INDIA"
+    },
+    {
+      "stock_code": "ARKADE",
+      "instrument_token": 6501889,
+      "name": "ARKADE DEVELOPERS"
+    },
+    {
+      "stock_code": "JYOTICNC",
+      "instrument_token": 5461505,
+      "name": "JYOTI CNC AUTOMATION"
+    },
+    {
+      "stock_code": "STANLEY",
+      "instrument_token": 6201857,
+      "name": "STANLEY LIFESTYLES"
+    },
+    {
+      "stock_code": "NUVAMA",
+      "instrument_token": 4792577,
+      "name": "NUVAMA WEALTH MANAGE"
+    },
+    {
+      "stock_code": "DEEDEV",
+      "instrument_token": 6183425,
+      "name": "DEE DEVELOPMENT ENG"
+    },
+    {
+      "stock_code": "INDOFARM",
+      "instrument_token": 7430401,
+      "name": "INDO FARM EQUIPMENT"
+    },
+    {
+      "stock_code": "JUNIPER",
+      "instrument_token": 5842945,
+      "name": "JUNIPER HOTELS"
+    },
+    {
+      "stock_code": "EXICOM",
+      "instrument_token": 5874433,
+      "name": "EXICOM TELE SYSTEMS"
+    },
+    {
+      "stock_code": "AZAD",
+      "instrument_token": 5351681,
+      "name": "AZAD ENGINEERING"
+    },
+    {
+      "stock_code": "SRM",
+      "instrument_token": 5990913,
+      "name": "SRM CONTRACTORS"
+    },
+    {
+      "stock_code": "KRYSTAL",
+      "instrument_token": 5932801,
+      "name": "KRYSTAL INTEGRATED SER L"
+    },
+    {
+      "stock_code": "MAXESTATES",
+      "instrument_token": 5029377,
+      "name": "MAX ESTATES"
+    },
+    {
+      "stock_code": "GOPAL",
+      "instrument_token": 5904897,
+      "name": "GOPAL SNACKS"
+    },
+    {
+      "stock_code": "KROSS",
+      "instrument_token": 6464513,
+      "name": "KROSS"
+    },
+    {
+      "stock_code": "DENTA",
+      "instrument_token": 7489537,
+      "name": "DENTA WATER N INFRA SOL L"
+    },
+    {
+      "stock_code": "BAJEL",
+      "instrument_token": 5255937,
+      "name": "BAJEL PROJECTS"
+    },
+    {
+      "stock_code": "STALLION",
+      "instrument_token": 7476225,
+      "name": "STALLION IND FLUOROCHEM L"
+    },
+    {
+      "stock_code": "AWFIS",
+      "instrument_token": 6109185,
+      "name": "AWFIS SPACE SOLUTIONS"
+    },
+    {
+      "stock_code": "OLAELEC",
+      "instrument_token": 6342913,
+      "name": "OLA ELECTRIC MOBILITY"
+    },
+    {
+      "stock_code": "SUNCLAY",
+      "instrument_token": 5364737,
+      "name": "SUNDARAM CLAYTON"
+    },
+    {
+      "stock_code": "DIFFNKG",
+      "instrument_token": 6572033,
+      "name": "DIFFUSION ENGINEERS"
+    },
+    {
+      "stock_code": "FIRSTCRY",
+      "instrument_token": 6352385,
+      "name": "BRAINBEES SOLUTIONS"
+    },
+    {
+      "stock_code": "SANSTAR",
+      "instrument_token": 6292993,
+      "name": "SANSTAR"
+    },
+    {
+      "stock_code": "UNIECOM",
+      "instrument_token": 6351105,
+      "name": "UNICOMMERCE ESOLUTIONS L"
+    },
+    {
+      "stock_code": "KRN",
+      "instrument_token": 6564609,
+      "name": "KRN HEAT EXCHANGE N REF L"
+    },
+    {
+      "stock_code": "BHARTIHEXA",
+      "instrument_token": 6013185,
+      "name": "BHARTI HEXACOM"
+    },
+    {
+      "stock_code": "GARUDA",
+      "instrument_token": 6604801,
+      "name": "GARUDA CONSTRUCT N ENG L"
+    },
+    {
+      "stock_code": "AKUMS",
+      "instrument_token": 6327041,
+      "name": "AKUMS DRUGS AND PHARMA L"
+    },
+    {
+      "stock_code": "ORIENTTECH",
+      "instrument_token": 6390017,
+      "name": "ORIENT TECHNOLOGIES"
+    },
+    {
+      "stock_code": "CEIGALL",
+      "instrument_token": 6333953,
+      "name": "CEIGALL INDIA"
+    },
+    {
+      "stock_code": "TRANSRAILL",
+      "instrument_token": 7350785,
+      "name": "TRANSRAIL LIGHTING"
+    },
+    {
+      "stock_code": "STYLEBAAZA",
+      "instrument_token": 6429185,
+      "name": "BAAZAR STYLE RETAIL"
+    },
+    {
+      "stock_code": "INTERARCH",
+      "instrument_token": 6376705,
+      "name": "INTERARCH BLDNG SOLTN"
+    },
+    {
+      "stock_code": "PNGJL",
+      "instrument_token": 6479873,
+      "name": "P N GADGIL JEWELLERS"
+    },
+    {
+      "stock_code": "CRIZAC",
+      "instrument_token": 194009601,
+      "name": "CRIZAC"
+    },
+    {
+      "stock_code": "PATELRMART",
+      "instrument_token": 194416385,
+      "name": "PATEL RETAIL"
+    },
+    {
+      "stock_code": "ECOSMOBLTY",
+      "instrument_token": 6415361,
+      "name": "ECOS (INDIA) MOB & HOSP L"
+    },
+    {
+      "stock_code": "AFCONS",
+      "instrument_token": 6650113,
+      "name": "AFCONS INFRASTRUCTURE"
+    },
+    {
+      "stock_code": "PREMIERENE",
+      "instrument_token": 6412545,
+      "name": "PREMIER ENERGIES"
+    },
+    {
+      "stock_code": "BOROSCI",
+      "instrument_token": 6147585,
+      "name": "BOROSIL SCIENTIFIC"
+    },
+    {
+      "stock_code": "BAJAJHFL",
+      "instrument_token": 6469121,
+      "name": "BAJAJ HOUSING FINANCE"
+    },
+    {
+      "stock_code": "QUADFUTURE",
+      "instrument_token": 7446273,
+      "name": "QUADRANT FUTURE TEK"
+    },
+    {
+      "stock_code": "HYUNDAI",
+      "instrument_token": 6616065,
+      "name": "HYUNDAI MOTOR INDIA"
+    },
+    {
+      "stock_code": "MAMATA",
+      "instrument_token": 7343873,
+      "name": "MAMATA MACHINERY"
+    },
+    {
+      "stock_code": "NIVABUPA",
+      "instrument_token": 6936833,
+      "name": "NIVA BUPA HEALTH INS CO L"
+    },
+    {
+      "stock_code": "SAGILITY",
+      "instrument_token": 6925313,
+      "name": "SAGILITY"
+    },
+    {
+      "stock_code": "BLACKBUCK",
+      "instrument_token": 6948865,
+      "name": "BLACKBUCK"
+    },
+    {
+      "stock_code": "SAILIFE",
+      "instrument_token": 7126785,
+      "name": "SAI LIFE SCIENCES"
+    },
+    {
+      "stock_code": "SETL",
+      "instrument_token": 7443201,
+      "name": "STANDARD ENGNG TCNLGY"
+    },
+    {
+      "stock_code": "SENORES",
+      "instrument_token": 7395329,
+      "name": "SENORES PHARMACEUTICALS L"
+    },
+    {
+      "stock_code": "RUBICON",
+      "instrument_token": 194384897,
+      "name": "RUBICON RESEARCH"
+    },
+    {
+      "stock_code": "ARIS",
+      "instrument_token": 193949185,
+      "name": "ARISINFRA SOLUTIONS"
+    },
+    {
+      "stock_code": "IKS",
+      "instrument_token": 7200001,
+      "name": "INVENTURUS KNOWLEDGE SO L"
+    },
+    {
+      "stock_code": "KALPATARU",
+      "instrument_token": 194190849,
+      "name": "KALPATARU"
+    },
+    {
+      "stock_code": "JSWCEMENT",
+      "instrument_token": 194165761,
+      "name": "JSW CEMENT"
+    },
+    {
+      "stock_code": "SMARTWORKS",
+      "instrument_token": 194039041,
+      "name": "SMARTWORKS COWORKING SP L"
+    },
+    {
+      "stock_code": "TRUALT",
+      "instrument_token": 194357761,
+      "name": "TRUALT BIOENERGY"
+    },
+    {
+      "stock_code": "UNIMECH",
+      "instrument_token": 7413761,
+      "name": "UNIMECH AEROSPACE N MFG L"
+    },
+    {
+      "stock_code": "IGIL",
+      "instrument_token": 7264769,
+      "name": "INTERNATIO GEMM INS (I) L"
+    },
+    {
+      "stock_code": "CARRARO",
+      "instrument_token": 7393025,
+      "name": "CARRARO INDIA"
+    },
+    {
+      "stock_code": "RAYMONDLSL",
+      "instrument_token": 6418689,
+      "name": "RAYMOND LIFESTYLE"
+    },
+    {
+      "stock_code": "DAMCAPITAL",
+      "instrument_token": 7337473,
+      "name": "DAM CAPITAL ADVISORS"
+    },
+    {
+      "stock_code": "IVALUE",
+      "instrument_token": 194314497,
+      "name": "IVALUE INFOSOLUTIONS"
+    },
+    {
+      "stock_code": "ATHERENERG",
+      "instrument_token": 193957121,
+      "name": "ATHER ENERGY"
+    },
+    {
+      "stock_code": "VENTIVE",
+      "instrument_token": 7384833,
+      "name": "VENTIVE HOSPITALITY"
+    },
+    {
+      "stock_code": "SANOFICONR",
+      "instrument_token": 6456833,
+      "name": "SANOFI CONS HEALTHC IND L"
+    },
+    {
+      "stock_code": "LAXMIDENTL",
+      "instrument_token": 7467777,
+      "name": "LAXMI DENTAL"
+    },
+    {
+      "stock_code": "FABTECH",
+      "instrument_token": 194592001,
+      "name": "FABTECH TECHNOLOGIES"
+    },
+    {
+      "stock_code": "QPOWER",
+      "instrument_token": 7606017,
+      "name": "QUALITY POWER ELEC EQUP L"
+    },
+    {
+      "stock_code": "OSWALPUMPS",
+      "instrument_token": 193741313,
+      "name": "OSWAL PUMPS"
+    },
+    {
+      "stock_code": "NTPCGREEN",
+      "instrument_token": 6957057,
+      "name": "NTPC GREEN ENERGY"
+    },
+    {
+      "stock_code": "THELEELA",
+      "instrument_token": 193795585,
+      "name": "LEELA PALACES HOTEL"
+    },
+    {
+      "stock_code": "MBEL",
+      "instrument_token": 194086401,
+      "name": "M AND B ENGINEERING"
+    },
+    {
+      "stock_code": "AGARWALEYE",
+      "instrument_token": 7539713,
+      "name": "DR AGARWALS HEALTH CARE L"
+    },
+    {
+      "stock_code": "PROSTARM",
+      "instrument_token": 194092289,
+      "name": "PROSTARM INFO SYSTEMS"
+    },
+    {
+      "stock_code": "ALLTIME",
+      "instrument_token": 194162689,
+      "name": "ALL TIME PLASTICS"
+    },
+    {
+      "stock_code": "AJAXENGG",
+      "instrument_token": 7583745,
+      "name": "AJAX ENGINEERING"
+    },
+    {
+      "stock_code": "CPPLUS",
+      "instrument_token": 194267649,
+      "name": "ADITYA INFOTECH"
+    },
+    {
+      "stock_code": "VIKRAN",
+      "instrument_token": 194297089,
+      "name": "VIKRAN ENGINEERING"
+    },
+    {
+      "stock_code": "JARO",
+      "instrument_token": 194547457,
+      "name": "JARO INS OF TEC MG N RE L"
+    },
+    {
+      "stock_code": "SCODATUBES",
+      "instrument_token": 193914369,
+      "name": "SCODA TUBES"
+    },
+    {
+      "stock_code": "MIDWESTLTD",
+      "instrument_token": 194436353,
+      "name": "MIDWEST"
+    },
+    {
+      "stock_code": "SWIGGY",
+      "instrument_token": 6928897,
+      "name": "SWIGGY"
+    },
+    {
+      "stock_code": "AHCL",
+      "instrument_token": 194295809,
+      "name": "ANLON HEALTHCARE"
+    },
+    {
+      "stock_code": "VMM",
+      "instrument_token": 7160065,
+      "name": "VISHAL MEGA MART"
+    },
+    {
+      "stock_code": "BRIGHOTEL",
+      "instrument_token": 193995265,
+      "name": "BRIGADE HOTEL VENTURE"
+    },
+    {
+      "stock_code": "HDBFS",
+      "instrument_token": 193989633,
+      "name": "HDB FINANCIAL SERVICES L"
+    },
+    {
+      "stock_code": "SAATVIKGL",
+      "instrument_token": 194318593,
+      "name": "SAATVIK GREEN ENERGY"
+    },
+    {
+      "stock_code": "AEGISVOPAK",
+      "instrument_token": 193878017,
+      "name": "AEGIS VOPAK TERMINALS"
+    },
+    {
+      "stock_code": "BELRISE",
+      "instrument_token": 193818113,
+      "name": "BELRISE INDUSTRIES"
+    },
+    {
+      "stock_code": "ROSSTECH",
+      "instrument_token": 7002369,
+      "name": "ROSSELL TECHSYS"
+    },
+    {
+      "stock_code": "LGEINDIA",
+      "instrument_token": 194614529,
+      "name": "LG ELECTRONICS INDIA"
+    },
+    {
+      "stock_code": "TRAVELFOOD",
+      "instrument_token": 193931521,
+      "name": "TRAVEL FOOD SERVICES"
+    },
+    {
+      "stock_code": "BLUESTONE",
+      "instrument_token": 194378497,
+      "name": "BLUESTONE JEWEL LFSTL"
+    },
+    {
+      "stock_code": "ARSSBL",
+      "instrument_token": 194548737,
+      "name": "ANAND RATHI SH N STK BR L"
+    },
+    {
+      "stock_code": "EBGNG",
+      "instrument_token": 194012673,
+      "name": "GNG ELECTRONICS"
+    },
+    {
+      "stock_code": "GKENERGY",
+      "instrument_token": 194316289,
+      "name": "GK ENERGY"
+    },
+    {
+      "stock_code": "MEIL",
+      "instrument_token": 194239489,
+      "name": "MANGAL ELECTRICAL IND L"
+    },
+    {
+      "stock_code": "GANESHCP",
+      "instrument_token": 194307073,
+      "name": "GANESH CONSUMER PRODUCT L"
+    },
+    {
+      "stock_code": "LOTUSDEV",
+      "instrument_token": 194085121,
+      "name": "SRI LOTUS DEVLPRS N RTY L"
+    },
+    {
+      "stock_code": "STYL",
+      "instrument_token": 194543105,
+      "name": "SESHAASAI TECHNOLOGIES L"
+    },
+    {
+      "stock_code": "UTLSOLAR",
+      "instrument_token": 194528257,
+      "name": "FUJIYAMA POWER SYSTEMS L"
+    },
+    {
+      "stock_code": "REGAAL",
+      "instrument_token": 194222081,
+      "name": "REGAAL RESOURCES"
+    },
+    {
+      "stock_code": "ANTHEM",
+      "instrument_token": 194018561,
+      "name": "ANTHEM BIOSCIENCES"
+    },
+    {
+      "stock_code": "VIDYAWIRES",
+      "instrument_token": 194617345,
+      "name": "VIDYA WIRES"
+    },
+    {
+      "stock_code": "SHANTIGOLD",
+      "instrument_token": 194048513,
+      "name": "SHANTI GOLD INTERNATION L"
+    },
+    {
+      "stock_code": "EUROPRATIK",
+      "instrument_token": 194508033,
+      "name": "EURO PRATIK SALES"
+    },
+    {
+      "stock_code": "ONESOURCE",
+      "instrument_token": 7481345,
+      "name": "ONESOURCE SPECL PHARMA L"
+    },
+    {
+      "stock_code": "EPACKPEB",
+      "instrument_token": 194368257,
+      "name": "EPACK PREFAB TECHN"
+    },
+    {
+      "stock_code": "SHREEJISPG",
+      "instrument_token": 194418689,
+      "name": "SHREEJI SHIPPING GLOBAL L"
+    },
+    {
+      "stock_code": "ITCHOTELS",
+      "instrument_token": 7488257,
+      "name": "ITC HOTELS"
+    },
+    {
+      "stock_code": "WEWORK",
+      "instrument_token": 194415105,
+      "name": "WEWORK INDIA MANAGEMENT L"
+    },
+    {
+      "stock_code": "ATLANTAELE",
+      "instrument_token": 194305793,
+      "name": "ATLANTA ELECTRICALS"
+    },
+    {
+      "stock_code": "SHRINGARMS",
+      "instrument_token": 194327809,
+      "name": "SHRINGAR HOU OF MANGALS L"
+    },
+    {
+      "stock_code": "JUBLCPL",
+      "instrument_token": 7575041,
+      "name": "JUBILANT AGRI N CON PRO L"
+    },
+    {
+      "stock_code": "BAJAJINDEF",
+      "instrument_token": 7597569,
+      "name": "INDEF MANUFACTURING"
+    },
+    {
+      "stock_code": "EXCELSOFT",
+      "instrument_token": 194561793,
+      "name": "EXCELSOFT TECHNOLOGIES L"
+    },
+    {
+      "stock_code": "PRABHA",
+      "instrument_token": 7714305,
+      "name": "PRABHA ENERGY"
+    },
+    {
+      "stock_code": "PACEDIGITK",
+      "instrument_token": 194391553,
+      "name": "PACE DIGITEK"
+    },
+    {
+      "stock_code": "PARKHOSPS",
+      "instrument_token": 194649857,
+      "name": "PARK MEDI WORLD"
+    },
+    {
+      "stock_code": "GKSL",
+      "instrument_token": 194866433,
+      "name": "GUJARAT KIDNEY N SUP SP L"
+    },
+    {
+      "stock_code": "ADVANCE",
+      "instrument_token": 194406913,
+      "name": "ADVANCE AGROLIFE"
+    },
+    {
+      "stock_code": "JAINREC",
+      "instrument_token": 194366465,
+      "name": "JAIN RESOURCE RECYCLING L"
+    },
+    {
+      "stock_code": "CRAMC",
+      "instrument_token": 194383617,
+      "name": "CANARA ROBECO AMC"
+    },
+    {
+      "stock_code": "URBANCO",
+      "instrument_token": 194325505,
+      "name": "URBAN COMPANY"
+    },
+    {
+      "stock_code": "CANHLIFE",
+      "instrument_token": 194426113,
+      "name": "CANARA HSBC LIFE INS CO L"
+    },
+    {
+      "stock_code": "CORONA",
+      "instrument_token": 194625025,
+      "name": "CORONA REMEDIES"
+    },
+    {
+      "stock_code": "KSHINTL",
+      "instrument_token": 194670849,
+      "name": "KSH INTERNATIONAL"
+    },
+    {
+      "stock_code": "BHARATCOAL",
+      "instrument_token": 194745857,
+      "name": "BHARAT COKING COAL"
+    },
+    {
+      "stock_code": "BLUSPRING",
+      "instrument_token": 193925121,
+      "name": "BLUSPRING ENTERPRISES"
+    },
+    {
+      "stock_code": "DIGITIDE",
+      "instrument_token": 193923841,
+      "name": "DIGITIDE SOLUTIONS"
+    },
+    {
+      "stock_code": "ORKLAINDIA",
+      "instrument_token": 194449665,
+      "name": "ORKLA INDIA"
+    },
+    {
+      "stock_code": "ENRIN",
+      "instrument_token": 193758977,
+      "name": "SIEMENS ENERGY INDIA"
+    },
+    {
+      "stock_code": "ABLBL",
+      "instrument_token": 193751809,
+      "name": "ADITYA BIRLA LIFES BRAN L"
+    },
+    {
+      "stock_code": "SUDEEPPHRM",
+      "instrument_token": 194569985,
+      "name": "SUDEEP PHARMA"
+    },
+    {
+      "stock_code": "PINELABS",
+      "instrument_token": 194513921,
+      "name": "PINE LABS"
+    },
+    {
+      "stock_code": "WAKEFIT",
+      "instrument_token": 194626305,
+      "name": "WAKEFIT INNOVATIONS"
+    },
+    {
+      "stock_code": "RAYMONDREL",
+      "instrument_token": 194189057,
+      "name": "RAYMOND REALTY"
+    },
+    {
+      "stock_code": "TENNIND",
+      "instrument_token": 194529281,
+      "name": "TENNECO CLEAN AIR INDIA L"
+    },
+    {
+      "stock_code": "EMMVEE",
+      "instrument_token": 194490369,
+      "name": "EMMVEE PHOTOVOLTAIC PWR L"
+    },
+    {
+      "stock_code": "ICICIAMC",
+      "instrument_token": 194664193,
+      "name": "ICICI PRUDENTIAL AMC"
+    },
+    {
+      "stock_code": "AMAGI",
+      "instrument_token": 194749441,
+      "name": "AMAGI MEDIA LABS"
+    },
+    {
+      "stock_code": "NEPHROPLUS",
+      "instrument_token": 194648577,
+      "name": "NEPHROCARE HEALTH SERV L"
+    },
+    {
+      "stock_code": "LENSKART",
+      "instrument_token": 194458881,
+      "name": "LENSKART SOLUTIONS"
+    },
+    {
+      "stock_code": "TATACAP",
+      "instrument_token": 194371841,
+      "name": "TATA CAPITAL"
+    },
+    {
+      "stock_code": "FRACTAL",
+      "instrument_token": 194806017,
+      "name": "FRACTAL ANALYTICS"
+    },
+    {
+      "stock_code": "STLNETWORK",
+      "instrument_token": 194293249,
+      "name": "STL NETWORKS"
+    },
+    {
+      "stock_code": "PWL",
+      "instrument_token": 194489089,
+      "name": "PHYSICSWALLAH"
+    },
+    {
+      "stock_code": "GROWW",
+      "instrument_token": 194510337,
+      "name": "BILLIONBRAINS GARAGE VN L"
+    },
+    {
+      "stock_code": "AEQUS",
+      "instrument_token": 194619905,
+      "name": "AEQUS"
+    },
+    {
+      "stock_code": "MEESHO",
+      "instrument_token": 194618625,
+      "name": "MEESHO"
+    },
+    {
+      "stock_code": "SHADOWFAX",
+      "instrument_token": 194936065,
+      "name": "SHADOWFAX TECHNOLOGIES L"
+    },
+    {
+      "stock_code": "TMCV",
+      "instrument_token": 194504193,
+      "name": "TATA MOTORS"
+    },
+    {
+      "stock_code": "ADVENTHTL",
+      "instrument_token": 194500865,
+      "name": "ADVENT HOTELS INTERNATI L"
+    },
+    {
+      "stock_code": "SKFINDUS",
+      "instrument_token": 194585857,
+      "name": "SKF IND (INDUSTRIAL)"
+    },
+    {
+      "stock_code": "GOLDBETA",
+      "instrument_token": 3720961,
+      "name": "UTI MUTUAL FUND - UTI GOLD EXCHANGE TRADED FUND"
+    },
+    {
+      "stock_code": "GOLD1",
+      "instrument_token": 3803649,
+      "name": "KOTAK GOLD ETF"
+    },
+    {
+      "stock_code": "PSUBANK",
+      "instrument_token": 3855617,
+      "name": "KOTAK NIFTY PSU BANK ETF"
+    },
+    {
+      "stock_code": "JUNIORBEES",
+      "instrument_token": 2800385,
+      "name": "NIPPON INDIA ETF NIFTY NEXT 50 JUNIOR BEES"
+    },
+    {
+      "stock_code": "BANKBEES",
+      "instrument_token": 2928385,
+      "name": "NIPPON INDIA ETF BANK BEES"
+    },
+    {
+      "stock_code": "PSUBNKBEES",
+      "instrument_token": 3848193,
+      "name": "NIPPON INDIA ETF PSU BANK BEES"
+    },
+    {
+      "stock_code": "SENSEXIETF",
+      "instrument_token": 1120769,
+      "name": "ICICI PRUDENTIAL BSE SENSEX ETF"
+    },
+    {
+      "stock_code": "SETFGOLD",
+      "instrument_token": 4421633,
+      "name": "SBI GOLD ETF"
+    },
+    {
+      "stock_code": "GOLDBEES",
+      "instrument_token": 3693569,
+      "name": "NIPPON INDIA ETF GOLD BEES"
+    },
+    {
+      "stock_code": "NIFTYBEES",
+      "instrument_token": 2707457,
+      "name": "NIPPON INDIA ETF NIFTY 50 BEES"
+    },
+    {
+      "stock_code": "NIFTY1",
+      "instrument_token": 4634113,
+      "name": "KOTAK NIFTY 50 ETF"
+    },
+    {
+      "stock_code": "HNGSNGBEES",
+      "instrument_token": 4680705,
+      "name": "NIPPON INDIA ETF HANG SENG BEES"
+    },
+    {
+      "stock_code": "IVZINGOLD",
+      "instrument_token": 4682753,
+      "name": "INVESCO INDIA GOLD EXCHANGE TRADED FUND"
+    },
+    {
+      "stock_code": "HDFCGOLD",
+      "instrument_token": 5003009,
+      "name": "HDFC GOLD ETF"
+    },
+    {
+      "stock_code": "INFRABEES",
+      "instrument_token": 5138433,
+      "name": "NIPPON INDIA ETF INFRA BEES"
+    },
+    {
+      "stock_code": "MOM100",
+      "instrument_token": 5484289,
+      "name": "MOTILAL OSWAL NIFTY MIDCAP 100 ETF"
+    },
+    {
+      "stock_code": "MON100",
+      "instrument_token": 5821185,
+      "name": "MOTILAL OSWAL NASDAQ 100 ETF"
+    },
+    {
+      "stock_code": "BSLNIFTY",
+      "instrument_token": 6343937,
+      "name": "ADITYA BIRLA SUN LIFE NIFTY 50 ETF"
+    },
+    {
+      "stock_code": "AXISGOLD",
+      "instrument_token": 5256193,
+      "name": "AXIS GOLD ETF"
+    },
+    {
+      "stock_code": "LICMFGOLD",
+      "instrument_token": 6563841,
+      "name": "LIC MF GOLD ETF"
+    },
+    {
+      "stock_code": "NIFTYIETF",
+      "instrument_token": 7565569,
+      "name": "ICICI PRUDENTIAL NIFTY 50 ETF"
+    },
+    {
+      "stock_code": "NIF100IETF",
+      "instrument_token": 7780353,
+      "name": "ICICI PRUDENTIAL NIFTY 100 ETF"
+    },
+    {
+      "stock_code": "CPSEETF",
+      "instrument_token": 595969,
+      "name": "CPSE ETF"
+    },
+    {
+      "stock_code": "CONSUMBEES",
+      "instrument_token": 623361,
+      "name": "NIPPON INDIA ETF CONSUMPTION"
+    },
+    {
+      "stock_code": "BANKNIFTY1",
+      "instrument_token": 1497857,
+      "name": "KOTAK NIFTY BANK ETF"
+    },
+    {
+      "stock_code": "LICNETFGSC",
+      "instrument_token": 1551873,
+      "name": "LIC MF NIFTY 8-13 YR G-SEC ETF"
+    },
+    {
+      "stock_code": "SETFNN50",
+      "instrument_token": 1882369,
+      "name": "SBI NIFTY NEXT 50 ETF"
+    },
+    {
+      "stock_code": "SETFNIFBK",
+      "instrument_token": 1884417,
+      "name": "SBI NIFTY BANK ETF"
+    },
+    {
+      "stock_code": "SETFNIF50",
+      "instrument_token": 2605057,
+      "name": "SBI NIFTY 50 ETF"
+    },
+    {
+      "stock_code": "SENSEXBETA",
+      "instrument_token": 2691841,
+      "name": "UTI BSE SENSEX ETF"
+    },
+    {
+      "stock_code": "NIFTYBETA",
+      "instrument_token": 2690817,
+      "name": "UTI NIFTY 50 ETF"
+    },
+    {
+      "stock_code": "HDFCNIFTY",
+      "instrument_token": 2967297,
+      "name": "HDFC NIFTY 50 ETF"
+    },
+    {
+      "stock_code": "HDFCSENSEX",
+      "instrument_token": 2967809,
+      "name": "HDFC BSE SENSEX ETF"
+    },
+    {
+      "stock_code": "SETF10GILT",
+      "instrument_token": 4453121,
+      "name": "SBI NIFTY 10 YR BENCHMARK G-SEC ETF"
+    },
+    {
+      "stock_code": "NV20IETF",
+      "instrument_token": 4473601,
+      "name": "ICICI PRUDENTIAL NIFTY50 VALUE 20 ETF"
+    },
+    {
+      "stock_code": "AXISNIFTY",
+      "instrument_token": 5440513,
+      "name": "AXIS NIFTY 50 ETF"
+    },
+    {
+      "stock_code": "LOWVOLIETF",
+      "instrument_token": 5441025,
+      "name": "ICICI PRUDENTIAL NIFTY 100 LOW VOLATILITY 30 ETF"
+    },
+    {
+      "stock_code": "NEXT50BETA",
+      "instrument_token": 5498369,
+      "name": "UTI NIFTY NEXT 50 ETF"
+    },
+    {
+      "stock_code": "ICICIB22",
+      "instrument_token": 133633,
+      "name": "BHARAT 22 ETF"
+    },
+    {
+      "stock_code": "BSE500IETF",
+      "instrument_token": 768257,
+      "name": "ICICI PRUDENTIAL BSE 500 ETF"
+    },
+    {
+      "stock_code": "GOLDIETF",
+      "instrument_token": 5037825,
+      "name": "ICICI PRUDENTIAL GOLD ETF"
+    },
+    {
+      "stock_code": "NEXT50IETF",
+      "instrument_token": 1159425,
+      "name": "ICICI PRUDENTIAL NIFTY NEXT 50 ETF"
+    },
+    {
+      "stock_code": "NIFTYETF",
+      "instrument_token": 1626369,
+      "name": "MIRAE ASSET NIFTY 50 ETF"
+    },
+    {
+      "stock_code": "MID150BEES",
+      "instrument_token": 2177537,
+      "name": "NIPPON INDIA ETF NIFTY MIDCAP 150"
+    },
+    {
+      "stock_code": "BANKIETF",
+      "instrument_token": 2825473,
+      "name": "ICICI PRUDENTIAL NIFTY BANK ETF"
+    },
+    {
+      "stock_code": "PVTBANIETF",
+      "instrument_token": 2914817,
+      "name": "ICICI PRUDENTIAL NIFTY PRIVATE BANK ETF"
+    },
+    {
+      "stock_code": "ABSLBANETF",
+      "instrument_token": 3580673,
+      "name": "ADITYA BIRLA SUN LIFE NIFTY BANK ETF"
+    },
+    {
+      "stock_code": "EBBETF0430",
+      "instrument_token": 4160769,
+      "name": "BHARAT BOND ETF - APRIL 2030"
+    },
+    {
+      "stock_code": "MIDCAPIETF",
+      "instrument_token": 4390913,
+      "name": "ICICI PRUDENTIAL NIFTY MIDCAP 150 ETF"
+    },
+    {
+      "stock_code": "NEXT50",
+      "instrument_token": 4398337,
+      "name": "MIRAE ASSET NIFTY NEXT 50 ETF"
+    },
+    {
+      "stock_code": "ITBEES",
+      "instrument_token": 4885505,
+      "name": "NIPPON INDIA ETF NIFTY IT"
+    },
+    {
+      "stock_code": "EBBETF0431",
+      "instrument_token": 5693185,
+      "name": "BHARAT BOND ETF - APRIL 2031"
+    },
+    {
+      "stock_code": "ALPL30IETF",
+      "instrument_token": 5720065,
+      "name": "ICICIPRAMC - ICICIALPLV"
+    },
+    {
+      "stock_code": "ITIETF",
+      "instrument_token": 5725441,
+      "name": "ICICI PRUDENTIAL NIFTY IT ETF"
+    },
+    {
+      "stock_code": "BANKBETA",
+      "instrument_token": 5744641,
+      "name": "UTI NIFTY BANK ETF"
+    },
+    {
+      "stock_code": "SDL26BEES",
+      "instrument_token": 773633,
+      "name": "NIPPON INDIA ETF NIFTY SDL - 2026 MATURITY"
+    },
+    {
+      "stock_code": "MAFANG",
+      "instrument_token": 897793,
+      "name": "MIRAE ASSET NYSE FANG+ ETF"
+    },
+    {
+      "stock_code": "HEALTHIETF",
+      "instrument_token": 928257,
+      "name": "ICICI PRUDENTIAL NIFTY HEALTHCARE ETF"
+    },
+    {
+      "stock_code": "PHARMABEES",
+      "instrument_token": 1273089,
+      "name": "NIPPON INDIA NIFTY PHARMA ETF"
+    },
+    {
+      "stock_code": "BFSI",
+      "instrument_token": 1336321,
+      "name": "MIRAE ASSET NIFTY FINANCIAL SERVICES ETF"
+    },
+    {
+      "stock_code": "FMCGIETF",
+      "instrument_token": 1358337,
+      "name": "ICICI PRUDENTIAL NIFTY FMCG ETF"
+    },
+    {
+      "stock_code": "EQUAL50ADD",
+      "instrument_token": 1691137,
+      "name": "DSP NIFTY 50 EQUAL WEIGHT ETF"
+    },
+    {
+      "stock_code": "BBETF0432",
+      "instrument_token": 1842177,
+      "name": "BHARAT BOND ETF - APRIL 2032"
+    },
+    {
+      "stock_code": "ALPHA",
+      "instrument_token": 1897473,
+      "name": "KOTAK NIFTY ALPHA 50 ETF"
+    },
+    {
+      "stock_code": "NIFTYADD",
+      "instrument_token": 1907457,
+      "name": "DSP NIFTY 50 ETF"
+    },
+    {
+      "stock_code": "AUTOIETF",
+      "instrument_token": 2008065,
+      "name": "ICICI PRUDENTIAL NIFTY AUTO ETF"
+    },
+    {
+      "stock_code": "AUTOBEES",
+      "instrument_token": 2017281,
+      "name": "NIPPON INDIA NIFTY AUTO ETF"
+    },
+    {
+      "stock_code": "SILVERIETF",
+      "instrument_token": 2033153,
+      "name": "ICICI PRUDENTIAL SILVER ETF"
+    },
+    {
+      "stock_code": "SILVER",
+      "instrument_token": 2048769,
+      "name": "ADITYA BIRLA SUN LIFE SILVER ETF"
+    },
+    {
+      "stock_code": "MIDCAP",
+      "instrument_token": 2067713,
+      "name": "KOTAK NIFTY MIDCAP 50 ETF"
+    },
+    {
+      "stock_code": "SILVERBEES",
+      "instrument_token": 2068481,
+      "name": "NIPPON INDIA SILVER ETF"
+    },
+    {
+      "stock_code": "MOMOMENTUM",
+      "instrument_token": 2094593,
+      "name": "MOTILAL OSWAL NIFTY 200 MOMENTUM 30 ETF"
+    },
+    {
+      "stock_code": "MIDCAPETF",
+      "instrument_token": 2153729,
+      "name": "MIRAE ASSET NIFTY MIDCAP 150 ETF"
+    },
+    {
+      "stock_code": "TNIDETF",
+      "instrument_token": 2273793,
+      "name": "TATA NIFTY INDIA DIGITAL EXCHANGE TRADED FUND"
+    },
+    {
+      "stock_code": "MOM30IETF",
+      "instrument_token": 2709761,
+      "name": "ICICI PRUDENTIAL NIFTY 200 MOMENTUM 30 ETF"
+    },
+    {
+      "stock_code": "INFRAIETF",
+      "instrument_token": 2745089,
+      "name": "ICICI PRUDENTIAL NIFTY INFRASTRUCTURE ETF"
+    },
+    {
+      "stock_code": "SILVERADD",
+      "instrument_token": 2754817,
+      "name": "DSP SILVER ETF"
+    },
+    {
+      "stock_code": "MOVALUE",
+      "instrument_token": 2771201,
+      "name": "MOTILAL OSWAL BSE ENHANCED VALUE ETF"
+    },
+    {
+      "stock_code": "HDFCSILVER",
+      "instrument_token": 2784257,
+      "name": "HDFC SILVER ETF"
+    },
+    {
+      "stock_code": "AXISILVER",
+      "instrument_token": 2865409,
+      "name": "AXIS SILVER ETF"
+    },
+    {
+      "stock_code": "FINIETF",
+      "instrument_token": 3219969,
+      "name": "ICICI PRUDENTIAL NIFTY FINANCIAL SERVICES EX-BANK ETF"
+    },
+    {
+      "stock_code": "SILVER1",
+      "instrument_token": 3348993,
+      "name": "KOTAK SILVER ETF"
+    },
+    {
+      "stock_code": "EBBETF0433",
+      "instrument_token": 3363585,
+      "name": "BHARAT BOND ETF - APRIL 2033"
+    },
+    {
+      "stock_code": "COMMOIETF",
+      "instrument_token": 3378689,
+      "name": "ICICI PRUDENTIAL NIFTY COMMODITIES ETF"
+    },
+    {
+      "stock_code": "BANKADD",
+      "instrument_token": 3492865,
+      "name": "DSP NIFTY BANK ETF"
+    },
+    {
+      "stock_code": "HDFCSML250",
+      "instrument_token": 3643649,
+      "name": "HDFC NIFTY SMALLCAP 250 ETF"
+    },
+    {
+      "stock_code": "HDFCMID150",
+      "instrument_token": 3644417,
+      "name": "HDFC NIFTY MIDCAP 150 ETF"
+    },
+    {
+      "stock_code": "GOLDETF",
+      "instrument_token": 3657217,
+      "name": "MIRAE ASSET GOLD ETF"
+    },
+    {
+      "stock_code": "PSUBNKIETF",
+      "instrument_token": 3733505,
+      "name": "ICICI PRUDENTIAL NIFTY PSU BANK ETF"
+    },
+    {
+      "stock_code": "SILVERBETA",
+      "instrument_token": 3861761,
+      "name": "UTI SILVER ETF"
+    },
+    {
+      "stock_code": "GOLDADD",
+      "instrument_token": 3931137,
+      "name": "DSP GOLD ETF"
+    },
+    {
+      "stock_code": "SILVERAG",
+      "instrument_token": 4294913,
+      "name": "MIRAE ASSET SILVER ETF"
+    },
+    {
+      "stock_code": "PVTBANKADD",
+      "instrument_token": 4499457,
+      "name": "DSP NIFTY PRIVATE BANK ETF"
+    },
+    {
+      "stock_code": "PSUBANKADD",
+      "instrument_token": 4509697,
+      "name": "DSP NIFTY PSU BANK ETF"
+    },
+    {
+      "stock_code": "ALPHAETF",
+      "instrument_token": 5027841,
+      "name": "MIRAE ASSET NIFTY 200 ALPHA 30 ETF"
+    },
+    {
+      "stock_code": "ITETF",
+      "instrument_token": 5026049,
+      "name": "MIRAE ASSET NIFTY IT ETF"
+    },
+    {
+      "stock_code": "EGOLD",
+      "instrument_token": 5102849,
+      "name": "EDELWEISS GOLD ETF"
+    },
+    {
+      "stock_code": "TATSILV",
+      "instrument_token": 5485569,
+      "name": "TATA SILVER EXCHANGE TRADED FUND"
+    },
+    {
+      "stock_code": "TATAGOLD",
+      "instrument_token": 5478657,
+      "name": "TATA GOLD EXCHANGE TRADED FUND"
+    },
+    {
+      "stock_code": "SMALLCAP",
+      "instrument_token": 5844993,
+      "name": "MIRAE ASSET NIFTY SMALLCAP 250 MOMENTUM QUALITY 100 ETF"
+    },
+    {
+      "stock_code": "GOLDCASE",
+      "instrument_token": 5862657,
+      "name": "ZERODHA GOLD ETF"
+    },
+    {
+      "stock_code": "MOREALTY",
+      "instrument_token": 5935105,
+      "name": "MOTILAL OSWAL NIFTY REALTY ETF"
+    },
+    {
+      "stock_code": "MOSMALL250",
+      "instrument_token": 5934337,
+      "name": "MOTILAL OSWAL NIFTY SMALLCAP 250 ETF"
+    },
+    {
+      "stock_code": "MIDSMALL",
+      "instrument_token": 6106881,
+      "name": "MIRAE ASSET NIFTY MIDSMALLCAP400 MOMENTUM QUALITY 100 ETF"
+    },
+    {
+      "stock_code": "MID150CASE",
+      "instrument_token": 6163713,
+      "name": "ZERODHA NIFTY MIDCAP 150 ETF"
+    },
+    {
+      "stock_code": "TOP100CASE",
+      "instrument_token": 6164737,
+      "name": "ZERODHA NIFTY 100 ETF"
+    },
+    {
+      "stock_code": "SBISILVER",
+      "instrument_token": 6237697,
+      "name": "SBI SILVER ETF"
+    },
+    {
+      "stock_code": "EVINDIA",
+      "instrument_token": 6262017,
+      "name": "MIRAE ASSET NIFTY EV AND NEW AGE AUTOMOTIVE ETF"
+    },
+    {
+      "stock_code": "OILIETF",
+      "instrument_token": 6280449,
+      "name": "ICICI PRUDENTIAL NIFTY OIL & GAS ETF"
+    },
+    {
+      "stock_code": "METALIETF",
+      "instrument_token": 6364417,
+      "name": "ICICI PRUDENTIAL NIFTY METAL ETF"
+    },
+    {
+      "stock_code": "MODEFENCE",
+      "instrument_token": 6385665,
+      "name": "MOTILAL OSWAL NIFTY INDIA DEFENCE ETF"
+    },
+    {
+      "stock_code": "TOP10ADD",
+      "instrument_token": 6443777,
+      "name": "DSP NIFTY TOP 10 EQUAL WEIGHT ETF"
+    },
+    {
+      "stock_code": "MOMENTUM50",
+      "instrument_token": 6555137,
+      "name": "MOTILAL OSWAL NIFTY 500 MOMENTUM 50 ETF"
+    },
+    {
+      "stock_code": "METAL",
+      "instrument_token": 6590465,
+      "name": "MIRAE ASSET NIFTY METAL ETF"
+    },
+    {
+      "stock_code": "GROWWDEFNC",
+      "instrument_token": 6594049,
+      "name": "GROWW NIFTY INDIA DEFENCE ETF"
+    },
+    {
+      "stock_code": "GROWWGOLD",
+      "instrument_token": 6623233,
+      "name": "GROWW GOLD ETF"
+    },
+    {
+      "stock_code": "GROWWRAIL",
+      "instrument_token": 7558913,
+      "name": "GROWW NIFTY INDIA RAILWAYS PSU ETF"
+    },
+    {
+      "stock_code": "MOCAPITAL",
+      "instrument_token": 7696641,
+      "name": "MOTILAL OSWAL NIFTY CAPITAL MARKET ETF"
+    },
+    {
+      "stock_code": "GOLD360",
+      "instrument_token": 7706881,
+      "name": "360 ONE GOLD ETF"
+    },
+    {
+      "stock_code": "SILVERCASE",
+      "instrument_token": 7750145,
+      "name": "ZERODHA SILVER ETF"
+    },
+    {
+      "stock_code": "SBIBPB",
+      "instrument_token": 7754241,
+      "name": "SBI BSE PSU BANK ETF"
+    },
+    {
+      "stock_code": "GROWWSLVR",
+      "instrument_token": 193747713,
+      "name": "GROWW SILVER ETF"
+    },
+    {
+      "stock_code": "MOGOLD",
+      "instrument_token": 193994497,
+      "name": "MOTILAL OSWAL GOLD ETF"
+    },
+    {
+      "stock_code": "GROWWPOWER",
+      "instrument_token": 194090241,
+      "name": "GROWW BSE POWER ETF"
+    },
+    {
+      "stock_code": "MOSILVER",
+      "instrument_token": 194164993,
+      "name": "MOTILAL OSWAL SILVER ETF"
+    },
+    {
+      "stock_code": "ENERGY",
+      "instrument_token": 194503681,
+      "name": "MIRAE ASSET NIFTY ENERGY ETF"
+    },
+    {
+      "stock_code": "SILVERBND",
+      "instrument_token": 194643969,
+      "name": "BANDHAN SILVER ETF"
+    },
+    
+    {
+      "stock_code": "MOMENTUM",
+      "instrument_token": 2737409,
+      "name": "ADITYA BIRLA SUN LIFE NIFTY 200 MOMENTUM 30 ETF"
+    },
+    {
+      "stock_code": "TECH",
+      "instrument_token": 1654273,
+      "name": "ADITYA BIRLA SUN LIFE NIFTY IT ETF"
+    },
+    {
+      "stock_code": "AONELIQUID",
+      "instrument_token": 7800833,
+      "name": "ANGEL ONE NIFTY 1D RATE LIQUID ETF - GROWTH"
+    },
+    {
+      "stock_code": "AXISBNKETF",
+      "instrument_token": 267265,
+      "name": "AXIS NIFTY BANK ETF"
+    },
+    {
+      "stock_code": "AXISCETF",
+      "instrument_token": 1467393,
+      "name": "AXIS NIFTY INDIA CONSUMPTION ETF"
+    },
+    {
+      "stock_code": "AXISHCETF",
+      "instrument_token": 923649,
+      "name": "AXIS NIFTY HEALTHCARE ETF"
+    },
+    {
+      "stock_code": "AXISTECETF",
+      "instrument_token": 770561,
+      "name": "AXIS NIFTY IT ETF"
+    },
+    {
+      "stock_code": "AXSENSEX",
+      "instrument_token": 3773953,
+      "name": "AXIS BSE SENSEX ETF"
+    },
+    {
+      "stock_code": "IDFNIFTYET",
+      "instrument_token": 4808449,
+      "name": "BANDHAN NIFTY 50 ETF"
+    },
+    {
+      "stock_code": "BANKBETF",
+      "instrument_token": 5628417,
+      "name": "BAJAJ FINSERV NIFTY BANK ETF"
+    },
+    {
+      "stock_code": "NIFTYBETF",
+      "instrument_token": 5621505,
+      "name": "BAJAJ FINSERV NIFTY 50 ETF"
+    },
+    {
+      "stock_code": "ABSLLIQUID",
+      "instrument_token": 3716609,
+      "name": "ADITYA BIRLA SUN LIFE CRISIL LIQUID OVERNIGHT ETF"
+    },
+    {
+      "stock_code": "ABSLNN50ET",
+      "instrument_token": 1878785,
+      "name": "ADITYA BIRLA SUN LIFE NIFTY NEXT 50 ETF"
+    },
+    {
+      "stock_code": "HEALTHY",
+      "instrument_token": 1612033,
+      "name": "ADITYA BIRLA SUN LIFE NIFTY HEALTHCARE ETF"
+    },
+    {
+      "stock_code": "LIQUIDETF",
+      "instrument_token": 493313,
+      "name": "DSP NIFTY 1D RATE LIQUID ETF"
+    },
+    {
+      "stock_code": "ITADD",
+      "instrument_token": 4404993,
+      "name": "DSP NIFTY IT ETF"
+    },
+    {
+      "stock_code": "MIDQ50ADD",
+      "instrument_token": 1908737,
+      "name": "DSP NIFTY MIDCAP 150 QUALITY 50 ETF"
+    },
+    {
+      "stock_code": "HDFCNIF100",
+      "instrument_token": 2722049,
+      "name": "HDFC NIFTY 100 ETF"
+    },
+    {
+      "stock_code": "HDFCGROWTH",
+      "instrument_token": 2877697,
+      "name": "HDFC NIFTY GROWTH SECTORS 15 ETF"
+    },
+    {
+      "stock_code": "HDFCLIQUID",
+      "instrument_token": 4679425,
+      "name": "HDFC NIFTY 1D RATE LIQUID ETF - GROWTH"
+    },
+    {
+      "stock_code": "HDFCNEXT50",
+      "instrument_token": 2718465,
+      "name": "HDFC NIFTY NEXT 50 ETF"
+    },
+    {
+      "stock_code": "HDFCLOWVOL",
+      "instrument_token": 2956033,
+      "name": "HDFC NIFTY100 LOW VOLATILITY 30 ETF"
+    },
+    {
+      "stock_code": "HDFCMOMENT",
+      "instrument_token": 2953729,
+      "name": "HDFC NIFTY200 MOMENTUM 30 ETF"
+    },
+    {
+      "stock_code": "HDFCNIFBAN",
+      "instrument_token": 5742849,
+      "name": "HDFC NIFTY BANKING ETF"
+    },
+    {
+      "stock_code": "HDFCNIFIT",
+      "instrument_token": 3097857,
+      "name": "HDFC NIFTY IT ETF"
+    },
+    {
+      "stock_code": "HDFCPVTBAN",
+      "instrument_token": 3099649,
+      "name": "HDFC NIFTY PRIVATE BANK ETF"
+    },
+    {
+      "stock_code": "HDFCQUAL",
+      "instrument_token": 2881281,
+      "name": "HDFC NIFTY100 QUALITY 30 ETF"
+    },
+    {
+      "stock_code": "HDFCPSUBK",
+      "instrument_token": 5784321,
+      "name": "HDFC NIFTY PSU BANK ETF"
+    },
+    {
+      "stock_code": "LIQUIDIETF",
+      "instrument_token": 1238529,
+      "name": "ICICI PRUDENTIAL BSE LIQUID RATE ETF - IDCW"
+    },
+    {
+      "stock_code": "CASHIETF",
+      "instrument_token": 7715585,
+      "name": "ICICI PRUDENTIAL BSE LIQUID RATE ETF - GROWTH"
+    },
+    {
+      "stock_code": "CONSUMIETF",
+      "instrument_token": 1650177,
+      "name": "ICICI PRUDENTIAL NIFTY INDIA CONSUMPTION ETF"
+    },
+    {
+      "stock_code": "QUAL30IETF",
+      "instrument_token": 4558849,
+      "name": "ICICI PRUDENTIAL NIFTY 200 QUALITY 30 ETF"
+    },
+    {
+      "stock_code": "MIDSELIETF",
+      "instrument_token": 4531713,
+      "name": "ICICI PRUDENTIAL BSE MIDCAP SELECT ETF"
+    },
+    {
+      "stock_code": "LOWVOL1",
+      "instrument_token": 2209793,
+      "name": "KOTAK NIFTY 100 LOW VOLATILITY 30 ETF"
+    },
+    {
+      "stock_code": "IT",
+      "instrument_token": 672513,
+      "name": "KOTAK NIFTY IT ETF"
+    },
+    {
+      "stock_code": "MNC",
+      "instrument_token": 2733057,
+      "name": "KOTAK NIFTY MNC ETF"
+    },
+    {
+      "stock_code": "NV20",
+      "instrument_token": 2932993,
+      "name": "KOTAK NIFTY 50 VALUE 20 ETF"
+    },
+    {
+      "stock_code": "LICNETFN50",
+      "instrument_token": 2897665,
+      "name": "LIC MF NIFTY 50 ETF"
+    },
+    {
+      "stock_code": "MASPTOP50",
+      "instrument_token": 1480193,
+      "name": "MIRAE ASSET S&P 500 TOP 50 ETF"
+    },
+    {
+      "stock_code": "BANKETF",
+      "instrument_token": 4459265,
+      "name": "MIRAE ASSET NIFTY BANK ETF"
+    },
+    {
+      "stock_code": "ESG",
+      "instrument_token": 307201,
+      "name": "MIRAE ASSET NIFTY 100 ESG SECTOR LEADERS ETF"
+    },
+    {
+      "stock_code": "MAHKTECH",
+      "instrument_token": 1810945,
+      "name": "MIRAE ASSET HANG SENG TECH ETF"
+    },
+    {
+      "stock_code": "MAKEINDIA",
+      "instrument_token": 2042625,
+      "name": "MIRAE ASSET NIFTY INDIA MANUFACTURING ETF"
+    },
+    {
+      "stock_code": "SENSEXETF",
+      "instrument_token": 4921345,
+      "name": "MIRAE ASSET S&P BSE SENSEX ETF"
+    },
+    {
+      "stock_code": "MOGSEC",
+      "instrument_token": 385793,
+      "name": "MOTILAL OSWAL NIFTY 5 YEAR BENCHMARK G-SEC ETF"
+    },
+    {
+      "stock_code": "MONQ50",
+      "instrument_token": 1900033,
+      "name": "MOTILAL OSWAL NASDAQ Q 50 ETF"
+    },
+    {
+      "stock_code": "MOHEALTH",
+      "instrument_token": 2690049,
+      "name": "MOTILAL OSWAL BSE HEALTHCARE ETF"
+    },
+    {
+      "stock_code": "MONIFTY500",
+      "instrument_token": 4924673,
+      "name": "MOTILAL OSWAL NIFTY 500 ETF"
+    },
+    {
+      "stock_code": "MOM50",
+      "instrument_token": 4937985,
+      "name": "MOTILAL OSWAL NIFTY 50 ETF"
+    },
+    {
+      "stock_code": "LIQUIDBEES",
+      "instrument_token": 2817537,
+      "name": "NIPPON INDIA ETF NIFTY 1D RATE LIQUID BEES"
+    },
+    {
+      "stock_code": "LTGILTBEES",
+      "instrument_token": 4531201,
+      "name": "NIPPON INDIA ETF LONG TERM GILT"
+    },
+    {
+      "stock_code": "SHARIABEES",
+      "instrument_token": 4363265,
+      "name": "NIPPON INDIA ETF NIFTY 50 SHARIAH BEES"
+    },
+    {
+      "stock_code": "DIVOPPBEES",
+      "instrument_token": 674817,
+      "name": "NIPPON INDIA ETF NIFTY DIVIDEND OPPORTUNITIES 50"
+    },
+    {
+      "stock_code": "NV20BEES",
+      "instrument_token": 2520833,
+      "name": "NIPPON INDIA ETF NV20"
+    },
+    {
+      "stock_code": "NIF100BEES",
+      "instrument_token": 7571713,
+      "name": "NIPPON INDIA ETF NIFTY 100"
+    },
+    {
+      "stock_code": "LIQGRWBEES",
+      "instrument_token": 193977601,
+      "name": "NIPPON INDIA NIFTY 1D RATE LIQUID ETF - GROWTH"
+    },
+    {
+      "stock_code": "QNIFTY",
+      "instrument_token": 4305665,
+      "name": "QUANTUM NIFTY 50 ETF"
+    },
+    {
+      "stock_code": "GILT5YBEES",
+      "instrument_token": 812033,
+      "name": "NIPPON INDIA ETF NIFTY 5 YR BENCHMARK G-SEC"
+    },
+    {
+      "stock_code": "SBILIQETF",
+      "instrument_token": 194174977,
+      "name": "SBI NIFTY 1D RATE LIQUID ETF"
+    },
+    {
+      "stock_code": "LIQUIDSBI",
+      "instrument_token": 5044481,
+      "name": "SBI NIFTY 1D RATE LIQUID ETF - IDCW"
+    },
+    {
+      "stock_code": "SBIETFCON",
+      "instrument_token": 1323009,
+      "name": "SBI ETF CONSUMPTION ETF"
+    },
+    {
+      "stock_code": "SBIETFIT",
+      "instrument_token": 189441,
+      "name": "SBI ETF IT ETF"
+    },
+    {
+      "stock_code": "SBIETFPB",
+      "instrument_token": 184833,
+      "name": "SBI ETF PRIVATE BANK ETF"
+    },
+    {
+      "stock_code": "SBIETFQLTY",
+      "instrument_token": 1847809,
+      "name": "SBI NIFTY 200 QUALITY 30 ETF"
+    },
+    {
+      "stock_code": "LIQUIDSHRI",
+      "instrument_token": 6239745,
+      "name": "SHRIRAM NIFTY 1D RATE LIQUID ETF"
+    },
+    {
+      "stock_code": "STYLAMIND",
+      "instrument_token": 1327617,
+      "name": "STYLAM INDUSTRIES"
+    },
+    {
+      "stock_code": "NETF",
+      "instrument_token": 2006529,
+      "name": "TATA NIFTY 50 ETF"
+    },
+    {
+      "stock_code": "NPBET",
+      "instrument_token": 3322369,
+      "name": "TATA NIFTY PRIVATE BANK ETF"
+    },
+    {
+      "stock_code": "MIDCAPBETA",
+      "instrument_token": 4696833,
+      "name": "UTI NIFTY MIDCAP 150 ETF"
+    },
+    {
+      "stock_code": "SNXT50BETA",
+      "instrument_token": 2347009,
+      "name": "UTI BSE SENSEX NEXT 50 ETF"
+    },
+    {
+      "stock_code": "CHEMICAL",
+      "instrument_token": 194530561,
+      "name": "KOTAK NIFTY CHEMICALS ETF"
+    },
+    {
+      "stock_code": "MULTICAP",
+      "instrument_token": 6420481,
+      "name": "MIRAE ASSET NIFTY500 MULTICAP 50:25:25 ETF"
+    },
+    {
+      "stock_code": "EMULTIMQ",
+      "instrument_token": 6654977,
+      "name": "EDELWEISS NIFTY500 MULTICAP MOMENTUM QUALITY 50 ETF"
+    },
+    {
+      "stock_code": "SCHNEIDER-BE",
+      "instrument_token": 7996929,
+      "name": "SCHNEIDER ELECTRIC INFRA"
+    },
+    {
+      "stock_code": "RAJESHEXPO-BZ",
+      "instrument_token": 194678017,
+      "name": "RAJESH EXPORTS"
+    },
+    {
+      "stock_code": "SMLMAH",
+      "instrument_token": 867073,
+      "name": "SML MAHINDRA"
+    }
+  ]
+}
