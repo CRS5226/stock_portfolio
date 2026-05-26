@@ -26,7 +26,7 @@ def _empty_state(msg="No orders yet."):
     st.markdown(
         f"""<div style="text-align:center;padding:32px 20px;background:#fafbfc;
                        border-radius:10px;border:1px dashed #e0e3ea;margin-top:8px">
-            <div style="font-size:30px;margin-bottom:8px">:material/receipt_long:</div>
+            <div style="font-size:30px;margin-bottom:8px">📋</div>
             <div style="color:#555;font-size:14px;font-weight:600">{msg}</div>
         </div>""",
         unsafe_allow_html=True,

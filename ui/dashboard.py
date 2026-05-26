@@ -104,7 +104,7 @@ def page_dashboard(r):
                 f"""<div style="{_card.format(bg=t['funds_bg'], accent='#1ba572', border=t['card_border'])}">
                     <div style="color:{t['text_muted']};font-size:10px;text-transform:uppercase;
                                 letter-spacing:.5px;margin-bottom:6px">
-                        :material/account_balance_wallet: Available Balance</div>
+                        Available Balance</div>
                     <div style="color:{t['text_primary']};font-size:26px;font-weight:700;
                                 letter-spacing:-.5px">₹ {avl:,.2f}</div>
                     <div style="color:{t['text_muted']};font-size:11px;margin-top:4px">
@@ -117,7 +117,7 @@ def page_dashboard(r):
             f"""<div style="{_card.format(bg=t['card_bg'], accent='#1976d2', border=t['card_border'])}">
                 <div style="color:{t['text_muted']};font-size:10px;text-transform:uppercase;
                             letter-spacing:.5px;margin-bottom:6px">
-                    :material/trending_up: Current Value</div>
+                    Current Value</div>
                 <div style="color:{t['text_primary']};font-size:26px;font-weight:700;
                             letter-spacing:-.5px">₹ {total_current:,.2f}</div>
                 <div style="color:{t['text_muted']};font-size:11px;margin-top:4px">
@@ -130,7 +130,7 @@ def page_dashboard(r):
             f"""<div style="{_card.format(bg=t['card_bg'], accent=pnl_color, border=t['card_border'])}">
                 <div style="color:{t['text_muted']};font-size:10px;text-transform:uppercase;
                             letter-spacing:.5px;margin-bottom:6px">
-                    :material/show_chart: Total Returns</div>
+                    Total Returns</div>
                 <div style="color:{pnl_color};font-size:26px;font-weight:700;
                             letter-spacing:-.5px">{pnl_sign}₹ {total_pnl:,.2f}</div>
                 <div style="margin-top:6px">
@@ -173,7 +173,7 @@ def page_dashboard(r):
     st.markdown(
         f"<div style='margin-top:18px;display:flex;align-items:center;gap:10px;margin-bottom:4px'>"
         f"<span style='color:{t['text_primary']};font-size:17px;font-weight:700'>"
-        f":material/account_balance: Holdings</span>"
+        f"Holdings</span>"
         f"<span style='background:#1976d2;color:#fff;font-size:11px;font-weight:600;"
         f"padding:2px 9px;border-radius:20px'>{len(holdings_list)}</span>"
         f"</div>"
@@ -298,7 +298,7 @@ def page_dashboard(r):
         st.markdown(
             f"""<div style="text-align:center;padding:40px 20px;background:{t['card_bg']};
                            border-radius:12px;border:1px dashed {t['card_border']};margin-top:8px">
-                <div style="font-size:36px;margin-bottom:10px">:material/account_balance:</div>
+                <div style="font-size:36px;margin-bottom:10px">🏦</div>
                 <div style="color:{t['text_primary']};font-size:15px;font-weight:600;margin-bottom:4px">
                     No holdings found</div>
                 <div style="color:{t['text_muted']};font-size:12px">

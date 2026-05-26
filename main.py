@@ -131,12 +131,12 @@ def main():
                 _ago = f"{_diff // 60}m ago" if _diff >= 60 else f"{_diff}s ago"
             except Exception:
                 _ago = last[:16]
-            sync_str = f":material/sync: {_ago} · "
+            sync_str = f"↻ {_ago} · "
         else:
             sync_str = ""
         st.markdown(
             f"<div style='font-size:12px;color:#666;text-align:right;padding-top:6px'>"
-            f"{_mkt_html} &nbsp;·&nbsp; {sync_str}:material/account_balance: {ucc}"
+            f"{_mkt_html} &nbsp;·&nbsp; {sync_str}{ucc} · Kotak Neo"
             f"</div>",
             unsafe_allow_html=True,
         )
