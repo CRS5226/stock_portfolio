@@ -233,21 +233,6 @@ def main():
             s.setProperty('border-radius','8px','important');
           }
         });
-        // Primary buttons: SELL action → red, BUY action → green (default)
-        doc.querySelectorAll('button[data-testid="baseButton-primary"]').forEach(function(btn){
-          var p = btn.querySelector('p');
-          if(!p) return;
-          var t = p.textContent;
-          var s = btn.style;
-          if(t.includes('SELL')){
-            s.setProperty('background','#e34a3a','important');
-            s.setProperty('background-image','none','important');
-            s.setProperty('border-color','#e34a3a','important');
-          } else if(t.includes('BUY')){
-            s.setProperty('background','linear-gradient(135deg,#1ba572,#17916a)','important');
-            s.setProperty('border-color','#1ba572','important');
-          }
-        });
       }
       applyStyles();
       new MutationObserver(applyStyles).observe(doc.body,{childList:true,subtree:true});
