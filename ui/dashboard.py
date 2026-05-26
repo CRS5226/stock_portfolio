@@ -262,8 +262,7 @@ def page_dashboard(r):
             )
 
             with row_cols[4]:
-                st.markdown("<div style='padding-top:8px'>", unsafe_allow_html=True)
-                bcol1, bcol2 = st.columns(2)
+                bcol1, bcol2 = st.columns([1, 1], gap="small")
                 with bcol1:
                     if st.button("B", key=f"buy_{symbol}", help=f"BUY {symbol}"):
                         st.session_state["prefill_symbol"] = symbol
@@ -280,7 +279,6 @@ def page_dashboard(r):
                         st.session_state["prefill_order_type"] = badge
                         st.session_state["nav_page"] = ":material/shopping_cart: Place Order"
                         st.rerun()
-                st.markdown("</div>", unsafe_allow_html=True)
 
             st.markdown(
                 f"<hr style='margin:0;border-color:{t['card_border']}'>",
@@ -311,10 +309,10 @@ def page_dashboard(r):
             unsafe_allow_html=True,
         )
 
-        mtf_hcols = st.columns([2.5, 1.8, 1.5, 1.8, 0.7])
+        mtf_hcols = st.columns([2.5, 1.8, 1.5, 1.8])
         for col, (label, align) in zip(mtf_hcols, [
             ("COMPANY", "left"), ("MARKET PRICE", "right"),
-            ("RETURNS", "right"), ("CURRENT (INVESTED)", "right"), ("", "center"),
+            ("RETURNS", "right"), ("CURRENT (INVESTED)", "right"),
         ]):
             col.markdown(
                 f"<div style='color:{t['text_muted']};font-size:10px;font-weight:500;"
@@ -340,7 +338,7 @@ def page_dashboard(r):
             row_border = t["green"] if pnl >= 0 else t["red"]
             exch = p.get("exchange", "NSE")
 
-            mtf_row_cols = st.columns([2.5, 1.8, 1.5, 1.8, 0.7])
+            mtf_row_cols = st.columns([2.5, 1.8, 1.5, 1.8])
 
             mtf_row_cols[0].markdown(
                 f"<div style='padding:10px 0 10px 10px;border-left:3px solid {row_border};'>"
@@ -386,27 +384,6 @@ def page_dashboard(r):
                 f"</div>",
                 unsafe_allow_html=True,
             )
-
-            with mtf_row_cols[4]:
-                st.markdown("<div style='padding-top:8px'>", unsafe_allow_html=True)
-                mb1, mb2 = st.columns(2)
-                with mb1:
-                    if st.button("B", key=f"mtf_buy_{symbol}", help=f"BUY {symbol}"):
-                        st.session_state["prefill_symbol"] = symbol
-                        st.session_state["prefill_action"] = "BUY"
-                        st.session_state["prefill_exchange"] = exch
-                        st.session_state["prefill_order_type"] = "MTF"
-                        st.session_state["nav_page"] = ":material/shopping_cart: Place Order"
-                        st.rerun()
-                with mb2:
-                    if st.button("S", key=f"mtf_sell_{symbol}", help=f"SELL {symbol}"):
-                        st.session_state["prefill_symbol"] = symbol
-                        st.session_state["prefill_action"] = "SELL"
-                        st.session_state["prefill_exchange"] = exch
-                        st.session_state["prefill_order_type"] = "MTF"
-                        st.session_state["nav_page"] = ":material/shopping_cart: Place Order"
-                        st.rerun()
-                st.markdown("</div>", unsafe_allow_html=True)
 
             st.markdown(
                 f"<hr style='margin:0;border-color:{t['card_border']}'>",

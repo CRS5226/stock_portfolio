@@ -1,6 +1,7 @@
 import os
 import threading
 import streamlit as st
+import streamlit.components.v1 as components
 
 from auth.kotak_client import get_redis, get_kotak, load_stocks_nse, load_stocks_bse
 from data.sync import sync_cnc, sync_mtf, sync_fo_positions, background_sync
@@ -38,45 +39,11 @@ def main():
         }
         div[data-testid="stVerticalBlock"] > div:first-child { padding-top: 0 !important; }
         .stRadio > div { gap: 0.3rem !important; }
-        [data-testid="stRadio"] label p { font-size: 11px !important; }
+        [data-testid="stRadio"] label p { font-size: 12.5px !important; }
         [data-testid="stHorizontalBlock"] { align-items: center !important; }
         div[data-testid="stHorizontalBlock"] { gap: 0.6rem; }
         hr { margin: 0.6rem 0 !important; }
         .holdings-row:hover { background:#f0f2f5 !important; }
-        div[data-testid="stButton"] button[kind="secondary"] {
-            font-size: 11px !important; padding: 1px 4px !important;
-            min-height: 26px !important; border-radius: 6px !important;
-        }
-        button[kind="secondary"]:has(p:contains("B")) {
-            background-color: #1ba572 !important;
-            border-color: #1ba572 !important;
-            color: #ffffff !important;
-            font-weight: 700 !important;
-            font-size: 12px !important;
-            width: 34px !important;
-            min-width: 34px !important;
-            max-width: 34px !important;
-            height: 34px !important;
-            min-height: 34px !important;
-            padding: 0 !important;
-            border-radius: 6px !important;
-            aspect-ratio: 1 !important;
-        }
-        button[kind="secondary"]:has(p:contains("S")) {
-            background-color: #e34a3a !important;
-            border-color: #e34a3a !important;
-            color: #ffffff !important;
-            font-weight: 700 !important;
-            font-size: 12px !important;
-            width: 34px !important;
-            min-width: 34px !important;
-            max-width: 34px !important;
-            height: 34px !important;
-            min-height: 34px !important;
-            padding: 0 !important;
-            border-radius: 6px !important;
-            aspect-ratio: 1 !important;
-        }
         div[data-testid="stSelectbox"] > div { min-height: 36px !important; font-size: 13px !important; }
         div[data-testid="stSelectbox"] > label { display: none !important; }
         </style>""",
@@ -205,7 +172,7 @@ def main():
             sync_str = f"↻ {_ago}"
         else:
             sync_str = "↻ —"
-        _info_c1, _info_c2 = st.columns([0.55, 1])
+        _info_c1, _info_c2 = st.columns([0.7, 1])
         with _info_c1:
             if st.button(":material/sync: Sync", key="hdr_sync", use_container_width=True, help="Sync portfolio now"):
                 with st.spinner("Syncing…"):
@@ -221,6 +188,56 @@ def main():
                 unsafe_allow_html=True,
             )
 
+    # ── JS: style B/S buttons green/red square + Sync button blue ──────────
+    components.html("""
+    <script>
+    (function(){
+      var doc = window.parent.document;
+      function applyStyles(){
+        doc.querySelectorAll('button[data-testid="baseButton-secondary"]').forEach(function(btn){
+          var p = btn.querySelector('p');
+          if(!p) return;
+          var t = p.textContent.trim();
+          var s = btn.style;
+          if(t === 'B'){
+            s.setProperty('background-color','#1ba572','important');
+            s.setProperty('color','#fff','important');
+            s.setProperty('border','2px solid #1ba572','important');
+            s.setProperty('width','32px','important');
+            s.setProperty('height','32px','important');
+            s.setProperty('min-width','32px','important');
+            s.setProperty('max-width','32px','important');
+            s.setProperty('padding','0','important');
+            s.setProperty('border-radius','6px','important');
+            s.setProperty('font-weight','700','important');
+            s.setProperty('font-size','12px','important');
+            var hb = btn.closest('[data-testid="stHorizontalBlock"]');
+            if(hb) hb.style.setProperty('gap','3px','important');
+          } else if(t === 'S'){
+            s.setProperty('background-color','#e34a3a','important');
+            s.setProperty('color','#fff','important');
+            s.setProperty('border','2px solid #e34a3a','important');
+            s.setProperty('width','32px','important');
+            s.setProperty('height','32px','important');
+            s.setProperty('min-width','32px','important');
+            s.setProperty('max-width','32px','important');
+            s.setProperty('padding','0','important');
+            s.setProperty('border-radius','6px','important');
+            s.setProperty('font-weight','700','important');
+            s.setProperty('font-size','12px','important');
+          } else if(t.trim() === 'Sync' || t.includes('Sync')){
+            s.setProperty('background-color','#1e88e5','important');
+            s.setProperty('color','#fff','important');
+            s.setProperty('border','none','important');
+            s.setProperty('border-radius','8px','important');
+          }
+        });
+      }
+      applyStyles();
+      new MutationObserver(applyStyles).observe(doc.body,{childList:true,subtree:true});
+    })();
+    </script>
+    """, height=1, scrolling=False)
     st.markdown("<hr style='margin:4px 0 8px 0;border-color:#e5e7ee'>", unsafe_allow_html=True)
 
     if page == ":material/home: Portfolio":
