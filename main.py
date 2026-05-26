@@ -207,7 +207,7 @@ def main():
     (function(){
       var doc = window.parent.document;
       function applyStyles(){
-        // Secondary buttons
+        // Secondary buttons: Sell (red) and Sync (blue)
         doc.querySelectorAll('button[data-testid="baseButton-secondary"]').forEach(function(btn){
           var p = btn.querySelector('p');
           if(!p) return;
@@ -224,6 +224,24 @@ def main():
             s.setProperty('color','#fff','important');
             s.setProperty('border','none','important');
             s.setProperty('border-radius','8px','important');
+          }
+        });
+        // Primary buttons: colour by BUY/SELL text
+        doc.querySelectorAll('button[data-testid="baseButton-primary"]').forEach(function(btn){
+          var p = btn.querySelector('p');
+          if(!p) return;
+          var t = p.textContent.trim();
+          var s = btn.style;
+          if(t.includes('BUY') || t === 'Buy'){
+            s.setProperty('background-color','#1ba572','important');
+            s.setProperty('background','#1ba572','important');
+            s.setProperty('background-image','none','important');
+            s.setProperty('border-color','#1ba572','important');
+          } else if(t.includes('SELL') && !t.includes('Confirm')){
+            s.setProperty('background-color','#e34a3a','important');
+            s.setProperty('background','#e34a3a','important');
+            s.setProperty('background-image','none','important');
+            s.setProperty('border-color','#e34a3a','important');
           }
         });
       }
