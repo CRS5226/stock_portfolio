@@ -3,7 +3,7 @@ import time
 import streamlit as st
 
 from config import REDIS_CNC_HOLDINGS
-from auth.kotak_client import _create_kotak_client, load_stocks_nse
+from auth.kotak_client import get_kotak, load_stocks_nse
 from data.prices import get_price_with_fallback
 from data.sync import sync_cnc, sync_mtf, sync_fo_positions
 from orders.place_order import get_order_history, get_fo_orders
@@ -176,7 +176,7 @@ def page_gtt(r):
         if st.button(btn_label, use_container_width=True, type="primary"):
             try:
                 with st.spinner("Placing GTT order..."):
-                    client = _create_kotak_client()
+                    client = get_kotak()
                     resp = client.place_gtt_order(
                         trading_symbol=trd_sym,
                         exchange_segment="nse_cm",
@@ -208,7 +208,7 @@ def page_gtt(r):
             st.rerun()
 
         try:
-            client = _create_kotak_client()
+            client = get_kotak()
             gtts_resp = client.get_gtts()
         except Exception as e:
             st.error(f"❌ Could not fetch GTTs: {e}")
@@ -296,7 +296,7 @@ def page_gtt(r):
                 st.markdown("<div style='padding-top:24px'>", unsafe_allow_html=True)
                 if st.button("🗑️ Delete Selected GTT", use_container_width=True):
                     try:
-                        client = _create_kotak_client()
+                        client = get_kotak()
                         del_resp = client.delete_gtt_order(id=selected_gtt)
                         st.success(f"✅ GTT `{selected_gtt}` deleted. Response: `{del_resp}`")
                         time.sleep(1)

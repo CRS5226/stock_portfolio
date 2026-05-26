@@ -1,5 +1,6 @@
 import os
 import json
+import threading
 import redis
 import pyotp
 import streamlit as st
@@ -16,6 +17,14 @@ from config import (
     CONFIG_BSE,
 )
 
+# ---------------------------------------------------------------------------
+# Thread-safe Kotak singleton — ONE login for the entire process lifetime.
+# Every call to _create_kotak_client() performs a fresh TOTP login which
+# invalidates ALL other active Kotak sessions. Use get_kotak() everywhere.
+# ---------------------------------------------------------------------------
+_kotak_lock = threading.Lock()
+_kotak_instance = None
+
 
 @st.cache_resource
 def get_redis():
@@ -27,12 +36,27 @@ def get_redis():
     )
 
 
-@st.cache_resource
 def get_kotak():
-    return _create_kotak_client()
+    """Return the shared Kotak NeoAPI singleton (thread-safe, process-wide)."""
+    global _kotak_instance
+    if _kotak_instance is not None:
+        return _kotak_instance
+    with _kotak_lock:
+        if _kotak_instance is None:
+            _kotak_instance = _create_kotak_client()
+    return _kotak_instance
+
+
+def refresh_kotak():
+    """Force a fresh TOTP re-login. Only call when the session is confirmed expired."""
+    global _kotak_instance
+    with _kotak_lock:
+        _kotak_instance = _create_kotak_client()
+    return _kotak_instance
 
 
 def _create_kotak_client():
+    """Internal: performs the actual TOTP login. Do NOT call directly — use get_kotak()."""
     client = NeoAPI(
         environment="prod",
         access_token=None,

@@ -10,7 +10,7 @@ from config import (
     REDIS_OTP_PENDING,
 )
 from auth.kotak_client import (
-    _create_kotak_client,
+    get_kotak,
     load_stocks_nse,
     load_stocks_bse,
     load_stocks_mtf_mis,
@@ -51,15 +51,11 @@ def page_place_order(r):
         "CNC": "CNC — Delivery",
         "MTF": "MTF — Margin",
         "MIS": "MIS — Intraday",
-        "CO":  "CO — Cover",
-        "BO":  "BO — Bracket",
     }.get(prefill_order_type, "CNC — Delivery")
     _ot_options = [
         "CNC — Delivery",
         "MTF — Margin",
         "MIS — Intraday",
-        "CO — Cover",
-        "BO — Bracket",
     ]
     _ot_index = _ot_options.index(_ot_default) if _ot_default in _ot_options else 0
 
@@ -75,13 +71,9 @@ def page_place_order(r):
     is_cnc = order_type.startswith("CNC")
     is_mtf = order_type.startswith("MTF")
     is_mis = order_type.startswith("MIS")
-    is_co  = order_type.startswith("CO")
-    is_bo  = order_type.startswith("BO")
     prod = (
         "MTF" if is_mtf
         else "MIS" if is_mis
-        else "CO"  if is_co
-        else "BO"  if is_bo
         else "CNC"
     )
 
@@ -100,24 +92,6 @@ def page_place_order(r):
         <div style="background:#fff3f3;border-radius:8px;padding:10px 14px;margin-bottom:12px;
                     border-left:3px solid #e34a3a;font-size:12px;color:#7a1a1a">
             ⚡ <b>MIS (Intraday)</b> — Auto square-off at 3:20 PM IST. NSE only.
-        </div>""",
-            unsafe_allow_html=True,
-        )
-    elif is_co:
-        st.markdown(
-            """
-        <div style="background:#f0faf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;
-                    border-left:3px solid #1ba572;font-size:12px;color:#0a4a2a">
-            🛡️ <b>CO (Cover Order)</b> — Intraday with mandatory stop-loss. NSE equity only. Auto square-off 3:20 PM.
-        </div>""",
-            unsafe_allow_html=True,
-        )
-    elif is_bo:
-        st.markdown(
-            """
-        <div style="background:#f3eefa;border-radius:8px;padding:10px 14px;margin-bottom:12px;
-                    border-left:3px solid #7c3aed;font-size:12px;color:#3d206b">
-            🎯 <b>BO (Bracket Order)</b> — Entry + Stop-Loss + Target in one order. NSE equity only. Auto square-off 3:20 PM.
         </div>""",
             unsafe_allow_html=True,
         )
@@ -143,9 +117,9 @@ def page_place_order(r):
             key="po_exchange",
         )
 
-    if is_cnc or is_co or is_bo:
+    if is_cnc:
         stock_data = (
-            load_stocks_bse() if (is_cnc and exchange == "BSE") else load_stocks_nse()
+            load_stocks_bse() if exchange == "BSE" else load_stocks_nse()
         )
         symbols = sorted(stock_data.keys())
         format_fn = lambda x: f"{x} — {stock_data.get(x,{}).get('name','')}"
@@ -173,7 +147,7 @@ def page_place_order(r):
         disabled=otp_pending,
     )
 
-    if (is_cnc or is_co or is_bo) and stock_data:
+    if is_cnc and stock_data:
         trd_sym = stock_data.get(selected, {}).get("trading_symbol")
         instr_token = stock_data.get(selected, {}).get("instrument_token", 0)
         exch_seg = "bse_cm" if (is_cnc and exchange == "BSE") else "nse_cm"
@@ -224,74 +198,23 @@ def page_place_order(r):
         unsafe_allow_html=True,
     )
 
-    if not (is_co or is_bo):
-        order_kind = st.radio(
-            "Order Kind",
-            ["MKT", "L", "SL", "SL-M"],
-            horizontal=True,
-            label_visibility="visible",
-            disabled=otp_pending,
-            help="MKT=Market  ·  L=Limit  ·  SL=Stop-Loss Limit  ·  SL-M=Stop-Loss Market",
-            key="po_order_kind",
-        )
-    else:
-        order_kind = "L"
+    order_kind = st.radio(
+        "Order Kind",
+        ["MKT", "L", "SL"],
+        horizontal=True,
+        label_visibility="visible",
+        disabled=otp_pending,
+        help="MKT=Market  ·  L=Limit  ·  SL=Stop-Loss Limit",
+        key="po_order_kind",
+    )
 
     limit_price = 0.0
     trigger_price = 0.0
-    co_stop_loss = 0.0
-    bo_entry = 0.0
-    bo_stoploss = 0.0
-    bo_target = 0.0
 
     _action_idx = 1 if prefill_action == "SELL" else 0
     _safe_px = max(float(round(live_price, 2)), 0.01)
 
-    if is_co:
-        _co_default = max(round(_safe_px * 0.99, 2), 0.01)
-        co_stop_loss = st.number_input(
-            "Stop-Loss Trigger Price (₹)",
-            min_value=0.01,
-            value=_co_default,
-            step=0.05,
-            format="%.2f",
-            disabled=otp_pending,
-            key="po_co_stoploss",
-            help="Must be below current price · Min 0.5% distance from LTP",
-        )
-    elif is_bo:
-        bc1, bc2, bc3 = st.columns(3)
-        with bc1:
-            bo_entry = st.number_input(
-                "Entry/Limit Price (₹)",
-                min_value=0.01,
-                value=_safe_px,
-                step=0.05,
-                format="%.2f",
-                disabled=otp_pending,
-                key="po_bo_entry",
-            )
-        with bc2:
-            bo_stoploss = st.number_input(
-                "Stop-Loss Price (₹)",
-                min_value=0.01,
-                value=max(round(_safe_px * 0.98, 2), 0.01),
-                step=0.05,
-                format="%.2f",
-                disabled=otp_pending,
-                key="po_bo_stoploss",
-            )
-        with bc3:
-            bo_target = st.number_input(
-                "Target Price (₹)",
-                min_value=0.01,
-                value=max(round(_safe_px * 1.02, 2), 0.01),
-                step=0.05,
-                format="%.2f",
-                disabled=otp_pending,
-                key="po_bo_target",
-            )
-    elif order_kind == "L":
+    if order_kind == "L":
         limit_price = st.number_input(
             "Limit Price (₹)",
             min_value=0.01,
@@ -335,23 +258,6 @@ def page_place_order(r):
                 key="po_limit_price",
                 help="BUY: set slightly above trigger · SELL: set slightly below trigger",
             )
-    elif order_kind == "SL-M":
-        _slm_trigger_default = (
-            max(round(_safe_px * 1.01, 2), 0.01)
-            if st.session_state.get("po_action", "BUY") == "BUY"
-            else max(round(_safe_px * 0.99, 2), 0.01)
-        )
-        trigger_price = st.number_input(
-            "Trigger Price (₹)",
-            min_value=0.01,
-            value=_slm_trigger_default,
-            step=0.05,
-            format="%.2f",
-            disabled=otp_pending,
-            key="po_slm_trigger_price",
-            help="BUY: set above current price · SELL: set below current price · Min 0.5% distance from LTP",
-        )
-
     col1, col2 = st.columns([3, 2])
     with col1:
         qty_step = lot_size if (exchange == "BSE" and lot_size > 1) else 1
@@ -374,12 +280,7 @@ def page_place_order(r):
         st.error(f"❌ Qty must be multiple of {lot_size}")
         return
 
-    if is_co:
-        display_price = live_price
-    elif is_bo:
-        display_price = bo_entry
-    else:
-        display_price = limit_price if order_kind in ("L", "SL") else live_price
+    display_price = limit_price if order_kind in ("L", "SL") else live_price
     total_val = qty * display_price
 
     margin = mis_margin = None
@@ -392,7 +293,7 @@ def page_place_order(r):
 
     avl = 0.0
     try:
-        fresh = _create_kotak_client()
+        fresh = get_kotak()
         limits = fresh.limits(segment="ALL", exchange="ALL", product="ALL")
         ldata = limits if isinstance(limits, dict) else {}
         cash = float(ldata.get("RmsPayInAmt", 0) or 0)
@@ -417,14 +318,6 @@ def page_place_order(r):
     elif is_mis and mis_margin and mis_margin > 0:
         mis_pct = (mis_margin / total_val * 100) if total_val else 0
         margin_line = f"Intraday margin: ₹{mis_margin:,.2f} ({mis_pct:.0f}%)"
-    elif is_co:
-        margin_line = f"Stop-Loss: ₹{co_stop_loss:,.2f}"
-    elif is_bo:
-        margin_line = (
-            f"Entry: ₹{bo_entry:,.2f}  ·  "
-            f"Stop-Loss: ₹{bo_stoploss:,.2f}  ·  "
-            f"Target: ₹{bo_target:,.2f}"
-        )
     elif is_cnc:
         margin_line = "Full payment required"
 
@@ -456,23 +349,11 @@ def page_place_order(r):
             "MKT": "Market",
             "L": "Limit",
             "SL": "SL-Limit",
-            "SL-M": "SL-Market",
         }.get(order_kind, order_kind)
-        if is_co:
-            btn_label = (
-                f"{'🟢 BUY' if action == 'BUY' else '🔴 SELL'} · "
-                f"CO · NSE · SL:₹{co_stop_loss:,.2f} · ₹{total_val:,.2f}"
-            )
-        elif is_bo:
-            btn_label = (
-                f"{'🟢 BUY' if action == 'BUY' else '🔴 SELL'} · "
-                f"BO · NSE · Tgt:₹{bo_target:,.2f} · ₹{total_val:,.2f}"
-            )
-        else:
-            btn_label = (
-                f"{'🟢 BUY' if action == 'BUY' else '🔴 SELL'} · "
-                f"{prod} · {exchange} · {order_kind_label} · ₹{total_val:,.2f}"
-            )
+        btn_label = (
+            f"{'🟢 BUY' if action == 'BUY' else '🔴 SELL'} · "
+            f"{prod} · {exchange} · {order_kind_label} · ₹{total_val:,.2f}"
+        )
         if st.button(btn_label, use_container_width=True, type="primary"):
             action_color = "#1ba572" if action == "BUY" else "#e34a3a"
             action_emoji = "🟢" if action == "BUY" else "🔴"
@@ -505,12 +386,12 @@ def page_place_order(r):
                 store_otp(
                     r, otp, selected, action, qty, live_price, prod, exchange,
                     order_kind, limit_price, trigger_price,
-                    co_stop_loss, bo_entry, bo_stoploss, bo_target,
+                    0, 0, 0, 0,
                 )
                 sent = send_telegram_otp(
                     otp, selected, action, qty, live_price, prod, exchange,
                     order_kind, limit_price, trigger_price,
-                    co_stop_loss, bo_entry, bo_stoploss, bo_target,
+                    0, 0, 0, 0,
                 )
                 if sent:
                     loading_placeholder.empty()
@@ -520,9 +401,7 @@ def page_place_order(r):
                         "price": live_price, "order_type": prod,
                         "exchange": exchange, "trading_symbol": trd_sym,
                         "order_kind": order_kind, "limit_price": limit_price,
-                        "trigger_price": trigger_price, "co_stop_loss": co_stop_loss,
-                        "bo_entry": bo_entry, "bo_stoploss": bo_stoploss,
-                        "bo_target": bo_target,
+                        "trigger_price": trigger_price,
                     }
                     st.rerun()
                 else:
@@ -536,21 +415,11 @@ def page_place_order(r):
 
     if otp_pending:
         order = st.session_state.get("otp_order", {})
-        if order.get("order_type") == "CO":
-            ok_lbl = f"Cover  SL:₹{order.get('co_stop_loss',0):,.2f}"
-        elif order.get("order_type") == "BO":
-            ok_lbl = (
-                f"Bracket  Entry:₹{order.get('bo_entry',0):,.2f}  "
-                f"SL:₹{order.get('bo_stoploss',0):,.2f}  "
-                f"Tgt:₹{order.get('bo_target',0):,.2f}"
-            )
-        else:
-            ok_lbl = {
-                "MKT": "Market",
-                "L": f"Limit @ ₹{order.get('limit_price',0):,.2f}",
-                "SL": f"SL-Limit  Trigger:₹{order.get('trigger_price',0):,.2f}  Limit:₹{order.get('limit_price',0):,.2f}",
-                "SL-M": f"SL-Market  Trigger:₹{order.get('trigger_price',0):,.2f}",
-            }.get(order.get("order_kind", "MKT"), "")
+        ok_lbl = {
+            "MKT": "Market",
+            "L": f"Limit @ ₹{order.get('limit_price',0):,.2f}",
+            "SL": f"SL-Limit  Trigger:₹{order.get('trigger_price',0):,.2f}  Limit:₹{order.get('limit_price',0):,.2f}",
+        }.get(order.get("order_kind", "MKT"), "")
         st.markdown(
             f"""
         <div style="background:{t['card_bg']};border-radius:12px;padding:16px 24px;
@@ -597,10 +466,6 @@ def page_place_order(r):
                                     data.get("order_kind", "MKT"),
                                     data.get("limit_price", 0),
                                     data.get("trigger_price", 0),
-                                    data.get("co_stop_loss", 0),
-                                    data.get("bo_entry", 0),
-                                    data.get("bo_stoploss", 0),
-                                    data.get("bo_target", 0),
                                 )
                             if order_id:
                                 save_order_history(
@@ -615,10 +480,6 @@ def page_place_order(r):
                                     data.get("order_kind", "MKT"),
                                     data.get("limit_price", 0),
                                     data.get("trigger_price", 0),
-                                    data.get("co_stop_loss", 0),
-                                    data.get("bo_entry", 0),
-                                    data.get("bo_stoploss", 0),
-                                    data.get("bo_target", 0),
                                 )
                                 if data["order_type"] == "CNC":
                                     sync_cnc(r)
@@ -629,9 +490,7 @@ def page_place_order(r):
                                     "otp_pending", "otp_order",
                                     "_pf_symbol", "_pf_action", "_pf_exchange", "_pf_order_type",
                                     "po_order_type", "po_order_kind", "po_exchange", "po_action",
-                                    "po_trigger_price", "po_slm_trigger_price", "po_limit_price",
-                                    "po_co_stoploss", "po_bo_entry", "po_bo_stoploss",
-                                    "po_bo_target", "po_qty",
+                                    "po_trigger_price", "po_limit_price", "po_qty",
                                 ]:
                                     st.session_state.pop(k, None)
                                 time.sleep(1)
@@ -652,9 +511,7 @@ def page_place_order(r):
                         "otp_pending", "otp_order",
                         "_pf_symbol", "_pf_action", "_pf_exchange", "_pf_order_type",
                         "po_order_type", "po_order_kind", "po_exchange", "po_action",
-                        "po_trigger_price", "po_slm_trigger_price", "po_limit_price",
-                        "po_co_stoploss", "po_bo_entry", "po_bo_stoploss",
-                        "po_bo_target", "po_qty",
+                        "po_trigger_price", "po_limit_price", "po_qty",
                     ]:
                         st.session_state.pop(k, None)
                     st.rerun()
@@ -669,8 +526,7 @@ def page_place_order(r):
                     order.get("price"), order.get("order_type", "CNC"),
                     order.get("exchange", "NSE"), order.get("order_kind", "MKT"),
                     order.get("limit_price", 0), order.get("trigger_price", 0),
-                    order.get("co_stop_loss", 0), order.get("bo_entry", 0),
-                    order.get("bo_stoploss", 0), order.get("bo_target", 0),
+                    0, 0, 0, 0,
                 )
                 send_telegram_otp(
                     otp,
@@ -678,8 +534,7 @@ def page_place_order(r):
                     order.get("price"), order.get("order_type", "CNC"),
                     order.get("exchange", "NSE"), order.get("order_kind", "MKT"),
                     order.get("limit_price", 0), order.get("trigger_price", 0),
-                    order.get("co_stop_loss", 0), order.get("bo_entry", 0),
-                    order.get("bo_stoploss", 0), order.get("bo_target", 0),
+                    0, 0, 0, 0,
                 )
                 st.session_state["otp_pending"] = True
                 st.rerun()

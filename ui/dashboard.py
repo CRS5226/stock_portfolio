@@ -7,7 +7,7 @@ from config import (
     REDIS_CNC_LAST_SYNC,
     REDIS_MTF_POSITIONS,
 )
-from auth.kotak_client import _create_kotak_client
+from auth.kotak_client import get_kotak
 from data.sync import sync_cnc, sync_mtf
 from data.sync import sync_fo_positions
 from data.prices import get_live_price, get_live_price_kotak
@@ -34,7 +34,7 @@ def page_dashboard(r):
     avl = net = cash = 0.0
     funds_err = None
     try:
-        fresh = _create_kotak_client()
+        fresh = get_kotak()
         limits = fresh.limits(segment="ALL", exchange="ALL", product="ALL")
         ldata = limits if isinstance(limits, dict) else {}
         cash = float(ldata.get("RmsPayInAmt", 0) or 0)
@@ -394,7 +394,7 @@ def page_dashboard(r):
     try:
         from datetime import datetime
         from config import INDIA_TZ as _TZ
-        fresh = _create_kotak_client()
+        fresh = get_kotak()
         resp = fresh.order_report()
         items = (
             resp

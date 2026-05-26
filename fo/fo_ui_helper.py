@@ -14,7 +14,7 @@ from config import (
     CONFIG_FO_FILE,
     CONFIG_FO_BSE_FILE,
 )
-from auth.kotak_client import _create_kotak_client
+from auth.kotak_client import get_kotak
 from data.prices import get_live_price_fo
 from data.sync import sync_fo_positions
 from orders.otp import generate_otp, store_fo_otp, verify_fo_otp
@@ -84,7 +84,7 @@ def get_expiries(contracts: list) -> list:
 def fetch_contracts(stock_code: str) -> list:
     fo_symbol = INDEX_MAP.get(stock_code, stock_code)
     try:
-        client = _create_kotak_client()
+        client = get_kotak()
         contracts = client.search_scrip(
             exchange_segment="nse_fo",
             symbol=fo_symbol,
@@ -105,7 +105,7 @@ def fetch_contracts(stock_code: str) -> list:
 @st.cache_data(ttl=300)
 def fetch_contracts_bse(stock_code: str) -> list:
     try:
-        client = _create_kotak_client()
+        client = get_kotak()
         contracts = client.search_scrip(
             exchange_segment="bse_fo",
             symbol=stock_code,
@@ -126,7 +126,7 @@ def fetch_contracts_bse(stock_code: str) -> list:
 @st.cache_data(ttl=300)
 def fetch_contracts_currency(symbol: str) -> list:
     try:
-        client = _create_kotak_client()
+        client = get_kotak()
         contracts = client.search_scrip(
             exchange_segment="cde_fo",
             symbol=symbol,
@@ -147,7 +147,7 @@ def fetch_contracts_currency(symbol: str) -> list:
 @st.cache_data(ttl=300)
 def fetch_contracts_commodity(symbol: str) -> list:
     try:
-        client = _create_kotak_client()
+        client = get_kotak()
         contracts = client.search_scrip(
             exchange_segment="mcx_fo",
             symbol=symbol,
@@ -175,7 +175,7 @@ def fetch_contract_prices(contracts: list, exchange_segment: str = "nse_fo") -> 
     if not contracts:
         return {}
     try:
-        client = _create_kotak_client()
+        client = get_kotak()
         token_to_trd = {}
         tokens = []
         for c in contracts:
@@ -287,7 +287,7 @@ def get_futures_contract_by_expiry(
 
 def _render_balance_card(t: dict, req_amount: float = 0):
     try:
-        client_bal = _create_kotak_client()
+        client_bal = get_kotak()
         lim = client_bal.limits(segment="ALL", exchange="ALL", product="ALL")
         ldata = lim if isinstance(lim, dict) else {}
         cash = float(ldata.get("RmsPayInAmt", 0) or 0)

@@ -2,7 +2,7 @@ import json
 import pandas as pd
 
 from config import REDIS_PREFIX_5M, REDIS_PREFIX_1D
-from auth.kotak_client import _create_kotak_client
+from auth.kotak_client import get_kotak
 
 
 def get_live_price(r, symbol):
@@ -24,7 +24,7 @@ def get_live_price_kotak(instrument_token, exchange_segment):
     if not instrument_token or instrument_token == 0:
         return None
     try:
-        client = _create_kotak_client()
+        client = get_kotak()
         resp = client.quotes(
             instrument_tokens=[
                 {
@@ -52,7 +52,7 @@ def get_price_with_fallback(r, symbol, instrument_token=0, exchange_segment="nse
 
 def get_margin_required(instrument_token, exchange_segment, qty):
     try:
-        client = _create_kotak_client()
+        client = get_kotak()
         resp = client.margin_required(
             exchange_segment=exchange_segment,
             price="0",
@@ -82,7 +82,7 @@ def get_margin_required(instrument_token, exchange_segment, qty):
 
 def get_margin_required_mis(instrument_token, exchange_segment, qty):
     try:
-        client = _create_kotak_client()
+        client = get_kotak()
         resp = client.margin_required(
             exchange_segment=exchange_segment,
             price="0",

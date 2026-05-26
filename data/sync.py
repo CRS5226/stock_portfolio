@@ -12,12 +12,12 @@ from config import (
     REDIS_FO_POSITIONS,
     REDIS_FO_LAST_SYNC,
 )
-from auth.kotak_client import _create_kotak_client
+from auth.kotak_client import get_kotak
 
 
 def sync_cnc(r):
     try:
-        client = _create_kotak_client()
+        client = get_kotak()
         resp = client.holdings()
         holdings = []
         if isinstance(resp, dict):
@@ -82,7 +82,7 @@ def sync_cnc(r):
 
 def sync_mtf(r):
     try:
-        client = _create_kotak_client()
+        client = get_kotak()
         resp = client.positions()
         items = (
             resp.get("data", [])
@@ -126,7 +126,7 @@ def sync_mtf(r):
 
 def sync_fo_positions(r):
     try:
-        client = _create_kotak_client()
+        client = get_kotak()
         resp = client.positions()
         items = []
         if isinstance(resp, dict):

@@ -10,7 +10,7 @@ from config import (
     REDIS_BO_ORDER_PFX,
     REDIS_FO_ORDER_PFX,
 )
-from auth.kotak_client import _create_kotak_client
+from auth.kotak_client import get_kotak
 
 
 def place_order(
@@ -29,7 +29,7 @@ def place_order(
     bo_target=0.0,
 ):
     try:
-        client = _create_kotak_client()
+        client = get_kotak()
         exch_seg = "bse_cm" if exchange == "BSE" else "nse_cm"
         trd_sym = trading_symbol or (symbol if exchange == "BSE" else f"{symbol}-EQ")
         order_kind_to_use = order_kind
@@ -172,7 +172,7 @@ def get_order_history(r, limit=50):
 
 def place_fo_order(trading_symbol, action, lots, lot_size, exchange_segment="nse_fo"):
     try:
-        client = _create_kotak_client()
+        client = get_kotak()
         quantity = lots * lot_size
         resp = client.place_order(
             exchange_segment=exchange_segment,
