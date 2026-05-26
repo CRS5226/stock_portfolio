@@ -352,11 +352,15 @@ def page_place_order(r):
         }.get(order_kind, order_kind)
         _ico = ":material/arrow_upward:" if action == "BUY" else ":material/arrow_downward:"
         btn_label = f"{_ico} {action} · {prod} · {exchange} · {order_kind_label} · ₹{total_val:,.2f}"
-        _bg = "linear-gradient(135deg,#1ba572,#17916a)" if action == "BUY" else "#e34a3a"
+        _bg  = "linear-gradient(135deg,#1ba572,#17916a)" if action == "BUY" else "#e34a3a"
+        _bdr = "#1ba572" if action == "BUY" else "#e34a3a"
         st.markdown(
-            f"<style>div[data-testid='stButton'] button[data-testid='baseButton-primary']"
+            f"<style>"
+            f"div[data-testid='stButton'] button[data-testid='baseButton-primary']"
             f"{{background:{_bg}!important;background-image:none!important;"
-            f"border-color:{'#1ba572' if action == 'BUY' else '#e34a3a'}!important}}</style>",
+            f"background-color:{'#1ba572' if action == 'BUY' else '#e34a3a'}!important;"
+            f"border-color:{_bdr}!important}}"
+            f"</style>",
             unsafe_allow_html=True,
         )
         if st.button(btn_label, use_container_width=True, type="primary"):

@@ -37,19 +37,12 @@ def main():
         [data-testid="stToolbar"] { display: none !important; }
         .block-container { padding-top: 0.6rem !important; padding-bottom: 1.2rem !important; }
         div[data-testid="stButton"] button[data-testid="baseButton-primary"] {
-            background: linear-gradient(135deg, #1ba572, #17916a) !important;
             color: #ffffff !important;
             border: none !important;
             border-radius: 8px !important;
             font-weight: 600 !important;
             font-size: 13px !important;
             height: 38px !important;
-        }
-        div[data-testid="stButton"] button[data-testid="baseButton-primary"]:has(p:contains("search")) {
-            width: 38px !important;
-            min-width: 38px !important;
-            padding: 0 !important;
-            border-radius: 8px !important;
         }
         div[data-testid="stVerticalBlock"] > div:first-child { padding-top: 0 !important; }
         .stRadio > div { gap: 0.3rem !important; }
