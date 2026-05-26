@@ -20,7 +20,7 @@ def page_dashboard(r):
 
     col_sync, col_last = st.columns([1, 5])
     with col_sync:
-        if st.button("🔄 Sync", use_container_width=True):
+        if st.button(":material/sync: Sync", use_container_width=True):
             with st.spinner("Syncing..."):
                 sync_cnc(r)
                 sync_mtf(r)
@@ -156,15 +156,19 @@ def page_dashboard(r):
                             letter-spacing:.4px;white-space:nowrap">Allocation</div>
                 <div style="flex:1;height:8px;background:#e5e7ee;border-radius:4px;overflow:hidden">
                     <div style="display:flex;height:100%">
-                        <div style="width:{cnc_pct:.1f}%;background:#1976d2;border-radius:4px 0 0 4px"></div>
-                        <div style="width:{mtf_pct:.1f}%;background:#ff9800"></div>
+                        <div style="width:{cnc_pct:.1f}%;background:#1976d2;border-radius:4px 0 0 4px;cursor:pointer"
+                             title="CNC: {cnc_pct:.1f}% · ₹{cnc_val:,.0f}"></div>
+                        <div style="width:{mtf_pct:.1f}%;background:#ff9800;cursor:pointer"
+                             title="MTF: {mtf_pct:.1f}% · ₹{mtf_val:,.0f}"></div>
                     </div>
                 </div>
                 <div style="display:flex;gap:14px;font-size:11px;white-space:nowrap">
                     <span><span style="color:#1976d2;font-weight:600">■</span>
-                          <span style="color:{t['text_secondary']}"> CNC ₹{cnc_val:,.0f}</span></span>
+                          <span style="color:{t['text_secondary']}"> CNC ₹{cnc_val:,.0f}
+                          <span style="color:{t['text_muted']}">({cnc_pct:.1f}%)</span></span></span>
                     <span><span style="color:#ff9800;font-weight:600">■</span>
-                          <span style="color:{t['text_secondary']}"> MTF ₹{mtf_val:,.0f}</span></span>
+                          <span style="color:{t['text_secondary']}"> MTF ₹{mtf_val:,.0f}
+                          <span style="color:{t['text_muted']}">({mtf_pct:.1f}%)</span></span></span>
                 </div>
             </div>""",
             unsafe_allow_html=True,
@@ -364,7 +368,7 @@ def page_dashboard(r):
 
     st.markdown(
         f"<div style='margin-top:22px;color:{t['text_primary']};font-size:18px;"
-        f"font-weight:700;margin-bottom:8px'>📋 Today's Orders</div>",
+        f"font-weight:700;margin-bottom:8px'>Today's Orders</div>",
         unsafe_allow_html=True,
     )
     try:

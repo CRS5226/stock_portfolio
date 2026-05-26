@@ -37,20 +37,22 @@ def main():
         hr { margin: 0.6rem 0 !important; }
         .holdings-row:hover { background:#f0f2f5 !important; }
         div[data-testid="stButton"] button[kind="secondary"] {
-            font-size: 11px !important; padding: 2px 4px !important;
-            min-height: 28px !important;
+            font-size: 11px !important; padding: 1px 4px !important;
+            min-height: 26px !important; border-radius: 6px !important;
         }
         [data-testid="column"] button[kind="secondary"]:has(p:contains("B")) {
-            background-color: #e8f8f0 !important;
+            background-color: #1ba572 !important;
             border-color: #1ba572 !important;
-            color: #1ba572 !important;
+            color: #ffffff !important;
             font-weight: 700 !important;
+            font-size: 10px !important;
         }
         [data-testid="column"] button[kind="secondary"]:has(p:contains("S")) {
-            background-color: #fff0ef !important;
+            background-color: #e34a3a !important;
             border-color: #e34a3a !important;
-            color: #e34a3a !important;
+            color: #ffffff !important;
             font-weight: 700 !important;
+            font-size: 10px !important;
         }
         div[data-testid="stSelectbox"] > div { min-height: 36px !important; font-size: 13px !important; }
         div[data-testid="stSelectbox"] > label { display: none !important; }
@@ -155,29 +157,23 @@ def main():
         with qs_col2:
             if qs_exch == "BSE":
                 qs_stock_data = load_stocks_bse()
-                qs_format = lambda x: (
-                    "🔍 Search any BSE stock..." if x == ""
-                    else f"{x} — {qs_stock_data.get(x, {}).get('name', '')}"
-                )
             else:
                 qs_stock_data = load_stocks_nse()
-                qs_format = lambda x: (
-                    "🔍 Search any NSE stock..." if x == ""
-                    else f"{x} — {qs_stock_data.get(x, {}).get('name', '')}"
-                )
 
-            qs_symbols = [""] + sorted(qs_stock_data.keys())
+            qs_symbols = sorted(qs_stock_data.keys())
             qs_selected = st.selectbox(
                 "search",
                 options=qs_symbols,
-                format_func=qs_format,
+                format_func=lambda x: f"{x} — {qs_stock_data.get(x, {}).get('name', '')}",
+                placeholder=f"Search any {qs_exch} stock...",
                 label_visibility="collapsed",
+                index=None,
                 key="qs_stock",
             )
 
         with qs_col3:
             if st.button(
-                "🚀 Go",
+                ":material/arrow_forward: Go",
                 use_container_width=True,
                 key="qs_go",
                 type="primary",

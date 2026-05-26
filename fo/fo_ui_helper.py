@@ -356,10 +356,10 @@ def _render_fo_otp_section(r):
     payload = st.session_state.get("fo_otp_payload", {})
     ctype = payload.get("contract_type", "")
     tag = {
-        "FUTURES": "📊 FUTURES",
-        "OPTIONS": "🎯 OPTIONS",
-        "CURRENCY": "💱 CURRENCY",
-        "COMMODITY": "🏭 COMMODITY",
+        "FUTURES": "Futures",
+        "OPTIONS": "Options",
+        "CURRENCY": "Currency",
+        "COMMODITY": "Commodity",
     }.get(ctype, ctype)
     qty_total = payload.get("lots", 1) * payload.get("lot_size", 1)
 
@@ -368,7 +368,7 @@ def _render_fo_otp_section(r):
     <div style="background:{t['card_bg']};border-radius:12px;padding:16px 24px;
                 outline:1px solid {t['card_border']};margin-bottom:16px">
         <div style="color:{t['text_primary']};font-size:14px;font-weight:600;margin-bottom:4px">
-            🔐 Confirm {tag} Order
+            Confirm {tag} Order
         </div>
         <div style="color:{t['text_muted']};font-size:12px">
             {payload.get('action')} &nbsp;·&nbsp; {payload.get('lots')} lot(s)
@@ -390,7 +390,7 @@ def _render_fo_otp_section(r):
         col_confirm, col_cancel = st.columns(2)
         with col_confirm:
             if st.button(
-                "✅ Confirm & Place Order",
+                ":material/check_circle: Confirm & Place Order",
                 use_container_width=True,
                 type="primary",
                 key="fo_confirm",
@@ -438,7 +438,7 @@ def _render_fo_otp_section(r):
                     elif status == "invalid":
                         st.error("❌ Wrong OTP. Try again.")
         with col_cancel:
-            if st.button("❌ Cancel", use_container_width=True, key="fo_cancel"):
+            if st.button(":material/cancel: Cancel", use_container_width=True, key="fo_cancel"):
                 r.delete(REDIS_FO_OTP)
                 for k in ["fo_otp_pending", "fo_otp_payload"]:
                     st.session_state.pop(k, None)
@@ -447,7 +447,7 @@ def _render_fo_otp_section(r):
         st.error("⏰ OTP expired.")
         st.session_state.pop("fo_otp_pending", None)
         payload_backup = payload.copy()
-        if st.button("🔁 Resend OTP", use_container_width=True, key="fo_resend"):
+        if st.button(":material/refresh: Resend OTP", use_container_width=True, key="fo_resend"):
             otp = generate_otp()
             store_fo_otp(r, otp, payload_backup)
             send_fo_otp(
@@ -511,14 +511,14 @@ def _render_futures_tab(
     format_fn = lambda x: f"{x} — {symbols_dict.get(x, x)}"
 
     selected = st.selectbox(
-        "🔍 Search & Select",
+        ":material/search: Search stock / symbol",
         options=symbols,
         format_func=format_fn,
         key=f"{tab_key}_selected",
         disabled=otp_pending,
     )
 
-    if st.button("🔍 Load Contracts", key=f"{tab_key}_load", disabled=otp_pending):
+    if st.button(":material/search: Load Contracts", key=f"{tab_key}_load", disabled=otp_pending):
         st.session_state[f"{tab_key}_active"] = "futures"
         with st.spinner("Loading contracts and live prices..."):
             contracts_data = fetch_fn(selected)
@@ -555,9 +555,9 @@ def _render_futures_tab(
         live_px = prices.get(trd_sym)
         px_text = f"₹ {live_px:,.2f}" if (live_px and live_px > 0) else "—"
         px_sub = (
-            f"📡 Live (Kotak)"
+            "Live"
             if (live_px and live_px > 0)
-            else "⚠️ Market Closed / No Data"
+            else "No Data"
         )
 
         _render_price_card(t, px_text, f"{trd_sym} · Lot {lot_size} · {px_sub}")
@@ -587,7 +587,7 @@ def _render_futures_tab(
         _render_order_summary(t, qty, lot_size, lots, price_label, est_val)
         _render_balance_card(t, est_val)
 
-        btn = f"{'🟢 BUY' if action == 'BUY' else '🔴 SELL'} · {contract_type} · ₹{est_val:,.2f}"
+        btn = f"{'BUY' if action == 'BUY' else 'SELL'} · {contract_type} · ₹{est_val:,.2f}"
         if st.button(
             btn,
             use_container_width=True,
@@ -640,14 +640,14 @@ def _render_options_tab(
     format_fn = lambda x: f"{x} — {symbols_dict.get(x, x)}"
 
     selected = st.selectbox(
-        "🔍 Search & Select",
+        ":material/search: Search stock / symbol",
         options=symbols,
         format_func=format_fn,
         key=f"{tab_key}_opt_selected",
         disabled=otp_pending,
     )
 
-    if st.button("🔍 Load Contracts", key=f"{tab_key}_opt_load", disabled=otp_pending):
+    if st.button(":material/search: Load Contracts", key=f"{tab_key}_opt_load", disabled=otp_pending):
         st.session_state[f"{tab_key}_active"] = "options"
         with st.spinner("Loading contracts and live prices..."):
             contracts_data = fetch_fn(selected)
@@ -714,7 +714,7 @@ def _render_options_tab(
         live_px = prices.get(trd_sym)
         live_px = live_px if (live_px and live_px > 0) else None
         px_text = f"₹ {live_px:,.2f}" if live_px else "—"
-        px_sub = "📡 Live Premium (Kotak)" if live_px else "⚠️ Market Closed / No Data"
+        px_sub = "Live Premium" if live_px else "No Data"
 
         _render_price_card(t, px_text, f"{trd_sym} · Lot {lot_size} · {px_sub}")
 
@@ -772,7 +772,7 @@ def _render_options_tab(
 
         _render_balance_card(t, premium_cost)
 
-        btn = f"{'🟢 BUY' if action == 'BUY' else '🔴 SELL'} · {opt_type} · ₹{premium_cost:,.2f}"
+        btn = f"{'BUY' if action == 'BUY' else 'SELL'} · {opt_type} · ₹{premium_cost:,.2f}"
         if st.button(
             btn,
             use_container_width=True,
@@ -820,7 +820,7 @@ def render_fo_page(r):
         f"""
     <div style="background:#f0faf5;border-radius:8px;padding:10px 14px;margin-bottom:12px;
                 border-left:3px solid #1ba572;font-size:12px;color:#0a4a2a">
-        📈 <b>F&amp;O Trading</b> — NSE &amp; BSE Futures/Options · Currency (CDS) · Commodity (MCX)
+        <b>F&amp;O Trading</b> — NSE &amp; BSE Futures/Options · Currency (CDS) · Commodity (MCX)
         · Product: NRML (overnight positions).
     </div>""",
         unsafe_allow_html=True,
@@ -835,11 +835,11 @@ def render_fo_page(r):
 
     tab_nse, tab_bse, tab_cur, tab_com, tab_pos = st.tabs(
         [
-            "📊 NSE F&O",
-            "📈 BSE F&O",
-            "💱 Currency",
-            "🏭 Commodity",
-            "📋 Positions",
+            ":material/candlestick_chart: NSE F&O",
+            ":material/bar_chart: BSE F&O",
+            ":material/currency_exchange: Currency",
+            ":material/diamond: Commodity",
+            ":material/list_alt: Positions",
         ]
     )
 
@@ -851,7 +851,7 @@ def render_fo_page(r):
                 f"""
             <div style="background:#fff8e6;border-radius:8px;padding:10px 14px;margin-bottom:12px;
                         border-left:3px solid #ff9800;font-size:12px;color:#7a5a00">
-                📊 <b>NSE Futures</b> — Index &amp; Stock futures. NRML overnight.
+                <b>NSE Futures</b> — Index &amp; Stock futures. NRML overnight.
             </div>""",
                 unsafe_allow_html=True,
             )
@@ -865,7 +865,7 @@ def render_fo_page(r):
                 f"""
             <div style="background:#fff3f3;border-radius:8px;padding:10px 14px;margin-bottom:12px;
                         border-left:3px solid #e34a3a;font-size:12px;color:#7a1a1a">
-                🎯 <b>NSE Options</b> — CE (calls) and PE (puts). Premium paid upfront.
+                <b>NSE Options</b> — CE (calls) and PE (puts). Premium paid upfront.
             </div>""",
                 unsafe_allow_html=True,
             )
@@ -885,7 +885,7 @@ def render_fo_page(r):
                     f"""
                 <div style="background:#fff8e6;border-radius:8px;padding:10px 14px;margin-bottom:12px;
                             border-left:3px solid #ff9800;font-size:12px;color:#7a5a00">
-                    📈 <b>BSE Futures</b> — SENSEX, BANKEX &amp; stock futures. NRML overnight.
+                    <b>BSE Futures</b> — SENSEX, BANKEX &amp; stock futures. NRML overnight.
                 </div>""",
                     unsafe_allow_html=True,
                 )
@@ -899,7 +899,7 @@ def render_fo_page(r):
                     f"""
                 <div style="background:#fff3f3;border-radius:8px;padding:10px 14px;margin-bottom:12px;
                             border-left:3px solid #e34a3a;font-size:12px;color:#7a1a1a">
-                    🎯 <b>BSE Options</b> — CE/PE on BSE stocks &amp; indices.
+                    <b>BSE Options</b> — CE/PE on BSE stocks &amp; indices.
                 </div>""",
                     unsafe_allow_html=True,
                 )
@@ -916,7 +916,7 @@ def render_fo_page(r):
                 f"""
             <div style="background:#f0f4ff;border-radius:8px;padding:10px 14px;margin-bottom:12px;
                         border-left:3px solid #3b6fd4;font-size:12px;color:#1a2a6a">
-                💱 <b>Currency Futures</b> — USDINR, EURINR, GBPINR, JPYINR &amp; more.
+                <b>Currency Futures</b> — USDINR, EURINR, GBPINR, JPYINR &amp; more.
                 Lot size = 1000 units. NRML product.
             </div>""",
                 unsafe_allow_html=True,
@@ -932,7 +932,7 @@ def render_fo_page(r):
                 f"""
             <div style="background:#f0f4ff;border-radius:8px;padding:10px 14px;margin-bottom:12px;
                         border-left:3px solid #3b6fd4;font-size:12px;color:#1a2a6a">
-                💱 <b>Currency Options</b> — CE/PE on currency pairs. Premium paid upfront.
+                <b>Currency Options</b> — CE/PE on currency pairs. Premium paid upfront.
             </div>""",
                 unsafe_allow_html=True,
             )
@@ -946,7 +946,7 @@ def render_fo_page(r):
             f"""
         <div style="background:#fdf5e6;border-radius:8px;padding:10px 14px;margin-bottom:12px;
                     border-left:3px solid #c47a1e;font-size:12px;color:#5a3a00">
-            🏭 <b>Commodity Futures (MCX)</b> — Gold, Silver, Crude Oil, Natural Gas &amp; more.
+            <b>Commodity Futures (MCX)</b> — Gold, Silver, Crude Oil, Natural Gas &amp; more.
             NRML product. Futures only.
         </div>""",
             unsafe_allow_html=True,
@@ -960,7 +960,7 @@ def render_fo_page(r):
     with tab_pos:
         col_sync, col_last = st.columns([1, 5])
         with col_sync:
-            if st.button("🔄 Sync", key="fo_sync", use_container_width=True):
+            if st.button(":material/sync: Sync", key="fo_sync", use_container_width=True):
                 with st.spinner("Syncing F&O positions..."):
                     sync_fo_positions(r)
                 st.rerun()
@@ -974,7 +974,7 @@ def render_fo_page(r):
 
         st.markdown(
             f"<div style='margin-top:14px;color:{t['text_primary']};font-size:18px;"
-            f"font-weight:700;margin-bottom:8px'>📋 Open Positions ({len(positions)})</div>",
+            f"font-weight:700;margin-bottom:8px'>Open Positions ({len(positions)})</div>",
             unsafe_allow_html=True,
         )
 
