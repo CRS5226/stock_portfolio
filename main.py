@@ -38,6 +38,7 @@ def main():
         }
         div[data-testid="stVerticalBlock"] > div:first-child { padding-top: 0 !important; }
         .stRadio > div { gap: 0.3rem !important; }
+        [data-testid="stRadio"] label p { font-size: 11px !important; }
         [data-testid="stHorizontalBlock"] { align-items: center !important; }
         div[data-testid="stHorizontalBlock"] { gap: 0.6rem; }
         hr { margin: 0.6rem 0 !important; }
@@ -46,31 +47,35 @@ def main():
             font-size: 11px !important; padding: 1px 4px !important;
             min-height: 26px !important; border-radius: 6px !important;
         }
-        [data-testid="column"] button[kind="secondary"]:has(p:contains("B")) {
+        button[kind="secondary"]:has(p:contains("B")) {
             background-color: #1ba572 !important;
             border-color: #1ba572 !important;
             color: #ffffff !important;
             font-weight: 700 !important;
-            font-size: 11px !important;
-            width: 32px !important;
-            min-width: 32px !important;
-            height: 32px !important;
-            min-height: 32px !important;
+            font-size: 12px !important;
+            width: 34px !important;
+            min-width: 34px !important;
+            max-width: 34px !important;
+            height: 34px !important;
+            min-height: 34px !important;
             padding: 0 !important;
             border-radius: 6px !important;
+            aspect-ratio: 1 !important;
         }
-        [data-testid="column"] button[kind="secondary"]:has(p:contains("S")) {
+        button[kind="secondary"]:has(p:contains("S")) {
             background-color: #e34a3a !important;
             border-color: #e34a3a !important;
             color: #ffffff !important;
             font-weight: 700 !important;
-            font-size: 11px !important;
-            width: 32px !important;
-            min-width: 32px !important;
-            height: 32px !important;
-            min-height: 32px !important;
+            font-size: 12px !important;
+            width: 34px !important;
+            min-width: 34px !important;
+            max-width: 34px !important;
+            height: 34px !important;
+            min-height: 34px !important;
             padding: 0 !important;
             border-radius: 6px !important;
+            aspect-ratio: 1 !important;
         }
         div[data-testid="stSelectbox"] > div { min-height: 36px !important; font-size: 13px !important; }
         div[data-testid="stSelectbox"] > label { display: none !important; }
@@ -197,15 +202,24 @@ def main():
                 _ago = f"{_diff // 60}m ago" if _diff >= 60 else f"{_diff}s ago"
             except Exception:
                 _ago = last[:16]
-            sync_str = f"↻ {_ago} · "
+            sync_str = f"↻ {_ago}"
         else:
-            sync_str = ""
-        st.markdown(
-            f"<div style='font-size:12px;color:#666;text-align:right;padding-top:6px'>"
-            f"{_mkt_html} &nbsp;·&nbsp; {sync_str}{ucc} · Kotak Neo"
-            f"</div>",
-            unsafe_allow_html=True,
-        )
+            sync_str = "↻ —"
+        _info_c1, _info_c2 = st.columns([0.55, 1])
+        with _info_c1:
+            if st.button(":material/sync: Sync", key="hdr_sync", use_container_width=True, help="Sync portfolio now"):
+                with st.spinner("Syncing…"):
+                    sync_cnc(r)
+                    sync_mtf(r)
+                    sync_fo_positions(r)
+                st.rerun()
+        with _info_c2:
+            st.markdown(
+                f"<div style='font-size:11px;color:#666;text-align:right;padding-top:8px;line-height:1.5'>"
+                f"{_mkt_html}<br>{sync_str} · {ucc}"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
 
     st.markdown("<hr style='margin:4px 0 8px 0;border-color:#e5e7ee'>", unsafe_allow_html=True)
 

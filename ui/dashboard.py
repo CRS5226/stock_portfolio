@@ -18,19 +18,6 @@ def page_dashboard(r):
     t = get_theme()
     st_autorefresh(interval=180000, key="dashboard_refresh")
 
-    col_sync, col_last = st.columns([1, 5])
-    with col_sync:
-        if st.button(":material/sync: Sync", use_container_width=True):
-            with st.spinner("Syncing..."):
-                sync_cnc(r)
-                sync_mtf(r)
-                sync_fo_positions(r)
-            st.rerun()
-    with col_last:
-        last = r.get(REDIS_CNC_LAST_SYNC)
-        if last:
-            st.caption(f"Last synced: {last[:19].replace('T',' ')} IST")
-
     avl = net = cash = 0.0
     funds_err = None
     try:
@@ -94,8 +81,8 @@ def page_dashboard(r):
     _card = (
         "background:{bg};border-radius:10px;padding:16px 20px;"
         "border-top:3px solid {accent};border:1px solid {border};"
-        "box-shadow:0 1px 4px rgba(0,0,0,.06);min-height:110px;"
-        "display:flex;flex-direction:column;justify-content:space-between"
+        "box-shadow:0 1px 4px rgba(0,0,0,.06);height:118px;"
+        "display:flex;flex-direction:column;justify-content:space-between;overflow:hidden"
     )
     with mc1:
         if funds_err:
@@ -109,7 +96,7 @@ def page_dashboard(r):
                     <div style="color:{t['text_primary']};font-size:26px;font-weight:700;
                                 letter-spacing:-.5px">₹ {avl:,.2f}</div>
                     <div style="color:{t['text_muted']};font-size:11px;margin-top:4px">
-                        Ready to invest{' · ' + mtf_warning_html if mtf_pos else ''}</div>
+                        Ready to invest{' · MTF active' if mtf_pos else ''}</div>
                 </div>""",
                 unsafe_allow_html=True,
             )
@@ -278,7 +265,7 @@ def page_dashboard(r):
                 st.markdown("<div style='padding-top:8px'>", unsafe_allow_html=True)
                 bcol1, bcol2 = st.columns(2)
                 with bcol1:
-                    if st.button("B", key=f"buy_{symbol}", use_container_width=True, help=f"BUY {symbol}"):
+                    if st.button("B", key=f"buy_{symbol}", help=f"BUY {symbol}"):
                         st.session_state["prefill_symbol"] = symbol
                         st.session_state["prefill_action"] = "BUY"
                         st.session_state["prefill_exchange"] = exch
@@ -286,7 +273,7 @@ def page_dashboard(r):
                         st.session_state["nav_page"] = ":material/shopping_cart: Place Order"
                         st.rerun()
                 with bcol2:
-                    if st.button("S", key=f"sell_{symbol}", use_container_width=True, help=f"SELL {symbol}"):
+                    if st.button("S", key=f"sell_{symbol}", help=f"SELL {symbol}"):
                         st.session_state["prefill_symbol"] = symbol
                         st.session_state["prefill_action"] = "SELL"
                         st.session_state["prefill_exchange"] = exch
@@ -404,7 +391,7 @@ def page_dashboard(r):
                 st.markdown("<div style='padding-top:8px'>", unsafe_allow_html=True)
                 mb1, mb2 = st.columns(2)
                 with mb1:
-                    if st.button("B", key=f"mtf_buy_{symbol}", use_container_width=True, help=f"BUY {symbol}"):
+                    if st.button("B", key=f"mtf_buy_{symbol}", help=f"BUY {symbol}"):
                         st.session_state["prefill_symbol"] = symbol
                         st.session_state["prefill_action"] = "BUY"
                         st.session_state["prefill_exchange"] = exch
@@ -412,7 +399,7 @@ def page_dashboard(r):
                         st.session_state["nav_page"] = ":material/shopping_cart: Place Order"
                         st.rerun()
                 with mb2:
-                    if st.button("S", key=f"mtf_sell_{symbol}", use_container_width=True, help=f"SELL {symbol}"):
+                    if st.button("S", key=f"mtf_sell_{symbol}", help=f"SELL {symbol}"):
                         st.session_state["prefill_symbol"] = symbol
                         st.session_state["prefill_action"] = "SELL"
                         st.session_state["prefill_exchange"] = exch
