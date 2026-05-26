@@ -309,7 +309,7 @@ def page_dashboard(r):
                         st.session_state["prefill_action"] = "BUY"
                         st.session_state["prefill_exchange"] = exch
                         st.session_state["prefill_order_type"] = badge
-                        st.session_state["nav_page"] = "🛒 Place Order"
+                        st.session_state["nav_page"] = ":material/shopping_cart: Place Order"
                         st.rerun()
                 with bcol2:
                     if st.button(
@@ -322,7 +322,7 @@ def page_dashboard(r):
                         st.session_state["prefill_action"] = "SELL"
                         st.session_state["prefill_exchange"] = exch
                         st.session_state["prefill_order_type"] = badge
-                        st.session_state["nav_page"] = "🛒 Place Order"
+                        st.session_state["nav_page"] = ":material/shopping_cart: Place Order"
                         st.rerun()
                 st.markdown("</div>", unsafe_allow_html=True)
 

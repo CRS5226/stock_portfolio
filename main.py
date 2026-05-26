@@ -77,14 +77,14 @@ def main():
 
     col_logo, col_nav, col_info = st.columns([1, 5, 2])
     with col_logo:
-        st.markdown("#### 📊 Portfolio")
+        st.markdown(":material/bar_chart: **Portfolio**")
     with col_nav:
         nav_options = [
-            "🏠 Portfolio",
-            "🛒 Place Order",
-            "📈 F&O Trading",
-            "🔔 GTT Orders",
-            "📋 Order History",
+            ":material/home: Portfolio",
+            ":material/shopping_cart: Place Order",
+            ":material/candlestick_chart: F&O Trading",
+            ":material/notifications: GTT Orders",
+            ":material/receipt_long: Order History",
         ]
         if "nav_page" in st.session_state:
             _redirect = st.session_state.pop("nav_page")
@@ -93,7 +93,7 @@ def main():
                 st.session_state["nav_radio"] = _redirect
 
         if "current_page" not in st.session_state:
-            st.session_state["current_page"] = "🏠 Portfolio"
+            st.session_state["current_page"] = ":material/home: Portfolio"
 
         nav_index = (
             nav_options.index(st.session_state["current_page"])
@@ -113,8 +113,8 @@ def main():
     with col_info:
         last = r.get(REDIS_CNC_LAST_SYNC)
         ucc = os.getenv("KOTAK_UCC", "")
-        sync_str = f"🔄 {last[:19].replace('T',' ')} IST · " if last else ""
-        st.caption(f"{sync_str}🏦 {ucc} · Kotak Neo")
+        sync_str = f":material/sync: {last[:19].replace('T',' ')} IST · " if last else ""
+        st.caption(f"{sync_str}:material/account_balance: {ucc} · Kotak Neo")
 
     if not st.session_state.get("otp_pending", False):
         qs_col1, qs_col2, qs_col3 = st.columns([1.2, 4, 1])
@@ -163,20 +163,20 @@ def main():
                     st.session_state["prefill_action"]     = "BUY"
                     st.session_state["prefill_exchange"]   = qs_exch
                     st.session_state["prefill_order_type"] = "CNC"
-                    st.session_state["nav_page"]           = "🛒 Place Order"
+                    st.session_state["nav_page"]           = ":material/shopping_cart: Place Order"
                     st.rerun()
 
     st.markdown("<hr style='margin:4px 0 8px 0;border-color:#e5e7ee'>", unsafe_allow_html=True)
 
-    if page == "🏠 Portfolio":
+    if page == ":material/home: Portfolio":
         page_dashboard(r)
-    elif page == "🛒 Place Order":
+    elif page == ":material/shopping_cart: Place Order":
         page_place_order(r)
-    elif page == "📈 F&O Trading":
+    elif page == ":material/candlestick_chart: F&O Trading":
         render_fo_page(r)
-    elif page == "🔔 GTT Orders":
+    elif page == ":material/notifications: GTT Orders":
         page_gtt(r)
-    elif page == "📋 Order History":
+    elif page == ":material/receipt_long: Order History":
         page_order_history(r)
 
 

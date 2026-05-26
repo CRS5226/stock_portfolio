@@ -11,10 +11,15 @@ from ui.theme import get_theme
 
 
 def page_order_history(r):
-    st.header("📋 Order History — Kotak Neo")
+    st.header(":material/receipt_long: Order History — Kotak Neo")
     all_orders = get_order_history(r)
     fo_orders = get_fo_orders(r)
-    tab1, tab2, tab3, tab4 = st.tabs(["📦 CNC", "💳 MTF", "⚡ Intraday", "📈 F&O"])
+    tab1, tab2, tab3, tab4 = st.tabs([
+        ":material/inventory_2: CNC",
+        ":material/credit_card: MTF",
+        ":material/bolt: Intraday",
+        ":material/candlestick_chart: F&O",
+    ])
 
     def render_table(orders):
         if orders:
