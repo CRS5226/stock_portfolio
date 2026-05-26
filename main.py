@@ -30,6 +30,12 @@ def main():
             font-size: 13px !important;
             height: 38px !important;
         }
+        div[data-testid="stButton"] button[data-testid="baseButton-primary"]:has(p:contains("search")) {
+            width: 38px !important;
+            min-width: 38px !important;
+            padding: 0 !important;
+            border-radius: 8px !important;
+        }
         div[data-testid="stVerticalBlock"] > div:first-child { padding-top: 0 !important; }
         .stRadio > div { gap: 0.3rem !important; }
         [data-testid="stHorizontalBlock"] { align-items: center !important; }
@@ -45,14 +51,26 @@ def main():
             border-color: #1ba572 !important;
             color: #ffffff !important;
             font-weight: 700 !important;
-            font-size: 10px !important;
+            font-size: 11px !important;
+            width: 32px !important;
+            min-width: 32px !important;
+            height: 32px !important;
+            min-height: 32px !important;
+            padding: 0 !important;
+            border-radius: 6px !important;
         }
         [data-testid="column"] button[kind="secondary"]:has(p:contains("S")) {
             background-color: #e34a3a !important;
             border-color: #e34a3a !important;
             color: #ffffff !important;
             font-weight: 700 !important;
-            font-size: 10px !important;
+            font-size: 11px !important;
+            width: 32px !important;
+            min-width: 32px !important;
+            height: 32px !important;
+            min-height: 32px !important;
+            padding: 0 !important;
+            border-radius: 6px !important;
         }
         div[data-testid="stSelectbox"] > div { min-height: 36px !important; font-size: 13px !important; }
         div[data-testid="stSelectbox"] > label { display: none !important; }
@@ -77,9 +95,15 @@ def main():
         threading.Thread(target=background_sync, args=(r,), daemon=True).start()
         st.session_state["sync_started"] = True
 
-    col_logo, col_nav, col_info = st.columns([1, 5, 2])
+    col_logo, col_nav, col_search, col_info = st.columns([0.9, 3.5, 2.8, 1.8])
     with col_logo:
-        st.markdown(":material/bar_chart: **Portfolio**")
+        st.markdown(
+            "<div style='padding-top:4px'>"
+            "<span style='font-size:20px;font-weight:800;color:#1ba572;"
+            "letter-spacing:-0.5px;line-height:1.2'>&#9679; Portfolio</span>"
+            "</div>",
+            unsafe_allow_html=True,
+        )
     with col_nav:
         nav_options = [
             ":material/home: Portfolio",
@@ -112,6 +136,46 @@ def main():
             key="nav_radio",
         )
         st.session_state["current_page"] = page
+    with col_search:
+        if not st.session_state.get("otp_pending", False):
+            sc1, sc2, sc3 = st.columns([0.9, 3, 0.6])
+            with sc1:
+                qs_exch = st.selectbox(
+                    "exch",
+                    ["NSE", "BSE"],
+                    label_visibility="collapsed",
+                    key="qs_exch",
+                )
+            with sc2:
+                if qs_exch == "BSE":
+                    qs_stock_data = load_stocks_bse()
+                else:
+                    qs_stock_data = load_stocks_nse()
+                qs_symbols = sorted(qs_stock_data.keys())
+                qs_selected = st.selectbox(
+                    "search",
+                    options=qs_symbols,
+                    format_func=lambda x: f"{x} — {qs_stock_data.get(x, {}).get('name', '')}",
+                    placeholder=f"Search any {qs_exch} stock...",
+                    label_visibility="collapsed",
+                    index=None,
+                    key="qs_stock",
+                )
+            with sc3:
+                if st.button(
+                    ":material/search:",
+                    use_container_width=True,
+                    key="qs_go",
+                    type="primary",
+                    disabled=(not qs_selected),
+                ):
+                    if qs_selected:
+                        st.session_state["prefill_symbol"]     = qs_selected
+                        st.session_state["prefill_action"]     = "BUY"
+                        st.session_state["prefill_exchange"]   = qs_exch
+                        st.session_state["prefill_order_type"] = "CNC"
+                        st.session_state["nav_page"]           = ":material/shopping_cart: Place Order"
+                        st.rerun()
     with col_info:
         from datetime import datetime as _dt
         last = r.get(REDIS_CNC_LAST_SYNC)
@@ -142,50 +206,6 @@ def main():
             f"</div>",
             unsafe_allow_html=True,
         )
-
-    if not st.session_state.get("otp_pending", False):
-        qs_col1, qs_col2, qs_col3 = st.columns([1.2, 4, 1])
-
-        with qs_col1:
-            qs_exch = st.selectbox(
-                "exch",
-                ["NSE", "BSE"],
-                label_visibility="collapsed",
-                key="qs_exch",
-            )
-
-        with qs_col2:
-            if qs_exch == "BSE":
-                qs_stock_data = load_stocks_bse()
-            else:
-                qs_stock_data = load_stocks_nse()
-
-            qs_symbols = sorted(qs_stock_data.keys())
-            qs_selected = st.selectbox(
-                "search",
-                options=qs_symbols,
-                format_func=lambda x: f"{x} — {qs_stock_data.get(x, {}).get('name', '')}",
-                placeholder=f"Search any {qs_exch} stock...",
-                label_visibility="collapsed",
-                index=None,
-                key="qs_stock",
-            )
-
-        with qs_col3:
-            if st.button(
-                ":material/arrow_forward: Go",
-                use_container_width=True,
-                key="qs_go",
-                type="primary",
-                disabled=(not qs_selected),
-            ):
-                if qs_selected:
-                    st.session_state["prefill_symbol"]     = qs_selected
-                    st.session_state["prefill_action"]     = "BUY"
-                    st.session_state["prefill_exchange"]   = qs_exch
-                    st.session_state["prefill_order_type"] = "CNC"
-                    st.session_state["nav_page"]           = ":material/shopping_cart: Place Order"
-                    st.rerun()
 
     st.markdown("<hr style='margin:4px 0 8px 0;border-color:#e5e7ee'>", unsafe_allow_html=True)
 

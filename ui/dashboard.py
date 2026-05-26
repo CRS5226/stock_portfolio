@@ -94,7 +94,8 @@ def page_dashboard(r):
     _card = (
         "background:{bg};border-radius:10px;padding:16px 20px;"
         "border-top:3px solid {accent};border:1px solid {border};"
-        "box-shadow:0 1px 4px rgba(0,0,0,.06)"
+        "box-shadow:0 1px 4px rgba(0,0,0,.06);min-height:110px;"
+        "display:flex;flex-direction:column;justify-content:space-between"
     )
     with mc1:
         if funds_err:
@@ -313,11 +314,27 @@ def page_dashboard(r):
 
     if mtf_pos:
         st.markdown(
-            f"<div style='margin-top:22px;color:{t['text_primary']};font-size:18px;"
-            f"font-weight:700;margin-bottom:8px'>💳 MTF Open Positions ({len(mtf_pos)})</div>",
+            f"<div style='margin-top:22px;display:flex;align-items:center;gap:10px;margin-bottom:4px'>"
+            f"<span style='color:{t['text_primary']};font-size:17px;font-weight:700'>MTF Open Positions</span>"
+            f"<span style='background:#ff9800;color:#fff;font-size:11px;font-weight:600;"
+            f"padding:2px 9px;border-radius:20px'>{len(mtf_pos)}</span>"
+            f"</div>"
+            f"<div style='color:{t['text_muted']};font-size:10px;margin-bottom:10px'>"
+            f"Margin Trading Facility positions · Interest charged daily</div>",
             unsafe_allow_html=True,
         )
-        rows_html = ""
+
+        mtf_hcols = st.columns([2.5, 1.8, 1.5, 1.8, 0.7])
+        for col, (label, align) in zip(mtf_hcols, [
+            ("COMPANY", "left"), ("MARKET PRICE", "right"),
+            ("RETURNS", "right"), ("CURRENT (INVESTED)", "right"), ("", "center"),
+        ]):
+            col.markdown(
+                f"<div style='color:{t['text_muted']};font-size:10px;font-weight:500;"
+                f"letter-spacing:.4px;padding:4px 0;text-align:{align}'>{label}</div>",
+                unsafe_allow_html=True,
+            )
+
         for p in sorted(mtf_pos, key=lambda x: x["symbol"]):
             symbol = p["symbol"]
             qty = p["quantity"]
@@ -328,43 +345,86 @@ def page_dashboard(r):
             pnl = cur - inv
             pc = t["green"] if pnl >= 0 else t["red"]
             ps = "+" if pnl >= 0 else ""
-            rows_html += f"""
-            <tr class="holdings-row" style="border-bottom:1px solid {t['card_border']}">
-                <td style="padding:9px 12px">
-                    <div style="font-weight:600;color:{t['text_primary']};font-size:13px">{symbol}
-                        <span style="background:#ff9800;color:#fff;font-size:9px;font-weight:600;
-                                     padding:1px 6px;border-radius:3px;margin-left:6px">MTF</span>
-                    </div>
-                </td>
-                <td style="padding:9px 12px;text-align:right;color:{t['text_secondary']};font-size:13px">{qty}</td>
-                <td style="padding:9px 12px;text-align:right;color:{t['text_secondary']};font-size:13px">₹{avg_price:,.2f}</td>
-                <td style="padding:9px 12px;text-align:right;color:{t['text_primary']};font-weight:600;font-size:13px">₹{lp:,.2f}</td>
-                <td style="padding:9px 12px;text-align:right">
-                    <div style="color:{pc};font-weight:600;font-size:13px">{ps}₹{pnl:,.2f}</div>
-                </td>
-                <td style="padding:9px 12px;text-align:right">
-                    <div style="color:{t['text_primary']};font-weight:600;font-size:13px">₹{cur:,.2f}</div>
-                    <div style="color:{t['text_muted']};font-size:11px">₹{inv:,.2f} inv.</div>
-                </td>
-            </tr>"""
-        st.markdown(
-            f"""
-        <div style="background:{t['card_bg']};border-radius:10px;overflow:hidden;
-                    border:1px solid {t['card_border']};margin-bottom:14px">
-            <table style="width:100%;border-collapse:collapse">
-                <thead><tr style="background:{t['header_bg']}">
-                    <th style="padding:9px 12px;text-align:left;color:{t['text_muted']};font-size:11px;font-weight:500">COMPANY</th>
-                    <th style="padding:9px 12px;text-align:right;color:{t['text_muted']};font-size:11px;font-weight:500">QTY</th>
-                    <th style="padding:9px 12px;text-align:right;color:{t['text_muted']};font-size:11px;font-weight:500">AVG PRICE</th>
-                    <th style="padding:9px 12px;text-align:right;color:{t['text_muted']};font-size:11px;font-weight:500">MARKET PRICE</th>
-                    <th style="padding:9px 12px;text-align:right;color:{t['text_muted']};font-size:11px;font-weight:500">P&L</th>
-                    <th style="padding:9px 12px;text-align:right;color:{t['text_muted']};font-size:11px;font-weight:500">CURRENT (INVESTED)</th>
-                </tr></thead>
-                <tbody>{rows_html}</tbody>
-            </table>
-        </div>""",
-            unsafe_allow_html=True,
-        )
+            day_chg = lp - (p.get("last_price", lp) or lp)
+            day_pct = (day_chg / p.get("last_price", lp) * 100) if p.get("last_price", 0) else 0
+            day_color = t["green"] if day_chg >= 0 else t["red"]
+            day_sign = "+" if day_chg >= 0 else ""
+            ret_pct = (pnl / inv * 100) if inv else 0
+            row_border = t["green"] if pnl >= 0 else t["red"]
+            exch = p.get("exchange", "NSE")
+
+            mtf_row_cols = st.columns([2.5, 1.8, 1.5, 1.8, 0.7])
+
+            mtf_row_cols[0].markdown(
+                f"<div style='padding:10px 0 10px 10px;border-left:3px solid {row_border};'>"
+                f"<div style='font-weight:700;color:{t['text_primary']};font-size:14px'>{symbol}</div>"
+                f"<div style='margin-top:5px;display:flex;gap:5px;align-items:center'>"
+                f"<span style='background:#ff9800;color:#fff;font-size:9px;font-weight:600;"
+                f"padding:2px 7px;border-radius:20px'>MTF</span>"
+                f"<span style='background:{t['exch_bg']};color:{t['exch_text']};font-size:9px;"
+                f"font-weight:500;padding:2px 7px;border-radius:20px'>{exch}</span>"
+                f"<span style='background:#f0f2f6;color:{t['text_muted']};font-size:9px;"
+                f"padding:2px 7px;border-radius:20px'>{qty} shares</span>"
+                f"</div>"
+                f"<div style='color:{t['text_muted']};font-size:11px;margin-top:4px'>"
+                f"Avg ₹{avg_price:,.2f}</div>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
+
+            mtf_row_cols[1].markdown(
+                f"<div style='padding:10px 0;text-align:right'>"
+                f"<div style='color:{t['text_primary']};font-weight:600;font-size:14px'>"
+                f"₹{lp:,.2f}</div>"
+                f"<div style='color:{day_color};font-size:11px;margin-top:3px'>"
+                f"{day_sign}{day_chg:,.2f} ({day_sign}{day_pct:.2f}%)</div>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
+
+            mtf_row_cols[2].markdown(
+                f"<div style='padding:10px 0;text-align:right'>"
+                f"<div style='color:{pc};font-weight:700;font-size:13px'>{ps}{ret_pct:.2f}%</div>"
+                f"<div style='color:{pc};font-size:11px;margin-top:3px'>{ps}₹{pnl:,.2f}</div>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
+
+            mtf_row_cols[3].markdown(
+                f"<div style='padding:10px 0;text-align:right'>"
+                f"<div style='color:{t['text_primary']};font-weight:600;font-size:14px'>"
+                f"₹{cur:,.2f}</div>"
+                f"<div style='color:{t['text_muted']};font-size:11px;margin-top:3px'>"
+                f"₹{inv:,.2f} inv.</div>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
+
+            with mtf_row_cols[4]:
+                st.markdown("<div style='padding-top:8px'>", unsafe_allow_html=True)
+                mb1, mb2 = st.columns(2)
+                with mb1:
+                    if st.button("B", key=f"mtf_buy_{symbol}", use_container_width=True, help=f"BUY {symbol}"):
+                        st.session_state["prefill_symbol"] = symbol
+                        st.session_state["prefill_action"] = "BUY"
+                        st.session_state["prefill_exchange"] = exch
+                        st.session_state["prefill_order_type"] = "MTF"
+                        st.session_state["nav_page"] = ":material/shopping_cart: Place Order"
+                        st.rerun()
+                with mb2:
+                    if st.button("S", key=f"mtf_sell_{symbol}", use_container_width=True, help=f"SELL {symbol}"):
+                        st.session_state["prefill_symbol"] = symbol
+                        st.session_state["prefill_action"] = "SELL"
+                        st.session_state["prefill_exchange"] = exch
+                        st.session_state["prefill_order_type"] = "MTF"
+                        st.session_state["nav_page"] = ":material/shopping_cart: Place Order"
+                        st.rerun()
+                st.markdown("</div>", unsafe_allow_html=True)
+
+            st.markdown(
+                f"<hr style='margin:0;border-color:{t['card_border']}'>",
+                unsafe_allow_html=True,
+            )
 
     st.markdown(
         f"<div style='margin-top:22px;color:{t['text_primary']};font-size:18px;"
