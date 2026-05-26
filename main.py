@@ -111,10 +111,35 @@ def main():
         )
         st.session_state["current_page"] = page
     with col_info:
+        from datetime import datetime as _dt
         last = r.get(REDIS_CNC_LAST_SYNC)
         ucc = os.getenv("KOTAK_UCC", "")
-        sync_str = f":material/sync: {last[:19].replace('T',' ')} IST · " if last else ""
-        st.caption(f"{sync_str}:material/account_balance: {ucc} · Kotak Neo")
+        from config import INDIA_TZ as _TZ
+        _now = _dt.now(_TZ)
+        _mopen = _now.replace(hour=9, minute=15, second=0, microsecond=0)
+        _mclose = _now.replace(hour=15, minute=30, second=0, microsecond=0)
+        _is_open = _mopen <= _now <= _mclose and _now.weekday() < 5
+        _mkt_html = (
+            '<span style="color:#1ba572;font-weight:600">● Live</span>'
+            if _is_open else
+            '<span style="color:#e34a3a;font-weight:600">● Closed</span>'
+        )
+        if last:
+            try:
+                _sync_dt = _dt.fromisoformat(last)
+                _diff = int((_now - _sync_dt).total_seconds())
+                _ago = f"{_diff // 60}m ago" if _diff >= 60 else f"{_diff}s ago"
+            except Exception:
+                _ago = last[:16]
+            sync_str = f":material/sync: {_ago} · "
+        else:
+            sync_str = ""
+        st.markdown(
+            f"<div style='font-size:12px;color:#666;text-align:right;padding-top:6px'>"
+            f"{_mkt_html} &nbsp;·&nbsp; {sync_str}:material/account_balance: {ucc}"
+            f"</div>",
+            unsafe_allow_html=True,
+        )
 
     if not st.session_state.get("otp_pending", False):
         qs_col1, qs_col2, qs_col3 = st.columns([1.2, 4, 1])

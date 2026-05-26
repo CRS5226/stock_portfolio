@@ -89,116 +89,94 @@ def page_dashboard(r):
         if h.get("product_type") == "MTF"
     )
 
-    col_funds, col_summary = st.columns([2, 3])
-    with col_funds:
+    # ── 3-column summary metric cards ──────────────────────────────────────
+    mc1, mc2, mc3 = st.columns(3)
+    _card = (
+        "background:{bg};border-radius:10px;padding:16px 20px;"
+        "border-top:3px solid {accent};border:1px solid {border};"
+        "box-shadow:0 1px 4px rgba(0,0,0,.06)"
+    )
+    with mc1:
         if funds_err:
-            st.warning(f"Funds: {funds_err}")
+            st.warning(f"Balance unavailable: {funds_err}")
         else:
             st.markdown(
-                f"""
-            <div style="background:{t['funds_bg']};border-radius:10px;padding:20px 24px;
-                        border:1px solid {t['card_border']};min-height:230px">
-                <div style="color:{t['funds_caption']};font-size:11px;letter-spacing:.6px;
-                            text-transform:uppercase">💰 Available Balance</div>
-                <div style="color:{t['text_primary']};font-size:30px;font-weight:700;
-                            margin-top:4px">₹ {avl:,.2f}</div>
-                <div style="color:{t['funds_caption']};font-size:11px;margin-top:4px">
-                    Ready to invest</div>
-                {mtf_warning_html}
-            </div>""",
+                f"""<div style="{_card.format(bg=t['funds_bg'], accent='#1ba572', border=t['card_border'])}">
+                    <div style="color:{t['text_muted']};font-size:10px;text-transform:uppercase;
+                                letter-spacing:.5px;margin-bottom:6px">
+                        :material/account_balance_wallet: Available Balance</div>
+                    <div style="color:{t['text_primary']};font-size:26px;font-weight:700;
+                                letter-spacing:-.5px">₹ {avl:,.2f}</div>
+                    <div style="color:{t['text_muted']};font-size:11px;margin-top:4px">
+                        Ready to invest{' · ' + mtf_warning_html if mtf_pos else ''}</div>
+                </div>""",
                 unsafe_allow_html=True,
             )
-
-    with col_summary:
-        if holdings_list:
-            total_day_chg = sum(
-                (
-                    get_live_price_kotak(
-                        h.get("exchange_identifier") or h.get("instrument_token", 0),
-                        "nse_cm",
-                    )
-                    or h["last_price"]
-                )
-                * h["quantity"]
-                - h["last_price"] * h["quantity"]
-                for h in holdings_list
-            )
-            day_color = t["green"] if total_day_chg >= 0 else t["red"]
-            day_sign = "+" if total_day_chg >= 0 else ""
-            day_pct = (
-                total_day_chg
-                / (sum(h["last_price"] * h["quantity"] for h in holdings_list) or 1)
-            ) * 100
-
-            st.markdown(
-                f"""
-            <div style="background:{t['card_bg']};border-radius:10px;padding:20px 24px;
-                        outline:1px solid {t['card_border']}">
-                <div style="color:{t['text_muted']};font-size:11px;text-transform:uppercase;
-                            letter-spacing:.5px">Current Value</div>
-                <div style="color:{t['text_primary']};font-size:30px;font-weight:700;
-                            margin:4px 0 16px 0">₹ {total_current:,.2f}</div>
-                <div style="display:flex;justify-content:space-between;padding:12px 0;
-                            border-top:1px solid {t['card_border']}">
-                    <div>
-                        <div style="color:{t['text_muted']};font-size:10px;text-transform:uppercase">Invested</div>
-                        <div style="color:{t['text_primary']};font-size:14px;font-weight:600;
-                                    margin-top:3px">₹ {total_invested:,.2f}</div>
-                    </div>
-                    <div style="text-align:center">
-                        <div style="color:{t['text_muted']};font-size:10px;text-transform:uppercase">1D Returns</div>
-                        <div style="color:{day_color};font-size:14px;font-weight:600;
-                                    margin-top:3px">{day_sign}₹ {total_day_chg:,.2f}</div>
-                        <div style="color:{day_color};font-size:11px">{day_sign}{day_pct:.2f}%</div>
-                    </div>
-                    <div style="text-align:right">
-                        <div style="color:{t['text_muted']};font-size:10px;text-transform:uppercase">Total Returns</div>
-                        <div style="color:{pnl_color};font-size:14px;font-weight:600;
-                                    margin-top:3px">{pnl_sign}₹ {total_pnl:,.2f}</div>
-                        <div style="background:{pnl_color};color:#fff;font-size:10px;
-                                    font-weight:600;padding:1px 7px;border-radius:10px;
-                                    display:inline-block;margin-top:2px">
-                            {arrow} {pnl_sign}{total_pnl_pct:.2f}%</div>
-                    </div>
-                </div>
-                <div style="display:flex;justify-content:space-between;padding-top:12px;gap:8px">
-                    <div style="flex:1;text-align:center;padding:6px 4px;
-                                background:{t['header_bg']};border-radius:6px">
-                        <div style="color:{t['text_muted']};font-size:9px;text-transform:uppercase">CNC</div>
-                        <div style="color:{t['text_primary']};font-size:12px;font-weight:600;
-                                    margin-top:2px">₹{cnc_val:,.0f}</div>
-                    </div>
-                    <div style="flex:1;text-align:center;padding:6px 4px;
-                                background:{t['header_bg']};border-radius:6px">
-                        <div style="color:{t['text_muted']};font-size:9px;text-transform:uppercase">MTF</div>
-                        <div style="color:{t['text_primary']};font-size:12px;font-weight:600;
-                                    margin-top:2px">₹{mtf_val:,.0f}</div>
-                    </div>
-                    <div style="flex:1;text-align:center;padding:6px 4px;
-                                background:{t['header_bg']};border-radius:6px">
-                        <div style="color:{t['text_muted']};font-size:9px;text-transform:uppercase">MIS</div>
-                        <div style="color:{t['text_muted']};font-size:12px;margin-top:2px">₹0</div>
-                    </div>
-                    <div style="flex:1;text-align:center;padding:6px 4px;
-                                background:{t['header_bg']};border-radius:6px">
-                        <div style="color:{t['text_muted']};font-size:9px;text-transform:uppercase">Futures</div>
-                        <div style="color:{t['text_muted']};font-size:12px;margin-top:2px">₹0</div>
-                    </div>
-                    <div style="flex:1;text-align:center;padding:6px 4px;
-                                background:{t['header_bg']};border-radius:6px">
-                        <div style="color:{t['text_muted']};font-size:9px;text-transform:uppercase">Options</div>
-                        <div style="color:{t['text_muted']};font-size:12px;margin-top:2px">₹0</div>
-                    </div>
+    with mc2:
+        st.markdown(
+            f"""<div style="{_card.format(bg=t['card_bg'], accent='#1976d2', border=t['card_border'])}">
+                <div style="color:{t['text_muted']};font-size:10px;text-transform:uppercase;
+                            letter-spacing:.5px;margin-bottom:6px">
+                    :material/trending_up: Current Value</div>
+                <div style="color:{t['text_primary']};font-size:26px;font-weight:700;
+                            letter-spacing:-.5px">₹ {total_current:,.2f}</div>
+                <div style="color:{t['text_muted']};font-size:11px;margin-top:4px">
+                    Invested ₹ {total_invested:,.2f}</div>
+            </div>""",
+            unsafe_allow_html=True,
+        )
+    with mc3:
+        st.markdown(
+            f"""<div style="{_card.format(bg=t['card_bg'], accent=pnl_color, border=t['card_border'])}">
+                <div style="color:{t['text_muted']};font-size:10px;text-transform:uppercase;
+                            letter-spacing:.5px;margin-bottom:6px">
+                    :material/show_chart: Total Returns</div>
+                <div style="color:{pnl_color};font-size:26px;font-weight:700;
+                            letter-spacing:-.5px">{pnl_sign}₹ {total_pnl:,.2f}</div>
+                <div style="margin-top:6px">
+                    <span style="background:{pnl_color};color:#fff;font-size:11px;font-weight:600;
+                                 padding:2px 10px;border-radius:20px">
+                        {arrow} {pnl_sign}{total_pnl_pct:.2f}%</span>
                 </div>
             </div>""",
-                unsafe_allow_html=True,
-            )
-        else:
-            st.info("No holdings found. Click Sync.")
+            unsafe_allow_html=True,
+        )
+
+    st.markdown("<div style='margin-top:6px'></div>", unsafe_allow_html=True)
+
+    # ── Allocation mini-bar ─────────────────────────────────────────────────
+    if total_invested > 0:
+        cnc_pct = cnc_val / total_invested * 100
+        mtf_pct = mtf_val / total_invested * 100
+        st.markdown(
+            f"""<div style="background:{t['header_bg']};border-radius:8px;
+                            padding:10px 16px;border:1px solid {t['card_border']};
+                            display:flex;align-items:center;gap:20px;margin-bottom:4px">
+                <div style="color:{t['text_muted']};font-size:10px;text-transform:uppercase;
+                            letter-spacing:.4px;white-space:nowrap">Allocation</div>
+                <div style="flex:1;height:8px;background:#e5e7ee;border-radius:4px;overflow:hidden">
+                    <div style="display:flex;height:100%">
+                        <div style="width:{cnc_pct:.1f}%;background:#1976d2;border-radius:4px 0 0 4px"></div>
+                        <div style="width:{mtf_pct:.1f}%;background:#ff9800"></div>
+                    </div>
+                </div>
+                <div style="display:flex;gap:14px;font-size:11px;white-space:nowrap">
+                    <span><span style="color:#1976d2;font-weight:600">■</span>
+                          <span style="color:{t['text_secondary']}"> CNC ₹{cnc_val:,.0f}</span></span>
+                    <span><span style="color:#ff9800;font-weight:600">■</span>
+                          <span style="color:{t['text_secondary']}"> MTF ₹{mtf_val:,.0f}</span></span>
+                </div>
+            </div>""",
+            unsafe_allow_html=True,
+        )
 
     st.markdown(
-        f"<div style='margin-top:22px;color:{t['text_primary']};font-size:18px;"
-        f"font-weight:700'>🏦 Holdings ({len(holdings_list)})</div>"
+        f"<div style='margin-top:18px;display:flex;align-items:center;gap:10px;margin-bottom:4px'>"
+        f"<span style='color:{t['text_primary']};font-size:17px;font-weight:700'>"
+        f":material/account_balance: Holdings</span>"
+        f"<span style='background:#1976d2;color:#fff;font-size:11px;font-weight:600;"
+        f"padding:2px 9px;border-radius:20px'>{len(holdings_list)}</span>"
+        f"</div>"
         f"<div style='color:{t['text_muted']};font-size:10px;margin-bottom:10px'>"
         f"Today's CNC orders appear here tomorrow · MTF holdings are pledged (interest charged daily)</div>",
         unsafe_allow_html=True,
@@ -206,23 +184,15 @@ def page_dashboard(r):
 
     if holdings_list:
         hcols = st.columns([2.5, 1.8, 1.5, 1.8, 0.7])
-        header_data = [
-            ("COMPANY", "left"),
-            ("MARKET PRICE (1D)", "right"),
-            ("RETURNS", "right"),
-            ("CURRENT (INVESTED)", "right"),
-            ("ACTION", "center"),
-        ]
-        for col, (label, align) in zip(hcols, header_data):
+        for col, (label, align) in zip(hcols, [
+            ("COMPANY", "left"), ("MARKET PRICE", "right"),
+            ("RETURNS", "right"), ("CURRENT (INVESTED)", "right"), ("", "center"),
+        ]):
             col.markdown(
                 f"<div style='color:{t['text_muted']};font-size:10px;font-weight:500;"
-                f"letter-spacing:.4px;padding:6px 0;text-align:{align}'>{label}</div>",
+                f"letter-spacing:.4px;padding:4px 0;text-align:{align}'>{label}</div>",
                 unsafe_allow_html=True,
             )
-        st.markdown(
-            f"<hr style='margin:0 0 4px 0;border-color:{t['card_border']}'>",
-            unsafe_allow_html=True,
-        )
 
         for h in sorted(holdings_list, key=lambda x: x["symbol"]):
             symbol = h["symbol"]
@@ -250,20 +220,24 @@ def page_dashboard(r):
             pc = t["green"] if pnl >= 0 else t["red"]
             ps = "+" if pnl >= 0 else ""
             bc = "#ff9800" if badge == "MTF" else "#1976d2"
+            row_border = t["green"] if pnl >= 0 else t["red"]
 
             row_cols = st.columns([2.5, 1.8, 1.5, 1.8, 0.7])
 
             row_cols[0].markdown(
-                f"<div style='padding:10px 0'>"
-                f"<div style='font-weight:600;color:{t['text_primary']};font-size:14px'>{symbol}</div>"
-                f"<div style='color:{t['text_muted']};font-size:11px;margin-top:2px'>"
-                f"{qty} shares &nbsp;·&nbsp; Avg ₹{avg_price:,.2f}</div>"
-                f"<div style='margin-top:4px;display:flex;gap:5px'>"
+                f"<div style='padding:10px 0 10px 10px;border-left:3px solid {row_border};'>"
+                f"<div style='font-weight:700;color:{t['text_primary']};font-size:14px'>{symbol}</div>"
+                f"<div style='margin-top:5px;display:flex;gap:5px;align-items:center'>"
                 f"<span style='background:{bc};color:#fff;font-size:9px;font-weight:600;"
-                f"padding:1px 6px;border-radius:3px'>{badge}</span>"
+                f"padding:2px 7px;border-radius:20px'>{badge}</span>"
                 f"<span style='background:{t['exch_bg']};color:{t['exch_text']};font-size:9px;"
-                f"padding:1px 6px;border-radius:3px'>{exch}</span>"
-                f"</div></div>",
+                f"font-weight:500;padding:2px 7px;border-radius:20px'>{exch}</span>"
+                f"<span style='background:#f0f2f6;color:{t['text_muted']};font-size:9px;"
+                f"padding:2px 7px;border-radius:20px'>{qty} shares</span>"
+                f"</div>"
+                f"<div style='color:{t['text_muted']};font-size:11px;margin-top:4px'>"
+                f"Avg ₹{avg_price:,.2f}</div>"
+                f"</div>",
                 unsafe_allow_html=True,
             )
 
@@ -271,7 +245,7 @@ def page_dashboard(r):
                 f"<div style='padding:10px 0;text-align:right'>"
                 f"<div style='color:{t['text_primary']};font-weight:600;font-size:14px'>"
                 f"₹{lp:,.2f}</div>"
-                f"<div style='color:{day_color};font-size:11px;margin-top:2px'>"
+                f"<div style='color:{day_color};font-size:11px;margin-top:3px'>"
                 f"{day_sign}{day_chg:,.2f} ({day_sign}{day_pct:.2f}%)</div>"
                 f"</div>",
                 unsafe_allow_html=True,
@@ -280,7 +254,7 @@ def page_dashboard(r):
             row_cols[2].markdown(
                 f"<div style='padding:10px 0;text-align:right'>"
                 f"<div style='color:{pc};font-weight:700;font-size:13px'>{ps}{ret_pct:.2f}%</div>"
-                f"<div style='color:{pc};font-size:11px;margin-top:2px'>{ps}₹{pnl:,.2f}</div>"
+                f"<div style='color:{pc};font-size:11px;margin-top:3px'>{ps}₹{pnl:,.2f}</div>"
                 f"</div>",
                 unsafe_allow_html=True,
             )
@@ -289,22 +263,17 @@ def page_dashboard(r):
                 f"<div style='padding:10px 0;text-align:right'>"
                 f"<div style='color:{t['text_primary']};font-weight:600;font-size:14px'>"
                 f"₹{cur_val:,.2f}</div>"
-                f"<div style='color:{t['text_muted']};font-size:11px;margin-top:2px'>"
-                f"₹{invested:,.2f}</div>"
+                f"<div style='color:{t['text_muted']};font-size:11px;margin-top:3px'>"
+                f"₹{invested:,.2f} inv.</div>"
                 f"</div>",
                 unsafe_allow_html=True,
             )
 
             with row_cols[4]:
-                st.markdown("<div style='padding-top:10px'>", unsafe_allow_html=True)
+                st.markdown("<div style='padding-top:8px'>", unsafe_allow_html=True)
                 bcol1, bcol2 = st.columns(2)
                 with bcol1:
-                    if st.button(
-                        "B",
-                        key=f"buy_{symbol}",
-                        use_container_width=True,
-                        help=f"BUY {symbol}",
-                    ):
+                    if st.button("B", key=f"buy_{symbol}", use_container_width=True, help=f"BUY {symbol}"):
                         st.session_state["prefill_symbol"] = symbol
                         st.session_state["prefill_action"] = "BUY"
                         st.session_state["prefill_exchange"] = exch
@@ -312,12 +281,7 @@ def page_dashboard(r):
                         st.session_state["nav_page"] = ":material/shopping_cart: Place Order"
                         st.rerun()
                 with bcol2:
-                    if st.button(
-                        "S",
-                        key=f"sell_{symbol}",
-                        use_container_width=True,
-                        help=f"SELL {symbol}",
-                    ):
+                    if st.button("S", key=f"sell_{symbol}", use_container_width=True, help=f"SELL {symbol}"):
                         st.session_state["prefill_symbol"] = symbol
                         st.session_state["prefill_action"] = "SELL"
                         st.session_state["prefill_exchange"] = exch
@@ -330,6 +294,18 @@ def page_dashboard(r):
                 f"<hr style='margin:0;border-color:{t['card_border']}'>",
                 unsafe_allow_html=True,
             )
+    else:
+        st.markdown(
+            f"""<div style="text-align:center;padding:40px 20px;background:{t['card_bg']};
+                           border-radius:12px;border:1px dashed {t['card_border']};margin-top:8px">
+                <div style="font-size:36px;margin-bottom:10px">:material/account_balance:</div>
+                <div style="color:{t['text_primary']};font-size:15px;font-weight:600;margin-bottom:4px">
+                    No holdings found</div>
+                <div style="color:{t['text_muted']};font-size:12px">
+                    Click <b>Sync</b> above to load your portfolio from Kotak Neo</div>
+            </div>""",
+            unsafe_allow_html=True,
+        )
 
     if mtf_pos:
         st.markdown(
