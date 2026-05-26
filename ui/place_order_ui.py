@@ -350,10 +350,8 @@ def page_place_order(r):
             "L": "Limit",
             "SL": "SL-Limit",
         }.get(order_kind, order_kind)
-        btn_label = (
-            f"{'🟢 BUY' if action == 'BUY' else '🔴 SELL'} · "
-            f"{prod} · {exchange} · {order_kind_label} · ₹{total_val:,.2f}"
-        )
+        _ico = ":material/arrow_upward:" if action == "BUY" else ":material/arrow_downward:"
+        btn_label = f"{_ico} {action} · {prod} · {exchange} · {order_kind_label} · ₹{total_val:,.2f}"
         if st.button(btn_label, use_container_width=True, type="primary"):
             action_color = "#1ba572" if action == "BUY" else "#e34a3a"
             action_emoji = "🟢" if action == "BUY" else "🔴"
