@@ -46,6 +46,21 @@ def main():
         .holdings-row:hover { background:#f0f2f5 !important; }
         div[data-testid="stSelectbox"] > div { min-height: 36px !important; font-size: 13px !important; }
         div[data-testid="stSelectbox"] > label { display: none !important; }
+        [data-testid="stPopover"] button {
+            border: none !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            padding: 2px 6px !important;
+            min-height: 28px !important;
+            color: #555 !important;
+            font-size: 18px !important;
+            letter-spacing: 1px !important;
+        }
+        [data-testid="stPopover"] button:hover {
+            background: #f0f2f6 !important;
+            border-radius: 4px !important;
+        }
+        [data-testid="stPopover"] button svg { display: none !important; }
         </style>""",
         unsafe_allow_html=True,
     )
