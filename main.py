@@ -87,27 +87,18 @@ def main():
         if "nav_page" in st.session_state:
             _redirect = st.session_state.pop("nav_page")
             if _redirect in nav_options:
-                st.session_state["current_page"] = _redirect
                 st.session_state["nav_radio"] = _redirect
 
-        if "current_page" not in st.session_state:
-            st.session_state["current_page"] = ":material/home: Portfolio"
-
-        nav_index = (
-            nav_options.index(st.session_state["current_page"])
-            if st.session_state["current_page"] in nav_options
-            else 0
-        )
+        if "nav_radio" not in st.session_state:
+            st.session_state["nav_radio"] = ":material/home: Portfolio"
 
         page = st.radio(
             "nav",
             nav_options,
-            index=nav_index,
             horizontal=True,
             label_visibility="collapsed",
             key="nav_radio",
         )
-        st.session_state["current_page"] = page
     with col_search:
         if not st.session_state.get("otp_pending", False):
             sc1, sc2, sc3 = st.columns([0.9, 3, 0.6])
