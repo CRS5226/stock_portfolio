@@ -8,7 +8,7 @@ from auth.kotak_client import get_redis, get_kotak, load_stocks_nse, load_stocks
 from data.sync import sync_cnc, sync_mtf, sync_fo_positions, background_sync
 from ui.dashboard import page_dashboard
 from ui.place_order_ui import page_place_order
-from ui.order_history import page_order_history, page_gtt
+from ui.order_history import page_order_history
 from fo.fo_ui_helper import render_fo_page
 from config import REDIS_CNC_LAST_SYNC
 
@@ -103,7 +103,6 @@ def main():
             ":material/home: Portfolio",
             ":material/shopping_cart: Place Order",
             ":material/candlestick_chart: F&O Trading",
-            ":material/notifications: GTT Orders",
             ":material/receipt_long: Order History",
         ]
         if "nav_page" in st.session_state:
@@ -258,8 +257,6 @@ def main():
         page_place_order(r)
     elif page == ":material/candlestick_chart: F&O Trading":
         render_fo_page(r)
-    elif page == ":material/notifications: GTT Orders":
-        page_gtt(r)
     elif page == ":material/receipt_long: Order History":
         page_order_history(r)
 
