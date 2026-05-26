@@ -262,17 +262,30 @@ def page_dashboard(r):
             )
 
             with row_cols[4]:
-                bcol1, bcol2 = st.columns([1, 1], gap="small")
-                with bcol1:
-                    if st.button("B", key=f"buy_{symbol}", help=f"BUY {symbol}"):
+                with st.popover(":material/more_vert:", use_container_width=True):
+                    st.markdown(
+                        f"<div style='font-size:12px;font-weight:700;color:#333;"
+                        f"margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid #e5e7ee'>"
+                        f"{symbol}</div>",
+                        unsafe_allow_html=True,
+                    )
+                    if st.button(
+                        ":material/trending_up: Buy",
+                        key=f"buy_{symbol}",
+                        use_container_width=True,
+                        type="primary",
+                    ):
                         st.session_state["prefill_symbol"] = symbol
                         st.session_state["prefill_action"] = "BUY"
                         st.session_state["prefill_exchange"] = exch
                         st.session_state["prefill_order_type"] = badge
                         st.session_state["nav_page"] = ":material/shopping_cart: Place Order"
                         st.rerun()
-                with bcol2:
-                    if st.button("S", key=f"sell_{symbol}", help=f"SELL {symbol}"):
+                    if st.button(
+                        ":material/trending_down: Sell",
+                        key=f"sell_{symbol}",
+                        use_container_width=True,
+                    ):
                         st.session_state["prefill_symbol"] = symbol
                         st.session_state["prefill_action"] = "SELL"
                         st.session_state["prefill_exchange"] = exch

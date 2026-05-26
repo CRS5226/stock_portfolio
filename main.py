@@ -39,7 +39,7 @@ def main():
         }
         div[data-testid="stVerticalBlock"] > div:first-child { padding-top: 0 !important; }
         .stRadio > div { gap: 0.3rem !important; }
-        [data-testid="stRadio"] label p { font-size: 12.5px !important; }
+        [data-testid="stRadio"] label p { font-size: 13.5px !important; }
         [data-testid="stHorizontalBlock"] { align-items: center !important; }
         div[data-testid="stHorizontalBlock"] { gap: 0.6rem; }
         hr { margin: 0.6rem 0 !important; }
@@ -179,7 +179,7 @@ def main():
                 unsafe_allow_html=True,
             )
 
-    # ── JS: style B/S buttons green/red square + Sync button blue ──────────
+    # ── JS: Sell button red in popover + Sync button blue ──────────────────
     components.html("""
     <script>
     (function(){
@@ -190,33 +190,13 @@ def main():
           if(!p) return;
           var t = p.textContent.trim();
           var s = btn.style;
-          if(t === 'B'){
-            s.setProperty('background-color','#1ba572','important');
-            s.setProperty('color','#fff','important');
-            s.setProperty('border','2px solid #1ba572','important');
-            s.setProperty('width','32px','important');
-            s.setProperty('height','32px','important');
-            s.setProperty('min-width','32px','important');
-            s.setProperty('max-width','32px','important');
-            s.setProperty('padding','0','important');
-            s.setProperty('border-radius','6px','important');
-            s.setProperty('font-weight','700','important');
-            s.setProperty('font-size','12px','important');
-            var hb = btn.closest('[data-testid="stHorizontalBlock"]');
-            if(hb) hb.style.setProperty('gap','3px','important');
-          } else if(t === 'S'){
+          if(t === 'Sell'){
             s.setProperty('background-color','#e34a3a','important');
             s.setProperty('color','#fff','important');
-            s.setProperty('border','2px solid #e34a3a','important');
-            s.setProperty('width','32px','important');
-            s.setProperty('height','32px','important');
-            s.setProperty('min-width','32px','important');
-            s.setProperty('max-width','32px','important');
-            s.setProperty('padding','0','important');
-            s.setProperty('border-radius','6px','important');
-            s.setProperty('font-weight','700','important');
-            s.setProperty('font-size','12px','important');
-          } else if(t.trim() === 'Sync' || t.includes('Sync')){
+            s.setProperty('border','none','important');
+            s.setProperty('border-radius','8px','important');
+            s.setProperty('font-weight','600','important');
+          } else if(t.includes('Sync')){
             s.setProperty('background-color','#1e88e5','important');
             s.setProperty('color','#fff','important');
             s.setProperty('border','none','important');
