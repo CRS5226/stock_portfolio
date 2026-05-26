@@ -2,6 +2,7 @@ import os
 import threading
 import streamlit as st
 import streamlit.components.v1 as components
+from PIL import Image, ImageDraw
 
 from auth.kotak_client import get_redis, get_kotak, load_stocks_nse, load_stocks_bse
 from data.sync import sync_cnc, sync_mtf, sync_fo_positions, background_sync
@@ -12,8 +13,21 @@ from fo.fo_ui_helper import render_fo_page
 from config import REDIS_CNC_LAST_SYNC
 
 
+def _make_favicon():
+    """Green rounded-square with a white stock-chart polyline."""
+    size = 64
+    img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    # Rounded green background
+    d.rounded_rectangle([0, 0, size - 1, size - 1], radius=12, fill="#1ba572")
+    # Chart polyline (scaled to 64px)
+    pts = [(8, 48), (20, 32), (32, 40), (44, 20), (56, 28)]
+    d.line(pts, fill="#ffffff", width=4)
+    return img
+
+
 def main():
-    st.set_page_config(page_title="Portfolio Manager", page_icon="📊", layout="wide")
+    st.set_page_config(page_title="Portfolio Manager", page_icon=_make_favicon(), layout="wide")
     st.markdown(
         """
         <style>
