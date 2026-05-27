@@ -48,15 +48,6 @@ def main():
         .stRadio > div { gap: 0.3rem !important; }
         [data-testid="stRadio"] label p { font-size: 13.5px !important; }
         [data-testid="stHorizontalBlock"] { align-items: center !important; }
-        /* Hide the nav radio visually — JS still clicks it for routing */
-        #nav-radio-hide [data-testid="stRadio"] {
-            position: absolute !important;
-            height: 1px !important;
-            width: 1px !important;
-            overflow: hidden !important;
-            clip: rect(0,0,0,0) !important;
-            white-space: nowrap !important;
-        }
         div[data-testid="stHorizontalBlock"] { gap: 0.6rem; }
         hr { margin: 0.6rem 0 !important; }
         .holdings-row:hover { background:#f0f2f5 !important; }
@@ -166,8 +157,7 @@ function navTo(label){{
 </script>
 """, height=46, scrolling=False)
 
-        # Hidden radio — state owner; visually removed via #nav-radio-hide CSS
-        st.markdown('<div id="nav-radio-hide">', unsafe_allow_html=True)
+        # Hidden radio — state owner; hidden by JS MutationObserver in components.html
         page = st.radio(
             "nav",
             nav_options,
@@ -175,7 +165,6 @@ function navTo(label){{
             label_visibility="collapsed",
             key="nav_radio",
         )
-        st.markdown('</div>', unsafe_allow_html=True)
     with col_search:
         if not st.session_state.get("otp_pending", False):
             sc1, sc2, sc3 = st.columns([0.9, 3, 0.6])
@@ -300,8 +289,20 @@ function navTo(label){{
           }
         });
       }
+      function hideNavRadio(){
+        doc.querySelectorAll('[data-testid="stRadio"]').forEach(function(r){
+          var lbls=r.querySelectorAll('label');
+          for(var i=0;i<lbls.length;i++){
+            if(lbls[i].textContent.indexOf('Portfolio')!==-1){
+              r.style.setProperty('display','none','important');
+              break;
+            }
+          }
+        });
+      }
       applyStyles();
-      new MutationObserver(applyStyles).observe(doc.body,{childList:true,subtree:true});
+      hideNavRadio();
+      new MutationObserver(function(){applyStyles();hideNavRadio();}).observe(doc.body,{childList:true,subtree:true});
     })();
     </script>
     """, height=1, scrolling=False)
