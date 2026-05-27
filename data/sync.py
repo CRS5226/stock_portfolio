@@ -12,7 +12,7 @@ from config import (
     REDIS_FO_POSITIONS,
     REDIS_FO_LAST_SYNC,
 )
-from auth.kotak_client import get_kotak, refresh_kotak
+from auth.kotak_client import get_kotak, refresh_kotak, load_etf_symbols
 
 
 def _parse_list(resp, key="data"):
@@ -70,6 +70,7 @@ def sync_cnc(r):
             }
         except Exception as pe:
             print(f"[SYNC CNC] MTF tag error: {pe}")
+        etf_symbols = load_etf_symbols()
         r.delete(REDIS_CNC_HOLDINGS)
         if holdings:
             pipe = r.pipeline()
@@ -77,7 +78,13 @@ def sync_cnc(r):
                 symbol = (h.get("symbol") or h.get("displaySymbol") or "").strip()
                 if not symbol:
                     continue
-                product_type = "MTF" if symbol in mtf_symbols else "CNC"
+                # Priority: MTF > ETF > CNC
+                if symbol in mtf_symbols:
+                    product_type = "MTF"
+                elif symbol in etf_symbols:
+                    product_type = "ETF"
+                else:
+                    product_type = "CNC"
                 pipe.hset(
                     REDIS_CNC_HOLDINGS,
                     symbol,

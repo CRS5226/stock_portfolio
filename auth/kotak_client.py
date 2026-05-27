@@ -69,6 +69,23 @@ def _create_kotak_client():
     return client
 
 
+@st.cache_data(ttl=3600)
+def load_etf_symbols():
+    """Return a set of stock codes that are ETFs (detected from NSE + BSE configs)."""
+    etfs = set()
+    for cfg in (CONFIG_NSE, CONFIG_BSE):
+        if not os.path.exists(cfg):
+            continue
+        with open(cfg) as f:
+            data = json.load(f)
+        for s in data.get("stocks", []):
+            code = s.get("stock_code", "").strip()
+            name = s.get("name", "").upper()
+            if code and ("ETF" in code.upper() or "ETF" in name):
+                etfs.add(code)
+    return etfs
+
+
 @st.cache_data(ttl=300)
 def load_stocks_mtf_mis():
     stocks = {}

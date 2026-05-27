@@ -75,6 +75,11 @@ def page_dashboard(r):
         for h in holdings_list
         if h.get("product_type") == "MTF"
     )
+    etf_val = sum(
+        h["average_price"] * h["quantity"]
+        for h in holdings_list
+        if h.get("product_type") == "ETF"
+    )
 
     # ── 3-column summary metric cards ──────────────────────────────────────
     mc1, mc2, mc3 = st.columns(3)
@@ -134,6 +139,16 @@ def page_dashboard(r):
     if total_invested > 0:
         cnc_pct = cnc_val / total_invested * 100
         mtf_pct = mtf_val / total_invested * 100
+        etf_pct = etf_val / total_invested * 100
+        etf_legend = (
+            f'<span><span style="color:#8b5cf6;font-weight:600">■</span>'
+            f'<span style="color:{t["text_secondary"]}"> ETF ₹{etf_val:,.0f}'
+            f'<span style="color:{t["text_muted"]}">({etf_pct:.1f}%)</span></span></span>'
+        ) if etf_val > 0 else ""
+        etf_bar = (
+            f'<div style="width:{etf_pct:.1f}%;background:#8b5cf6;cursor:pointer"'
+            f' title="ETF: {etf_pct:.1f}% · ₹{etf_val:,.0f}"></div>'
+        ) if etf_val > 0 else ""
         st.markdown(
             f"""<div style="padding-top:22px">
             <div style="background:{t['header_bg']};border-radius:8px;
@@ -147,6 +162,7 @@ def page_dashboard(r):
                              title="CNC: {cnc_pct:.1f}% · ₹{cnc_val:,.0f}"></div>
                         <div style="width:{mtf_pct:.1f}%;background:#ff9800;cursor:pointer"
                              title="MTF: {mtf_pct:.1f}% · ₹{mtf_val:,.0f}"></div>
+                        {etf_bar}
                     </div>
                 </div>
                 <div style="display:flex;gap:14px;font-size:11px;white-space:nowrap">
@@ -156,6 +172,7 @@ def page_dashboard(r):
                     <span><span style="color:#ff9800;font-weight:600">■</span>
                           <span style="color:{t['text_secondary']}"> MTF ₹{mtf_val:,.0f}
                           <span style="color:{t['text_muted']}">({mtf_pct:.1f}%)</span></span></span>
+                    {etf_legend}
                 </div>
             </div>
             </div>""",
@@ -211,7 +228,7 @@ def page_dashboard(r):
             exch = h.get("exchange", "NSE")
             pc = t["green"] if pnl >= 0 else t["red"]
             ps = "+" if pnl >= 0 else ""
-            bc = "#ff9800" if badge == "MTF" else "#1976d2"
+            bc = "#ff9800" if badge == "MTF" else ("#8b5cf6" if badge == "ETF" else "#1976d2")
             row_border = t["green"] if pnl >= 0 else t["red"]
 
             row_cols = st.columns([2.5, 1.8, 1.5, 1.8, 0.7])
