@@ -48,6 +48,15 @@ def main():
         .stRadio > div { gap: 0.3rem !important; }
         [data-testid="stRadio"] label p { font-size: 13.5px !important; }
         [data-testid="stHorizontalBlock"] { align-items: center !important; }
+        /* Hide the nav radio visually — JS still clicks it for routing */
+        #nav-radio-hide [data-testid="stRadio"] {
+            position: absolute !important;
+            height: 1px !important;
+            width: 1px !important;
+            overflow: hidden !important;
+            clip: rect(0,0,0,0) !important;
+            white-space: nowrap !important;
+        }
         div[data-testid="stHorizontalBlock"] { gap: 0.6rem; }
         hr { margin: 0.6rem 0 !important; }
         .holdings-row:hover { background:#f0f2f5 !important; }
@@ -105,14 +114,60 @@ def main():
             ":material/candlestick_chart: F&O Trading",
             ":material/receipt_long: Order History",
         ]
+        _nav_labels = ["Portfolio", "Place Order", "F&O Trading", "Order History"]
+
         if "nav_page" in st.session_state:
             _redirect = st.session_state.pop("nav_page")
             if _redirect in nav_options:
                 st.session_state["nav_radio"] = _redirect
 
         if "nav_radio" not in st.session_state:
-            st.session_state["nav_radio"] = ":material/home: Portfolio"
+            st.session_state["nav_radio"] = nav_options[0]
 
+        _active_opt = st.session_state.get("nav_radio", nav_options[0])
+        _active_label = (
+            _nav_labels[nav_options.index(_active_opt)]
+            if _active_opt in nav_options else _nav_labels[0]
+        )
+
+        # ── Custom website-style nav bar ─────────────────────────────────────
+        _nav_items_html = ""
+        for _lbl in _nav_labels:
+            _is_active = _lbl == _active_label
+            _c = "#111827" if _is_active else "#6b7280"
+            _w = "600" if _is_active else "400"
+            _b = "#1ba572" if _is_active else "transparent"
+            _nav_items_html += (
+                f'<span class="ni" onclick="navTo(\'{_lbl}\')" '
+                f'style="color:{_c};font-weight:{_w};border-bottom:2.5px solid {_b}">'
+                f'{_lbl}</span>'
+            )
+
+        components.html(f"""
+<style>
+*{{margin:0;padding:0;box-sizing:border-box}}
+body{{background:transparent;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;overflow:hidden}}
+.nav{{display:flex;align-items:stretch;height:46px}}
+.ni{{cursor:pointer;font-size:14px;padding:0 14px;display:flex;align-items:center;
+     border-bottom:2.5px solid transparent;transition:color .15s,border-color .15s;
+     white-space:nowrap;user-select:none;line-height:1}}
+.ni:hover{{color:#111827 !important;border-bottom-color:#1ba572 !important}}
+</style>
+<div class="nav">{_nav_items_html}</div>
+<script>
+function navTo(label){{
+  var doc=window.parent.document;
+  var inputs=doc.querySelectorAll('[data-testid="stRadio"] input[type="radio"]');
+  for(var i=0;i<inputs.length;i++){{
+    var lbl=inputs[i].closest('label');
+    if(lbl&&lbl.textContent.indexOf(label)!==-1){{inputs[i].click();return;}}
+  }}
+}}
+</script>
+""", height=46, scrolling=False)
+
+        # Hidden radio — state owner; visually removed via #nav-radio-hide CSS
+        st.markdown('<div id="nav-radio-hide">', unsafe_allow_html=True)
         page = st.radio(
             "nav",
             nav_options,
@@ -120,6 +175,7 @@ def main():
             label_visibility="collapsed",
             key="nav_radio",
         )
+        st.markdown('</div>', unsafe_allow_html=True)
     with col_search:
         if not st.session_state.get("otp_pending", False):
             sc1, sc2, sc3 = st.columns([0.9, 3, 0.6])
