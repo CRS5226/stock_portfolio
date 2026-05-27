@@ -65,21 +65,14 @@ def page_dashboard(r):
         else ""
     )
 
-    cnc_val = sum(
-        h["average_price"] * h["quantity"]
-        for h in holdings_list
-        if h.get("product_type", "CNC") == "CNC"
-    )
-    mtf_val = sum(
-        h["average_price"] * h["quantity"]
-        for h in holdings_list
-        if h.get("product_type") == "MTF"
-    )
-    etf_val = sum(
-        h["average_price"] * h["quantity"]
-        for h in holdings_list
-        if h.get("product_type") == "ETF"
-    )
+    # Dynamically group holdings by product_type
+    from collections import defaultdict as _dd
+    _alloc = _dd(float)
+    for h in holdings_list:
+        _alloc[h.get("product_type", "CNC")] += h["average_price"] * h["quantity"]
+    cnc_val = _alloc.get("CNC", 0.0)
+    mtf_val = _alloc.get("MTF", 0.0)
+    etf_val = _alloc.get("ETF", 0.0)
 
     # ── 3-column summary metric cards ──────────────────────────────────────
     mc1, mc2, mc3 = st.columns(3)
@@ -135,20 +128,37 @@ def page_dashboard(r):
             unsafe_allow_html=True,
         )
 
-    # ── Allocation mini-bar ─────────────────────────────────────────────────
+    # ── Allocation mini-bar — fully dynamic, handles any product_type ──────
     if total_invested > 0:
-        cnc_pct = cnc_val / total_invested * 100
-        mtf_pct = mtf_val / total_invested * 100
-        etf_pct = etf_val / total_invested * 100
-        etf_legend = (
-            f'<span><span style="color:#8b5cf6;font-weight:600">■</span>'
-            f'<span style="color:{t["text_secondary"]}"> ETF ₹{etf_val:,.0f}'
-            f'<span style="color:{t["text_muted"]}">({etf_pct:.1f}%)</span></span></span>'
-        ) if etf_val > 0 else ""
-        etf_bar = (
-            f'<div style="width:{etf_pct:.1f}%;background:#8b5cf6;cursor:pointer"'
-            f' title="ETF: {etf_pct:.1f}% · ₹{etf_val:,.0f}"></div>'
-        ) if etf_val > 0 else ""
+        _TYPE_COLORS = {
+            "CNC": "#1976d2", "MTF": "#ff9800", "ETF": "#8b5cf6",
+            "MIS": "#e34a3a", "FO":  "#06b6d4", "CO":  "#ec4899",
+            "BO":  "#10b981",
+        }
+        _DEFAULT_COLOR = "#6b7280"
+        # Only render types that have value; CNC first, then rest sorted by value desc
+        _types_present = [
+            (pt, val) for pt, val in sorted(
+                _alloc.items(), key=lambda x: (x[0] != "CNC", -x[1])
+            ) if val > 0
+        ]
+        _bars_html = ""
+        _legend_html = ""
+        for _i, (_pt, _val) in enumerate(_types_present):
+            _pct = _val / total_invested * 100
+            _col = _TYPE_COLORS.get(_pt, _DEFAULT_COLOR)
+            _radius = "border-radius:4px 0 0 4px" if _i == 0 else (
+                "border-radius:0 4px 4px 0" if _i == len(_types_present) - 1 else ""
+            )
+            _bars_html += (
+                f'<div style="width:{_pct:.1f}%;background:{_col};{_radius};cursor:pointer"'
+                f' title="{_pt}: {_pct:.1f}% · ₹{_val:,.0f}"></div>'
+            )
+            _legend_html += (
+                f'<span><span style="color:{_col};font-weight:600">■</span>'
+                f'<span style="color:{t["text_secondary"]}"> {_pt} ₹{_val:,.0f}'
+                f'<span style="color:{t["text_muted"]}"> ({_pct:.1f}%)</span></span></span>'
+            )
         st.markdown(
             f"""<div style="padding-top:22px">
             <div style="background:{t['header_bg']};border-radius:8px;
@@ -157,22 +167,10 @@ def page_dashboard(r):
                 <div style="color:{t['text_muted']};font-size:10px;text-transform:uppercase;
                             letter-spacing:.4px;white-space:nowrap">Allocation</div>
                 <div style="flex:1;height:8px;background:#e5e7ee;border-radius:4px;overflow:hidden">
-                    <div style="display:flex;height:100%">
-                        <div style="width:{cnc_pct:.1f}%;background:#1976d2;border-radius:4px 0 0 4px;cursor:pointer"
-                             title="CNC: {cnc_pct:.1f}% · ₹{cnc_val:,.0f}"></div>
-                        <div style="width:{mtf_pct:.1f}%;background:#ff9800;cursor:pointer"
-                             title="MTF: {mtf_pct:.1f}% · ₹{mtf_val:,.0f}"></div>
-                        {etf_bar}
-                    </div>
+                    <div style="display:flex;height:100%">{_bars_html}</div>
                 </div>
-                <div style="display:flex;gap:14px;font-size:11px;white-space:nowrap">
-                    <span><span style="color:#1976d2;font-weight:600">■</span>
-                          <span style="color:{t['text_secondary']}"> CNC ₹{cnc_val:,.0f}
-                          <span style="color:{t['text_muted']}">({cnc_pct:.1f}%)</span></span></span>
-                    <span><span style="color:#ff9800;font-weight:600">■</span>
-                          <span style="color:{t['text_secondary']}"> MTF ₹{mtf_val:,.0f}
-                          <span style="color:{t['text_muted']}">({mtf_pct:.1f}%)</span></span></span>
-                    {etf_legend}
+                <div style="display:flex;gap:14px;font-size:11px;white-space:nowrap;flex-wrap:wrap">
+                    {_legend_html}
                 </div>
             </div>
             </div>""",
@@ -430,7 +428,22 @@ def page_dashboard(r):
                     or o.get("hsUpTm")
                     or ""
                 )
-                time_str = str(time_val)[:8]
+                time_str = ""
+                if time_val:
+                    ts = str(time_val).strip()
+                    for _fmt in (
+                        "%Y/%m/%d %H:%M:%S", "%d-%b-%Y %H:%M:%S",
+                        "%Y-%m-%d %H:%M:%S", "%d/%m/%Y %H:%M:%S",
+                        "%Y/%m/%d %H:%M",    "%d-%b-%Y %H:%M",
+                    ):
+                        try:
+                            _dt = datetime.strptime(ts[:19], _fmt)
+                            time_str = _dt.strftime("%d %b %H:%M")
+                            break
+                        except Exception:
+                            continue
+                    if not time_str:
+                        time_str = ts[:16]
                 sym = o.get("trdSym", "").replace("-EQ", "")
                 exch = o.get("exSeg", "").replace("_cm", "").upper()
                 otype = o.get("prod", "")
