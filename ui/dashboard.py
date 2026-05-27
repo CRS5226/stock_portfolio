@@ -135,7 +135,7 @@ def page_dashboard(r):
         cnc_pct = cnc_val / total_invested * 100
         mtf_pct = mtf_val / total_invested * 100
         st.markdown(
-            f"""<div style="padding-top:12px">
+            f"""<div style="padding-top:22px">
             <div style="background:{t['header_bg']};border-radius:8px;
                             padding:10px 16px;border:1px solid {t['card_border']};
                             display:flex;align-items:center;gap:20px;margin-bottom:4px">
