@@ -304,7 +304,7 @@ def page_dashboard(r):
         _card_s = (
             f"background:{t['card_bg']};border-radius:10px;"
             f"padding:14px 14px;border:1px solid {t['card_border']};"
-            f"box-shadow:0 1px 4px rgba(0,0,0,.06);margin-bottom:10px"
+            f"box-shadow:0 1px 4px rgba(0,0,0,.06);margin-bottom:14px"
         )
         _sec_lbl = (
             f"font-size:10px;font-weight:600;text-transform:uppercase;"
@@ -331,13 +331,12 @@ def page_dashboard(r):
                 else f"₹{total_invested:,.0f}"
             )
             _leg_rows = "".join(
-                f"<div style='display:flex;align-items:center;gap:7px;margin-bottom:7px'>"
+                f"<div style='display:flex;align-items:center;gap:6px;margin-bottom:7px'>"
                 f"<span style='width:10px;height:10px;border-radius:2px;flex-shrink:0;"
                 f"background:{_TYPE_COLORS.get(_pt, _DEFAULT_COLOR)};display:inline-block'></span>"
-                f"<span style='flex:1;font-size:11px;font-weight:600;"
-                f"color:{t['text_secondary']}'>{_pt}</span>"
-                f"<span style='font-size:11px;color:{t['text_muted']};white-space:nowrap'>"
-                f"{_val / total_invested * 100:.1f}%</span>"
+                f"<span style='font-size:11px;font-weight:600;color:{t['text_secondary']};white-space:nowrap'>{_pt}</span>"
+                f"<span style='font-size:11px;color:{t['text_muted']};white-space:nowrap;margin-left:4px'>"
+                f"₹{_val:,.0f} · {_val / total_invested * 100:.1f}%</span>"
                 f"</div>"
                 for _pt, _val in _donut_types
             )
