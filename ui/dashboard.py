@@ -136,49 +136,6 @@ def page_dashboard(r):
     }
     _DEFAULT_COLOR = "#6b7280"
 
-    # ── Allocation mini-bar — fully dynamic, handles any product_type ──────
-    if total_invested > 0:
-        # Only render types that have value; CNC first, then rest sorted by value desc
-        _types_present = [
-            (pt, val) for pt, val in sorted(
-                _alloc.items(), key=lambda x: (x[0] != "CNC", -x[1])
-            ) if val > 0
-        ]
-        _bars_html = ""
-        _legend_html = ""
-        for _i, (_pt, _val) in enumerate(_types_present):
-            _pct = _val / total_invested * 100
-            _col = _TYPE_COLORS.get(_pt, _DEFAULT_COLOR)
-            _radius = "border-radius:4px 0 0 4px" if _i == 0 else (
-                "border-radius:0 4px 4px 0" if _i == len(_types_present) - 1 else ""
-            )
-            _bars_html += (
-                f'<div style="width:{_pct:.1f}%;background:{_col};{_radius};cursor:pointer"'
-                f' title="{_pt}: {_pct:.1f}% · ₹{_val:,.0f}"></div>'
-            )
-            _legend_html += (
-                f'<span><span style="color:{_col};font-weight:600">■</span>'
-                f'<span style="color:{t["text_secondary"]}"> {_pt} ₹{_val:,.0f}'
-                f'<span style="color:{t["text_muted"]}"> ({_pct:.1f}%)</span></span></span>'
-            )
-        st.markdown(
-            f"""<div style="padding-top:22px">
-            <div style="background:{t['header_bg']};border-radius:8px;
-                            padding:10px 16px;border:1px solid {t['card_border']};
-                            display:flex;align-items:center;gap:20px;margin-bottom:4px">
-                <div style="color:{t['text_muted']};font-size:10px;text-transform:uppercase;
-                            letter-spacing:.4px;white-space:nowrap">Allocation</div>
-                <div style="flex:1;height:8px;background:#e5e7ee;border-radius:4px;overflow:hidden">
-                    <div style="display:flex;height:100%">{_bars_html}</div>
-                </div>
-                <div style="display:flex;gap:14px;font-size:11px;white-space:nowrap;flex-wrap:wrap">
-                    {_legend_html}
-                </div>
-            </div>
-            </div>""",
-            unsafe_allow_html=True,
-        )
-
     # ── Precompute enriched holdings (used by list AND right panel) ──────────
     _holdings_data = []
     for h in sorted(holdings_list, key=lambda x: x["symbol"]):
@@ -374,14 +331,12 @@ def page_dashboard(r):
                 else f"₹{total_invested:,.0f}"
             )
             _leg_rows = "".join(
-                f"<div style='display:flex;justify-content:space-between;"
-                f"align-items:center;margin-bottom:5px'>"
-                f"<span style='display:flex;align-items:center;gap:6px'>"
+                f"<div style='display:flex;align-items:center;gap:7px;margin-bottom:7px'>"
                 f"<span style='width:10px;height:10px;border-radius:2px;flex-shrink:0;"
                 f"background:{_TYPE_COLORS.get(_pt, _DEFAULT_COLOR)};display:inline-block'></span>"
-                f"<span style='font-size:11px;color:{t['text_secondary']}'>{_pt}</span>"
-                f"</span>"
-                f"<span style='font-size:11px;color:{t['text_muted']}'>"
+                f"<span style='flex:1;font-size:11px;font-weight:600;"
+                f"color:{t['text_secondary']}'>{_pt}</span>"
+                f"<span style='font-size:11px;color:{t['text_muted']};white-space:nowrap'>"
                 f"{_val / total_invested * 100:.1f}%</span>"
                 f"</div>"
                 for _pt, _val in _donut_types
@@ -389,23 +344,25 @@ def page_dashboard(r):
             st.markdown(
                 f"<div style='{_card_s}'>"
                 f"<div style='{_sec_lbl}'>Allocation</div>"
-                f"<div style='display:flex;flex-direction:column;align-items:center;padding:4px 0 12px'>"
-                f"  <div style='position:relative;width:124px;height:124px'>"
-                f"    <div style='width:124px;height:124px;border-radius:50%;"
+                f"<div style='display:flex;align-items:center;gap:14px'>"
+                # ── donut (left) ──
+                f"  <div style='position:relative;width:110px;height:110px;flex-shrink:0'>"
+                f"    <div style='width:110px;height:110px;border-radius:50%;"
                 f"background:conic-gradient({_gradient})'></div>"
                 f"    <div style='position:absolute;top:50%;left:50%;"
                 f"transform:translate(-50%,-50%);"
-                f"width:76px;height:76px;background:{t['card_bg']};border-radius:50%;"
+                f"width:68px;height:68px;background:{t['card_bg']};border-radius:50%;"
                 f"display:flex;flex-direction:column;align-items:center;"
                 f"justify-content:center;gap:2px'>"
-                f"      <span style='font-size:12px;font-weight:700;"
+                f"      <span style='font-size:11px;font-weight:700;"
                 f"color:{t['text_primary']}'>{_cval}</span>"
-                f"      <span style='font-size:9px;color:{t['text_muted']};"
+                f"      <span style='font-size:8px;color:{t['text_muted']};"
                 f"letter-spacing:.3px'>INVESTED</span>"
                 f"    </div>"
                 f"  </div>"
+                # ── legend (right) ──
+                f"  <div style='flex:1;min-width:0'>{_leg_rows}</div>"
                 f"</div>"
-                f"<div>{_leg_rows}</div>"
                 f"</div>",
                 unsafe_allow_html=True,
             )
