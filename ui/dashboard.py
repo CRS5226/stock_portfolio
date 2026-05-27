@@ -130,8 +130,6 @@ def page_dashboard(r):
             unsafe_allow_html=True,
         )
 
-    st.markdown("<div style='margin-top:14px'></div>", unsafe_allow_html=True)
-
     # ── Allocation mini-bar ─────────────────────────────────────────────────
     if total_invested > 0:
         cnc_pct = cnc_val / total_invested * 100
@@ -139,7 +137,8 @@ def page_dashboard(r):
         st.markdown(
             f"""<div style="background:{t['header_bg']};border-radius:8px;
                             padding:10px 16px;border:1px solid {t['card_border']};
-                            display:flex;align-items:center;gap:20px;margin-bottom:4px">
+                            display:flex;align-items:center;gap:20px;margin-bottom:4px;
+                            margin-top:10px">
                 <div style="color:{t['text_muted']};font-size:10px;text-transform:uppercase;
                             letter-spacing:.4px;white-space:nowrap">Allocation</div>
                 <div style="flex:1;height:8px;background:#e5e7ee;border-radius:4px;overflow:hidden">
