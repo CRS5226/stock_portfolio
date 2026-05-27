@@ -352,15 +352,7 @@ def page_place_order(r):
         }.get(order_kind, order_kind)
         _ico = ":material/arrow_upward:" if action == "BUY" else ":material/arrow_downward:"
         btn_label = f"{_ico} {action} · {prod} · {exchange} · {order_kind_label} · ₹{total_val:,.2f}"
-        _btn_col = "#1ba572" if action == "BUY" else "#e34a3a"
-        # Override Streamlit's --primary-color CSS variable directly —
-        # this is what Streamlit uses internally for all primary button colours.
-        st.markdown(f"""<style>
-:root, body, [data-testid="stApp"], [data-testid="stAppViewContainer"] {{
-    --primary-color: {_btn_col} !important;
-}}
-</style>""", unsafe_allow_html=True)
-        if st.button(btn_label, use_container_width=True, type="primary"):
+        if st.button(btn_label, use_container_width=True, type="primary", key="po_buy_btn"):
             action_color = "#1ba572" if action == "BUY" else "#e34a3a"
             action_emoji = "🟢" if action == "BUY" else "🔴"
             loading_placeholder = st.empty()
