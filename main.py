@@ -55,8 +55,8 @@ def main():
         .stRadio > div { gap: 0.3rem !important; }
         [data-testid="stRadio"] label p { font-size: 13px !important; }
         /* Tighten gap between radio title label and its options row */
-        [data-testid="stRadio"] > label { padding-bottom: 1px !important; margin-bottom: 0 !important; line-height: 1.2 !important; }
-        [data-testid="stRadio"] > div[role="radiogroup"] { margin-top: 2px !important; }
+        [data-testid="stWidgetLabel"] { margin-bottom: 2px !important; padding-bottom: 0 !important; line-height: 1.2 !important; }
+        [data-testid="stRadio"] > div:last-of-type { margin-top: 0 !important; }
         [data-testid="stHorizontalBlock"] { align-items: center !important; }
         div[data-testid="stHorizontalBlock"] { gap: 0.5rem; }
         hr { margin: 1px 0 3px 0 !important; border-top-width: 1px !important; }
