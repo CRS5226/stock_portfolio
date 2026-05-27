@@ -130,7 +130,7 @@ def page_dashboard(r):
             unsafe_allow_html=True,
         )
 
-    st.markdown("<div style='margin-top:6px'></div>", unsafe_allow_html=True)
+    st.markdown("<div style='margin-top:14px'></div>", unsafe_allow_html=True)
 
     # ── Allocation mini-bar ─────────────────────────────────────────────────
     if total_invested > 0:
@@ -177,7 +177,7 @@ def page_dashboard(r):
     if holdings_list:
         hcols = st.columns([2.5, 1.8, 1.5, 1.8, 0.7])
         for col, (label, align) in zip(hcols, [
-            ("COMPANY", "left"), ("MARKET PRICE", "right"),
+            ("", "left"), ("MARKET PRICE", "right"),
             ("RETURNS", "right"), ("CURRENT (INVESTED)", "right"), ("", "center"),
         ]):
             col.markdown(
@@ -309,7 +309,7 @@ def page_dashboard(r):
 
         mtf_hcols = st.columns([2.5, 1.8, 1.5, 1.8])
         for col, (label, align) in zip(mtf_hcols, [
-            ("COMPANY", "left"), ("MARKET PRICE", "right"),
+            ("", "left"), ("MARKET PRICE", "right"),
             ("RETURNS", "right"), ("CURRENT (INVESTED)", "right"),
         ]):
             col.markdown(
