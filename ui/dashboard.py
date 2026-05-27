@@ -130,9 +130,12 @@ def page_dashboard(r):
 
     # ── Shared colour map (used by allocation bar + right panel) ────────────
     _TYPE_COLORS = {
-        "CNC": "#1976d2", "MTF": "#ff9800", "ETF": "#8b5cf6",
-        "MIS": "#e34a3a", "FO":  "#06b6d4", "CO":  "#ec4899",
-        "BO":  "#10b981",
+        "CNC":    "#1976d2",
+        "MTF":    "#ff9800",
+        "ETF":    "#8b5cf6",
+        "MIS":    "#e34a3a",
+        "Future": "#06b6d4",
+        "Option": "#10b981",
     }
     _DEFAULT_COLOR = "#6b7280"
 
@@ -338,10 +341,11 @@ def page_dashboard(r):
                 _v  = _alloc.get(_pt, 0)
                 _op = "1" if _v > 0 else "0.35"
                 _tc = _tsec if _v > 0 else _tmuted
+                _col = _TYPE_COLORS.get(_pt, _DEFAULT_COLOR)
                 return (
-                    f"<div style='display:flex;align-items:center;gap:5px;margin-bottom:8px'>"
+                    f"<div style='display:flex;align-items:center;gap:5px;margin-bottom:9px'>"
                     f"<span style='width:9px;height:9px;border-radius:2px;flex-shrink:0;"
-                    f"background:{_TYPE_COLORS[_pt]};display:inline-block;opacity:{_op}'></span>"
+                    f"background:{_col};display:inline-block;opacity:{_op}'></span>"
                     f"<div style='line-height:1.25'>"
                     f"<div style='font-size:11px;font-weight:600;color:{_tc}'>{_pt}</div>"
                     f"<div style='font-size:10px;color:{_tmuted};white-space:nowrap'>"
@@ -350,32 +354,35 @@ def page_dashboard(r):
                     f"</div>"
                 )
 
+            # Group 1: CNC / MTF / ETF  |  Group 2: MIS / Future / Option
             _col_left  = "".join(_leg_row(p) for p in ["CNC", "MTF", "ETF"])
-            _col_right = "".join(_leg_row(p) for p in ["MIS", "FO"])
+            _col_right = "".join(_leg_row(p) for p in ["MIS", "Future", "Option"])
 
             st.markdown(
                 f"<div style='{_card_s}'>"
                 f"<div style='{_sec_lbl}'>Allocation</div>"
-                f"<div style='display:flex;align-items:center;gap:12px'>"
-                # ── donut ──
-                f"  <div style='position:relative;width:100px;height:100px;flex-shrink:0'>"
-                f"    <div style='width:100px;height:100px;border-radius:50%;"
+                # 3 sections, justify-content:space-between → equal gaps
+                f"<div style='display:flex;align-items:center;"
+                f"justify-content:space-between;'>"
+                # ── donut (section 1) ──
+                f"  <div style='position:relative;width:96px;height:96px;flex-shrink:0'>"
+                f"    <div style='width:96px;height:96px;border-radius:50%;"
                 f"background:conic-gradient({_gradient})'></div>"
                 f"    <div style='position:absolute;top:50%;left:50%;"
                 f"transform:translate(-50%,-50%);"
-                f"width:62px;height:62px;background:{t['card_bg']};border-radius:50%;"
+                f"width:60px;height:60px;background:{t['card_bg']};border-radius:50%;"
                 f"display:flex;flex-direction:column;align-items:center;"
                 f"justify-content:center;gap:1px'>"
-                f"      <span style='font-size:11px;font-weight:700;"
+                f"      <span style='font-size:10px;font-weight:700;"
                 f"color:{t['text_primary']}'>{_cval}</span>"
                 f"      <span style='font-size:8px;color:{t['text_muted']};"
                 f"letter-spacing:.3px'>INVESTED</span>"
                 f"    </div>"
                 f"  </div>"
-                # ── left legend: CNC / MTF / ETF ──
-                f"  <div style='flex:1;min-width:0'>{_col_left}</div>"
-                # ── right legend: MIS / FO ──
-                f"  <div style='flex:1;min-width:0'>{_col_right}</div>"
+                # ── legend group 1: CNC / MTF / ETF (section 2) ──
+                f"  <div style='padding-left:10px'>{_col_left}</div>"
+                # ── legend group 2: MIS / Future / Option (section 3) ──
+                f"  <div style='padding-left:6px'>{_col_right}</div>"
                 f"</div>"
                 f"</div>",
                 unsafe_allow_html=True,
