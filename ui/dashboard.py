@@ -304,7 +304,7 @@ def page_dashboard(r):
         _card_s = (
             f"background:{t['card_bg']};border-radius:10px;"
             f"padding:14px 14px;border:1px solid {t['card_border']};"
-            f"box-shadow:0 1px 4px rgba(0,0,0,.06);margin-bottom:14px"
+            f"box-shadow:0 1px 4px rgba(0,0,0,.06);margin-top:18px;margin-bottom:14px"
         )
         _sec_lbl = (
             f"font-size:10px;font-weight:600;text-transform:uppercase;"
@@ -331,51 +331,51 @@ def page_dashboard(r):
                 if total_invested >= 100000
                 else f"₹{total_invested:,.0f}"
             )
-            # All known types always shown in legend (0 if not held yet)
-            _ALL_TYPES_ORDER = ["CNC", "MTF", "ETF", "MIS", "FO", "CO", "BO"]
-            _tmuted  = t["text_muted"]
-            _tsec    = t["text_secondary"]
-            _leg_rows = "".join(
-                (
-                    lambda _v, _op, _tc: (
-                        f"<div style='display:flex;align-items:center;gap:6px;margin-bottom:7px'>"
-                        f"<span style='width:10px;height:10px;border-radius:2px;flex-shrink:0;"
-                        f"background:{_TYPE_COLORS[_pt]};display:inline-block;opacity:{_op}'></span>"
-                        f"<span style='font-size:11px;font-weight:600;white-space:nowrap;"
-                        f"color:{_tc}'>{_pt}</span>"
-                        f"<span style='font-size:11px;white-space:nowrap;margin-left:4px;"
-                        f"color:{_tmuted}'>"
-                        f"₹{_v:,.0f} · {_v / total_invested * 100:.1f}%</span>"
-                        f"</div>"
-                    )
-                )(
-                    _alloc.get(_pt, 0),
-                    "1" if _alloc.get(_pt, 0) > 0 else "0.35",
-                    _tsec if _alloc.get(_pt, 0) > 0 else _tmuted,
+            # Legend helper — builds one type row
+            _tmuted = t["text_muted"]
+            _tsec   = t["text_secondary"]
+            def _leg_row(_pt):
+                _v  = _alloc.get(_pt, 0)
+                _op = "1" if _v > 0 else "0.35"
+                _tc = _tsec if _v > 0 else _tmuted
+                return (
+                    f"<div style='display:flex;align-items:center;gap:5px;margin-bottom:8px'>"
+                    f"<span style='width:9px;height:9px;border-radius:2px;flex-shrink:0;"
+                    f"background:{_TYPE_COLORS[_pt]};display:inline-block;opacity:{_op}'></span>"
+                    f"<div style='line-height:1.25'>"
+                    f"<div style='font-size:11px;font-weight:600;color:{_tc}'>{_pt}</div>"
+                    f"<div style='font-size:10px;color:{_tmuted};white-space:nowrap'>"
+                    f"₹{_v:,.0f} · {_v/total_invested*100:.1f}%</div>"
+                    f"</div>"
+                    f"</div>"
                 )
-                for _pt in _ALL_TYPES_ORDER
-            )
+
+            _col_left  = "".join(_leg_row(p) for p in ["CNC", "MTF", "ETF"])
+            _col_right = "".join(_leg_row(p) for p in ["MIS", "FO"])
+
             st.markdown(
                 f"<div style='{_card_s}'>"
                 f"<div style='{_sec_lbl}'>Allocation</div>"
-                f"<div style='display:flex;align-items:center;gap:14px'>"
-                # ── donut (left) ──
-                f"  <div style='position:relative;width:110px;height:110px;flex-shrink:0'>"
-                f"    <div style='width:110px;height:110px;border-radius:50%;"
+                f"<div style='display:flex;align-items:center;gap:12px'>"
+                # ── donut ──
+                f"  <div style='position:relative;width:100px;height:100px;flex-shrink:0'>"
+                f"    <div style='width:100px;height:100px;border-radius:50%;"
                 f"background:conic-gradient({_gradient})'></div>"
                 f"    <div style='position:absolute;top:50%;left:50%;"
                 f"transform:translate(-50%,-50%);"
-                f"width:68px;height:68px;background:{t['card_bg']};border-radius:50%;"
+                f"width:62px;height:62px;background:{t['card_bg']};border-radius:50%;"
                 f"display:flex;flex-direction:column;align-items:center;"
-                f"justify-content:center;gap:2px'>"
+                f"justify-content:center;gap:1px'>"
                 f"      <span style='font-size:11px;font-weight:700;"
                 f"color:{t['text_primary']}'>{_cval}</span>"
                 f"      <span style='font-size:8px;color:{t['text_muted']};"
                 f"letter-spacing:.3px'>INVESTED</span>"
                 f"    </div>"
                 f"  </div>"
-                # ── legend (right) ──
-                f"  <div style='flex:1;min-width:0'>{_leg_rows}</div>"
+                # ── left legend: CNC / MTF / ETF ──
+                f"  <div style='flex:1;min-width:0'>{_col_left}</div>"
+                # ── right legend: MIS / FO ──
+                f"  <div style='flex:1;min-width:0'>{_col_right}</div>"
                 f"</div>"
                 f"</div>",
                 unsafe_allow_html=True,
