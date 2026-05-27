@@ -135,10 +135,10 @@ def page_dashboard(r):
         cnc_pct = cnc_val / total_invested * 100
         mtf_pct = mtf_val / total_invested * 100
         st.markdown(
-            f"""<div style="background:{t['header_bg']};border-radius:8px;
+            f"""<div style="padding-top:12px">
+            <div style="background:{t['header_bg']};border-radius:8px;
                             padding:10px 16px;border:1px solid {t['card_border']};
-                            display:flex;align-items:center;gap:20px;margin-bottom:4px;
-                            margin-top:10px">
+                            display:flex;align-items:center;gap:20px;margin-bottom:4px">
                 <div style="color:{t['text_muted']};font-size:10px;text-transform:uppercase;
                             letter-spacing:.4px;white-space:nowrap">Allocation</div>
                 <div style="flex:1;height:8px;background:#e5e7ee;border-radius:4px;overflow:hidden">
@@ -157,6 +157,7 @@ def page_dashboard(r):
                           <span style="color:{t['text_secondary']}"> MTF ₹{mtf_val:,.0f}
                           <span style="color:{t['text_muted']}">({mtf_pct:.1f}%)</span></span></span>
                 </div>
+            </div>
             </div>""",
             unsafe_allow_html=True,
         )
