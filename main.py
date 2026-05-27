@@ -112,10 +112,41 @@ def main():
     col_logo, col_nav, col_search, col_info = st.columns([0.9, 3.5, 2.8, 1.8])
     with col_logo:
         st.markdown(
-            "<div style='padding-top:2px'>"
-            "<span style='font-size:17px;font-weight:800;color:#1ba572;"
-            "letter-spacing:-0.5px;line-height:1.2'>&#9679; Portfolio</span>"
-            "</div>",
+            """
+            <div style='display:flex;align-items:center;gap:8px;padding-top:1px;'>
+              <div style='
+                width:30px;height:30px;
+                background:linear-gradient(135deg,#1ba572 0%,#15936a 100%);
+                border-radius:8px;
+                display:flex;align-items:center;justify-content:center;
+                box-shadow:0 2px 8px rgba(27,165,114,0.40);
+                flex-shrink:0;
+              '>
+                <svg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                  <polyline points='2,13 6,7 9.5,10.5 13,4.5 15,6.5'
+                    stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+                  <circle cx='15' cy='6.5' r='1.5' fill='white'/>
+                </svg>
+              </div>
+              <div style='display:flex;flex-direction:column;line-height:1;'>
+                <span style='
+                  font-size:17px;font-weight:800;
+                  color:#1a1a2e;
+                  letter-spacing:-0.4px;
+                  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+                  line-height:1.1;
+                '>Portfolio</span>
+                <span style='
+                  font-size:9px;font-weight:500;
+                  color:#1ba572;
+                  letter-spacing:1.2px;
+                  text-transform:uppercase;
+                  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+                  line-height:1.2;
+                '>Manager</span>
+              </div>
+            </div>
+            """,
             unsafe_allow_html=True,
         )
     with col_nav:
