@@ -54,6 +54,9 @@ def main():
         div[data-testid="stVerticalBlock"] > div:first-child { padding-top: 0 !important; }
         .stRadio > div { gap: 0.3rem !important; }
         [data-testid="stRadio"] label p { font-size: 13px !important; }
+        /* Tighten gap between radio title label and its options row */
+        [data-testid="stRadio"] > label { padding-bottom: 1px !important; margin-bottom: 0 !important; line-height: 1.2 !important; }
+        [data-testid="stRadio"] > div[role="radiogroup"] { margin-top: 2px !important; }
         [data-testid="stHorizontalBlock"] { align-items: center !important; }
         div[data-testid="stHorizontalBlock"] { gap: 0.5rem; }
         hr { margin: 1px 0 3px 0 !important; border-top-width: 1px !important; }
@@ -258,22 +261,16 @@ def main():
             s.setProperty('border-radius','8px','important');
           }
         });
-        // Primary buttons: colour by BUY/SELL text
+        // Primary buttons: Buy (in popovers) → green
         doc.querySelectorAll('button[data-testid="baseButton-primary"]').forEach(function(btn){
           var p = btn.querySelector('p');
           if(!p) return;
           var t = p.textContent.trim();
-          var s = btn.style;
-          if(t.includes('BUY') || t === 'Buy'){
-            s.setProperty('background-color','#1ba572','important');
-            s.setProperty('background','#1ba572','important');
-            s.setProperty('background-image','none','important');
-            s.setProperty('border-color','#1ba572','important');
-          } else if(t.includes('SELL') && !t.includes('Confirm')){
-            s.setProperty('background-color','#e34a3a','important');
-            s.setProperty('background','#e34a3a','important');
-            s.setProperty('background-image','none','important');
-            s.setProperty('border-color','#e34a3a','important');
+          if(t === 'Buy'){
+            btn.style.setProperty('background-color','#1ba572','important');
+            btn.style.setProperty('background','#1ba572','important');
+            btn.style.setProperty('background-image','none','important');
+            btn.style.setProperty('border-color','#1ba572','important');
           }
         });
       }

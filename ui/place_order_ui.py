@@ -352,6 +352,15 @@ def page_place_order(r):
         }.get(order_kind, order_kind)
         _ico = ":material/arrow_upward:" if action == "BUY" else ":material/arrow_downward:"
         btn_label = f"{_ico} {action} · {prod} · {exchange} · {order_kind_label} · ₹{total_val:,.2f}"
+        _btn_col = "#1ba572" if action == "BUY" else "#e34a3a"
+        st.html(f"""<style>
+div[data-testid="stButton"] button[data-testid="baseButton-primary"] {{
+    background-color: {_btn_col} !important;
+    background:       {_btn_col} !important;
+    background-image: none        !important;
+    border-color:     {_btn_col} !important;
+}}
+</style>""")
         if st.button(btn_label, use_container_width=True, type="primary"):
             action_color = "#1ba572" if action == "BUY" else "#e34a3a"
             action_emoji = "🟢" if action == "BUY" else "🔴"
