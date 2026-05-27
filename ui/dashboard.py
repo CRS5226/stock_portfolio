@@ -128,14 +128,16 @@ def page_dashboard(r):
             unsafe_allow_html=True,
         )
 
+    # ── Shared colour map (used by allocation bar + right panel) ────────────
+    _TYPE_COLORS = {
+        "CNC": "#1976d2", "MTF": "#ff9800", "ETF": "#8b5cf6",
+        "MIS": "#e34a3a", "FO":  "#06b6d4", "CO":  "#ec4899",
+        "BO":  "#10b981",
+    }
+    _DEFAULT_COLOR = "#6b7280"
+
     # ── Allocation mini-bar — fully dynamic, handles any product_type ──────
     if total_invested > 0:
-        _TYPE_COLORS = {
-            "CNC": "#1976d2", "MTF": "#ff9800", "ETF": "#8b5cf6",
-            "MIS": "#e34a3a", "FO":  "#06b6d4", "CO":  "#ec4899",
-            "BO":  "#10b981",
-        }
-        _DEFAULT_COLOR = "#6b7280"
         # Only render types that have value; CNC first, then rest sorted by value desc
         _types_present = [
             (pt, val) for pt, val in sorted(
@@ -177,138 +179,296 @@ def page_dashboard(r):
             unsafe_allow_html=True,
         )
 
-    st.markdown(
-        f"<div style='margin-top:18px;display:flex;align-items:center;gap:10px;margin-bottom:4px'>"
-        f"<span style='color:{t['text_primary']};font-size:17px;font-weight:700'>"
-        f"Holdings</span>"
-        f"<span style='background:#1976d2;color:#fff;font-size:11px;font-weight:600;"
-        f"padding:2px 9px;border-radius:20px'>{len(holdings_list)}</span>"
-        f"</div>"
-        f"<div style='color:{t['text_muted']};font-size:10px;margin-bottom:10px'>"
-        f"Today's CNC orders appear here tomorrow · MTF holdings are pledged (interest charged daily)</div>",
-        unsafe_allow_html=True,
-    )
-
-    if holdings_list:
-        hcols = st.columns([2.5, 1.8, 1.5, 1.8, 0.7])
-        for col, (label, align) in zip(hcols, [
-            ("", "left"), ("MARKET PRICE", "right"),
-            ("RETURNS", "right"), ("CURRENT (INVESTED)", "right"), ("", "center"),
-        ]):
-            col.markdown(
-                f"<div style='color:{t['text_muted']};font-size:10px;font-weight:500;"
-                f"letter-spacing:.4px;padding:4px 0;text-align:{align}'>{label}</div>",
-                unsafe_allow_html=True,
+    # ── Precompute enriched holdings (used by list AND right panel) ──────────
+    _holdings_data = []
+    for h in sorted(holdings_list, key=lambda x: x["symbol"]):
+        _sym  = h["symbol"]
+        _qty  = h["quantity"]
+        _avg  = h["average_price"]
+        _lp   = (
+            get_live_price_kotak(
+                h.get("exchange_identifier") or h.get("instrument_token", 0), "nse_cm"
             )
+            or get_live_price(r, _sym)
+            or h["last_price"]
+        )
+        _prev = h.get("last_price", 0)
+        _dchg = _lp - _prev if _prev else 0
+        _dpct = (_dchg / _prev * 100) if _prev else 0
+        _inv  = _avg * _qty
+        _cur  = _lp * _qty
+        _pnl  = _cur - _inv
+        _rpct = (_pnl / _inv * 100) if _inv else 0
+        _holdings_data.append({
+            "symbol": _sym, "qty": _qty, "avg_price": _avg,
+            "lp": _lp, "prev_close": _prev,
+            "day_chg": _dchg, "day_pct": _dpct,
+            "invested": _inv, "cur_val": _cur,
+            "pnl": _pnl, "ret_pct": _rpct,
+            "badge": h.get("product_type", "CNC"),
+            "exch": h.get("exchange", "NSE"),
+        })
 
-        for h in sorted(holdings_list, key=lambda x: x["symbol"]):
-            symbol = h["symbol"]
-            qty = h["quantity"]
-            avg_price = h["average_price"]
-            lp = (
-                get_live_price_kotak(
-                    h.get("exchange_identifier") or h.get("instrument_token", 0),
-                    "nse_cm",
-                )
-                or get_live_price(r, symbol)
-                or h["last_price"]
-            )
-            prev_close = h.get("last_price", 0)
-            day_chg = lp - prev_close if prev_close else 0
-            day_pct = (day_chg / prev_close * 100) if prev_close else 0
-            day_color = t["green"] if day_chg >= 0 else t["red"]
-            day_sign = "+" if day_chg >= 0 else ""
-            invested = avg_price * qty
-            cur_val = lp * qty
-            pnl = cur_val - invested
-            ret_pct = (pnl / invested * 100) if invested else 0
-            badge = h.get("product_type", "CNC")
-            exch = h.get("exchange", "NSE")
-            pc = t["green"] if pnl >= 0 else t["red"]
-            ps = "+" if pnl >= 0 else ""
-            bc = "#ff9800" if badge == "MTF" else ("#8b5cf6" if badge == "ETF" else "#1976d2")
-            row_border = t["green"] if pnl >= 0 else t["red"]
+    _sorted_pnl = sorted(_holdings_data, key=lambda x: x["ret_pct"], reverse=True)
+    _gainers    = [x for x in _sorted_pnl if x["pnl"] > 0][:3]
+    _losers     = [x for x in reversed(_sorted_pnl) if x["pnl"] < 0][:3]
 
-            row_cols = st.columns([2.5, 1.8, 1.5, 1.8, 0.7])
+    # ── Two-column layout: Holdings list (left) + Insights panel (right) ────
+    main_left, main_right = st.columns([3.2, 1.5])
 
-            row_cols[0].markdown(
-                f"<div style='padding:10px 0 10px 10px;border-left:3px solid {row_border};'>"
-                f"<div style='font-weight:700;color:{t['text_primary']};font-size:14px'>{symbol}</div>"
-                f"<div style='margin-top:5px;display:flex;gap:5px;align-items:center'>"
-                f"<span style='background:{bc};color:#fff;font-size:9px;font-weight:600;"
-                f"padding:2px 7px;border-radius:20px'>{badge}</span>"
-                f"<span style='background:{t['exch_bg']};color:{t['exch_text']};font-size:9px;"
-                f"font-weight:500;padding:2px 7px;border-radius:20px'>{exch}</span>"
-                f"<span style='background:#f0f2f6;color:{t['text_muted']};font-size:9px;"
-                f"padding:2px 7px;border-radius:20px'>{qty} shares</span>"
-                f"</div>"
-                f"<div style='color:{t['text_muted']};font-size:11px;margin-top:4px'>"
-                f"Avg ₹{avg_price:,.2f}</div>"
-                f"</div>",
-                unsafe_allow_html=True,
-            )
-
-            row_cols[1].markdown(
-                f"<div style='padding:10px 0;text-align:right'>"
-                f"<div style='color:{t['text_primary']};font-weight:600;font-size:14px'>"
-                f"₹{lp:,.2f}</div>"
-                f"<div style='color:{day_color};font-size:11px;margin-top:3px'>"
-                f"{day_sign}{day_chg:,.2f} ({day_sign}{day_pct:.2f}%)</div>"
-                f"</div>",
-                unsafe_allow_html=True,
-            )
-
-            row_cols[2].markdown(
-                f"<div style='padding:10px 0;text-align:right'>"
-                f"<div style='color:{pc};font-weight:700;font-size:13px'>{ps}{ret_pct:.2f}%</div>"
-                f"<div style='color:{pc};font-size:11px;margin-top:3px'>{ps}₹{pnl:,.2f}</div>"
-                f"</div>",
-                unsafe_allow_html=True,
-            )
-
-            row_cols[3].markdown(
-                f"<div style='padding:10px 0;text-align:right'>"
-                f"<div style='color:{t['text_primary']};font-weight:600;font-size:14px'>"
-                f"₹{cur_val:,.2f}</div>"
-                f"<div style='color:{t['text_muted']};font-size:11px;margin-top:3px'>"
-                f"₹{invested:,.2f} inv.</div>"
-                f"</div>",
-                unsafe_allow_html=True,
-            )
-
-            with row_cols[4]:
-                with st.popover("⋮", use_container_width=True):
-                    if st.button("Buy", key=f"buy_{symbol}", use_container_width=True, type="primary"):
-                        st.session_state["prefill_symbol"] = symbol
-                        st.session_state["prefill_action"] = "BUY"
-                        st.session_state["prefill_exchange"] = exch
-                        st.session_state["prefill_order_type"] = badge
-                        st.session_state["nav_page"] = ":material/shopping_cart: Place Order"
-                        st.rerun()
-                    if st.button("Sell", key=f"sell_{symbol}", use_container_width=True):
-                        st.session_state["prefill_symbol"] = symbol
-                        st.session_state["prefill_action"] = "SELL"
-                        st.session_state["prefill_exchange"] = exch
-                        st.session_state["prefill_order_type"] = badge
-                        st.session_state["nav_page"] = ":material/shopping_cart: Place Order"
-                        st.rerun()
-
-            st.markdown(
-                f"<hr style='margin:0;border-color:{t['card_border']}'>",
-                unsafe_allow_html=True,
-            )
-    else:
+    # ────────────────────────── LEFT: Holdings list ──────────────────────────
+    with main_left:
         st.markdown(
-            f"""<div style="text-align:center;padding:40px 20px;background:{t['card_bg']};
-                           border-radius:12px;border:1px dashed {t['card_border']};margin-top:8px">
-                <div style="font-size:36px;margin-bottom:10px">🏦</div>
-                <div style="color:{t['text_primary']};font-size:15px;font-weight:600;margin-bottom:4px">
-                    No holdings found</div>
-                <div style="color:{t['text_muted']};font-size:12px">
-                    Click <b>Sync</b> above to load your portfolio from Kotak Neo</div>
-            </div>""",
+            f"<div style='margin-top:18px;display:flex;align-items:center;gap:10px;margin-bottom:4px'>"
+            f"<span style='color:{t['text_primary']};font-size:17px;font-weight:700'>Holdings</span>"
+            f"<span style='background:#1976d2;color:#fff;font-size:11px;font-weight:600;"
+            f"padding:2px 9px;border-radius:20px'>{len(holdings_list)}</span>"
+            f"</div>"
+            f"<div style='color:{t['text_muted']};font-size:10px;margin-bottom:10px'>"
+            f"Today's CNC orders appear here tomorrow · MTF holdings are pledged (interest charged daily)</div>",
             unsafe_allow_html=True,
         )
+
+        if _holdings_data:
+            hcols = st.columns([2.5, 1.8, 1.5, 1.8, 0.7])
+            for col, (label, align) in zip(hcols, [
+                ("", "left"), ("MARKET PRICE", "right"),
+                ("RETURNS", "right"), ("CURRENT (INVESTED)", "right"), ("", "center"),
+            ]):
+                col.markdown(
+                    f"<div style='color:{t['text_muted']};font-size:10px;font-weight:500;"
+                    f"letter-spacing:.4px;padding:4px 0;text-align:{align}'>{label}</div>",
+                    unsafe_allow_html=True,
+                )
+
+            for hd in _holdings_data:
+                symbol    = hd["symbol"]
+                qty       = hd["qty"]
+                avg_price = hd["avg_price"]
+                lp        = hd["lp"]
+                day_chg   = hd["day_chg"]
+                day_pct   = hd["day_pct"]
+                day_color = t["green"] if day_chg >= 0 else t["red"]
+                day_sign  = "+" if day_chg >= 0 else ""
+                invested  = hd["invested"]
+                cur_val   = hd["cur_val"]
+                pnl       = hd["pnl"]
+                ret_pct   = hd["ret_pct"]
+                badge     = hd["badge"]
+                exch      = hd["exch"]
+                pc        = t["green"] if pnl >= 0 else t["red"]
+                ps        = "+" if pnl >= 0 else ""
+                bc        = "#ff9800" if badge == "MTF" else ("#8b5cf6" if badge == "ETF" else "#1976d2")
+                row_border = t["green"] if pnl >= 0 else t["red"]
+
+                row_cols = st.columns([2.5, 1.8, 1.5, 1.8, 0.7])
+
+                row_cols[0].markdown(
+                    f"<div style='padding:10px 0 10px 10px;border-left:3px solid {row_border};'>"
+                    f"<div style='font-weight:700;color:{t['text_primary']};font-size:14px'>{symbol}</div>"
+                    f"<div style='margin-top:5px;display:flex;gap:5px;align-items:center'>"
+                    f"<span style='background:{bc};color:#fff;font-size:9px;font-weight:600;"
+                    f"padding:2px 7px;border-radius:20px'>{badge}</span>"
+                    f"<span style='background:{t['exch_bg']};color:{t['exch_text']};font-size:9px;"
+                    f"font-weight:500;padding:2px 7px;border-radius:20px'>{exch}</span>"
+                    f"<span style='background:#f0f2f6;color:{t['text_muted']};font-size:9px;"
+                    f"padding:2px 7px;border-radius:20px'>{qty} shares</span>"
+                    f"</div>"
+                    f"<div style='color:{t['text_muted']};font-size:11px;margin-top:4px'>"
+                    f"Avg ₹{avg_price:,.2f}</div>"
+                    f"</div>",
+                    unsafe_allow_html=True,
+                )
+
+                row_cols[1].markdown(
+                    f"<div style='padding:10px 0;text-align:right'>"
+                    f"<div style='color:{t['text_primary']};font-weight:600;font-size:14px'>"
+                    f"₹{lp:,.2f}</div>"
+                    f"<div style='color:{day_color};font-size:11px;margin-top:3px'>"
+                    f"{day_sign}{day_chg:,.2f} ({day_sign}{day_pct:.2f}%)</div>"
+                    f"</div>",
+                    unsafe_allow_html=True,
+                )
+
+                row_cols[2].markdown(
+                    f"<div style='padding:10px 0;text-align:right'>"
+                    f"<div style='color:{pc};font-weight:700;font-size:13px'>{ps}{ret_pct:.2f}%</div>"
+                    f"<div style='color:{pc};font-size:11px;margin-top:3px'>{ps}₹{pnl:,.2f}</div>"
+                    f"</div>",
+                    unsafe_allow_html=True,
+                )
+
+                row_cols[3].markdown(
+                    f"<div style='padding:10px 0;text-align:right'>"
+                    f"<div style='color:{t['text_primary']};font-weight:600;font-size:14px'>"
+                    f"₹{cur_val:,.2f}</div>"
+                    f"<div style='color:{t['text_muted']};font-size:11px;margin-top:3px'>"
+                    f"₹{invested:,.2f} inv.</div>"
+                    f"</div>",
+                    unsafe_allow_html=True,
+                )
+
+                with row_cols[4]:
+                    with st.popover("⋮", use_container_width=True):
+                        if st.button("Buy", key=f"buy_{symbol}", use_container_width=True, type="primary"):
+                            st.session_state["prefill_symbol"] = symbol
+                            st.session_state["prefill_action"] = "BUY"
+                            st.session_state["prefill_exchange"] = exch
+                            st.session_state["prefill_order_type"] = badge
+                            st.session_state["nav_page"] = ":material/shopping_cart: Place Order"
+                            st.rerun()
+                        if st.button("Sell", key=f"sell_{symbol}", use_container_width=True):
+                            st.session_state["prefill_symbol"] = symbol
+                            st.session_state["prefill_action"] = "SELL"
+                            st.session_state["prefill_exchange"] = exch
+                            st.session_state["prefill_order_type"] = badge
+                            st.session_state["nav_page"] = ":material/shopping_cart: Place Order"
+                            st.rerun()
+
+                st.markdown(
+                    f"<hr style='margin:0;border-color:{t['card_border']}'>",
+                    unsafe_allow_html=True,
+                )
+        else:
+            st.markdown(
+                f"""<div style="text-align:center;padding:40px 20px;background:{t['card_bg']};
+                               border-radius:12px;border:1px dashed {t['card_border']};margin-top:8px">
+                    <div style="font-size:36px;margin-bottom:10px">🏦</div>
+                    <div style="color:{t['text_primary']};font-size:15px;font-weight:600;margin-bottom:4px">
+                        No holdings found</div>
+                    <div style="color:{t['text_muted']};font-size:12px">
+                        Click <b>Sync</b> above to load your portfolio from Kotak Neo</div>
+                </div>""",
+                unsafe_allow_html=True,
+            )
+
+    # ────────────────────────── RIGHT: Insights panel ───────────────────────
+    with main_right:
+        _card_s = (
+            f"background:{t['card_bg']};border-radius:10px;"
+            f"padding:14px 14px;border:1px solid {t['card_border']};"
+            f"box-shadow:0 1px 4px rgba(0,0,0,.06);margin-bottom:10px"
+        )
+        _sec_lbl = (
+            f"font-size:10px;font-weight:600;text-transform:uppercase;"
+            f"letter-spacing:.6px;color:{t['text_muted']};margin-bottom:8px"
+        )
+
+        # ── Donut chart (CSS conic-gradient, no external lib needed) ────────
+        if _holdings_data and total_invested > 0:
+            _donut_types = [
+                (pt, val) for pt, val in sorted(
+                    _alloc.items(), key=lambda x: (x[0] != "CNC", -x[1])
+                ) if val > 0
+            ]
+            _stops, _cum = [], 0.0
+            for _pt, _val in _donut_types:
+                _pct = _val / total_invested * 100
+                _c   = _TYPE_COLORS.get(_pt, _DEFAULT_COLOR)
+                _stops.append(f"{_c} {_cum:.2f}% {_cum + _pct:.2f}%")
+                _cum += _pct
+            _gradient = ", ".join(_stops)
+            _cval = (
+                f"₹{total_invested / 100000:.1f}L"
+                if total_invested >= 100000
+                else f"₹{total_invested:,.0f}"
+            )
+            _leg_rows = "".join(
+                f"<div style='display:flex;justify-content:space-between;"
+                f"align-items:center;margin-bottom:5px'>"
+                f"<span style='display:flex;align-items:center;gap:6px'>"
+                f"<span style='width:10px;height:10px;border-radius:2px;flex-shrink:0;"
+                f"background:{_TYPE_COLORS.get(_pt, _DEFAULT_COLOR)};display:inline-block'></span>"
+                f"<span style='font-size:11px;color:{t['text_secondary']}'>{_pt}</span>"
+                f"</span>"
+                f"<span style='font-size:11px;color:{t['text_muted']}'>"
+                f"{_val / total_invested * 100:.1f}%</span>"
+                f"</div>"
+                for _pt, _val in _donut_types
+            )
+            st.markdown(
+                f"<div style='{_card_s}'>"
+                f"<div style='{_sec_lbl}'>Allocation</div>"
+                f"<div style='display:flex;flex-direction:column;align-items:center;padding:4px 0 12px'>"
+                f"  <div style='position:relative;width:124px;height:124px'>"
+                f"    <div style='width:124px;height:124px;border-radius:50%;"
+                f"background:conic-gradient({_gradient})'></div>"
+                f"    <div style='position:absolute;top:50%;left:50%;"
+                f"transform:translate(-50%,-50%);"
+                f"width:76px;height:76px;background:{t['card_bg']};border-radius:50%;"
+                f"display:flex;flex-direction:column;align-items:center;"
+                f"justify-content:center;gap:2px'>"
+                f"      <span style='font-size:12px;font-weight:700;"
+                f"color:{t['text_primary']}'>{_cval}</span>"
+                f"      <span style='font-size:9px;color:{t['text_muted']};"
+                f"letter-spacing:.3px'>INVESTED</span>"
+                f"    </div>"
+                f"  </div>"
+                f"</div>"
+                f"<div>{_leg_rows}</div>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
+
+        # ── Top Gainers ──────────────────────────────────────────────────────
+        if _gainers:
+            _g_items = ""
+            for _i, g in enumerate(_gainers):
+                _sep = f"border-bottom:1px solid {t['card_border']};" if _i < len(_gainers) - 1 else ""
+                _g_items += (
+                    f"<div style='display:flex;justify-content:space-between;"
+                    f"align-items:center;padding:7px 0;{_sep}'>"
+                    f"<div>"
+                    f"<div style='font-size:12px;font-weight:700;"
+                    f"color:{t['text_primary']}'>{g['symbol']}</div>"
+                    f"<div style='font-size:10px;color:{t['text_muted']};margin-top:1px'>"
+                    f"{g['qty']} shares</div>"
+                    f"</div>"
+                    f"<div style='text-align:right'>"
+                    f"<div style='font-size:12px;font-weight:700;color:{t['green']}'>"
+                    f"+{g['ret_pct']:.2f}%</div>"
+                    f"<div style='font-size:10px;color:{t['green']};margin-top:1px'>"
+                    f"+₹{g['pnl']:,.0f}</div>"
+                    f"</div>"
+                    f"</div>"
+                )
+            st.markdown(
+                f"<div style='{_card_s}'>"
+                f"<div style='{_sec_lbl}'>▲ Top Gainers</div>"
+                f"{_g_items}"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
+
+        # ── Top Losers ───────────────────────────────────────────────────────
+        if _losers:
+            _l_items = ""
+            for _i, l in enumerate(_losers):
+                _sep = f"border-bottom:1px solid {t['card_border']};" if _i < len(_losers) - 1 else ""
+                _l_items += (
+                    f"<div style='display:flex;justify-content:space-between;"
+                    f"align-items:center;padding:7px 0;{_sep}'>"
+                    f"<div>"
+                    f"<div style='font-size:12px;font-weight:700;"
+                    f"color:{t['text_primary']}'>{l['symbol']}</div>"
+                    f"<div style='font-size:10px;color:{t['text_muted']};margin-top:1px'>"
+                    f"{l['qty']} shares</div>"
+                    f"</div>"
+                    f"<div style='text-align:right'>"
+                    f"<div style='font-size:12px;font-weight:700;color:{t['red']}'>"
+                    f"{l['ret_pct']:.2f}%</div>"
+                    f"<div style='font-size:10px;color:{t['red']};margin-top:1px'>"
+                    f"-₹{abs(l['pnl']):,.0f}</div>"
+                    f"</div>"
+                    f"</div>"
+                )
+            st.markdown(
+                f"<div style='{_card_s}'>"
+                f"<div style='{_sec_lbl}'>▼ Top Losers</div>"
+                f"{_l_items}"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
 
     if mtf_pos:
         st.markdown(
