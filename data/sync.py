@@ -12,26 +12,57 @@ from config import (
     REDIS_FO_POSITIONS,
     REDIS_FO_LAST_SYNC,
 )
-from auth.kotak_client import get_kotak
+from auth.kotak_client import get_kotak, refresh_kotak
+
+
+def _parse_list(resp, key="data"):
+    """Safely extract a list from an API dict response, treating None as []."""
+    if isinstance(resp, list):
+        return resp
+    if isinstance(resp, dict):
+        raw = resp.get(key)
+        if isinstance(raw, list):
+            return raw
+    return []
+
+
+def _session_looks_expired(resp):
+    """Return True when the API response indicates a dead/expired session.
+
+    Kotak Neo returns {"data": null} (not an empty list) when the session token
+    has been invalidated by a newer login.  A genuine empty account returns
+    {"data": []}.  We only auto-refresh on the null case.
+    """
+    if not isinstance(resp, dict):
+        return False
+    raw = resp.get("data")
+    # None  → session expired
+    # stat/stCode error fields → auth failure
+    if raw is None:
+        return True
+    stat = str(resp.get("stat", "") or resp.get("stCode", "")).lower()
+    if stat in ("not_ok", "error", "failure", "401", "403"):
+        return True
+    return False
 
 
 def sync_cnc(r):
     try:
         client = get_kotak()
         resp = client.holdings()
-        holdings = []
-        if isinstance(resp, dict):
-            raw = resp.get("data", [])
-            if isinstance(raw, list):
-                holdings = raw
+        holdings = _parse_list(resp)
+
+        # Kotak silently returns {"data": null} when the session is expired.
+        # Detect this and force a fresh TOTP re-login, then retry once.
+        if not holdings and _session_looks_expired(resp):
+            print("[SYNC CNC] session expired (data=null) — refreshing Kotak login…")
+            client = refresh_kotak()
+            resp = client.holdings()
+            holdings = _parse_list(resp)
         mtf_symbols = set()
         try:
             pos_resp = client.positions()
-            pos_items = (
-                pos_resp.get("data", [])
-                if isinstance(pos_resp, dict)
-                else (pos_resp if isinstance(pos_resp, list) else [])
-            )
+            pos_items = _parse_list(pos_resp)
             mtf_symbols = {
                 p.get("sym", "").strip()
                 for p in pos_items
@@ -84,11 +115,11 @@ def sync_mtf(r):
     try:
         client = get_kotak()
         resp = client.positions()
-        items = (
-            resp.get("data", [])
-            if isinstance(resp, dict)
-            else (resp if isinstance(resp, list) else [])
-        )
+        if not _parse_list(resp) and _session_looks_expired(resp):
+            print("[SYNC MTF] session expired — refreshing Kotak login…")
+            client = refresh_kotak()
+            resp = client.positions()
+        items = _parse_list(resp)
         mtf_items = [p for p in items if p.get("prod", "").upper() == "MTF"]
         r.delete(REDIS_MTF_POSITIONS)
         if mtf_items:
@@ -128,13 +159,7 @@ def sync_fo_positions(r):
     try:
         client = get_kotak()
         resp = client.positions()
-        items = []
-        if isinstance(resp, dict):
-            raw = resp.get("data", [])
-            if isinstance(raw, list):
-                items = raw
-        elif isinstance(resp, list):
-            items = resp
+        items = _parse_list(resp)
 
         fo_items = [
             p
