@@ -255,9 +255,9 @@ def main():
             s.setProperty('border-radius','8px','important');
             s.setProperty('font-weight','600','important');
           } else if(t.includes('Sync')){
-            s.setProperty('background-color','#1e88e5','important');
-            s.setProperty('color','#fff','important');
-            s.setProperty('border','none','important');
+            s.setProperty('background-color','#e0f4ff','important');
+            s.setProperty('color','#0284c7','important');
+            s.setProperty('border','1px solid #bae6fd','important');
             s.setProperty('border-radius','8px','important');
           }
         });
