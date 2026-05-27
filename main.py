@@ -35,23 +35,26 @@ def main():
         header[data-testid="stHeader"] { height: 0 !important; min-height: 0 !important; }
         footer { visibility: hidden !important; }
         [data-testid="stToolbar"] { display: none !important; }
-        .block-container { padding-top: 0.6rem !important; padding-bottom: 1.2rem !important; }
+        .block-container { padding-top: 0.25rem !important; padding-bottom: 1rem !important; }
         div[data-testid="stButton"] button[data-testid="baseButton-primary"] {
             color: #ffffff !important;
             border: none !important;
-            border-radius: 8px !important;
+            border-radius: 7px !important;
             font-weight: 600 !important;
-            font-size: 13px !important;
-            height: 38px !important;
+            font-size: 12.5px !important;
+            height: 30px !important;
+            min-height: 30px !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
         }
         div[data-testid="stVerticalBlock"] > div:first-child { padding-top: 0 !important; }
         .stRadio > div { gap: 0.3rem !important; }
-        [data-testid="stRadio"] label p { font-size: 13.5px !important; }
+        [data-testid="stRadio"] label p { font-size: 13px !important; }
         [data-testid="stHorizontalBlock"] { align-items: center !important; }
-        div[data-testid="stHorizontalBlock"] { gap: 0.6rem; }
-        hr { margin: 0.6rem 0 !important; }
+        div[data-testid="stHorizontalBlock"] { gap: 0.5rem; }
+        hr { margin: 0.25rem 0 0.4rem 0 !important; }
         .holdings-row:hover { background:#f0f2f5 !important; }
-        div[data-testid="stSelectbox"] > div { min-height: 36px !important; font-size: 13px !important; }
+        div[data-testid="stSelectbox"] > div { min-height: 30px !important; font-size: 12.5px !important; }
         div[data-testid="stSelectbox"] > label { display: none !important; }
         [data-testid="stPopover"] button {
             border: none !important;
@@ -71,9 +74,9 @@ def main():
         /* Website-style nav bar */
         .custom-nav { display:flex; align-items:center; gap:0; margin:0; padding:0; }
         .cn-item {
-            font-size:14px; padding:0 13px; cursor:pointer; color:#6b7280; font-weight:400;
-            border-bottom:2.5px solid transparent; white-space:nowrap; user-select:none;
-            display:inline-flex; align-items:center; height:38px; line-height:1;
+            font-size:13px; padding:0 11px; cursor:pointer; color:#6b7280; font-weight:400;
+            border-bottom:2px solid transparent; white-space:nowrap; user-select:none;
+            display:inline-flex; align-items:center; height:30px; line-height:1;
             transition:color .15s, border-color .15s;
         }
         .cn-item:hover { color:#111827 !important; border-bottom-color:#1ba572 !important; }
@@ -102,8 +105,8 @@ def main():
     col_logo, col_nav, col_search, col_info = st.columns([0.9, 3.5, 2.8, 1.8])
     with col_logo:
         st.markdown(
-            "<div style='padding-top:4px'>"
-            "<span style='font-size:20px;font-weight:800;color:#1ba572;"
+            "<div style='padding-top:2px'>"
+            "<span style='font-size:17px;font-weight:800;color:#1ba572;"
             "letter-spacing:-0.5px;line-height:1.2'>&#9679; Portfolio</span>"
             "</div>",
             unsafe_allow_html=True,
@@ -220,7 +223,7 @@ def main():
                 st.rerun()
         with _info_c2:
             st.markdown(
-                f"<div style='font-size:11px;color:#666;text-align:right;padding-top:8px;line-height:1.5'>"
+                f"<div style='font-size:10.5px;color:#666;text-align:right;padding-top:3px;line-height:1.4'>"
                 f"{_mkt_html}<br>{sync_str} · {ucc}"
                 f"</div>",
                 unsafe_allow_html=True,
@@ -300,7 +303,7 @@ def main():
     })();
     </script>
     """, height=1, scrolling=False)
-    st.markdown("<hr style='margin:4px 0 8px 0;border-color:#e5e7ee'>", unsafe_allow_html=True)
+    st.markdown("<hr style='margin:2px 0 6px 0;border-color:#e5e7ee'>", unsafe_allow_html=True)
 
     if page == ":material/home: Portfolio":
         page_dashboard(r)
