@@ -242,19 +242,18 @@ def main():
     (function(){
       var doc = window.parent.document;
       function applyStyles(){
-        // Secondary buttons: Sell (red) and Sync (blue)
+        // Secondary buttons: Sell (red) and Sync (sky blue)
+        // Use btn.textContent directly — robust regardless of inner HTML structure
         doc.querySelectorAll('button[data-testid="baseButton-secondary"]').forEach(function(btn){
-          var p = btn.querySelector('p');
-          if(!p) return;
-          var t = p.textContent.trim();
+          var t = btn.textContent.trim().toLowerCase();
           var s = btn.style;
-          if(t === 'Sell'){
+          if(t === 'sell'){
             s.setProperty('background-color','#e34a3a','important');
             s.setProperty('color','#fff','important');
             s.setProperty('border','none','important');
             s.setProperty('border-radius','8px','important');
             s.setProperty('font-weight','600','important');
-          } else if(t.includes('Sync')){
+          } else if(t.includes('sync')){
             s.setProperty('background-color','#e0f4ff','important');
             s.setProperty('color','#0284c7','important');
             s.setProperty('border','1px solid #bae6fd','important');
@@ -263,10 +262,8 @@ def main():
         });
         // Primary buttons: Buy (in popovers) → green
         doc.querySelectorAll('button[data-testid="baseButton-primary"]').forEach(function(btn){
-          var p = btn.querySelector('p');
-          if(!p) return;
-          var t = p.textContent.trim();
-          if(t === 'Buy'){
+          var t = btn.textContent.trim().toLowerCase();
+          if(t === 'buy'){
             btn.style.setProperty('background-color','#1ba572','important');
             btn.style.setProperty('background','#1ba572','important');
             btn.style.setProperty('background-image','none','important');
