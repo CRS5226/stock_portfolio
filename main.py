@@ -35,7 +35,11 @@ def main():
         header[data-testid="stHeader"] { height: 0 !important; min-height: 0 !important; }
         footer { visibility: hidden !important; }
         [data-testid="stToolbar"] { display: none !important; }
-        .block-container { padding-top: 0.25rem !important; padding-bottom: 1rem !important; }
+        .block-container { padding-top: 0.15rem !important; padding-bottom: 1rem !important; }
+        /* Collapse the gap between header row and content */
+        [data-testid="stVerticalBlock"] > [data-testid="stVerticalBlock"] { gap: 0 !important; }
+        section.main > div { padding-top: 0 !important; }
+        [data-testid="stVerticalBlock"] { gap: 0.4rem !important; }
         div[data-testid="stButton"] button[data-testid="baseButton-primary"] {
             color: #ffffff !important;
             border: none !important;
@@ -52,7 +56,7 @@ def main():
         [data-testid="stRadio"] label p { font-size: 13px !important; }
         [data-testid="stHorizontalBlock"] { align-items: center !important; }
         div[data-testid="stHorizontalBlock"] { gap: 0.5rem; }
-        hr { margin: 0.25rem 0 0.4rem 0 !important; }
+        hr { margin: 1px 0 3px 0 !important; border-top-width: 1px !important; }
         .holdings-row:hover { background:#f0f2f5 !important; }
         div[data-testid="stSelectbox"] > div { min-height: 30px !important; font-size: 12.5px !important; }
         div[data-testid="stSelectbox"] > label { display: none !important; }
@@ -303,7 +307,7 @@ def main():
     })();
     </script>
     """, height=1, scrolling=False)
-    st.markdown("<hr style='margin:2px 0 6px 0;border-color:#e5e7ee'>", unsafe_allow_html=True)
+    st.markdown("<hr style='margin:1px 0 2px 0;border-color:#e5e7ee'>", unsafe_allow_html=True)
 
     if page == ":material/home: Portfolio":
         page_dashboard(r)
