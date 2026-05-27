@@ -313,6 +313,7 @@ def page_dashboard(r):
 
         # ── Donut chart (CSS conic-gradient, no external lib needed) ────────
         if _holdings_data and total_invested > 0:
+            # Types with actual value → used for gradient segments
             _donut_types = [
                 (pt, val) for pt, val in sorted(
                     _alloc.items(), key=lambda x: (x[0] != "CNC", -x[1])
@@ -330,15 +331,29 @@ def page_dashboard(r):
                 if total_invested >= 100000
                 else f"₹{total_invested:,.0f}"
             )
+            # All known types always shown in legend (0 if not held yet)
+            _ALL_TYPES_ORDER = ["CNC", "MTF", "ETF", "MIS", "FO", "CO", "BO"]
+            _tmuted  = t["text_muted"]
+            _tsec    = t["text_secondary"]
             _leg_rows = "".join(
-                f"<div style='display:flex;align-items:center;gap:6px;margin-bottom:7px'>"
-                f"<span style='width:10px;height:10px;border-radius:2px;flex-shrink:0;"
-                f"background:{_TYPE_COLORS.get(_pt, _DEFAULT_COLOR)};display:inline-block'></span>"
-                f"<span style='font-size:11px;font-weight:600;color:{t['text_secondary']};white-space:nowrap'>{_pt}</span>"
-                f"<span style='font-size:11px;color:{t['text_muted']};white-space:nowrap;margin-left:4px'>"
-                f"₹{_val:,.0f} · {_val / total_invested * 100:.1f}%</span>"
-                f"</div>"
-                for _pt, _val in _donut_types
+                (
+                    lambda _v, _op, _tc: (
+                        f"<div style='display:flex;align-items:center;gap:6px;margin-bottom:7px'>"
+                        f"<span style='width:10px;height:10px;border-radius:2px;flex-shrink:0;"
+                        f"background:{_TYPE_COLORS[_pt]};display:inline-block;opacity:{_op}'></span>"
+                        f"<span style='font-size:11px;font-weight:600;white-space:nowrap;"
+                        f"color:{_tc}'>{_pt}</span>"
+                        f"<span style='font-size:11px;white-space:nowrap;margin-left:4px;"
+                        f"color:{_tmuted}'>"
+                        f"₹{_v:,.0f} · {_v / total_invested * 100:.1f}%</span>"
+                        f"</div>"
+                    )
+                )(
+                    _alloc.get(_pt, 0),
+                    "1" if _alloc.get(_pt, 0) > 0 else "0.35",
+                    _tsec if _alloc.get(_pt, 0) > 0 else _tmuted,
+                )
+                for _pt in _ALL_TYPES_ORDER
             )
             st.markdown(
                 f"<div style='{_card_s}'>"
