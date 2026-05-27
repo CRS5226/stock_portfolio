@@ -68,6 +68,16 @@ def main():
             border-radius: 4px !important;
         }
         [data-testid="stPopover"] button svg { display: none !important; }
+        /* Website-style nav bar */
+        .custom-nav { display:flex; align-items:center; gap:0; margin:0; padding:0; }
+        .cn-item {
+            font-size:14px; padding:0 13px; cursor:pointer; color:#6b7280; font-weight:400;
+            border-bottom:2.5px solid transparent; white-space:nowrap; user-select:none;
+            display:inline-flex; align-items:center; height:38px; line-height:1;
+            transition:color .15s, border-color .15s;
+        }
+        .cn-item:hover { color:#111827 !important; border-bottom-color:#1ba572 !important; }
+        .cn-item.active { color:#111827; font-weight:600; border-bottom-color:#1ba572; }
         </style>""",
         unsafe_allow_html=True,
     )
@@ -121,43 +131,14 @@ def main():
             if _active_opt in nav_options else _nav_labels[0]
         )
 
-        # ── Custom website-style nav bar ─────────────────────────────────────
-        _nav_items_html = ""
+        # ── Website-style nav bar (plain HTML — aligns naturally with header row) ──
+        _items_html = ""
         for _lbl in _nav_labels:
-            _is_active = _lbl == _active_label
-            _c = "#111827" if _is_active else "#6b7280"
-            _w = "600" if _is_active else "400"
-            _b = "#1ba572" if _is_active else "transparent"
-            _nav_items_html += (
-                f'<span class="ni" onclick="navTo(\'{_lbl}\')" '
-                f'style="color:{_c};font-weight:{_w};border-bottom:2.5px solid {_b}">'
-                f'{_lbl}</span>'
-            )
+            _cls = "cn-item active" if _lbl == _active_label else "cn-item"
+            _items_html += f'<span class="{_cls}" data-nav="{_lbl}">{_lbl}</span>'
+        st.markdown(f'<nav class="custom-nav">{_items_html}</nav>', unsafe_allow_html=True)
 
-        components.html(f"""
-<style>
-*{{margin:0;padding:0;box-sizing:border-box}}
-body{{background:transparent;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;overflow:hidden}}
-.nav{{display:flex;align-items:stretch;height:46px}}
-.ni{{cursor:pointer;font-size:14px;padding:0 14px;display:flex;align-items:center;
-     border-bottom:2.5px solid transparent;transition:color .15s,border-color .15s;
-     white-space:nowrap;user-select:none;line-height:1}}
-.ni:hover{{color:#111827 !important;border-bottom-color:#1ba572 !important}}
-</style>
-<div class="nav">{_nav_items_html}</div>
-<script>
-function navTo(label){{
-  var doc=window.parent.document;
-  var inputs=doc.querySelectorAll('[data-testid="stRadio"] input[type="radio"]');
-  for(var i=0;i<inputs.length;i++){{
-    var lbl=inputs[i].closest('label');
-    if(lbl&&lbl.textContent.indexOf(label)!==-1){{inputs[i].click();return;}}
-  }}
-}}
-</script>
-""", height=46, scrolling=False)
-
-        # Hidden radio — state owner; hidden by JS MutationObserver in components.html
+        # Hidden radio — state owner; click-binding attached by JS observer below
         page = st.radio(
             "nav",
             nav_options,
@@ -300,9 +281,22 @@ function navTo(label){{
           }
         });
       }
-      applyStyles();
-      hideNavRadio();
-      new MutationObserver(function(){applyStyles();hideNavRadio();}).observe(doc.body,{childList:true,subtree:true});
+      function bindNav(){
+        doc.querySelectorAll('.cn-item').forEach(function(item){
+          if(item._nb) return;
+          item._nb = true;
+          item.addEventListener('click', function(){
+            var target = this.dataset.nav;
+            var inputs = doc.querySelectorAll('[data-testid="stRadio"] input[type="radio"]');
+            for(var i=0;i<inputs.length;i++){
+              var lbl = inputs[i].closest('label');
+              if(lbl && lbl.textContent.indexOf(target)!==-1){ inputs[i].click(); return; }
+            }
+          });
+        });
+      }
+      applyStyles(); hideNavRadio(); bindNav();
+      new MutationObserver(function(){applyStyles();hideNavRadio();bindNav();}).observe(doc.body,{childList:true,subtree:true});
     })();
     </script>
     """, height=1, scrolling=False)
